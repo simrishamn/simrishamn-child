@@ -1,0 +1,23 @@
+html {
+    background: $black; //Fixes issues of color in footer, when page is to "short".
+}
+
+html.video-is-playing {
+    .scroll-down-please-icon,
+    .scroll-down-please {
+        display: none !important;
+    }
+}
+
+.admin-bar #site-header {
+    @media screen and (max-width: 782px) {
+        margin-top: 46px;
+    }
+    @media screen and (min-width: 783px) {
+        margin-top: 32px;
+    }
+}
+
+html.translated-ltr #site-header {
+    top: 39px;
+}
