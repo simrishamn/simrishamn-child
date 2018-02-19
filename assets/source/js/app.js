@@ -1,1 +1,1 @@
-var (#theme_namespace#);
+var Simrishamn;

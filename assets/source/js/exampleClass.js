@@ -1,7 +1,7 @@
-(#theme_namespace#) = (#theme_namespace#) || {};
-(#theme_namespace#).ExampleNamespace = (#theme_namespace#).Liquid || {};
+Simrishamn = Simrishamn || {};
+Simrishamn.ExampleNamespace = Simrishamn.Liquid || {};
 
-(#theme_namespace#).ExampleNamespace.ExampleClass = (function ($) {
+Simrishamn.ExampleNamespace.ExampleClass = (function ($) {
 
 	var classVariable = false;
 

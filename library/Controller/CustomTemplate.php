@@ -1,6 +1,6 @@
 <?php
 
-namespace (#theme_namespace#)\Controller;
+namespace Simrishamn\Controller;
 
 /**
  * To add a custom template and load it's controller do the following:
