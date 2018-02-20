@@ -1,5 +1,6 @@
 html {
-    background: $black; //Fixes issues of color in footer, when page is to "short".
+    // Fixes color issues in footer when page is too "short".
+    background: 000000;
 }
 
 html.video-is-playing {
