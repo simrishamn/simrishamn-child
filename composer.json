@@ -1,0 +1,16 @@
+{
+    "name": "sigmavaxjo/simrishamn-child",
+    "description": "Municipio child theme for Simrishamn",
+    "type": "wordpress-theme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Joakim Söderlund",
+            "email": "joakim.soderlund@sigma.se"
+        },
+        {
+            "name": "Rasmus Sjöström",
+            "email": "rasmus.sjostrom@sigma.se"
+        }
+    ]
+}
