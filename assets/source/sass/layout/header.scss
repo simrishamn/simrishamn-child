@@ -1,0 +1,29 @@
+.navbar {
+    background-color: #FEFEFE;
+
+    ul li a:hover {
+	text-decoration: none !important;
+    }
+
+
+    li {
+	max-width: 78px;
+	margin-left: 20px;
+
+	a {
+	    color: $blue;
+	    font-size: 12px;
+	    font-family: "Avenir Next";
+	    font-weight: 500;
+	    line-height: 14px !important;
+	    height: 28px !important;
+	    text-align: center;
+	}
+    }
+
+    li:hover {
+	border-bottom: 5px solid #E20714;
+
+    }
+
+}
