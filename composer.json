@@ -12,5 +12,8 @@
             "name": "Rasmus Sjöström",
             "email": "rasmus.sjostrom@sigma.se"
         }
-    ]
+    ],
+    "extra": {
+        "installer-name": "simrishamn"
+    }
 }
