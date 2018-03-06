@@ -1,0 +1,73 @@
+/* === Action Cards === */
+// todo: move this into the actual module
+// todo: make it follow the style-guide
+.box-action {
+    margin-bottom: 45px;
+    border: none;
+
+    .box-action-title {
+	color: #fff;
+	font-family: "sans serif";
+	font-weight: 500;
+	font-size: 18px;
+    }
+
+    .fa {
+	padding: 5px 0 5px 0;
+	font-size: 50px;
+	color: $simrishamn-blue;
+    }
+
+    .box-content {
+	background-color: $simrishamn-light-blue !important;
+	text-align: center;
+	padding: 5px;
+    }
+}
+
+/* === Mest Besokta === */
+// fixme: temporary selector. Supposed to be its own module later
+div.modularity-mod-inlaylist:nth-child(2) {
+    h4 {
+	background-color: $simrishamn-blue;
+	padding: 15px;
+	font-family: "sans serif";
+	font-weight: normal;
+	font-size: 21px;
+    }
+
+    .title:before {
+	font-family: FontAwesome;
+	content: "\f061";
+	color: $simrishamn-blue;
+	vertical-align: 0;
+    }
+
+    li {
+	margin: 3px 0;
+	background-color: #EFEFEF;
+	a .title {
+	    color: black !important;
+	}
+    }
+}
+
+.grid-xs-12 {
+    .box-title {
+	padding: 15px;
+	width: 100%;
+	background-color: #0069b3;
+	color: white;
+	font-family: "sans serif";
+	font-weight: normal;
+	font-size: 21px;
+    }
+}
+
+.box-panel > ul:not(.accordion) {
+    border: none;
+}
+
+.box-panel {
+    border: none;
+}

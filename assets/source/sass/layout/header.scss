@@ -1,29 +1,63 @@
-.navbar {
-    background-color: #FEFEFE;
+/* === Header === */
+.c-header--top {
+    line-height: 0.4;
+}
 
-    ul li a:hover {
-	text-decoration: none !important;
+.c-header--primary {
+    // todo: Discuss the maxwidth of this section
+    .c-header__row {
+	padding: 5px 0px 10px;
+    }
+}
+
+/* --- Logo --- */
+.c-header__logo.t-municipio a {
+    position: relative;
+    padding-top: 100%;
+    max-width: 100%;
+    width: 82px;
+    margin-top: -25px;
+}
+
+/* --- Navbar --- */
+nav .c-navbar .c-navbar__item {
+    max-width: 80px;
+    margin-right: 20px;
+    height: 45px;
+    padding-bottom: 20px;
+
+    a {
+	padding: 10px 5px 5px 5px;
+	text-align: center;
+	font-family: "sans serif";
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 1.1;
+	color: $simrishamn-blue;
+    }
+}
+
+nav .c-navbar .c-navbar__item a:hover:not(.is-current),
+nav .c-navbar .c-navbar__item.is-current a {
+    border-bottom: 5px solid $simrishamn-red;
+    text-decoration: none;
+}
+
+nav .c-navbar .c-navbar__item.is-current::after {
+    // Remove the arrow indicating selected menu item
+    all: unset;
+}
+
+/* --- Search --- */
+.c-header__item.c-header__item--right {
+    // Search Widget
+    [class^="widget_"]:not(.widget_calendar) {
+	margin-bottom: 0px;
+	margin-top: -5px;
     }
 
-
-    li {
-	max-width: 78px;
-	margin-left: 20px;
-
-	a {
-	    color: $blue;
-	    font-size: 12px;
-	    font-family: "Avenir Next";
-	    font-weight: 500;
-	    line-height: 14px !important;
-	    height: 28px !important;
-	    text-align: center;
-	}
+    // Search Form
+    [class^="widget_"]:not(.widget_calendar) :not(.main-footer) form {
+	padding: 10px;
     }
-
-    li:hover {
-	border-bottom: 5px solid #E20714;
-
-    }
-
 }
