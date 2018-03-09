@@ -17,9 +17,11 @@ $loader->addPrefix('Simrishamn', SIMRISHAMN_PATH . 'source/php/');
 $loader->register();
 
 if(defined('CUSTOM_MODULES_PATH')) {
-    foreach (glob(CUSTOM_MODULES_PATH . "/*/*.php") as $module) {
-        include $module;
+    foreach (glob(CUSTOM_MODULES_PATH . "*") as $module) {
+        modularity_register_module(
+            $module,
+            basename($module)
+        );
     }
 }
-
 new Simrishamn\App();
