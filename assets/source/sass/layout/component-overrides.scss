@@ -1,41 +1,6 @@
-/* === Action Cards === */
-// todo: move this into the actual module
-// todo: make it follow the style-guide
-.box-action {
-    margin-bottom: 45px;
-    border: none;
-
-    .box-action-title {
-	color: #fff;
-	font-family: "sans serif";
-	font-weight: 500;
-	font-size: 18px;
-    }
-
-    .fa {
-	padding: 5px 0 5px 0;
-	font-size: 50px;
-	color: $simrishamn-blue;
-    }
-
-    .box-content {
-	background-color: $simrishamn-light-blue !important;
-	text-align: center;
-	padding: 5px;
-    }
-}
-
 /* === Mest Besokta === */
 // fixme: temporary selector. Supposed to be its own module later
 div.modularity-mod-inlaylist:nth-child(2) {
-    h4 {
-	background-color: $simrishamn-blue;
-	padding: 15px;
-	font-family: "sans serif";
-	font-weight: normal;
-	font-size: 21px;
-    }
-
     .title:before {
 	font-family: FontAwesome;
 	content: "\f061";
@@ -44,7 +9,7 @@ div.modularity-mod-inlaylist:nth-child(2) {
     }
 
     li {
-	margin: 3px 0;
+	margin: $box-margin 0;
 	background-color: #EFEFEF;
 	a .title {
 	    color: black !important;
@@ -52,16 +17,8 @@ div.modularity-mod-inlaylist:nth-child(2) {
     }
 }
 
-.grid-xs-12 {
-    .box-title {
-	padding: 15px;
-	width: 100%;
-	background-color: #0069b3;
-	color: white;
-	font-family: "sans serif";
-	font-weight: normal;
-	font-size: 21px;
-    }
+.box {
+    box-shadow: none !important;
 }
 
 .box-panel > ul:not(.accordion) {
@@ -70,4 +27,22 @@ div.modularity-mod-inlaylist:nth-child(2) {
 
 .box-panel {
     border: none;
+}
+
+.box-title {
+    padding: 15px;
+    width: 100%;
+    background-color: $simrishamn-blue;
+    color: white;
+    font-family: "sans serif";
+    font-weight: normal;
+    font-size: 21px;
+}
+
+.box-content {
+    font-size: 12px;
+    line-height: 17px;
+    font-family: "open sans";
+    margin: $box-margin 0;
+    padding: 15px 5px 15px 5px;
 }
