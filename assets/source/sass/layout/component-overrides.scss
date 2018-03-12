@@ -34,15 +34,17 @@ div.modularity-mod-inlaylist:nth-child(2) {
     width: 100%;
     background-color: $simrishamn-blue;
     color: white;
-    font-family: "sans serif";
-    font-weight: normal;
+    font-weight: 500;
     font-size: 21px;
 }
 
 .box-content {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 17px;
-    font-family: "open sans";
     margin: $box-margin 0;
     padding: 15px 5px 15px 5px;
+
+    .title {
+	color: black;
+    }
 }
