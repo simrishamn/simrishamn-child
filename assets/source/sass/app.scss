@@ -3,6 +3,7 @@
 @import 'config/theme';
 
 .is-child-theme {
+    @import 'component/stripe/stripe';
     @import 'component/wordpress/widget-search';
     @import 'layout/header';
     @import 'layout/component-overrides';
