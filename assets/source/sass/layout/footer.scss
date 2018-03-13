@@ -1,0 +1,22 @@
+.main-footer {
+    margin-top: 0px !important;
+}
+
+div .widget_media_image {
+    padding-bottom: 0;
+    margin-bottom: -8px;
+}
+
+.color-bars {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin-top: 0px;
+    height: 8px;
+
+    div {
+	-webkit-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	width: 25%;
+    }
+}

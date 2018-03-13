@@ -25,3 +25,12 @@ html.video-is-playing {
 html.translated-ltr #site-header {
     top: 39px;
 }
+
+.clear-below {
+    padding-bottom: 0 !important;
+
+    div {
+	margin-bottom: 0 !important;
+	box-shadow: none !important;
+    }
+}
