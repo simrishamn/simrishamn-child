@@ -18,7 +18,14 @@ div.modularity-mod-inlaylist:nth-child(2) {
 }
 
 .box {
-    box-shadow: none !important;
+
+    a, .link {
+	text-decoration: none !important;
+    }
+
+    a:hover, a:focus, .link:hover, .link:focus {
+	text-decoration: none !important;
+    }
 }
 
 .box-panel > ul:not(.accordion) {
@@ -40,11 +47,33 @@ div.modularity-mod-inlaylist:nth-child(2) {
 
 .box-content {
     font-size: 14px;
+    font-weight: 500;
     line-height: 17px;
     margin: $box-margin 0;
-    padding: 15px 5px 15px 5px;
+    padding: 10px 10px 15px 10px;
 
     .title {
 	color: black;
+	font-size: 17px;
+    }
+
+    p {
+	margin-top: 10px;
+    }
+}
+
+.inlay-index {
+    box-shadow: none !important;
+
+    .box-content {
+	display: flex;
+	padding-right: 5px;
+    }
+
+    .material-icons {
+	margin: auto;
+	padding-right: 5px;
+	color: grey;
+	font-size: 32px;
     }
 }
