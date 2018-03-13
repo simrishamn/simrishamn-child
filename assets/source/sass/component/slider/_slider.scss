@@ -1,0 +1,28 @@
+.slider .text-block {
+    width: 30em;
+    max-width: 100%;
+
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: 0;
+
+    &, &.text-block-center {
+        background-image: none;
+        background-color: rgba($simrishamn-blue, 0.4) !important;
+    }
+
+    &:not(.text-block-center) span {
+        display: inline-block;
+        margin-top: 50%;
+        transform: translateY(-50%);
+    }
+
+    span {
+        .title {
+            font-size: 16pt;
+        }
+
+        font-size: 36pt;
+    }
+}
