@@ -3,16 +3,17 @@
 .box-action {
     margin-bottom: 45px;
     border: none;
+    box-shadow: none !important;
 
     .box-action-title {
 	color: #fff;
-	font-weight: 500;
-	font-size: 17px;
+	font-weight: 600;
+	font-size: 16px;
     }
 
     .fa {
-	padding: 5px 0 5px 0;
-	font-size: 50px;
+	padding: 10px 0 5px 0;
+	font-size: 46px;
 	color: $simrishamn-blue;
     }
 
@@ -25,8 +26,22 @@
 
 /* === Inlay Index === */
 .modularity-mod-inlay-index {
+    font-weight: 500;
+    box-shadow: none !important;
+
     .title {
-	font-weight: 500;
 	font-size: 17px;
+    }
+
+    .box-content {
+	display: flex;
+	padding-right: 5px;
+    }
+
+    .material-icons {
+	margin: auto;
+	padding-right: 5px;
+	color: grey;
+	font-size: 32px;
     }
 }
