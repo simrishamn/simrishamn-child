@@ -1,5 +1,3 @@
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
 <div class="{{ $classes }} inlay-index">
   <h4 class="box-title" style="background-color: {{ $title_color }};">
     {!! apply_filters('the_title', $post_title) !!} </h4>
@@ -13,7 +11,6 @@
 	    </span>
 	    <p style="color: black;">{{ $item->post_content }}</p>
 	  </div>
-	  <i class="material-icons">arrow_forward</i>
 	</div>
       </a>
     @endforeach
