@@ -15,9 +15,11 @@
 
 .box-panel {
     border: none;
+    font-family: 'Open Sans', serif !important;
 }
 
 .box-title {
+    font-family: 'Open Sans', serif !important;
     padding: 15px;
     width: 100%;
     background-color: $simrishamn-blue;
@@ -27,6 +29,7 @@
 }
 
 .box-content {
+    font-family: 'Open Sans', serif !important;
     font-size: 14px;
     font-weight: 500;
     line-height: 17px;
@@ -39,7 +42,7 @@
     }
 
     p {
-	    margin-top: 10px;
+	margin-top: 10px;
     }
 }
 

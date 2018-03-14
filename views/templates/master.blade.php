@@ -5,6 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
     <title><?php echo apply_filters('Municipio/pageTitle', wp_title('|', false, 'right') . get_bloginfo('name')); ?></title>
 
