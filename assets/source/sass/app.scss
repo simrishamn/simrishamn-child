@@ -3,6 +3,11 @@
 @import 'config/theme';
 
 .is-child-theme {
+    @import 'mixin/form';
+    @import 'component/box/box';
+    @import 'component/box/news';
+    @import 'component/form/general';
+    @import 'component/form/input-group';
     @import 'component/slider/slider';
     @import 'component/stripe/stripe';
     @import 'component/wordpress/widget-search';

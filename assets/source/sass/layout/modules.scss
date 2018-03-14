@@ -1,47 +1,30 @@
-/* === Action Cards === */
-// todo: move this into the actual module
-.box-action {
-    margin-bottom: 45px;
-    border: none;
-    box-shadow: none !important;
-
-    .box-action-title {
-	color: #fff;
-	font-weight: 600;
-	font-size: 16px;
-    }
-
-    .fa {
-	padding: 10px 0 5px 0;
-	font-size: 46px;
-	color: $simrishamn-blue;
-    }
-
-    .box-content {
-	background-color: $simrishamn-light-blue !important;
-	text-align: center;
-	padding: 5px;
-    }
-}
-
 /* === Inlay Index === */
 .modularity-mod-inlay-index {
     font-weight: 500;
     box-shadow: none !important;
 
     .title {
-	font-size: 17px;
+	    font-size: 17px;
+    }
+
+    a:hover .title {
+        text-decoration: underline !important;
     }
 
     .box-content {
-	display: flex;
-	padding-right: 5px;
-    }
-
-    .material-icons {
-	margin: auto;
-	padding-right: 5px;
-	color: grey;
-	font-size: 32px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-right: 34px;
+        
+        &:after {
+            font-family: FontAwesome;
+            font-size: 24px;
+            content: "\f061";
+            color: #999;
+            position: absolute;
+            right: 6px;
+            top: calc(50% - 10px);
+        }
     }
 }

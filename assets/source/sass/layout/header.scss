@@ -6,7 +6,7 @@
 .c-header--primary {
     // todo: Discuss the maxwidth of this section
     .c-header__row {
-	padding: 5px 0px 10px;
+        padding: 5px 0px 25px;
     }
 }
 
@@ -57,6 +57,7 @@ nav .c-navbar .c-navbar__item.is-current::after {
 
     // Search Form
     [class^="widget_"]:not(.widget_calendar) :not(.main-footer) form {
-	padding: 10px;
+        padding: 10px;
+        height: 35px;
     }
 }

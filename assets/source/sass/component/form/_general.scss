@@ -1,0 +1,39 @@
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select,
+button {
+    //Rounded inputs and buttons
+    border-radius: 50px;
+
+    // Round outline (when input has focus)
+    &:focus {
+        box-shadow: 0 0 2pt 1pt #444;
+        outline: none;
+    }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="search"], input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+    // Inner shadow of inputs
+    /*
+    -webkit-box-shadow: inset 0px 1px 5px #444;
+       -moz-box-shadow: inset 0px 1px 5px #444;
+            box-shadow: inset 0px 1px 5px #444;
+    */
+}
+
+// Black placeholder text color
+@include input-placeholder(#000, 1);
