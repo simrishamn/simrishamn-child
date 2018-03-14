@@ -9,10 +9,10 @@
      The SASS for this is in 'layout/footer.scss'.
 -->
 <section class="color-bars">
-  <div style="background-color: green;"></div>
-  <div style="background-color: orange;"></div>
-  <div style="background-color: blue;"></div>
-  <div style="background-color: red;"></div>
+  <div style="background-color: #44711B;"></div>
+  <div style="background-color: #F2943F;"></div>
+  <div style="background-color: #036AB3;"></div>
+  <div style="background-color: #E20714;"></div>
 </section>
 
 <footer class="main-footer hidden-print {{ get_field('scroll_elevator_enabled', 'option') ? 'scroll-elevator-toggle' : '' }}">
