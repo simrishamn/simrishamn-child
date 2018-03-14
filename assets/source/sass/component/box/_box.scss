@@ -24,7 +24,7 @@
     width: 100%;
     background-color: $simrishamn-blue;
     color: white;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 21px;
 }
 
@@ -70,15 +70,15 @@
     .fa {
         font-size: 56px;
         color: $simrishamn-blue;
-        margin-top: 10px;
+        margin-top: 0px;
     }
 
     .box-action-title {
         color: #fff;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 600;
         padding-bottom: 0;
-        margin-top: 10px;
+        margin-top: 0px;
     }
 }
 
@@ -137,7 +137,7 @@
 	}
     }
     .box-title {
-	background-color: $simrishamn-light-blue;
+	background-color: $simrishamn-medium-blue;
 	color: black;
     }
 }
