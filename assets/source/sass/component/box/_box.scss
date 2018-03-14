@@ -1,0 +1,169 @@
+.box {
+
+    a, .link {
+	    text-decoration: none !important;
+    }
+
+    a:hover, a:focus, .link:hover, .link:focus {
+	    text-decoration: none !important;
+    }
+}
+
+.box-panel > ul:not(.accordion) {
+    border: none;
+}
+
+.box-panel {
+    border: none;
+}
+
+.box-title {
+    padding: 15px;
+    width: 100%;
+    background-color: $simrishamn-blue;
+    color: white;
+    font-weight: 500;
+    font-size: 21px;
+}
+
+.box-content {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    margin: $box-margin 0;
+    padding: 15px 10px;
+
+    .title {
+        color: black;
+        font-size: 17px;
+    }
+
+    p {
+	    margin-top: 10px;
+    }
+}
+
+
+/* === Action Cards === */
+
+.modularity-mod-action-card {
+    margin-bottom: 45px;
+
+    .box-action {
+        margin-bottom: 0;
+    }
+}
+
+.box-action {
+    border: none;
+    box-shadow: none !important;
+    
+    .box-content {
+        background-color: $simrishamn-light-blue !important;
+        text-align: center;
+        padding: 15px 5px;
+    }
+    
+    .fa {
+        font-size: 56px;
+        color: $simrishamn-blue;
+        margin-top: 10px;
+    }
+
+    .box-action-title {
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        padding-bottom: 0;
+        margin-top: 10px;
+    }
+}
+
+
+/* === Mest Besokta med mera === */
+.box-panel {
+
+    li {
+        margin: $box-margin 0;
+        background-color: #EFEFEF;
+
+        a {
+            width: 100%;
+
+            .title {
+                color: black !important;
+                left: 0;
+                
+                &:before {
+                    content: none;
+                }
+                &:after {
+                    font-family: FontAwesome;
+                    content: "\f061";
+                    color: $simrishamn-blue;
+                    vertical-align: 0;
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+/** Anslagstavlan **/
+.modularity-mod-posts-175 {
+    .box-content {
+        background: $simrishamn-light-blue;
+    }
+}
+
+.sidebar-content-area-bottom {
+    .grid {
+        margin-left: 0;
+        margin-right: 0;
+
+        > [class*="grid-"] {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        // The first link box
+        .modularity-mod-inlaylist {
+            .box-title {
+                background: red;
+            }
+            .nav li {
+                background: lightcoral;
+                margin: 0;
+            }
+        }
+
+        // The three read more boxes
+        .grid {
+            > [class*="grid-"] {
+                &:nth-child(1) {
+                    background: lightgreen;
+                    .box-title {
+                        background: green;
+                    }
+                }
+                &:nth-child(2) {
+                    background: lightblue;
+                    .box-title {
+                        background: blue;
+                    }
+                }
+                &:nth-child(3) {
+                    background: lightgrey;
+                    .box-title {
+                        background: grey;
+                    }
+                }
+            }
+        }
+    }
+
+    .box-content {
+        
+    }
+}

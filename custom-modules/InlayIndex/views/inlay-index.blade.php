@@ -13,7 +13,6 @@
 	    </span>
 	    <p style="color: black;">{{ $item->post_content }}</p>
 	  </div>
-	  <i class="material-icons">arrow_forward</i>
 	</div>
       </a>
     @endforeach

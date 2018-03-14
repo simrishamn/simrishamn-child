@@ -6,6 +6,9 @@
     .input-group {
         .form-control {
             //max-width: 350px;
+            -webkit-box-shadow: inset 0px 1px 5px #444;
+            -moz-box-shadow: inset 0px 1px 5px #444;
+            box-shadow: inset 0px 1px 5px #444;
         }
     }
 }

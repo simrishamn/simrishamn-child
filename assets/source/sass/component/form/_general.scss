@@ -28,9 +28,11 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
     // Inner shadow of inputs
+    /*
     -webkit-box-shadow: inset 0px 1px 5px #444;
        -moz-box-shadow: inset 0px 1px 5px #444;
             box-shadow: inset 0px 1px 5px #444;
+    */
 }
 
 // Black placeholder text color
