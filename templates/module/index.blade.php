@@ -12,7 +12,7 @@
 	  <div class="box-content">
             {!! $item['lead'] !!}
 	    <a href="{{ $item['permalink'] }}" class="btn btn-plain">
-	      Las Mer
+	      Läs Mer
 	    </a>
 	  </div>
         </div>
