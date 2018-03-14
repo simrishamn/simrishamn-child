@@ -57,13 +57,13 @@
 .box-action {
     border: none;
     box-shadow: none !important;
-    
+
     .box-content {
         background-color: $simrishamn-light-blue !important;
         text-align: center;
         padding: 15px 5px;
     }
-    
+
     .fa {
         font-size: 56px;
         color: $simrishamn-blue;
@@ -93,7 +93,7 @@
             .title {
                 color: black !important;
                 left: 0;
-                
+
                 &:before {
                     content: none;
                 }
@@ -111,16 +111,18 @@
 }
 
 /** Anslagstavlan **/
-.modularity-mod-posts-175 {
+#Anslagstavlan {
     .box-content {
         background: $simrishamn-light-blue;
     }
 }
 
 .sidebar-content-area-bottom {
+    margin: auto;
     .grid {
         margin-left: 0;
         margin-right: 0;
+	height: 100%;
 
         > [class*="grid-"] {
             padding-left: 0;
@@ -130,40 +132,71 @@
         // The first link box
         .modularity-mod-inlaylist {
             .box-title {
-                background: red;
+                background: $simrishamn-red;
+		border-bottom: 1px solid white;
             }
-            .nav li {
-                background: lightcoral;
-                margin: 0;
+            .nav {
+		padding-bottom: 15px;
+                background: $simrishamn-light-red;
+		li {
+                    margin: 0;
+		    border: none;
+                    background: $simrishamn-light-red;
+		    .title {
+			color: white !important;
+			font-size: 20px;
+			&:after {
+			    content: "";
+			}
+		    }
+		}
             }
         }
 
         // The three read more boxes
         .grid {
             > [class*="grid-"] {
+		.box-content {
+		    text-align: center;
+		    color: white;
+		    p {
+			margin-top: 60px;
+		    }
+		    .btn-plain {
+			background-color: transparent;
+			color: white;
+			border: 1px solid white;
+			padding: 5px 50px 5px 50px;
+			margin-top: 15px;
+		    }
+		}
+		.box-title {
+		    border-bottom: 1px solid white;
+		}
+
                 &:nth-child(1) {
-                    background: lightgreen;
+                    background: $simrishamn-light-green;
                     .box-title {
-                        background: green;
+                        background: $simrishamn-green;
                     }
                 }
                 &:nth-child(2) {
-                    background: lightblue;
+                    background: $simrishamn-light-blue;
                     .box-title {
-                        background: blue;
+                        background: $simrishamn-blue;
                     }
                 }
                 &:nth-child(3) {
                     background: lightgrey;
+		    .box-content {
+			color: black !important;
+		    }
                     .box-title {
                         background: grey;
+			color: black;
                     }
                 }
             }
         }
-    }
-
-    .box-content {
-        
     }
 }
