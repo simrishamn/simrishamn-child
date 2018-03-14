@@ -87,29 +87,59 @@
 
                 {{-- ## Footer widget area begin ## --}}
                 <div class="grid sidebar-footer-area">
-                    @if (is_active_sidebar('footer-area'))
-                        <?php dynamic_sidebar('footer-area'); ?>
-                    @endif
+		  <div class="grid-lg-4">
+		    <div class="contact-box">
+		      <h4>Telefonnummer</h4>
+		      <p>0414-81 90 00</p>
+		    </div>
+
+		    <div class="contact-box">
+		      <h4>E-post</h4>
+		      <p>simrishamns.kommun@simrishamn.se</p>
+		    </div>
+
+		    <div class="contact-box">
+		      <h4>Öppettider</h4>
+		      <p>Måndag-Fredag kl. 08.00-16.30</p>
+		    </div>
+		  </div>
+
+		  <div class="grid-lg-4">
+		    <div class="contact-box">
+		      <h4>Postadress</h4>
+		      <p>Simrishamns kommun, 272 80 Simrishamn</p>
+		    </div>
+
+		    <div class="contact-box">
+		      <h4>Besöksadress</h4>
+		      <p>Stadshuset, Stortorget, Simrishamn</p>
+		    </div>
+
+		    <div class="contact-box">
+		      <h4>Om Webbplatsen</h4>
+		      <p>A-Ö</p>
+		      <p>Webbkarta</p>
+		    </div>
+		  </div>
+		  <div class="grid-lg-4">
+		    <div class="contact-box">
+		      <h4>Länkar</h4>
+		      <p>Turism</p>
+		      <p>Bibliotek</p>
+		      <p>Marincentrum.se</p>
+		      <p>Österlensmuseum.se</p>
+		    </div>
+		  </div>
                 </div>
                 {{-- ## Footer widget area end ## --}}
 
                 {{-- ## Footer header begin ## --}}
-                @if (get_field('footer_logotype_vertical_position', 'option') == 'bottom' && get_field('footer_logotype', 'option') != 'hide')
-                <div class="grid no-margin-top">
-                    <div class="grid-xs-12">
-                        {!! municipio_get_logotype(get_field('footer_logotype', 'option'), false, true, false, false) !!}
-                    </div>
-                </div>
-                @endif
+
                 {{-- ## Footer header end ## --}}
             </div>
 
             {{-- ## Footer signature ## --}}
-            @if (get_field('footer_signature_show', 'option'))
-                <div class="grid-md-2 text-right">
-                    {!! apply_filters('Municipio/footer_signature', '<a href="http://www.helsingborg.se"><img src="' . get_template_directory_uri() . '/assets/dist/images/helsingborg_gray.svg" alt="Helsingborg Stad" class="footer-signature"></a>') !!}
-                </div>
-            @endif
+
         </div>
     </div>
 
