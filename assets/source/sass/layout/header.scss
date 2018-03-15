@@ -21,7 +21,6 @@
 
 /* --- Navbar --- */
 nav .c-navbar .c-navbar__item {
-    max-width: 100px;
     margin-right: 10px;
     height: 45px;
     padding-bottom: 20px;
@@ -32,7 +31,8 @@ nav .c-navbar .c-navbar__item {
 	font-size: 12px;
 	font-weight: 500;
 	line-height: 1.1;
-	color: $simrishamn-blue;
+    color: $simrishamn-blue;
+    word-break: break-word;
     }
 }
 
