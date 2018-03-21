@@ -1,0 +1,31 @@
+.index-content {
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+
+    .box-title {
+	border-bottom: 1px solid white;
+	text-align: left;
+	font-weight: 500;
+	font-size: 20px;
+    }
+
+    p {
+	font-size: 13px;
+	line-height: 1.2;
+	padding-left: 2px;
+	padding-right: 2px;
+    }
+
+    .btn-plain {
+	background-color: transparent;
+	color: white;
+	border: 1px solid white;
+	padding: 5px 50px 5px 50px;
+	margin-top: 30px;
+    }
+    .btn-holder {
+	padding: 8px;
+    }
+}
