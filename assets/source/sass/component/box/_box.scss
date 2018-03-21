@@ -113,35 +113,6 @@
     }
 }
 
-/** Anslagstavlan **/
-#Anslagstavlan {
-    .box-content {
-	text-align: center;
-	color: white;
-	background-color: $simrishamn-extra-light-blue;
-
-	p {
-	    color: black;
-	    padding-bottom: 40px;
-	    margin-top: -5px;
-	    text-align: left;
-	}
-
-	.btn-plain {
-	    background-color: transparent;
-	    color: black;
-	    border: 1px solid black;
-	    padding: 5px 50px 5px 50px;
-	    margin-top: 25px;
-	    margin-bottom: 20px;
-	}
-    }
-    .box-title {
-	background-color: $simrishamn-medium-blue;
-	color: black;
-    }
-}
-
 .creamy {
     border: none;
 }
@@ -169,6 +140,7 @@
                 background: $simrishamn-red;
 		border-bottom: 1px solid white;
 		font-weight: 400;
+		font-size: 20px;
             }
             .nav {
 		padding-bottom: 15px;
@@ -179,59 +151,12 @@
                     background: $simrishamn-light-red;
 		    .title {
 			color: white !important;
-			font-size: 20px;
+			font-size: 20px !important;
 			&:after {
 			    content: "";
 			}
 		    }
 		}
-            }
-        }
-
-        // The three read more boxes
-        .grid {
-            > [class*="grid-"] {
-		.box-content {
-		    text-align: center;
-		    color: white;
-		    p {
-			margin-top: 60px;
-		    }
-		    .btn-plain {
-			background-color: transparent;
-			color: white;
-			border: 1px solid white;
-			padding: 5px 50px 5px 50px;
-			margin-top: 30px;
-		    }
-		}
-		.box-title {
-		    border-bottom: 1px solid white;
-		    font-weight: 500;
-		}
-
-                &:nth-child(1) {
-                    background: $simrishamn-light-green;
-                    .box-title {
-                        background: $simrishamn-green;
-                    }
-                }
-                &:nth-child(2) {
-                    background: $simrishamn-light-blue;
-                    .box-title {
-                        background: $simrishamn-blue;
-                    }
-                }
-                &:nth-child(3) {
-                    background: lightgrey;
-		    .box-content {
-			color: black !important;
-		    }
-                    .box-title {
-                        background: grey;
-			color: black;
-                    }
-                }
             }
         }
     }

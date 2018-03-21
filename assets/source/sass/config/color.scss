@@ -14,3 +14,57 @@ $simrishamn-red: #E20714;
 $simrishamn-light-red: #EE6A72;
 $simrishamn-green: #44711B;
 $simrishamn-light-green: #8FAA76;
+
+
+.title-blue {
+    background-color: #0069b3 !important;
+}
+
+.content-blue {
+    background-color: #85b7da;
+    color: white;
+}
+
+.title-light-blue {
+    background-color: #c8e0f5 !important;
+    color: black !important;
+}
+
+.content-light-blue {
+    background-color: #eff6fc;
+    .btn-holder .btn-plain {
+	color: black !important;
+	border-color: black !important;
+    }
+}
+
+.title-green {
+    background-color: #44711B !important;
+}
+
+.content-green {
+    background-color: #8FAA76;
+    color: white;
+}
+
+.title-red {
+    background-color: #E20714 !important;
+}
+
+.content-red {
+    background-color: #EE6A72;
+    color: white;
+}
+
+.title-gray {
+    background-color: grey !important;
+    color: black !important;
+}
+
+.content-gray {
+    background-color: lightgrey;
+    .btn-holder .btn-plain {
+	color: black !important;
+	border-color: black !important;
+    }
+}
