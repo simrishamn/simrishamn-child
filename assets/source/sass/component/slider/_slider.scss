@@ -12,12 +12,6 @@
         background-color: rgba($simrishamn-blue, 0.4) !important;
     }
 
-    &:not(.text-block-center) span {
-        display: inline-block;
-        margin-top: 50%;
-        transform: translateY(-50%);
-    }
-
     span {
         .title {
             font-size: 16pt;
