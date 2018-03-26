@@ -4,6 +4,7 @@
 
 .is-child-theme {
     @import 'mixin/form';
+    @import 'component/accordion/accordion';
     @import 'component/box/box';
     @import 'component/box/news';
     @import 'component/form/general';

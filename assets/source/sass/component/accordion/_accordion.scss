@@ -1,0 +1,30 @@
+.accordion-toggle {
+    $paddingX: 0px;
+    $paddingY: 30px;
+
+    height: 75px;
+    padding: $paddingX $paddingY;
+    background: $simrishamn-blue;
+    color: $simrishamn-white;
+    font-weight: 800;
+
+    &::before {
+        position: absolute;
+        right: $paddingY;
+        font-family: 'FontAwesome';
+        color: $simrishamn-white;
+        content: '\f067';
+    }
+
+    &.minus::before {
+        content: '\f068';
+    }
+
+    .column-header {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        padding-right: calc(#{$paddingY} * 2 + 2em);
+    }
+}
