@@ -1,3 +1,8 @@
+.accordion-section {
+    border: 0;
+    margin-bottom: 5px;
+}
+
 .accordion-toggle {
     $paddingX: 0px;
     $paddingY: 30px;
@@ -7,6 +12,10 @@
     background: $simrishamn-blue;
     color: $simrishamn-white;
     font-weight: 800;
+
+    z-index: 1;
+    outline: 0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
 
     &::before {
         position: absolute;
