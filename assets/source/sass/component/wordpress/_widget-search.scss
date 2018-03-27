@@ -4,21 +4,22 @@
     }
 
     .input-group {
-	padding-top: 0px;
-	max-width: 300px;
-	min-width: 140px;
+        padding-top: 0px;
+        max-width: 300px;
+        min-width: 140px;
 
-	.btn-lg {
-	    background-color: $simrishamn-blue;
-	    border: none;
-	    padding-right: 20px;
-	    padding-left: 20px;
-	    max-height: 35px;
-	}
+        .btn-lg {
+            background-color: $simrishamn-blue;
+            border: none;
+            padding-right: 20px;
+            padding-left: 20px;
+            max-height: 35px;
+        }
+
         .form-control-lg {
-	    padding: 0;
-	    padding-left: 15px;
-	    max-height: 35px;
+            padding: 0;
+            padding-left: 15px;
+            max-height: 35px;
             -webkit-box-shadow: inset 0px 1px 5px #444;
             -moz-box-shadow: inset 0px 1px 5px #444;
             box-shadow: inset 0px 1px 5px #444;
