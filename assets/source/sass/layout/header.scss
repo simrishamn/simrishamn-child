@@ -26,13 +26,13 @@ nav .c-navbar .c-navbar__item {
     padding-bottom: 20px;
 
     a {
-	padding: 10px 5px 5px 0px;
-	text-align: center;
-	font-size: 12px;
-	font-weight: 500;
-	line-height: 1.1;
-    color: $simrishamn-blue;
-    word-break: break-word;
+        padding: 10px 5px 5px 0px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.1;
+        color: $simrishamn-blue;
+        word-break: break-word;
     }
 }
 
@@ -51,8 +51,8 @@ nav .c-navbar .c-navbar__item.is-current::after {
 .c-header__item.c-header__item--right {
     // Search Widget
     [class^="widget_"]:not(.widget_calendar) {
-	margin-bottom: 0px;
-	margin-top: -5px;
+        margin-bottom: 0px;
+        margin-top: -5px;
     }
 
     // Search Form
@@ -61,7 +61,7 @@ nav .c-navbar .c-navbar__item.is-current::after {
         height: 35px;
     }
     .search {
-	margin-bottom: 15px;
-	font-size: 12px;
+        margin-bottom: 15px;
+        font-size: 12px;
     }
 }

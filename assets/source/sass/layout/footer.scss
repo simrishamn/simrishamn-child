@@ -5,22 +5,24 @@
     .container {
 
     }
+
     .sidebar-footer-area {
-	margin-top: 25px;
+        margin-top: 25px;
 
-	.grid-md-4 {
+        .grid-md-4 {
 
-	}
+        }
 
-	.contact-box {
-	    margin-bottom: 35px;
-	    h4 {
-		font-size: 16px;
-		color: black;
-		font-family: 'Open Sans', serif;
-		padding-bottom: 0;
-	    }
-	}
+        .contact-box {
+            margin-bottom: 35px;
+
+            h4 {
+                    font-size: 16px;
+                    color: black;
+                    font-family: 'Open Sans', serif;
+                    padding-bottom: 0;
+            }
+        }
     }
 }
 
@@ -37,8 +39,8 @@ div .widget_media_image {
     height: 8px;
 
     div {
-	-webkit-flex-wrap: nowrap;
-	flex-wrap: nowrap;
-	width: 25%;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        width: 25%;
     }
 }
