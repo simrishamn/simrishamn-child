@@ -15,7 +15,7 @@ $simrishamn-light-red: #EE6A72;
 $simrishamn-green: #44711B;
 $simrishamn-light-green: #8FAA76;
 $simrishamn-white: #fff;
-
+$simrishamn-gray: #EFEFEF;
 
 .title-blue {
     background-color: #0069b3 !important;
@@ -68,4 +68,12 @@ $simrishamn-white: #fff;
         color: black !important;
         border-color: black !important;
     }
+}
+
+.title-blue-gray {
+    background-color: $simrishamn-blue !important;
+}
+
+.content-blue-gray {
+    background-color: $simrishamn-gray;
 }
