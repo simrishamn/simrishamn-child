@@ -1,20 +1,15 @@
 @if (is_active_sidebar('bottom-sidebar'))
-  <?php dynamic_sidebar('bottom-sidebar'); ?>
+  <div class="sidebar-bottom-fullwidth">
+    <?php dynamic_sidebar('bottom-sidebar'); ?>
+  </div>
 @endif
 
-<!--
-     fixme: i don't know if it's worth putting too much work into this
-     color bar above the footer, but i'm sure it can be done much better.
-
-     The SASS for this is in 'layout/footer.scss'.
--->
 <section class="color-bars">
   <div style="background-color: #44711B;"></div>
   <div style="background-color: #F2943F;"></div>
   <div style="background-color: #036AB3;"></div>
   <div style="background-color: #E20714;"></div>
 </section>
-
 <footer class="main-footer hidden-print {{ get_field('scroll_elevator_enabled', 'option') ? 'scroll-elevator-toggle' : '' }}">
     <div class="container">
 
@@ -50,7 +45,7 @@
         <div class="grid">
           <div class="{{ get_field('footer_signature_show', 'option') ? 'grid-md-10' : 'grid-md-12' }}">
 
-            {{-- ## Footer header befin ## --}}
+            {{-- ## Footer header begin ## --}}
             @if (get_field('footer_logotype_vertical_position', 'option') == 'top' || !get_field('footer_logotype_vertical_position', 'option'))
               <div class="grid">
 		<div class="grid-md-12">

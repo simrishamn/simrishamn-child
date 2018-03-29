@@ -47,7 +47,6 @@
 
 
 /* === Action Cards === */
-
 .modularity-mod-action-card {
     margin-bottom: 45px;
 
@@ -84,7 +83,6 @@
 
 /* === Mest Besokta med mera === */
 .box-panel {
-
     li {
         margin: $box-margin 0;
 
@@ -117,6 +115,14 @@
 
 .sidebar-content-area {
     padding-bottom: 30px;
+}
+
+.sidebar-content-area-bottom .box {
+    margin-bottom: 0px;
+}
+
+.sidebar-bottom-fullwidth .box {
+    margin-bottom: 0px;
 }
 
 .sidebar-content-area-bottom {
