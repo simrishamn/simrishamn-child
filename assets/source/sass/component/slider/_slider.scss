@@ -1,6 +1,9 @@
 .slider .text-block {
     width: 30em;
-    max-width: 100%;
+
+    @media screen and #{$screen-below-md} {
+        width: 100%;
+    }
 
     top: 0;
     right: auto;
@@ -12,11 +15,15 @@
         background-color: rgba($simrishamn-blue, 0.4) !important;
     }
 
-    span {
-        .title {
-            font-size: 16pt;
-        }
+    span .title {
+        font-size: 16pt;
+    }
 
+    span {
         font-size: 36pt;
+
+        @media screen and #{$screen-below-sm} {
+            font-size: 24pt;
+        }
     }
 }
