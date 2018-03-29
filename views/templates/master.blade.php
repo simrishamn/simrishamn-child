@@ -80,7 +80,7 @@
 	  @else
 	      <section class="gutter-xl gutter-vertical sidebar-content-area-bottom">
 	  @endif
-            <div class="grid clear-below">
+            <div class="grid">
 	      <?php dynamic_sidebar('content-area-bottom'); ?>
             </div>
           </section>
