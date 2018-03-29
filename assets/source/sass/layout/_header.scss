@@ -12,12 +12,13 @@
 
 /* --- Logo --- */
 .c-header__logo.t-municipio a {
-    position: relative;
-    padding-top: 100%;
-    max-width: 100%;
-
-    width: 82px;
-    margin-top: -25px;
+    @media screen and #{$screen-md-up} {
+        position: relative;
+        width: 82px;
+        max-width: 100%;
+        margin-top: -25px;
+        padding-top: 100%;
+    }
 }
 
 /* --- Navbar --- */
