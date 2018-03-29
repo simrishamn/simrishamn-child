@@ -26,3 +26,9 @@
         }
     }
 }
+
+header .widget_search {
+    @media screen and #{$screen-below-md} {
+        display: none;
+    }
+}
