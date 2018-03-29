@@ -73,8 +73,13 @@
 
       <main id="main-content" class="clearfix main-content">
         @yield('content')
+
         @if (is_active_sidebar('content-area-bottom'))
-          <section class="gutter-xl gutter-vertical sidebar-content-area-bottom clear-below">
+	  @if(is_front_page())
+	    <section class="gutter-xl gutter-vertical sidebar-content-area-bottom clear-below">
+	  @else
+	      <section class="gutter-xl gutter-vertical sidebar-content-area-bottom">
+	  @endif
             <div class="grid clear-below">
 	      <?php dynamic_sidebar('content-area-bottom'); ?>
             </div>
