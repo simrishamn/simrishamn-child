@@ -128,6 +128,18 @@
 .sidebar-content-area-bottom {
     padding: 0;
     margin: auto;
+
+    > .grid-sm-12:not(:last-child) {
+        margin-bottom: 20px;
+
+        .modularity-mod-inlaylist,
+        .modularity-mod-fileslist {
+            .box-title {
+                color: $base-font-color;
+            }
+        }
+    }
+
     .grid {
         margin-left: 0;
         margin-right: 0;
