@@ -37,3 +37,11 @@
         padding-right: calc(#{$paddingY} * 2 + 2em);
     }
 }
+
+.accordion-search {
+    padding: 8px;
+
+    input:not([type="checkbox"]):not([type="radio"]) {
+        border-radius: 0;
+    }
+}
