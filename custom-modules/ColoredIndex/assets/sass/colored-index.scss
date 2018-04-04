@@ -2,7 +2,8 @@
     justify-content: space-between;
     flex-direction: column;
     display: flex;
-    text-align: center;
+	text-align: center;
+	width: 100%;
 
     .box-title {
 	border-bottom: 1px solid white;
@@ -14,8 +15,7 @@
     p {
 	font-size: 13px;
 	line-height: 1.2;
-	padding-left: 2px;
-	padding-right: 2px;
+	padding: 10px;
     }
 
     .btn-plain {
