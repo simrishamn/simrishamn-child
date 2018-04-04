@@ -1,0 +1,22 @@
+.nav-aside {
+    
+    li {
+        > a {
+            padding: 12px;
+            
+        }
+    }
+
+    // First level nodes
+    > li {
+        &.current-node {
+            > a {
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.nav-aside .sub-menu .current > a::before, .nav-aside .sub-menu .current-menu-item > a::before, .nav-mobile .sub-menu .current > a::before, .nav-mobile .sub-menu .current-menu-item > a::before {
+    background-color: $simrishamn-blue;
+}

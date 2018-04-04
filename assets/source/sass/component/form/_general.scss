@@ -1,7 +1,7 @@
 input:not([type="checkbox"]):not([type="radio"]),
 textarea,
 select,
-button {
+button:not([data-load-submenu]) {
     //Rounded inputs and buttons
     border-radius: 50px;
 
