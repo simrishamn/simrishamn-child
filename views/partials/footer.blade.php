@@ -5,10 +5,10 @@
 @endif
 
 <section class="color-bars">
-  <div style="background-color: #44711B;"></div>
-  <div style="background-color: #F2943F;"></div>
-  <div style="background-color: #036AB3;"></div>
-  <div style="background-color: #E20714;"></div>
+  <div class="color-1"></div>
+  <div class="color-2"></div>
+  <div class="color-3"></div>
+  <div class="color-4"></div>
 </section>
 <footer class="main-footer hidden-print {{ get_field('scroll_elevator_enabled', 'option') ? 'scroll-elevator-toggle' : '' }}">
     <div class="container">

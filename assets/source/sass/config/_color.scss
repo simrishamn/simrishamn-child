@@ -10,6 +10,8 @@ $simrishamn-blue: #0069b3;
 $simrishamn-medium-blue: #C8E0F5;
 $simrishamn-light-blue: #85b7da;
 $simrishamn-extra-light-blue: #EFF6FC;
+$simrishamn-orange: #e56526;
+$simrishamn-light-orange: #FFB273;
 $simrishamn-red: #E20714;
 $simrishamn-light-red: #EE6A72;
 $simrishamn-green: #44711B;
@@ -17,22 +19,27 @@ $simrishamn-light-green: #8FAA76;
 $simrishamn-white: #fff;
 $simrishamn-gray: #EFEFEF;
 
+$simrishamn-colorbar-green: $simrishamn-green;
+$simrishamn-colorbar-orange: $simrishamn-light-orange;
+$simrishamn-colorbar-blue: $simrishamn-blue;
+$simrishamn-colorbar-red: $simrishamn-red;
+
 .title-blue {
-    background-color: #0069b3 !important;
+    background-color: $simrishamn-blue !important;
 }
 
 .content-blue {
-    background-color: #85b7da;
+    background-color: $simrishamn-light-blue;
     color: white;
 }
 
 .title-light-blue {
-    background-color: #c8e0f5 !important;
+    background-color: $simrishamn-medium-blue !important;
     color: black !important;
 }
 
 .content-light-blue {
-    background-color: #eff6fc;
+    background-color: $simrishamn-extra-light-blue;
     .btn-holder .btn-plain {
         color: black !important;
         border-color: black !important;
@@ -40,20 +47,20 @@ $simrishamn-gray: #EFEFEF;
 }
 
 .title-green {
-    background-color: #44711B !important;
+    background-color: $simrishamn-green !important;
 }
 
 .content-green {
-    background-color: #8FAA76;
+    background-color: $simrishamn-light-green;
     color: white;
 }
 
 .title-red {
-    background-color: #E20714 !important;
+    background-color: $simrishamn-red !important;
 }
 
 .content-red {
-    background-color: #EE6A72;
+    background-color: $simrishamn-light-red;
     color: white;
 }
 
