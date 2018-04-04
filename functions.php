@@ -27,4 +27,13 @@ if (function_exists('modularity_register_module') && defined('CUSTOM_MODULES_PAT
     );
   }
 }
+
+add_action('admin_bar_menu', 'customize_admin_bar', 999);
+function customize_admin_bar($wp_admin_bar) {
+    if(!current_user_can('administrator')) {
+        $wp_admin_bar->remove_menu('customize');
+        $wp_admin_bar->remove_menu('comments');
+    }
+}
+
 new Simrishamn\App();
