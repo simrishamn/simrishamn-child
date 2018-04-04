@@ -25,7 +25,7 @@ class InlayIndex extends \Modularity\Module
             'post_type'		=> get_field('post_types', $this->ID)
         );
 
-        $data['items'] = get_posts( $args );
+        $data['items'] = get_posts($args);
         $data['title_color'] = get_field('title_color', $this->ID);
         $data['box_color'] = get_field('excerpt_box_color', $this->ID);
         $data['classes'] = implode(
