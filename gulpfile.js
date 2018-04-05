@@ -5,9 +5,17 @@ var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
 var concat = require('gulp-concat');
 var cssnano = require('gulp-cssnano');
+var gettext = require('gulp-gettext');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
+
+// Compile translations.
+gulp.task('po-dist', function() {
+    return gulp.src('languages/*.po')
+        .pipe(gettext())
+        .pipe(gulp.dest('languages'));
+});
 
 // Compile Our Sass
 gulp.task('sass-dist', function() {
@@ -47,5 +55,5 @@ gulp.task('watch', function() {
 });
 
 // Default Task
-gulp.task('build', ['sass-dist', 'sass-dev', 'scripts-dist']);
+gulp.task('build', ['po-dist', 'sass-dist', 'sass-dev', 'scripts-dist']);
 gulp.task('default', ['build', 'watch']);
