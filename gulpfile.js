@@ -12,32 +12,32 @@ var uglify = require('gulp-uglify');
 // Compile Our Sass
 gulp.task('sass-dist', function() {
     return gulp.src('assets/source/sass/app.scss')
-            .pipe(sass())
-            .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-            .pipe(rename({suffix: '.min'}))
-            .pipe(cssnano({
-                mergeLonghand: false,
-                zindex: false
-            }))
-            .pipe(gulp.dest('assets/dist/css'));
+        .pipe(sass())
+        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(cssnano({
+            mergeLonghand: false,
+            zindex: false
+        }))
+        .pipe(gulp.dest('assets/dist/css'));
 });
 
 gulp.task('sass-dev', function() {
     return gulp.src('assets/source/sass/app.scss')
-            .pipe(sass())
-            .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-            .pipe(rename({suffix: '.dev'}))
-            .pipe(gulp.dest('assets/dist/css'));
+        .pipe(sass())
+        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+        .pipe(rename({suffix: '.dev'}))
+        .pipe(gulp.dest('assets/dist/css'));
 });
 
 // Concatenate & Minify JS
 gulp.task('scripts-dist', function() {
     return gulp.src('assets/source/js/*.js')
-            .pipe(concat('app.js'))
-            .pipe(gulp.dest('assets/dist/js'))
-            .pipe(rename('app.min.js'))
-            .pipe(uglify())
-            .pipe(gulp.dest('assets/dist/js'));
+        .pipe(concat('app.js'))
+        .pipe(gulp.dest('assets/dist/js'))
+        .pipe(rename('app.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('assets/dist/js'));
 });
 
 // Watch Files For Changes
