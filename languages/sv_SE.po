@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: simrishamn\n"
-"POT-Creation-Date: 2018-04-05 11:34+0200\n"
-"PO-Revision-Date: 2018-04-05 11:34+0200\n"
+"POT-Creation-Date: 2018-04-05 15:51+0200\n"
+"PO-Revision-Date: 2018-04-05 15:52+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -68,6 +68,19 @@ msgstr "Länklistor"
 #: custom-modules/LinkList/LinkList.php:15
 msgid "Outputs a list of links, with option to choose color."
 msgstr ""
+
+#: custom-modules/RelatedNews/RelatedNews.php:12
+#: custom-modules/RelatedNews/RelatedNews.php:13
+msgid "Related News"
+msgstr "Relaterade Nyheter"
+
+#: custom-modules/RelatedNews/RelatedNews.php:15
+msgid "Description"
+msgstr ""
+
+#: library/admin-bar.php:41
+msgid "News Article"
+msgstr "Nyhet"
 
 #: templates/module/grid.blade.php:49
 msgid "No posts to show…"

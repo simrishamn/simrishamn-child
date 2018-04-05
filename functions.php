@@ -19,7 +19,7 @@ $loader->addPrefix('Simrishamn', SIMRISHAMN_PATH . 'library');
 $loader->addPrefix('Simrishamn', SIMRISHAMN_PATH . 'source/php/');
 $loader->register();
 
-include_once 'admin-bar.php';
+include_once 'library/admin-bar.php';
 
 if (function_exists('modularity_register_module') && defined('CUSTOM_MODULES_PATH')) {
   foreach (glob(CUSTOM_MODULES_PATH . "*") as $module) {
