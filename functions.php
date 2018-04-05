@@ -42,4 +42,8 @@ function filter_theme_page_templates($templates) {
     return $templates;
 };
 
+add_action('after_setup_theme', function () {
+    load_theme_textdomain('simrishamn', dirname(__FILE__) . '/languages');
+});
+
 new Simrishamn\App();

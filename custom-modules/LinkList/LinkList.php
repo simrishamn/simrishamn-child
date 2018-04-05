@@ -9,11 +9,11 @@ class LinkList extends \Modularity\Module
 
   public function init()
   {
-    $this->nameSingular = __("Link List", 'modularity');
-    $this->namePlural  = __("Link Lists", 'modularity');
+    $this->nameSingular = __("Link List", 'simrishamn');
+    $this->namePlural  = __("Link Lists", 'simrishamn');
     $this->description  = __(
       "Outputs a list of links, with option to choose color.",
-      'modularity'
+      'simrishamn'
     );
   }
 

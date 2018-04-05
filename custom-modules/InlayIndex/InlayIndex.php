@@ -9,11 +9,11 @@ class InlayIndex extends \Modularity\Module
 
     public function init()
     {
-        $this->nameSingular = __("Inlay Index", 'modularity');
-        $this->namePlural  = __("Inlay Indices", 'modularity');
+        $this->nameSingular = __("Inlay Index", 'simrishamn');
+        $this->namePlural  = __("Inlay Indices", 'simrishamn');
         $this->description  = __(
             "Outputs 2-4 of the latest posts from the selected post-type.",
-            'modularity'
+            'simrishamn'
         );
     }
 

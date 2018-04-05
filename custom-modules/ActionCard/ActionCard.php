@@ -10,11 +10,11 @@ class ActionCard extends \Modularity\Module
 
     public function init()
     {
-        $this->nameSingular = __('ActionCard', 'modularity');
-        $this->namePlural = __('ActionCards', 'modularity');
+        $this->nameSingular = __('ActionCard', 'simrishamn');
+        $this->namePlural = __('ActionCards', 'simrishamn');
         $this->description = __(
             'Index-like cards with configurable FontAwesome icons and no excerpt.',
-            'modularity'
+            'simrishamn'
         );
 
         add_filter(
