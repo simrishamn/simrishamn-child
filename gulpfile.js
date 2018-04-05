@@ -2,12 +2,12 @@
 var gulp = require('gulp');
 
 // Include Our Plugins
-var sass 			= require('gulp-sass');
-var concat 			= require('gulp-concat');
-var uglify 			= require('gulp-uglify');
-var cssnano 		= require('gulp-cssnano');
-var rename 			= require('gulp-rename');
-var autoprefixer 	= require('gulp-autoprefixer');
+var autoprefixer = require('gulp-autoprefixer');
+var concat = require('gulp-concat');
+var cssnano = require('gulp-cssnano');
+var rename = require('gulp-rename');
+var sass = require('gulp-sass');
+var uglify = require('gulp-uglify');
 
 // Compile Our Sass
 gulp.task('sass-dist', function() {
