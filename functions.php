@@ -19,6 +19,8 @@ $loader->addPrefix('Simrishamn', SIMRISHAMN_PATH . 'library');
 $loader->addPrefix('Simrishamn', SIMRISHAMN_PATH . 'source/php/');
 $loader->register();
 
+include_once 'admin-bar.php';
+
 if (function_exists('modularity_register_module') && defined('CUSTOM_MODULES_PATH')) {
   foreach (glob(CUSTOM_MODULES_PATH . "*") as $module) {
     modularity_register_module(
@@ -26,14 +28,6 @@ if (function_exists('modularity_register_module') && defined('CUSTOM_MODULES_PAT
       basename($module)
     );
   }
-}
-
-add_action('admin_bar_menu', 'customize_admin_bar', 999);
-function customize_admin_bar($wp_admin_bar) {
-    if(!current_user_can('administrator')) {
-        $wp_admin_bar->remove_menu('customize');
-        $wp_admin_bar->remove_menu('comments');
-    }
 }
 
 add_filter( 'theme_page_templates', 'filter_theme_page_templates', 20, 3);
