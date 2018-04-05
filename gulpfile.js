@@ -52,6 +52,7 @@ gulp.task('scripts-dist', function() {
 gulp.task('watch', function() {
     gulp.watch('assets/source/js/**/*.js', ['scripts-dist']);
     gulp.watch('assets/source/sass/**/*.scss', ['sass-dist', 'sass-dev']);
+    gulp.watch('languages/*.po', ['po-dist']);
 });
 
 // Default Task
