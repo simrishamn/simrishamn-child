@@ -36,4 +36,10 @@ function customize_admin_bar($wp_admin_bar) {
     }
 }
 
+add_filter( 'theme_page_templates', 'filter_theme_page_templates', 20, 3);
+function filter_theme_page_templates($templates) {
+    unset($templates['one-page.blade.php']);
+    return $templates;
+};
+
 new Simrishamn\App();
