@@ -18,6 +18,16 @@
     font-family: 'Open Sans', serif !important;
 }
 
+.box-panel-secondary {
+    background-color: $simrishamn-blue;
+    h4 {
+	border-bottom: none;
+    }
+    .box-content {
+	background-color: white;
+    }
+}
+
 .box-title {
     font-family: 'Open Sans', serif !important;
     padding: 15px;
