@@ -65,6 +65,16 @@
     }
 }
 
+.grid-xs-12 {
+    .modularity-mod-action-card {
+	margin-bottom: 0;
+    }
+    .grid-md-12 {
+	padding-left: 15px;
+	padding-right: 15px;
+    }
+}
+
 .box-action {
     border: none;
     box-shadow: none !important;
