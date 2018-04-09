@@ -7,5 +7,6 @@ class App
     {
         new \Simrishamn\Theme\Enqueue();
         new \Simrishamn\Theme\CustomizerFeatures();
+        new \Simrishamn\Theme\Language();
     }
 }
