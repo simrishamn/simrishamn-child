@@ -64,7 +64,7 @@ gulp.task('script', ['script-app', 'script-admin']);
 gulp.task('watch', function() {
     gulp.watch('assets/source/js/**/*.js', ['script']);
     gulp.watch('assets/source/sass/**/*.scss', ['style']);
-    gulp.watch('languages/*.po', ['lang']);
+    gulp.watch('languages/**/*.po', ['lang']);
 });
 
 // Command line tasks.
