@@ -22,33 +22,43 @@ gulp.task('lang', function() {
 });
 
 // Compile application styles.
-gulp.task('style', function() {
-    return gulp.src('assets/source/sass/app.scss')
+function stylePipe(name) {
+    return gulp.src(`assets/source/sass/${name}.scss`)
         .pipe(sass())
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-        .pipe(rename('app.dev.css'))
+        .pipe(rename(`${name}.dev.css`))
         .pipe(gulp.dest('assets/dist/css'))
-        .pipe(rename('app.min.css'))
+        .pipe(rename(`${name}.min.css`))
         .pipe(cssnano({
             mergeLonghand: false,
             zindex: false
         }))
         .pipe(gulp.dest('assets/dist/css'));
-});
+}
+
+// Register style tasks.
+gulp.task('style-app', () => stylePipe('app'));
+gulp.task('style-admin', () => stylePipe('admin'));
+gulp.task('style', ['style-app', 'style-admin']);
 
 // Compile application scripts.
-gulp.task('script', function() {
-    return browserify({entries: 'assets/source/js/app.js'})
+function scriptPipe(name) {
+    return browserify({entries: `assets/source/js/${name}.js`})
         .transform(babelify, {presets: ['env']})
         .bundle()
-        .pipe(source('app.js'))
+        .pipe(source(`${name}.js`))
         .pipe(buffer())
-        .pipe(rename('app.dev.js'))
+        .pipe(rename(`${name}.dev.js`))
         .pipe(gulp.dest('assets/dist/js'))
-        .pipe(rename('app.min.js'))
+        .pipe(rename(`${name}.min.js`))
         .pipe(uglify())
         .pipe(gulp.dest('assets/dist/js'));
-});
+}
+
+// Register script tasks.
+gulp.task('script-app', () => scriptPipe('app'));
+gulp.task('script-admin', () => scriptPipe('admin'));
+gulp.task('script', ['script-app', 'script-admin']);
 
 // File change watches.
 gulp.task('watch', function() {
