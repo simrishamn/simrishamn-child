@@ -1,9 +1,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: maxgalleria-media-library\n"
-"POT-Creation-Date: 2018-03-28 09:18-0400\n"
-"PO-Revision-Date: 2018-04-09 11:52+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-09 14:21+0200\n"
+"PO-Revision-Date: 2018-04-09 14:21+0200\n"
+"Last-Translator: \n"
 "Language-Team: Swedish\n"
+"Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,10 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e\n"
-"Last-Translator: \n"
-"Language: sv_SE\n"
 "X-Poedit-SearchPath-0: ..\n"
-"Report-Msgid-Bugs-To: "
 
 #: ../EDD_SL_Plugin_Updater.php:189
 #, php-format
@@ -47,16 +47,16 @@ msgstr ""
 msgid "Media Library Folders Pro"
 msgstr ""
 
-#: ../includes/media_library.php:92 ../maxgalleria-media-library.php:602
-#: ../maxgalleria-media-library.php:5181 ../maxgalleria-media-library.php:5482
-#: ../maxgalleria-media-library.php:5683
+#: ../includes/media_library.php:92 ../includes/mlf_support.php:19
+#: ../maxgalleria-media-library.php:602 ../maxgalleria-media-library.php:5181
+#: ../maxgalleria-media-library.php:5482
 msgid "Makers of"
 msgstr ""
 
-#: ../includes/media_library.php:92 ../maxgalleria-media-library.php:602
-#: ../maxgalleria-media-library.php:4622 ../maxgalleria-media-library.php:4623
-#: ../maxgalleria-media-library.php:5181 ../maxgalleria-media-library.php:5482
-#: ../maxgalleria-media-library.php:5683
+#: ../includes/media_library.php:92 ../includes/mlf_support.php:19
+#: ../maxgalleria-media-library.php:602 ../maxgalleria-media-library.php:4622
+#: ../maxgalleria-media-library.php:4623 ../maxgalleria-media-library.php:5181
+#: ../maxgalleria-media-library.php:5482
 msgid "and"
 msgstr ""
 
@@ -418,6 +418,200 @@ msgstr ""
 msgid "NextGen Galleries: "
 msgstr ""
 
+#: ../includes/mlf_support.php:14 ../maxgalleria-media-library.php:1278
+msgid "Support"
+msgstr ""
+
+#: ../includes/mlf_support.php:20 ../maxgalleria-media-library.php:603
+#: ../maxgalleria-media-library.php:5182 ../maxgalleria-media-library.php:5483
+msgid "Click here to"
+msgstr ""
+
+#: ../includes/mlf_support.php:20 ../maxgalleria-media-library.php:603
+#: ../maxgalleria-media-library.php:5182 ../maxgalleria-media-library.php:5483
+msgid "Fix Common Problems"
+msgstr ""
+
+#: ../includes/mlf_support.php:21 ../maxgalleria-media-library.php:604
+#: ../maxgalleria-media-library.php:5183 ../maxgalleria-media-library.php:5484
+msgid "Need help? Click here for"
+msgstr ""
+
+#: ../includes/mlf_support.php:21 ../maxgalleria-media-library.php:604
+#: ../maxgalleria-media-library.php:5183 ../maxgalleria-media-library.php:5484
+msgid "Awesome Support!"
+msgstr ""
+
+#: ../includes/mlf_support.php:22 ../maxgalleria-media-library.php:605
+#: ../maxgalleria-media-library.php:5184 ../maxgalleria-media-library.php:5485
+msgid "Or Email Us at"
+msgstr ""
+
+#: ../includes/mlf_support.php:30
+msgid "Troubleshooting Tips"
+msgstr ""
+
+#: ../includes/mlf_support.php:31
+msgid "Troubleshooting Articles"
+msgstr ""
+
+#: ../includes/mlf_support.php:32
+msgid "System Information</a>"
+msgstr ""
+
+#: ../includes/mlf_support.php:38
+msgid "Activating Media Library Folders Pro causes a Fatal Error"
+msgstr ""
+
+#: ../includes/mlf_support.php:40
+msgid ""
+"This happens because the free version of Media Library Folders is running on "
+"the site. First deactivate Media Library Folders and then activate Media "
+"Library Folders Pro. With the Pro version installed, you no longer need the "
+"free version. It can be deleted from the site."
+msgstr ""
+
+#: ../includes/mlf_support.php:42
+msgid "Folder Tree Not Loading"
+msgstr ""
+
+#: ../includes/mlf_support.php:44
+msgid ""
+"Users who report this issue can usually fix it by running the Media Library "
+"Folders Reset plugin that comes with Media Library Folders."
+msgstr ""
+
+#: ../includes/mlf_support.php:47
+msgid ""
+"First make sure you have installed the latest version of Media Library "
+"Folders."
+msgstr ""
+
+#: ../includes/mlf_support.php:48
+msgid ""
+"Deactivate Media Library Folders and activate Media Library Folders Reset "
+"and run the Reset Database option from the Media Library Folders Reset sub "
+"menu in the dashboard."
+msgstr ""
+
+#: ../includes/mlf_support.php:49
+msgid ""
+"After that, reactivate Media Library Folders. It will do a fresh scan of "
+"your media library database and no changes will be made to the files or "
+"folders on your site."
+msgstr ""
+
+#: ../includes/mlf_support.php:52
+msgid "How to Unhide a Hidden Folder"
+msgstr ""
+
+#: ../includes/mlf_support.php:55
+msgid ""
+"Go to the hidden folder via your cPanel or FTP and remove the file ‘mlpp-"
+"hidden’."
+msgstr ""
+
+#: ../includes/mlf_support.php:56
+msgid ""
+"In the Media Library Folders Menu, click the Check for New folders link. "
+"This will add the folder back into Media Library Folders"
+msgstr ""
+
+#: ../includes/mlf_support.php:57
+msgid ""
+"Visit the unhidden folder in Media Library Folders and click the Sync button "
+"to add contents of the folder. Before doing this, check to see that there "
+"are no thumbnail images in the current folder since these will be "
+"regenerated automatically; these usually have file names such as image-"
+"name-150×150.jpg, etc."
+msgstr ""
+
+#: ../includes/mlf_support.php:58
+msgid "Repeat step 3 for each sub folder."
+msgstr ""
+
+#: ../includes/mlf_support.php:61
+msgid "Activation Error After Update"
+msgstr ""
+
+#: ../includes/mlf_support.php:63
+msgid ""
+"This issue is usually accompanied with a messaged that the plugin file is "
+"empty."
+msgstr ""
+
+#: ../includes/mlf_support.php:65
+msgid "The solution would be to manually install the update:"
+msgstr ""
+
+#: ../includes/mlf_support.php:68
+msgid ""
+"Delete your current version of Media Library Folders Pro. This does not "
+"affect the files or the media library on your site."
+msgstr ""
+
+#: ../includes/mlf_support.php:69
+msgid ""
+"Download the new version of Media Library Folders Pro from your account page "
+"at MaxGalleria.com."
+msgstr ""
+
+#: ../includes/mlf_support.php:70
+msgid ""
+"Upload the plugin from your site’s Plugins->Add New page. Click the Upload "
+"Plugin button at the top of the page. Select the Zip file you downloaded."
+msgstr ""
+
+#: ../includes/mlf_support.php:71
+msgid "Activate the uploaded plugin."
+msgstr ""
+
+#: ../includes/mlf_support.php:74
+msgid ""
+"Folders and images added to the site by FTP are not showing up in Media "
+"Library Folders"
+msgstr ""
+
+#: ../includes/mlf_support.php:76
+msgid ""
+"Media Library Folders does not work like the file manager on you computer. "
+"It only display images and folders that have been added to the Media Library "
+"database. To display new folders that have not been added through the Media "
+"Library Folders you can click the Check for new folders option in the Media "
+"Library Folders submenu in the WordPress Dashboard. If you allow WordPress "
+"to store images by year and month folders, then you should click the option "
+"once each month to add these auto-generated folders."
+msgstr ""
+
+#: ../includes/mlf_support.php:78
+msgid ""
+"To add images that were upload to the site via the cPanel or by FTP, "
+"navigate to the folder containing the images in Media Library Folders and "
+"click the Sync button. This will scan the folder looking images not "
+"currently found in the Media Library for that folder. The Sync function only "
+"scans the current folder. If there are subfolders, you will need to "
+"individually sync them."
+msgstr ""
+
+#: ../includes/mlf_support.php:80
+msgid "Unable to Update Media Library Folders Reset"
+msgstr ""
+
+#: ../includes/mlf_support.php:82
+msgid ""
+"Media Library Folders Reset is maintenance and diagnostic plugin that is "
+"included with Media Library Folders. It automatically updates when Media "
+"Library Folders is updated. There is no need to updated it separately. Users "
+"should leave the reset plugin deactivated until it is needed in order to "
+"avoid accidentally deleting your site’s folder data."
+msgstr ""
+
+#: ../includes/mlf_support.php:102
+msgid ""
+"You may be asked to provide the information below to help troubleshoot your "
+"issue."
+msgstr ""
+
 #: ../includes/mlfp-categories.php:6
 msgid "Media Categories"
 msgstr ""
@@ -509,31 +703,6 @@ msgid ""
 "Arrow."
 msgstr ""
 
-#: ../maxgalleria-media-library.php:603 ../maxgalleria-media-library.php:5182
-#: ../maxgalleria-media-library.php:5483 ../maxgalleria-media-library.php:5684
-msgid "Click here to"
-msgstr ""
-
-#: ../maxgalleria-media-library.php:603 ../maxgalleria-media-library.php:5182
-#: ../maxgalleria-media-library.php:5483 ../maxgalleria-media-library.php:5684
-msgid "Fix Common Problems"
-msgstr ""
-
-#: ../maxgalleria-media-library.php:604 ../maxgalleria-media-library.php:5183
-#: ../maxgalleria-media-library.php:5484 ../maxgalleria-media-library.php:5685
-msgid "Need help? Click here for"
-msgstr ""
-
-#: ../maxgalleria-media-library.php:604 ../maxgalleria-media-library.php:5183
-#: ../maxgalleria-media-library.php:5484 ../maxgalleria-media-library.php:5685
-msgid "Awesome Support!"
-msgstr ""
-
-#: ../maxgalleria-media-library.php:605 ../maxgalleria-media-library.php:5184
-#: ../maxgalleria-media-library.php:5485 ../maxgalleria-media-library.php:5686
-msgid "Or Email Us at"
-msgstr ""
-
 #: ../maxgalleria-media-library.php:637
 msgid ""
 "Please deactivate Media Library Folders. It should not running when Media "
@@ -562,12 +731,12 @@ msgstr ""
 #: ../maxgalleria-media-library.php:4536 ../maxgalleria-media-library.php:4756
 #: ../maxgalleria-media-library.php:4773 ../maxgalleria-media-library.php:4825
 #: ../maxgalleria-media-library.php:4930 ../maxgalleria-media-library.php:5074
-#: ../maxgalleria-media-library.php:5552 ../maxgalleria-media-library.php:5794
-#: ../maxgalleria-media-library.php:6287 ../maxgalleria-media-library.php:6314
-#: ../maxgalleria-media-library.php:6350 ../maxgalleria-media-library.php:6487
-#: ../maxgalleria-media-library.php:6514 ../maxgalleria-media-library.php:6636
-#: ../maxgalleria-media-library.php:6775 ../maxgalleria-media-library.php:6787
-#: ../maxgalleria-media-library.php:6829 ../maxgalleria-media-library.php:6884
+#: ../maxgalleria-media-library.php:5552 ../maxgalleria-media-library.php:5704
+#: ../maxgalleria-media-library.php:6197 ../maxgalleria-media-library.php:6224
+#: ../maxgalleria-media-library.php:6260 ../maxgalleria-media-library.php:6397
+#: ../maxgalleria-media-library.php:6424 ../maxgalleria-media-library.php:6546
+#: ../maxgalleria-media-library.php:6685 ../maxgalleria-media-library.php:6697
+#: ../maxgalleria-media-library.php:6739 ../maxgalleria-media-library.php:6794
 msgid "missing nonce!"
 msgstr ""
 
@@ -581,10 +750,6 @@ msgstr ""
 
 #: ../maxgalleria-media-library.php:1277 ../maxgalleria-media-library.php:5477
 msgid "Image SEO"
-msgstr ""
-
-#: ../maxgalleria-media-library.php:1278
-msgid "Support"
 msgstr ""
 
 #: ../maxgalleria-media-library.php:1279 ../maxgalleria-media-library.php:5513
@@ -604,7 +769,7 @@ msgid "Or you can turn on pagination in Settings."
 msgstr ""
 
 #: ../maxgalleria-media-library.php:2239 ../maxgalleria-media-library.php:4713
-#: ../maxgalleria-media-library.php:6474 ../maxgalleria-media-library.php:6621
+#: ../maxgalleria-media-library.php:6384 ../maxgalleria-media-library.php:6531
 msgid "No files were found."
 msgstr ""
 
@@ -1015,40 +1180,30 @@ msgstr ""
 msgid "The Image SEO setting have been updated "
 msgstr ""
 
-#: ../maxgalleria-media-library.php:5678
-msgid "Support - System Information"
-msgstr ""
-
-#: ../maxgalleria-media-library.php:5692
-msgid ""
-"You may be asked to provide the information below to help troubleshoot your "
-"issue."
-msgstr ""
-
-#: ../maxgalleria-media-library.php:5828
+#: ../maxgalleria-media-library.php:5738
 msgid "The selected folder, subfolders and thier files have been hidden."
 msgstr ""
 
-#: ../maxgalleria-media-library.php:6183
+#: ../maxgalleria-media-library.php:6093
 msgid ""
 "Click on the image you want to select. After its data is loaded you can "
 "click the \"Insert\" button at the bottom of this window."
 msgstr ""
 
-#: ../maxgalleria-media-library.php:6223
+#: ../maxgalleria-media-library.php:6133
 msgid ""
 "Click on the file you want to select. After its data is loaded you can click "
 "the \"Insert\" button at the bottom of this window."
 msgstr ""
 
-#: ../maxgalleria-media-library.php:6339
+#: ../maxgalleria-media-library.php:6249
 msgid "The media categories were updated."
 msgstr ""
 
-#: ../maxgalleria-media-library.php:6484
+#: ../maxgalleria-media-library.php:6394
 msgid "The category was not added."
 msgstr ""
 
-#: ../maxgalleria-media-library.php:6819
+#: ../maxgalleria-media-library.php:6729
 msgid "The settings were updated."
 msgstr ""
