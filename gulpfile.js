@@ -16,7 +16,7 @@ var uglify = require('gulp-uglify');
 
 // Compile translations.
 gulp.task('lang', function() {
-    return gulp.src('languages/*.po')
+    return gulp.src('languages/**/*.po')
         .pipe(gettext())
         .pipe(gulp.dest('languages'));
 });

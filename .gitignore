@@ -1,4 +1,4 @@
 .projectile
 node_modules
 assets/dist
-languages/*.mo
+*.mo

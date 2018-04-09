@@ -37,7 +37,10 @@ function filter_theme_page_templates($templates) {
 };
 
 add_action('after_setup_theme', function () {
-    load_theme_textdomain('simrishamn', dirname(__FILE__) . '/languages');
+    $languages = dirname(__file__) . '/languages';
+
+    load_theme_textdomain('simrishamn', "$languages/simrishamn");
+    load_theme_textdomain('maxgalleria-media-library', "$languages/media-library");
 });
 
 new Simrishamn\App();
