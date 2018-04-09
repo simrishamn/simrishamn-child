@@ -1,0 +1,16 @@
+/* Media Library Plus */
+// Upload Folders
+#ft-panel {
+    top: 250px;
+}
+
+
+// Default Media Menu Items
+.media-menu> :first-child,
+.media-menu> a:nth-child(2),
+.media-menu> a:nth-child(3),
+.media-menu> a:nth-child(4),
+.media-menu> a:nth-child(5),
+.media-menu > .separator {
+    display: none;
+}
