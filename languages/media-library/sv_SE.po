@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: maxgalleria-media-library\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-04-09 14:21+0200\n"
-"PO-Revision-Date: 2018-04-09 14:21+0200\n"
+"POT-Creation-Date: 2018-04-09 14:27+0200\n"
+"PO-Revision-Date: 2018-04-10 10:53+0200\n"
 "Last-Translator: \n"
 "Language-Team: Swedish\n"
 "Language: sv_SE\n"
@@ -36,7 +36,7 @@ msgstr ""
 
 #: ../EDD_SL_Plugin_Updater.php:340
 msgid "Error"
-msgstr ""
+msgstr "Fel"
 
 #: ../includes/max_sync_contents.php:16
 msgid "missing nonce! Please refresh the page."
@@ -71,25 +71,27 @@ msgstr ""
 #: ../includes/media_library.php:134 ../maxgalleria-media-library.php:1401
 #: ../maxgalleria-media-library.php:4241 ../maxgalleria-media-library.php:4650
 msgid "Location:"
-msgstr ""
+msgstr "Nuvarande plats:"
 
 #: ../includes/media_library.php:149
 msgid "Upload new files."
-msgstr ""
+msgstr "Ladda upp nya filer."
 
 #: ../includes/media_library.php:149
 msgid "Add File"
-msgstr ""
+msgstr "Lägg till fil"
 
 #: ../includes/media_library.php:151
 msgid ""
 "Create a new folder. Type in a folder name (do not use spaces, single or "
 "double quote marks) and click Create Folder."
 msgstr ""
+"Skapa ny mapp. Ange det namn du vill att mappen ska ha (undvik mellanslag "
+"samt enkla-, eller dubbla citationstecken) och klicka på Skapa mapp."
 
 #: ../includes/media_library.php:151
 msgid "Add Folder"
-msgstr ""
+msgstr "Lägg till mapp"
 
 #: ../includes/media_library.php:164
 msgid ""
@@ -132,6 +134,10 @@ msgid ""
 "class='mlp-warning'>Images IDs used in Jetpack Gallery shortcodes will not "
 "be updated.</span>"
 msgstr ""
+"Flytta/kopiera markerat. Flytta eller kopiera markerade filer till en annan "
+"mapp. När Flytta är valt uppdateras även bildernas länkar på de ställen där "
+"bilderna används. <span class='mlp-warning'>OBS! Bild ID:n som används i "
+"Jetpack Galleri uppdateras dock inte.</span>"
 
 #: ../includes/media_library.php:191
 msgid "Inserts an image file into a post or page."
@@ -154,60 +160,64 @@ msgid ""
 "Rename a file; select only one file. Folders cannot be renamed. Type in a "
 "new name with no spaces and without the extention and click Rename."
 msgstr ""
+"Byt namn på en fil; Markera endast en fil. Namn på mappar kan inte ändras. "
+"Skriv in ett nytt namn (utan mellanslag och filändelse) och klicka sedan på "
+"Byt namn."
 
 #: ../includes/media_library.php:207 ../includes/media_library.php:284
 msgid "Rename"
-msgstr ""
+msgstr "Byt namn"
 
 #: ../includes/media_library.php:209
 msgid "Delete selected files."
-msgstr ""
+msgstr "Radera markerade filer."
 
 #: ../includes/media_library.php:209
 msgid "Delete"
-msgstr ""
+msgstr "Radera"
 
 #: ../includes/media_library.php:211
 msgid "Select or unselect all files in the folder."
-msgstr ""
+msgstr "Markera eller avmarkera alla filer i mappen."
 
 #: ../includes/media_library.php:211
 msgid "Select/Unselect All"
-msgstr ""
+msgstr "Markera/Avmarkera alla"
 
 #: ../includes/media_library.php:213
 msgid "View or Select categories for images and files."
-msgstr ""
+msgstr "Visa eller Markera kategorier för bilder och filer."
 
 #: ../includes/media_library.php:213
 msgid "Categories"
-msgstr ""
+msgstr "Kategorier"
 
 #: ../includes/media_library.php:216 ../includes/media_library.php:297
 msgid "Sort by Name"
-msgstr ""
+msgstr "Sortera efter namn"
 
 #: ../includes/media_library.php:217 ../includes/media_library.php:298
 msgid "Sort by Date"
-msgstr ""
+msgstr "Sortera efter datum"
 
 #: ../includes/media_library.php:224
 msgid ""
 "Sync the contents of the current folder and its subfolders with the server"
 msgstr ""
+"Synkronisera innehållet i aktuell mapp och dess undermappar mot servern"
 
 #: ../includes/media_library.php:224
 msgid "Sync"
-msgstr ""
+msgstr "Synkronisera"
 
 #: ../includes/media_library.php:228
 msgid "Regenerates the thumbnails of selected images"
-msgstr ""
+msgstr "Återskapa miniatyrbilder för markerade bilder"
 
 #: ../includes/media_library.php:228 ../maxgalleria-media-library.php:1276
 #: ../maxgalleria-media-library.php:5176
 msgid "Regenerate Thumbnails"
-msgstr ""
+msgstr "Återskapa miniatyrbilder"
 
 #: ../includes/media_library.php:233
 msgid "Upload selected files to S3"
@@ -294,11 +304,11 @@ msgstr ""
 
 #: ../includes/media_library.php:306
 msgid "Category Name: "
-msgstr ""
+msgstr "Kategori namn:"
 
 #: ../includes/media_library.php:308
 msgid "Add Category"
-msgstr ""
+msgstr "Lägg till kategori"
 
 #: ../includes/media_library.php:324 ../includes/mlp-media-button.php:657
 msgid "Title"
@@ -314,7 +324,7 @@ msgstr ""
 
 #: ../includes/media_library.php:329 ../includes/mlp-media-button.php:662
 msgid "Description"
-msgstr ""
+msgstr "Beskrivning"
 
 #: ../includes/media_library.php:330 ../includes/mlp-media-button.php:663
 msgid "Alignment"
@@ -368,11 +378,11 @@ msgstr ""
 
 #: ../includes/media_library.php:444
 msgid "Add"
-msgstr ""
+msgstr "Lägg till"
 
 #: ../includes/media_library.php:445
 msgid "Remove selected images from the gallery box"
-msgstr ""
+msgstr "Radera markerade bilder från galleriet"
 
 #: ../includes/media_library.php:445
 msgid "Remove"
@@ -396,7 +406,7 @@ msgstr ""
 
 #: ../includes/media_library.php:490 ../includes/media_library.php:536
 msgid "Add Images"
-msgstr ""
+msgstr "Lägg till bilder"
 
 #: ../includes/media_library.php:502
 msgid "Folder Name: "
@@ -457,7 +467,7 @@ msgstr ""
 
 #: ../includes/mlf_support.php:32
 msgid "System Information</a>"
-msgstr ""
+msgstr "Systeminformation</a>"
 
 #: ../includes/mlf_support.php:38
 msgid "Activating Media Library Folders Pro causes a Fatal Error"
@@ -618,7 +628,7 @@ msgstr ""
 
 #: ../includes/mlfp-categories.php:7
 msgid "All Media Categories"
-msgstr ""
+msgstr "Alla media kategorier"
 
 #: ../includes/mlfp-categories.php:8
 msgid "Parent Media Category"
@@ -746,7 +756,7 @@ msgstr ""
 
 #: ../maxgalleria-media-library.php:1272
 msgid "Search Library"
-msgstr ""
+msgstr "Sök i biblioteket"
 
 #: ../maxgalleria-media-library.php:1277 ../maxgalleria-media-library.php:5477
 msgid "Image SEO"
@@ -771,7 +781,7 @@ msgstr ""
 #: ../maxgalleria-media-library.php:2239 ../maxgalleria-media-library.php:4713
 #: ../maxgalleria-media-library.php:6384 ../maxgalleria-media-library.php:6531
 msgid "No files were found."
-msgstr ""
+msgstr "Inga filer hittades."
 
 #: ../maxgalleria-media-library.php:2246
 msgid "Previous"
@@ -868,7 +878,7 @@ msgstr ""
 
 #: ../maxgalleria-media-library.php:3403 ../maxgalleria-media-library.php:3503
 msgid "No files were found matching that name."
-msgstr ""
+msgstr "Inga matchande filer hittades."
 
 #: ../maxgalleria-media-library.php:3745
 msgid "Updating attachment links, please wait...The file was renamed"
@@ -876,11 +886,11 @@ msgstr ""
 
 #: ../maxgalleria-media-library.php:3778
 msgid "Sorting by date."
-msgstr ""
+msgstr "Sorterar efter datum."
 
 #: ../maxgalleria-media-library.php:3782
 msgid "Sorting by name."
-msgstr ""
+msgstr "Sorterar efter namn."
 
 #: ../maxgalleria-media-library.php:3869
 msgid "Scaning for new folders in "
@@ -1092,7 +1102,7 @@ msgstr ""
 
 #: ../maxgalleria-media-library.php:5372
 msgid "Regenerate All Thumbnails"
-msgstr ""
+msgstr "Återskapa alla miniatyrbilder"
 
 #: ../maxgalleria-media-library.php:5396
 #, php-format
@@ -1170,7 +1180,7 @@ msgstr ""
 
 #: ../maxgalleria-media-library.php:5525 ../maxgalleria-media-library.php:5530
 msgid "example"
-msgstr ""
+msgstr "exempel"
 
 #: ../maxgalleria-media-library.php:5528
 msgid "Image Title attribute:"
