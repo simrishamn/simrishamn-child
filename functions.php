@@ -5,9 +5,6 @@ define('CUSTOM_MODULES_PATH', SIMRISHAMN_PATH . 'custom-modules/');
 define('G_RECAPTCHA_KEY', '');
 define('G_RECAPTCHA_SECRET', '');
 
-define('DEV_MODE', true);
-
-
 //Include vendor files
 if (file_exists(dirname(ABSPATH) . '/vendor/autoload.php')) {
   include_once dirname(ABSPATH) . '/vendor/autoload.php';
