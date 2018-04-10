@@ -1,3 +1,9 @@
+.archive-content-wrapper {
+    @media screen and #{$screen-below-lg} {
+	order: 3;
+    }
+}
+
 .post-horizontal__image-container {
     max-width: 33% !important;
 }
