@@ -5,6 +5,7 @@ class App
 {
     public function __construct()
     {
+        new \Simrishamn\Theme\AdminBar();
         new \Simrishamn\Theme\Customizer();
         new \Simrishamn\Theme\Enqueue();
         new \Simrishamn\Theme\Language();
