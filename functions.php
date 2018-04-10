@@ -2,8 +2,6 @@
 
 define('SIMRISHAMN_PATH', get_stylesheet_directory() . '/');
 define('CUSTOM_MODULES_PATH', SIMRISHAMN_PATH . 'custom-modules/');
-define('G_RECAPTCHA_KEY', '');
-define('G_RECAPTCHA_SECRET', '');
 
 //Include vendor files
 if (file_exists(dirname(ABSPATH) . '/vendor/autoload.php')) {
