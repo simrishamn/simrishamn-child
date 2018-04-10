@@ -16,8 +16,6 @@ $loader->addPrefix('Simrishamn', SIMRISHAMN_PATH . 'library');
 $loader->addPrefix('Simrishamn', SIMRISHAMN_PATH . 'source/php/');
 $loader->register();
 
-require_once 'library/admin-bar.php';
-
 if (function_exists('modularity_register_module') && defined('CUSTOM_MODULES_PATH')) {
     foreach (glob(CUSTOM_MODULES_PATH . "*") as $module) {
         modularity_register_module($module, basename($module));
