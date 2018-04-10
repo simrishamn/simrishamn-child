@@ -9,6 +9,7 @@ class App
         new \Simrishamn\Theme\Customizer();
         new \Simrishamn\Theme\Enqueue();
         new \Simrishamn\Theme\Language();
+        new \Simrishamn\Theme\Modularity();
         new \Simrishamn\Theme\Template();
     }
 }
