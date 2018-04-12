@@ -37,9 +37,10 @@ function stylePipe(name) {
 }
 
 // Register style tasks.
-gulp.task('style-app', () => stylePipe('app'));
+gulp.task('style-theme', () => stylePipe('theme'));
 gulp.task('style-admin', () => stylePipe('admin'));
-gulp.task('style', ['style-app', 'style-admin']);
+gulp.task('style-editor', () => stylePipe('editor'));
+gulp.task('style', ['style-theme', 'style-admin', 'style-editor']);
 
 // Compile application scripts.
 function scriptPipe(name) {
@@ -56,9 +57,10 @@ function scriptPipe(name) {
 }
 
 // Register script tasks.
-gulp.task('script-app', () => scriptPipe('app'));
+gulp.task('script-theme', () => scriptPipe('theme'));
 gulp.task('script-admin', () => scriptPipe('admin'));
-gulp.task('script', ['script-app', 'script-admin']);
+gulp.task('script-editor', () => scriptPipe('editor'));
+gulp.task('script', ['script-theme', 'script-admin', 'script-editor']);
 
 // File change watches.
 gulp.task('watch', function() {
