@@ -14,7 +14,8 @@ class Enqueue
     {
         add_action('wp_enqueue_scripts', array($this, 'enqueueTheme'));
         add_action('admin_enqueue_scripts', array($this, 'enqueueAdmin'));
-        add_action('wp_enqueue_editor', array($this, 'enqueueEditor'));
+        add_action('wp_enqueue_editor', array($this, 'enqueueEditorStyle'));
+        add_filter('mce_external_plugins', array($this, 'enqueueEditorScript'));
     }
 
     /**
@@ -74,13 +75,29 @@ class Enqueue
     }
 
     /**
-     * Enqueue editor files.
+     * Enqueue editor style.
      *
      * @return void
      */
-    public function enqueueEditor()
+    public function enqueueEditorStyle()
     {
         $this->_style('simrishamn-editor', 'editor.min.css');
-        $this->_script('simrishamn-editor', 'editor.min.js');
+    }
+
+    /**
+     * Enqueue editor script.
+     *
+     * @param array $plugins The default plugins.
+     *
+     * @return array A mapping of active plugins.
+     */
+    public function enqueueEditorScript($plugins)
+    {
+        $path = $this->_scriptPath . '/editor.min.js';
+        $uri = get_stylesheet_directory_uri() . '/' . $path;
+
+        $plugins['simrishamn'] = $uri;
+
+        return $plugins;
     }
 }
