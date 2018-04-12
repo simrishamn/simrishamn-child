@@ -3,7 +3,6 @@ $colors: (
     darkblue #0069b3,
     orange #e56526,
     cerice #dc167a,
-
 );
 
 $simrishamn-blue: #0069b3;
@@ -24,66 +23,7 @@ $simrishamn-colorbar-orange: $simrishamn-light-orange;
 $simrishamn-colorbar-blue: $simrishamn-blue;
 $simrishamn-colorbar-red: $simrishamn-red;
 
-.title-blue {
-    background-color: $simrishamn-blue !important;
-    color: white;
-}
-
-.content-blue {
-    background-color: $simrishamn-light-blue;
-    color: white;
-}
-
-.title-light-blue {
-    background-color: $simrishamn-medium-blue !important;
-    color: black !important;
-}
-
-.content-light-blue {
-    background-color: $simrishamn-extra-light-blue;
-    .btn-holder .btn-plain {
-        color: black !important;
-        border-color: black !important;
-    }
-}
-
-.title-green {
-    background-color: $simrishamn-green !important;
-    color: white;
-}
-
-.content-green {
-    background-color: $simrishamn-light-green;
-    color: white;
-}
-
-.title-red {
-    background-color: $simrishamn-red !important;
-    color: white;
-}
-
-.content-red {
-    background-color: $simrishamn-light-red;
-    color: white;
-}
-
-.title-gray {
-    background-color: grey !important;
-    color: black !important;
-}
-
-.content-gray {
-    background-color: lightgrey;
-    .btn-holder .btn-plain {
-        color: black !important;
-        border-color: black !important;
-    }
-}
-
-.title-blue-gray {
-    background-color: $simrishamn-blue !important;
-}
-
-.content-blue-gray {
-    background-color: $simrishamn-gray;
-}
+$black: #000000;
+$blue: $simrishamn-blue;
+$base-font-color: #252525;
+$box-margin: 4px;
