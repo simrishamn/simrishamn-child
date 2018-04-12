@@ -1,7 +1,6 @@
 @import 'config/color';
-@import 'layout/master';
 @import 'config/grid';
-@import 'config/theme';
+@import 'layout/master';
 
 .is-child-theme {
     @import 'mixin/form';
