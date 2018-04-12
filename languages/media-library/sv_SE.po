@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: maxgalleria-media-library\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-09 14:27+0200\n"
-"PO-Revision-Date: 2018-04-10 10:53+0200\n"
+"PO-Revision-Date: 2018-04-10 18:17+0200\n"
 "Last-Translator: \n"
 "Language-Team: Swedish\n"
 "Language: sv_SE\n"
@@ -32,7 +32,7 @@ msgstr ""
 
 #: ../EDD_SL_Plugin_Updater.php:340
 msgid "You do not have permission to install plugin updates"
-msgstr ""
+msgstr "Du har inte tillstånd att installera uppdateringar för plugins"
 
 #: ../EDD_SL_Plugin_Updater.php:340
 msgid "Error"
@@ -45,7 +45,7 @@ msgstr ""
 #: ../includes/media_library.php:81 ../includes/media_library.php:86
 #: ../maxgalleria-media-library.php:1270
 msgid "Media Library Folders Pro"
-msgstr ""
+msgstr "Mediabiblioteket"
 
 #: ../includes/media_library.php:92 ../includes/mlf_support.php:19
 #: ../maxgalleria-media-library.php:602 ../maxgalleria-media-library.php:5181
@@ -58,11 +58,11 @@ msgstr ""
 #: ../maxgalleria-media-library.php:4623 ../maxgalleria-media-library.php:5181
 #: ../maxgalleria-media-library.php:5482
 msgid "and"
-msgstr ""
+msgstr "och"
 
 #: ../includes/media_library.php:112
 msgid "Current PHP version, "
-msgstr ""
+msgstr "Nuvarande PHP version, "
 
 #: ../includes/media_library.php:112
 msgid ", is outdated. Please upgrade to version 5.6."
@@ -98,12 +98,16 @@ msgid ""
 "When moving/copying to a new folder place your pointer, not the image, on "
 "the folder where you want the file(s) to go."
 msgstr ""
+"Vid flytt eller kopiering till en ny mapp, placera muspekaren (och inte "
+"bilden) på den mapp där du vill att filerna ska hamna."
 
 #: ../includes/media_library.php:165
 msgid ""
 "To drag multiple images, check the box under the files you want to move and "
 "then drag one of the images to the desired folder."
 msgstr ""
+"För att flytta flera bilder på en gång, klicka i de filer du vill flytta och "
+"dra sedan en av de markerade bilderna till önskad mapp."
 
 #: ../includes/media_library.php:166
 msgid ""
@@ -118,6 +122,9 @@ msgid ""
 "Click on the option, \"Delete this folder?\" If the folder is empty, it will "
 "be deleted."
 msgstr ""
+"För att radera en mapp: Högerklicka på mappen så att en pop-up menu visas. "
+"Klicka på alternativet \"Radera denna mapp?\" Om mappen är tom kommer den "
+"att raderas."
 
 #: ../includes/media_library.php:168
 msgid ""
@@ -126,6 +133,10 @@ msgid ""
 "folders and files will be removed from the Media Library, but not from the "
 "server."
 msgstr ""
+"För att gömma en mapp samt dess undermappar och innehållande filer, "
+"högerklicka på en mapp och sedan \"Göm denna mapp?\" i pop-up menyn som "
+"visas. Mapparna och filerna flyttas då från Mediabiblioteket, men inte från "
+"servern."
 
 #: ../includes/media_library.php:182
 msgid ""
@@ -141,15 +152,15 @@ msgstr ""
 
 #: ../includes/media_library.php:191
 msgid "Inserts an image file into a post or page."
-msgstr ""
+msgstr "Klistrar i en bildfil till en sida eller nyhet."
 
 #: ../includes/media_library.php:191
 msgid "Insert Media"
-msgstr ""
+msgstr "Klistra in media"
 
 #: ../includes/media_library.php:194
 msgid "Creates a JetPack WP Gallery"
-msgstr ""
+msgstr "Skapar ett JetPack WP galleri"
 
 #: ../includes/media_library.php:194
 msgid "JetPack WP Gallery"
@@ -221,57 +232,60 @@ msgstr "Återskapa miniatyrbilder"
 
 #: ../includes/media_library.php:233
 msgid "Upload selected files to S3"
-msgstr ""
+msgstr "Ladda upp markerade filer till S3"
 
 #: ../includes/media_library.php:233
 msgid "Upload to S3"
-msgstr ""
+msgstr "Ladda upp till S3"
 
 #: ../includes/media_library.php:235
 msgid "Downloads selected files from S3"
-msgstr ""
+msgstr "Laddar ner markerade filer från S3"
 
 #: ../includes/media_library.php:235
 msgid "Download from S3"
-msgstr ""
+msgstr "Ladda ner från S3"
 
 #: ../includes/media_library.php:239
 msgid ""
 "Add images to an existing MaxGalleria gallery. Folders can not be added to a "
 "gallery. Images already in the gallery will not be added. "
 msgstr ""
+"Lägg till bilder i ett existerande MaxGalleria galleri. Mappar kan inte "
+"läggas till i ett galleri. Bilder som redan existerar i galleriet kommer "
+"inte att läggas till. "
 
 #: ../includes/media_library.php:239
 msgid "Add to MaxGalleria Gallery"
-msgstr ""
+msgstr "Lägg till i MaxGalleria galleri"
 
 #: ../includes/media_library.php:243
 msgid "Create a new NextGEN Gallery"
-msgstr ""
+msgstr "Skapa ett nytt NextGEN galleri"
 
 #: ../includes/media_library.php:243
 msgid "New NextGen Gallery"
-msgstr ""
+msgstr "Nytt NextGen galleri"
 
 #: ../includes/media_library.php:245
 msgid "Add images to a NextGEN Gallery"
-msgstr ""
+msgstr "Lägg till bilder till ett NextGEN Galleri"
 
 #: ../includes/media_library.php:245
 msgid "Add Images to NextGen Gallery"
-msgstr ""
+msgstr "Lägg till bilder till NextGen galleri"
 
 #: ../includes/media_library.php:282
 msgid "File Name: "
-msgstr ""
+msgstr "Filnamn: "
 
 #: ../includes/media_library.php:291
 msgid "Add a new category\"."
-msgstr ""
+msgstr "Lägg till en ny kategori\"."
 
 #: ../includes/media_library.php:291
 msgid "Add New Category"
-msgstr ""
+msgstr "Lägg till ny kategori"
 
 #: ../includes/media_library.php:292
 msgid ""
@@ -279,32 +293,37 @@ msgid ""
 "wish to assign to them and click Set Categories. Any existing categoires "
 "will be removed."
 msgstr ""
+"Kryssa i rutan för en eller flera filer och kryssa i de kategorier som du "
+"vill tilldela dem och klicka sedan på Ange Kategorier. Eventuella "
+"existerande kategorier kommer att raderas."
 
 #: ../includes/media_library.php:292
 msgid "Set Categories"
-msgstr ""
+msgstr "Ange kategorier"
 
 #: ../includes/media_library.php:293
 msgid ""
 "Check the checkbox a single file and click \"Get Categories\" to view the "
 "media catagories for the select file."
 msgstr ""
+"Kryssa i rutan för en ensam fil och klicka på \"Hämta kategorier\" för att "
+"se media kategorierna för den markerade filen."
 
 #: ../includes/media_library.php:293
 msgid "Get Categories"
-msgstr ""
+msgstr "Hämta kategorier"
 
 #: ../includes/media_library.php:294
 msgid "View images of the selected category."
-msgstr ""
+msgstr "Visa bilder i vald kategori."
 
 #: ../includes/media_library.php:294
 msgid "View by Category"
-msgstr ""
+msgstr "Visa efter Kategori"
 
 #: ../includes/media_library.php:306
 msgid "Category Name: "
-msgstr "Kategori namn:"
+msgstr "Kategori namn: "
 
 #: ../includes/media_library.php:308
 msgid "Add Category"
@@ -312,15 +331,15 @@ msgstr "Lägg till kategori"
 
 #: ../includes/media_library.php:324 ../includes/mlp-media-button.php:657
 msgid "Title"
-msgstr ""
+msgstr "Titel"
 
 #: ../includes/media_library.php:325 ../includes/mlp-media-button.php:658
 msgid "Caption"
-msgstr ""
+msgstr "Rubrik"
 
 #: ../includes/media_library.php:326 ../includes/mlp-media-button.php:659
 msgid "Alt"
-msgstr ""
+msgstr "Alternativ text"
 
 #: ../includes/media_library.php:329 ../includes/mlp-media-button.php:662
 msgid "Description"
@@ -332,28 +351,28 @@ msgstr ""
 
 #: ../includes/media_library.php:332 ../includes/mlp-media-button.php:665
 msgid "Left"
-msgstr ""
+msgstr "Vänster"
 
 #: ../includes/media_library.php:333 ../includes/mlp-media-button.php:666
 msgid "Center"
-msgstr ""
+msgstr "Centrera"
 
 #: ../includes/media_library.php:334 ../includes/mlp-media-button.php:667
 msgid "Right"
-msgstr ""
+msgstr "Höger"
 
 #: ../includes/media_library.php:335 ../includes/media_library.php:344
 #: ../includes/mlp-media-button.php:668 ../includes/mlp-media-button.php:677
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 #: ../includes/media_library.php:342 ../includes/mlp-media-button.php:675
 msgid "Link To"
-msgstr ""
+msgstr "Länk till"
 
 #: ../includes/media_library.php:345 ../includes/mlp-media-button.php:678
 msgid "Media File"
-msgstr ""
+msgstr "Mediafil"
 
 #: ../includes/media_library.php:346 ../includes/mlp-media-button.php:679
 msgid "Attachment Page"
@@ -361,20 +380,20 @@ msgstr ""
 
 #: ../includes/media_library.php:347 ../includes/mlp-media-button.php:680
 msgid "Custom URL"
-msgstr ""
+msgstr "Anpassad URL"
 
 #: ../includes/media_library.php:349 ../includes/mlp-media-button.php:682
 msgid "Custom Link"
-msgstr ""
+msgstr "Anpassad länk"
 
 #: ../includes/media_library.php:355 ../includes/mlp-media-button.php:689
 #: ../includes/mlp-media-button.php:690
 msgid "Insert"
-msgstr ""
+msgstr "Klistra in"
 
 #: ../includes/media_library.php:444
 msgid "Adds selected images to the gallery box"
-msgstr ""
+msgstr "Lägger till markerade bilder i galleriet"
 
 #: ../includes/media_library.php:444
 msgid "Add"
@@ -386,11 +405,11 @@ msgstr "Radera markerade bilder från galleriet"
 
 #: ../includes/media_library.php:445
 msgid "Remove"
-msgstr ""
+msgstr "Ta bort"
 
 #: ../includes/media_library.php:446
 msgid "Remove all images from the gallery box"
-msgstr ""
+msgstr "Ta bort alla bilder från galleriet"
 
 #: ../includes/media_library.php:446
 msgid "Clear"
@@ -410,23 +429,23 @@ msgstr "Lägg till bilder"
 
 #: ../includes/media_library.php:502
 msgid "Folder Name: "
-msgstr ""
+msgstr "Mappnamn: "
 
 #: ../includes/media_library.php:504
 msgid "Create Folder"
-msgstr ""
+msgstr "Skapa mapp"
 
 #: ../includes/media_library.php:513
 msgid "Gallery Name: "
-msgstr ""
+msgstr "Gallerinamn: "
 
 #: ../includes/media_library.php:514
 msgid "Create NG Gallery"
-msgstr ""
+msgstr "Skapa NG galleri"
 
 #: ../includes/media_library.php:532
 msgid "NextGen Galleries: "
-msgstr ""
+msgstr "NextGen Gallerier: "
 
 #: ../includes/mlf_support.php:14 ../maxgalleria-media-library.php:1278
 msgid "Support"
@@ -435,17 +454,17 @@ msgstr ""
 #: ../includes/mlf_support.php:20 ../maxgalleria-media-library.php:603
 #: ../maxgalleria-media-library.php:5182 ../maxgalleria-media-library.php:5483
 msgid "Click here to"
-msgstr ""
+msgstr "Klicka här för att"
 
 #: ../includes/mlf_support.php:20 ../maxgalleria-media-library.php:603
 #: ../maxgalleria-media-library.php:5182 ../maxgalleria-media-library.php:5483
 msgid "Fix Common Problems"
-msgstr ""
+msgstr "Lös vanliga problem"
 
 #: ../includes/mlf_support.php:21 ../maxgalleria-media-library.php:604
 #: ../maxgalleria-media-library.php:5183 ../maxgalleria-media-library.php:5484
 msgid "Need help? Click here for"
-msgstr ""
+msgstr "Behöver du hjälp? Klicka här för"
 
 #: ../includes/mlf_support.php:21 ../maxgalleria-media-library.php:604
 #: ../maxgalleria-media-library.php:5183 ../maxgalleria-media-library.php:5484
@@ -455,7 +474,7 @@ msgstr ""
 #: ../includes/mlf_support.php:22 ../maxgalleria-media-library.php:605
 #: ../maxgalleria-media-library.php:5184 ../maxgalleria-media-library.php:5485
 msgid "Or Email Us at"
-msgstr ""
+msgstr "Eller maila oss på"
 
 #: ../includes/mlf_support.php:30
 msgid "Troubleshooting Tips"
@@ -463,7 +482,7 @@ msgstr ""
 
 #: ../includes/mlf_support.php:31
 msgid "Troubleshooting Articles"
-msgstr ""
+msgstr "Felsöker artiklar"
 
 #: ../includes/mlf_support.php:32
 msgid "System Information</a>"
@@ -483,7 +502,7 @@ msgstr ""
 
 #: ../includes/mlf_support.php:42
 msgid "Folder Tree Not Loading"
-msgstr ""
+msgstr "Mappstrukturen laddar inte"
 
 #: ../includes/mlf_support.php:44
 msgid ""
@@ -496,6 +515,8 @@ msgid ""
 "First make sure you have installed the latest version of Media Library "
 "Folders."
 msgstr ""
+"Börja med att säkerställa att du har den senaste versionen av "
+"Mediabiblioteket installerat."
 
 #: ../includes/mlf_support.php:48
 msgid ""
@@ -513,7 +534,7 @@ msgstr ""
 
 #: ../includes/mlf_support.php:52
 msgid "How to Unhide a Hidden Folder"
-msgstr ""
+msgstr "Hur man tar fram en Gömd mapp"
 
 #: ../includes/mlf_support.php:55
 msgid ""
@@ -526,6 +547,8 @@ msgid ""
 "In the Media Library Folders Menu, click the Check for New folders link. "
 "This will add the folder back into Media Library Folders"
 msgstr ""
+"Klicka på länken Leta efter nya mappar i Mediabibliotekets meny för att "
+"återskapa mappen till Mediabiblioteket"
 
 #: ../includes/mlf_support.php:57
 msgid ""
@@ -535,14 +558,19 @@ msgid ""
 "regenerated automatically; these usually have file names such as image-"
 "name-150×150.jpg, etc."
 msgstr ""
+"Leta upp den gömda filen i Medibiblioteket och klicka på Synkronisera för "
+"att lägga till mappens iinnehåll. Innan du gör detta, kontrollera att där "
+"inte är några miniatyrbilder i aktuell mapp eftersom dessa kommer att "
+"återskapas automatiskt; dessa har vanligtvis filnamn likt bild-namn-150x150."
+"jpg, etc."
 
 #: ../includes/mlf_support.php:58
 msgid "Repeat step 3 for each sub folder."
-msgstr ""
+msgstr "Repetera steg 3 för varje undermapp."
 
 #: ../includes/mlf_support.php:61
 msgid "Activation Error After Update"
-msgstr ""
+msgstr "Aktiveringsfel efter uppdatering"
 
 #: ../includes/mlf_support.php:63
 msgid ""
@@ -574,13 +602,13 @@ msgstr ""
 
 #: ../includes/mlf_support.php:71
 msgid "Activate the uploaded plugin."
-msgstr ""
+msgstr "Aktivera det uppladdade pluginet."
 
 #: ../includes/mlf_support.php:74
 msgid ""
 "Folders and images added to the site by FTP are not showing up in Media "
 "Library Folders"
-msgstr ""
+msgstr "Mappar och bilder tillagda via FTP visas inte i Mediabiblioteket"
 
 #: ../includes/mlf_support.php:76
 msgid ""
@@ -592,6 +620,13 @@ msgid ""
 "to store images by year and month folders, then you should click the option "
 "once each month to add these auto-generated folders."
 msgstr ""
+"Mediabiblioteket fungerar inte på samma sätt som filhanteraren på din dator. "
+"Här visar endast bilder och mappar som har lagts till i Mediabibliotekets "
+"databas. För att visa nya mappar som inte har lagts till i Mediabiblioteket "
+"kan du klicka på alternativet Leta efter nya mappar i Mediabibliotekets "
+"undermeny i WordPress Dashboarden. Om du tillåter WordPress att lagra bilder "
+"i mappar baserat på år och månader, bör du göra detta en gång i månaden för "
+"att de automatiskt skapade mapparna ska läggas till."
 
 #: ../includes/mlf_support.php:78
 msgid ""
@@ -621,10 +656,12 @@ msgid ""
 "You may be asked to provide the information below to help troubleshoot your "
 "issue."
 msgstr ""
+"Du kan få en förfrågan om att uppge informationen nedan för att underlätta "
+"arbetet med att felsöka problemet."
 
 #: ../includes/mlfp-categories.php:6
 msgid "Media Categories"
-msgstr ""
+msgstr "Media kategori"
 
 #: ../includes/mlfp-categories.php:7
 msgid "All Media Categories"
@@ -640,55 +677,55 @@ msgstr ""
 
 #: ../includes/mlfp-categories.php:10
 msgid "New Media Category Name"
-msgstr ""
+msgstr "Nytt mediakategori namn"
 
 #: ../includes/mlfp-categories.php:11
 msgid "Add New Media Category"
-msgstr ""
+msgstr "Lägg till ny mediakategori"
 
 #: ../includes/mlfp-categories.php:12
 msgid "Edit Media Category"
-msgstr ""
+msgstr "Redigera mediakategori"
 
 #: ../includes/mlfp-categories.php:13
 msgid "Update Media Category"
-msgstr ""
+msgstr "Uppdatera mediakategori"
 
 #: ../includes/mlfp-categories.php:14
 msgid "View Media Category"
-msgstr ""
+msgstr "Visa Media kategori"
 
 #: ../includes/mlfp-categories.php:15
 msgid "Separate items with commas"
-msgstr ""
+msgstr "Separera objekt med kommatecken (,)"
 
 #: ../includes/mlfp-categories.php:16
 msgid "Add or remove items"
-msgstr ""
+msgstr "Lägg till eller ta bort objekt"
 
 #: ../includes/mlfp-categories.php:17
 msgid "Choose from the most used"
-msgstr ""
+msgstr "Välj från Mest använda"
 
 #: ../includes/mlfp-categories.php:18
 msgid "Popular Items"
-msgstr ""
+msgstr "Populära objekt"
 
 #: ../includes/mlfp-categories.php:19
 msgid "Search Media Categories"
-msgstr ""
+msgstr "Sök bland mediakategorier"
 
 #: ../includes/mlfp-categories.php:20
 msgid "Not Found"
-msgstr ""
+msgstr "Hittades inte"
 
 #: ../includes/mlfp-categories.php:21
 msgid "No items"
-msgstr ""
+msgstr "Inga objekt"
 
 #: ../includes/mlfp-categories.php:22
 msgid "Items list"
-msgstr ""
+msgstr "Objektlista"
 
 #: ../includes/mlfp-categories.php:23
 msgid "Items list navigation"
@@ -696,15 +733,15 @@ msgstr ""
 
 #: ../includes/mlp-media-button.php:694
 msgid "Set Product Image"
-msgstr ""
+msgstr "Ange produktbild"
 
 #: ../includes/mlp-media-button.php:695
 msgid "Insert into Product Gallery"
-msgstr ""
+msgstr "Klistra in i Produktgalleri"
 
 #: ../includes/mlp-media-button.php:698
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: ../maxgalleria-media-library.php:120
 msgid ""
@@ -752,7 +789,7 @@ msgstr ""
 
 #: ../maxgalleria-media-library.php:1271 ../maxgalleria-media-library.php:1273
 msgid "Check For New Folders"
-msgstr ""
+msgstr "Leta efter nya mappar"
 
 #: ../maxgalleria-media-library.php:1272
 msgid "Search Library"
@@ -760,23 +797,23 @@ msgstr "Sök i biblioteket"
 
 #: ../maxgalleria-media-library.php:1277 ../maxgalleria-media-library.php:5477
 msgid "Image SEO"
-msgstr ""
+msgstr "Sökoptimering för bild"
 
 #: ../maxgalleria-media-library.php:1279 ../maxgalleria-media-library.php:5513
 msgid "Settings"
-msgstr ""
+msgstr "Inställningar"
 
 #: ../maxgalleria-media-library.php:1282
 msgid "S3 Settings"
-msgstr ""
+msgstr "S3 inställningar"
 
 #: ../maxgalleria-media-library.php:1830
 msgid "You cannot hide the currently open folder."
-msgstr ""
+msgstr "Du kan inte gömma den mapp du befinner dig i."
 
 #: ../maxgalleria-media-library.php:2068
 msgid "Or you can turn on pagination in Settings."
-msgstr ""
+msgstr "Eller så kan du sätta på sidnumrering under Inställningar."
 
 #: ../maxgalleria-media-library.php:2239 ../maxgalleria-media-library.php:4713
 #: ../maxgalleria-media-library.php:6384 ../maxgalleria-media-library.php:6531
@@ -785,51 +822,52 @@ msgstr "Inga filer hittades."
 
 #: ../maxgalleria-media-library.php:2246
 msgid "Previous"
-msgstr ""
+msgstr "Föregående"
 
 #: ../maxgalleria-media-library.php:2248
 msgid "Next"
-msgstr ""
+msgstr "Nästa"
 
 #: ../maxgalleria-media-library.php:2406
 msgid "The folder was created."
-msgstr ""
+msgstr "Mappen skapades."
 
 #: ../maxgalleria-media-library.php:2412
 msgid "There was a problem creating the folder."
-msgstr ""
+msgstr "Det uppstod ett problem vid skapande av mappen."
 
 #: ../maxgalleria-media-library.php:2419
 msgid "The folder already exists."
-msgstr ""
+msgstr "Mappen existerar redan."
 
 #: ../maxgalleria-media-library.php:2612
 msgid "The folder, "
-msgstr ""
+msgstr "Mappen, "
 
 #: ../maxgalleria-media-library.php:2612
 msgid ", is not empty. Please delete or move files from the folder"
-msgstr ""
+msgstr ", är inte tom. Vänligen radera eller flytta filer från mappen"
 
 #: ../maxgalleria-media-library.php:2628 ../maxgalleria-media-library.php:2641
 msgid "The folder was deleted."
-msgstr ""
+msgstr "Mappen raderades."
 
 #: ../maxgalleria-media-library.php:2630
 msgid "The folder could not be deleted."
-msgstr ""
+msgstr "Mappen kunde inte raderas."
 
 #: ../maxgalleria-media-library.php:2666
 msgid "The file(s) were deleted"
-msgstr ""
+msgstr "Filen/filerna raderades"
 
 #: ../maxgalleria-media-library.php:2668
 msgid "The file(s) were not deleted"
-msgstr ""
+msgstr "Filen/filerna raderades inte"
 
 #: ../maxgalleria-media-library.php:2778 ../maxgalleria-media-library.php:3034
 msgid "Unable to copy the file; please check the folder and file permissions."
 msgstr ""
+"Kunde inte kopiera filen; vänligen kontrollera mapp- och filbehörigheter."
 
 #: ../maxgalleria-media-library.php:2870 ../maxgalleria-media-library.php:3196
 msgid "Updating attachment links, please wait..."
@@ -839,42 +877,44 @@ msgstr ""
 msgid ""
 "Unable to move the file(s); please check the folder and file permissions."
 msgstr ""
+"Kunde inte flytta filen/filerna; vänligen kontrollera mapp- och "
+"filbehörigheter."
 
 #: ../maxgalleria-media-library.php:2882 ../maxgalleria-media-library.php:3208
 msgid "The destination is not a folder: "
-msgstr ""
+msgstr "Destinationen är inte en mapp: "
 
 #: ../maxgalleria-media-library.php:2888 ../maxgalleria-media-library.php:3214
 msgid "Cannot find destination folder: "
-msgstr ""
+msgstr "Kan inte hitta angiven mapp: "
 
 #: ../maxgalleria-media-library.php:2894 ../maxgalleria-media-library.php:3220
 msgid "Coping or moving a folder is not allowed."
-msgstr ""
+msgstr "Det är inte tillåtet att kopiera eller flytta en mapp."
 
 #: ../maxgalleria-media-library.php:2900 ../maxgalleria-media-library.php:3226
 msgid "Cannot find the file: "
-msgstr ""
+msgstr "Kan inte hitta filen: "
 
 #: ../maxgalleria-media-library.php:2907 ../maxgalleria-media-library.php:3233
 msgid "The file(s) were copied to "
-msgstr ""
+msgstr "Filen/filerna kopierades till "
 
 #: ../maxgalleria-media-library.php:2909 ../maxgalleria-media-library.php:3235
 msgid "The file(s) were not copied."
-msgstr ""
+msgstr "Filen/filerna kopierades inte."
 
 #: ../maxgalleria-media-library.php:2913 ../maxgalleria-media-library.php:3239
 msgid "The file(s) were moved to "
-msgstr ""
+msgstr "Filen/filerna flyttades till "
 
 #: ../maxgalleria-media-library.php:2915 ../maxgalleria-media-library.php:3241
 msgid "The file(s) were not moved."
-msgstr ""
+msgstr "Filen/filerna flyttades inte."
 
 #: ../maxgalleria-media-library.php:3351
 msgid "The images were added."
-msgstr ""
+msgstr "Bilderna lades till."
 
 #: ../maxgalleria-media-library.php:3403 ../maxgalleria-media-library.php:3503
 msgid "No files were found matching that name."
@@ -894,16 +934,16 @@ msgstr "Sorterar efter namn."
 
 #: ../maxgalleria-media-library.php:3869
 msgid "Scaning for new folders in "
-msgstr ""
+msgstr "Letar efter nya mappar i "
 
 #: ../maxgalleria-media-library.php:3896 ../maxgalleria-media-library.php:3925
 #: ../maxgalleria-media-library.php:3953 ../maxgalleria-media-library.php:3993
 msgid "Adding"
-msgstr ""
+msgstr "Lägger till"
 
 #: ../maxgalleria-media-library.php:3971
 msgid "No new folders were found."
-msgstr ""
+msgstr "Inga nya mappar hittades."
 
 #: ../maxgalleria-media-library.php:4091
 msgid "Rate us Please!"
@@ -921,7 +961,7 @@ msgstr ""
 
 #: ../maxgalleria-media-library.php:4096
 msgid "Maybe Later"
-msgstr ""
+msgstr "Kanske senare"
 
 #: ../maxgalleria-media-library.php:4097
 msgid "Sure! I'd love to!"
@@ -956,43 +996,43 @@ msgstr ""
 
 #: ../maxgalleria-media-library.php:4801
 msgid "The gallery already exists."
-msgstr ""
+msgstr "Galleriet existerar redan."
 
 #: ../maxgalleria-media-library.php:4807
 msgid "The gallery was created."
-msgstr ""
+msgstr "Galleriet skapades."
 
 #: ../maxgalleria-media-library.php:4811
 msgid "The gallery could not be created."
-msgstr ""
+msgstr "Galleriet kunde inte skapas."
 
 #: ../maxgalleria-media-library.php:4907
 msgid " image(s) were added."
-msgstr ""
+msgstr " bilder lades till."
 
 #: ../maxgalleria-media-library.php:4975
 msgid "Media Library Folders Pro Plugin License"
-msgstr ""
+msgstr "Mediabiblioteket plugin licens"
 
 #: ../maxgalleria-media-library.php:4984
 msgid "License Key"
-msgstr ""
+msgstr "Licensnyckel"
 
 #: ../maxgalleria-media-library.php:4988
 msgid "Enter your license key"
-msgstr ""
+msgstr "Ange din licensnyckel"
 
 #: ../maxgalleria-media-library.php:4998
 msgid "active"
-msgstr ""
+msgstr "aktiv"
 
 #: ../maxgalleria-media-library.php:5000
 msgid "Deactivate License"
-msgstr ""
+msgstr "Avaktivera licens"
 
 #: ../maxgalleria-media-library.php:5003
 msgid "Activate License"
-msgstr ""
+msgstr "Aktivera licens"
 
 #: ../maxgalleria-media-library.php:5022
 msgid "Disable floating file tree"
@@ -1006,11 +1046,11 @@ msgstr ""
 
 #: ../maxgalleria-media-library.php:5029
 msgid "Number of images to display per page:"
-msgstr ""
+msgstr "Antal bilder att visa per sida:"
 
 #: ../maxgalleria-media-library.php:5033 ../maxgalleria-media-library.php:5533
 msgid "Update Settings"
-msgstr ""
+msgstr "Uppdatera inställningar"
 
 #: ../maxgalleria-media-library.php:5197
 msgid "Cheatin&#8217; uh?"
@@ -1020,16 +1060,17 @@ msgstr ""
 #, php-format
 msgid "Unable to find any images. Are you sure <a href='%s'>some exist</a>?"
 msgstr ""
+"Kunde inte hitta några bilder. Är du säker på att <a href='%s'>finns</a>?"
 
 #: ../maxgalleria-media-library.php:5219
 msgid ""
 "Please wait while the thumbnails are regenerated. This may take a while."
-msgstr ""
+msgstr "Vänligen vänta medan miniatyren återskapas. Detta kan ta lite tid."
 
 #: ../maxgalleria-media-library.php:5223
 #, php-format
 msgid "To go back to the previous page, <a href=\"%s\">click here</a>."
-msgstr ""
+msgstr "<a href=\"%s\">click here</a> för att återgå till föregående sida."
 
 #: ../maxgalleria-media-library.php:5224
 #, php-format
@@ -1048,7 +1089,7 @@ msgstr ""
 
 #: ../maxgalleria-media-library.php:5229 ../maxgalleria-media-library.php:5374
 msgid "You must enable Javascript in order to proceed!"
-msgstr ""
+msgstr "Du måste aktivera Javascript för att kunna fortsätta!"
 
 #: ../maxgalleria-media-library.php:5235
 msgid "Abort Resizing Images"
@@ -1061,21 +1102,21 @@ msgstr ""
 #: ../maxgalleria-media-library.php:5240
 #, php-format
 msgid "Total Images: %s"
-msgstr ""
+msgstr "Totalt antal bilder: %s"
 
 #: ../maxgalleria-media-library.php:5241
 #, php-format
 msgid "Images Resized: %s"
-msgstr ""
+msgstr "Bildstorlek har ändrat: %s"
 
 #: ../maxgalleria-media-library.php:5242
 #, php-format
 msgid "Resize Failures: %s"
-msgstr ""
+msgstr "Storleksändring misslyckades: %s"
 
 #: ../maxgalleria-media-library.php:5273
 msgid "Stopping..."
-msgstr ""
+msgstr "Stoppar..."
 
 #: ../maxgalleria-media-library.php:5325
 #, php-format
@@ -1090,6 +1131,10 @@ msgid ""
 "Library. This is helpful if you have added new thumbnail sizes to your site. "
 "Existing thumbnails will not be removed to prevent breaking any links."
 msgstr ""
+"Klicka på knappen nedan för att återskapa miniatyrbilder för alla bilder i "
+"Mediabiblioteket. Detta är användbart om du har lagt till nya "
+"miniatyrstorlekar för sidan. Existerande miniatyrbilder raderas inte för att "
+"undvika att existerande länkar bryts."
 
 #: ../maxgalleria-media-library.php:5370
 msgid ""
@@ -1107,31 +1152,34 @@ msgstr "Återskapa alla miniatyrbilder"
 #: ../maxgalleria-media-library.php:5396
 #, php-format
 msgid "Failed resize: %s is an invalid image ID."
-msgstr ""
+msgstr "Storleksändring misslyckades: %s är ett ogiltigt bild ID."
 
 #: ../maxgalleria-media-library.php:5399
 msgid "Your user account doesn't have permission to resize images"
-msgstr ""
+msgstr "Du har inte rättighet att ändra storlek på bilder"
 
 #: ../maxgalleria-media-library.php:5409
 #, php-format
 msgid "The originally uploaded image file cannot be found at %s"
-msgstr ""
+msgstr "Den uppladdade ursprungsfilen kan inte hittas på %s"
 
 #: ../maxgalleria-media-library.php:5418
 msgid "Unknown failure reason."
-msgstr ""
+msgstr "Okänd anledning till."
 
 #: ../maxgalleria-media-library.php:5452
 #, php-format
 msgid "&quot;%1$s&quot; (ID %2$s) was successfully resized in %3$s seconds."
 msgstr ""
+"Storleksändring för &quot;%1$s&quot; (ID %2$s) lyckades, på %3$s sekunder."
 
 #: ../maxgalleria-media-library.php:5457
 #, php-format
 msgid ""
 "&quot;%1$s&quot; (ID %2$s) failed to resize. The error message was: %3$s"
 msgstr ""
+"Storleksändring för &quot;%1$s&quot; (ID %2$s) misslyckades. Felmeddelande: "
+"%3$s"
 
 #: ../maxgalleria-media-library.php:5492
 msgid ""
@@ -1155,28 +1203,31 @@ msgid ""
 "change the settings on the far right.  Save and then back click to return to "
 "Media  Library Folders or MLFP."
 msgstr ""
+"För att ändra inställningar på en specifik bild, klicka på bilden och ändra "
+"inställningarna till höger. Spara och klicka sedan på bakåt för att återgå "
+"till Mediabiblioteket."
 
 #: ../maxgalleria-media-library.php:5495
 msgid "Image SEO supports two special tags:"
-msgstr ""
+msgstr "Sökmotoroptimering för bild stödjer två specifika taggar:"
 
 #: ../maxgalleria-media-library.php:5496
 #, php-format
 msgid "%filename - replaces image file name ( without extension )"
-msgstr ""
+msgstr "% filnamn - ersätter bildens filnamn (utan filändelse)"
 
 #: ../maxgalleria-media-library.php:5497
 #, php-format
 msgid "%foldername - replaces image folder name"
-msgstr ""
+msgstr "%fmappnamn - ersätter bildens mappnamn"
 
 #: ../maxgalleria-media-library.php:5518
 msgid "Turn on Image SEO:"
-msgstr ""
+msgstr "Slå på sökmotoroptimering för bild:"
 
 #: ../maxgalleria-media-library.php:5523
 msgid "Image ALT attribute:"
-msgstr ""
+msgstr "Alternativ text för bilden:"
 
 #: ../maxgalleria-media-library.php:5525 ../maxgalleria-media-library.php:5530
 msgid "example"
@@ -1184,36 +1235,40 @@ msgstr "exempel"
 
 #: ../maxgalleria-media-library.php:5528
 msgid "Image Title attribute:"
-msgstr ""
+msgstr "Bildtitel attribut:"
 
 #: ../maxgalleria-media-library.php:5576
 msgid "The Image SEO setting have been updated "
-msgstr ""
+msgstr "Bildens inställningar för sökoptimering har uppdaterats "
 
 #: ../maxgalleria-media-library.php:5738
 msgid "The selected folder, subfolders and thier files have been hidden."
-msgstr ""
+msgstr "Den valda mappen, undermappar och innehållande filer har nu gömts."
 
 #: ../maxgalleria-media-library.php:6093
 msgid ""
 "Click on the image you want to select. After its data is loaded you can "
 "click the \"Insert\" button at the bottom of this window."
 msgstr ""
+"Klicka på en bild för att välja den. När data för filen har laddat kan du "
+"klicka på knappen \"Infoga\" längst ner i detta fönster."
 
 #: ../maxgalleria-media-library.php:6133
 msgid ""
 "Click on the file you want to select. After its data is loaded you can click "
 "the \"Insert\" button at the bottom of this window."
 msgstr ""
+"Klicka på en fil för att välja den. När data för filen har laddat kan du "
+"klicka på knappen \"Infoga\" längst ner i detta fönster."
 
 #: ../maxgalleria-media-library.php:6249
 msgid "The media categories were updated."
-msgstr ""
+msgstr "Media kategorierna har uppdaterats."
 
 #: ../maxgalleria-media-library.php:6394
 msgid "The category was not added."
-msgstr ""
+msgstr "Kategorin lades inte till."
 
 #: ../maxgalleria-media-library.php:6729
 msgid "The settings were updated."
-msgstr ""
+msgstr "Inställningarna uppdaterades."
