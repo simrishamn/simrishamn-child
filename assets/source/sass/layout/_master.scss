@@ -98,3 +98,7 @@ html.translated-ltr #site-header {
 .content-blue-gray {
     background-color: $simrishamn-gray;
 }
+
+article:not(.full) {
+    max-width: 700px;
+}
