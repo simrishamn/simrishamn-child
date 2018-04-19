@@ -3,15 +3,15 @@
     .box-post-brick {
 	margin-bottom: 10px;
 	padding-bottom: 75%;
+	@media screen and #{$screen-below-md} {
+	    padding-bottom: 33%;
+	}
     }
     .index-content {
 	p {
 	    line-height: 1.2;
 	    font-size: 16px;
 	    padding: 20px 20px 0 20px;
-	    @media screen and #{$screen-below-lg} {
-		padding: 0px 20px 0 20px;
-	    }
 	}
 	.btn-holder {
 	    padding-top: 0px;
@@ -22,6 +22,108 @@
 	.brick-container {
 	    position: absolute;
 	    margin-top: 10%;
+	    @media screen and #{$screen-below-md} {
+
+	    }
+	}
+
+	@media screen and #{$screen-below-lg} {
+	    .brick-container {
+		margin-top: 5px;
+		width: 75%;
+		left: 15%;
+		p {
+		    padding: 0px 5px 0 5px;
+		    font-size: 13px;
+		}
+		.btn-holder {
+		    margin-top: 0px;
+		    padding: 0;
+		    .btn-plain {
+			margin-top: 5px;
+			padding: 5px 40px 5px 40px;
+		    }
+		}
+	    }
+	}
+    }
+}
+
+.news-list {
+    box-sizing: border-box;
+    justify-content: center;
+    padding: 10px;
+    padding-bottom: 45px;
+    background-color: white;
+    .grid-md-4 {
+	max-width: 448px;
+    }
+
+    .box-horizontal .box-content {
+	max-height: 125px;
+	overflow: hidden;
+	display: flex;
+	@media screen and #{$screen-below-lg} {
+	    background-image: linear-gradient(180deg,transparent,#cecece4d)
+	}
+	div#fade{
+	    height: 30px;
+	    bottom: 0;
+	    left: 0;
+	    width: 100%;
+	}
+    }
+
+
+
+    .box-image img {
+	max-width: 100%;
+    }
+
+    p {
+	overflow: hidden;
+	margin-top: 0px;
+    }
+
+    .news-featured {
+	padding: 5px;
+	.box-content {
+	    max-width: 100%;
+	    height: 190px;
+	    padding: 5px 10px;
+	    overflow: hidden;
+	}
+
+	p {
+	    font-weight: 600;
+	    font-size: 12px;
+	    overflow: hidden;
+	}
+    }
+
+    .btn-holder {
+	text-align: center;
+	border: 2px solid;
+	margin-top: 18px;
+	.btn-plain {
+	    font-size: 22px;
+	    font-weight: 600;
+	    padding: 5px 30px 5px 30px;
+	}
+    }
+
+    .border-blue {
+	border: 2px solid;
+	border-color: $simrishamn-blue;
+	a {
+	    color: $simrishamn-blue;
+	}
+    }
+
+    .border-green {
+	border-color: $simrishamn-green;
+	a {
+	    color: $simrishamn-green;
 	}
     }
 }

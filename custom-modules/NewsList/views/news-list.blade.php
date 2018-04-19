@@ -1,39 +1,42 @@
-<div class="grid">
-  <div class="grid-md-4 box">
-    <div>
-      {{ $thumb_one }}
-    </div>
-    <div>
-      {{ $featured_one->post_title }}
-    </div>
-  </div>
+<div class="grid news-list">
+  <div class="block-title"> <h1> {{ $post_title }} </h1> </div>
 
-  <div class="grid-md-4 box">
-    <img width="1920" height="1080"
-	 src=""
-	 class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt=""
-    />
-    <div>
-      {{ $featured_two->post_title }}
+  @foreach($featured as $item)
+    <div class="grid-md-4 news-featured">
+      <div class="box-image">
+	<img src="{{ $item->thumbnail }}" alt="{{ $item->post_title }}">
+      </div>
+      <div class="box box-content">
+	<span class="title">{{ $item->post_title }}</span>
+	<p>{{ $item->post_excerpt }}</p>
+      </div>
     </div>
-  </div>
+  @endforeach
 
   <div class="grid-md-4">
-    <div class="box box-panel inlay-index">
-      <div class="box box-horizontal">
+    <div class="box-panel inlay-index">
+      <div class="box-horizontal">
 	@foreach($items as $item)
 	  <a href="">
-	    <div class="box-content content-{{ $content_color }}">
+	    <div class="box-content content-light-{{ $content_color }}">
 	      <div>
 		<span class="title">
+		  {{ $item->date_stamp }}
 		  {{ $item->post_title }}
 		</span>
-		<p style="color: black;">{{ $item->post_excerpt }}</p>
+		<p style="color: black;">{{ $item->post_excerpt }}
+		  <div> </div>
+		</p>
 	      </div>
 	    </div>
 	  </a>
 	@endforeach
-	<button>Go to Archive</button>
+	<div class="btn-holder border-{{ $content_color }}">
+	  <a class="btn btn-plain"
+	     href="{{ get_post_type_archive_link( 'post' ) }}">
+	    Gå till Nyhetsarkiv
+	  </a>
+	</div>
       </div>
     </div>
   </div>

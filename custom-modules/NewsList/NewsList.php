@@ -6,7 +6,6 @@ class NewsList extends \Modularity\Module
 {
     public $slug = 'news-listing';
     public $supports = array();
-
     public function init()
     {
         $this->nameSingular = __("News", 'modularity');
@@ -20,22 +19,22 @@ class NewsList extends \Modularity\Module
     public function data() : array
     {
         $data = array();
-
-
         $args = array(
             'numberposts'	=> 3,
             'post_type'		=> 'post',
-            'taxonomy' => get_field('post_types', $this->ID)
+            'category' => get_field('filter-p') ? get_field('category', $this->ID) : null
         );
 
         $data['items'] = get_posts( $args );
+        $this->setMetaData($data['items']);
+
+        $data['featured'] = array(
+            get_field('featured_one', $this->ID),
+            get_field('featured_two', $this->ID)
+        );
+        $this->setMetaData($data['featured']);
+
         $data['content_color'] = get_field('content_color', $this->ID);
-
-        $data['featured_one'] = get_field('featured_one', $this->ID);
-        $data['thumb_one'] = get_the_post_thumbnail($data['featured_one']);
-
-        $data['featured_two'] = get_field('featured_two', $this->ID);
-
         $data['classes'] = implode(
             ' ',
             apply_filters(
@@ -48,6 +47,15 @@ class NewsList extends \Modularity\Module
         return $data;
     }
 
+    public function setMetaData($items) {
+        // TODO: format date & set thumbnail in this function
+        foreach($items as $item) {
+            if($item) {
+                $item->thumbnail = get_the_post_thumbnail_url($item, 'small');
+                //$item->date_stamp = do_something_with($item->post_date);
+            }
+        }
+    }
 
     public function template() {
         if(get_field('format', $this->ID) == 'default') {
