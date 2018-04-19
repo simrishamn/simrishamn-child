@@ -28,11 +28,11 @@
 	  <div class="brick-container">
 	    <p>
 	      Hitta fler hyter i Nyhetsarkivet!
-	      Lattast ar att klicka på ga till knappen.
+	      Lättast är att klicka på Gå Till knappen.
 	    </p>
 	    <div class="btn-holder">
 	      <a class="btn btn-plain" href="{{ get_post_type_archive_link( 'post' ) }}">
-		Ga Till
+          Gå Till
 	      </a>
 	    </div>
 	  </div>
