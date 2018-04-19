@@ -45,16 +45,16 @@
     margin: $box-margin 0;
     padding: 15px 10px;
 
-    .title {
-        color: black;
-        font-size: 17px;
-    }
-
     p {
         margin-top: 10px;
     }
-}
 
+    .title {
+	color: black;
+	font-size: 15px;
+	font-weight: 600;
+    }
+}
 
 /* === Action Cards === */
 .modularity-mod-action-card {
