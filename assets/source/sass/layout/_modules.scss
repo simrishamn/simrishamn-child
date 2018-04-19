@@ -33,6 +33,16 @@
     margin-bottom: 15px;
 }
 
+.block-title {
+    text-align: center;
+    h1 {
+	color: $simrishamn-dark-gray;
+	font-size: 36px;
+	font-weight: 600;
+	line-height: 49px;
+    }
+}
+
 .modularity-mod-posts {
     margin-bottom: 20px;
 

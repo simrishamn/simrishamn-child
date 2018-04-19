@@ -64,6 +64,11 @@ html.translated-ltr #site-header {
 }
 
 .content-green {
+    background-color: $simrishamn-medium-green;
+    color: white;
+}
+
+.content-light-green {
     background-color: $simrishamn-light-green;
     color: white;
 }
