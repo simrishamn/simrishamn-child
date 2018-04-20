@@ -17,6 +17,76 @@
     }
 }
 
-.nav-aside .sub-menu .current > a::before, .nav-aside .sub-menu .current-menu-item > a::before, .nav-mobile .sub-menu .current > a::before, .nav-mobile .sub-menu .current-menu-item > a::before {
+.nav-aside .sub-menu .current > a::before,
+.nav-aside .sub-menu .current-menu-item > a::before,
+.nav-mobile .sub-menu .current > a::before,
+.nav-mobile .sub-menu .current-menu-item > a::before {
     background-color: $simrishamn-blue;
+}
+
+
+@media screen and #{$screen-lg-up} {
+    #mobile-menu {        
+        width: 450px;
+        position: absolute;
+        z-index: 2;
+
+        .nav-mobile > .nav {
+            li {
+                > a {
+                    padding-right: 60px;
+                }
+                > button {
+                    right: 60px;
+                }
+            }
+
+            // First level
+            > li {
+                > a {
+                    padding-left: 50px;
+                }
+
+                // Second level
+                > .sub-menu > li {
+                    > a {
+                        padding-left: 60px;
+                    }
+
+                    // Third level
+                    > .sub-menu > li {
+                        > a {
+                            padding-left: 70px;
+                        }
+                        
+                        // Forth level
+                        > .sub-menu > li {
+                            > a {
+                                padding-left: 80px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .sub-menu {
+                border-left: none;
+
+                .current-menu-item > a,
+                .current > a {
+                    font-weight: bold;
+
+                    &::before {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and #{$screen-lg-up} {
+    &.mobile-menu-open #main-content {
+        margin-left: 450px;
+    }
 }
