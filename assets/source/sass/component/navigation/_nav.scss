@@ -44,14 +44,37 @@
             > .nav {
                 li {
                     > a {
-                        padding-right: 60px;
+                        padding-right: 80px;
+                        padding-top: 7px;
+                        padding-bottom: 7px;
 
                         &:hover {
                             background-color: $simrishamn-menu-active-grey;
                         }
                     }
                     > button {
-                        right: 60px;
+                        right: 50px;
+
+                        .icon {                            
+                            &::after {
+                                position: absolute;
+                                right: 12px;
+                                top: 10px;
+                                font-family: 'FontAwesome';
+                                font-size: 1em;
+                                content: '\f067';
+                            }
+                        }
+                    }
+
+                    &.is-expanded {
+                        > button {
+                            .icon {
+                                &::after {
+                                    content: '\f068';
+                                }
+                            }
+                        }
                     }
                 }
 
