@@ -11,5 +11,6 @@ class App
         new \Simrishamn\Theme\Language();
         new \Simrishamn\Theme\Modularity();
         new \Simrishamn\Theme\Template();
+        new \Simrishamn\Theme\TinyMCE();
     }
 }
