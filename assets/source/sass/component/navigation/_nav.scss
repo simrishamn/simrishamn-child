@@ -30,54 +30,89 @@
         width: 450px;
         position: absolute;
         z-index: 2;
+        box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.175);
+        border-right: 1px solid #000;
 
-        .nav-mobile > .nav {
-            li {
-                > a {
-                    padding-right: 60px;
-                }
-                > button {
-                    right: 60px;
-                }
-            }
+        > form.search {
+            display: none;
+        }
 
-            // First level
-            > li {
-                > a {
-                    padding-left: 50px;
+        .nav-mobile {
+            background-color: $simrishamn-menu-dark-grey;
+            padding: 50px 0;
+
+            > .nav {
+                li {
+                    > a {
+                        padding-right: 60px;
+
+                        &:hover {
+                            background-color: $simrishamn-menu-active-grey;
+                        }
+                    }
+                    > button {
+                        right: 60px;
+                    }
                 }
 
-                // Second level
-                > .sub-menu > li {
+                // First level
+                > li {
+                    &.current-node {
+                        background-color: $simrishamn-menu-medium-grey;
+                    }
+
                     > a {
                         padding-left: 60px;
                     }
 
-                    // Third level
+                    // Second level
                     > .sub-menu > li {
+                        &.current-node {
+                            background-color: $simrishamn-menu-light-grey;
+                        }
+
                         > a {
                             padding-left: 70px;
                         }
-                        
-                        // Forth level
+
+                        // Third level
                         > .sub-menu > li {
+                            &.current-node {
+                                background-color: $simrishamn-menu-light-grey;
+                            }
+
                             > a {
                                 padding-left: 80px;
+                            }
+                            
+                            // Forth, fifth, sixth, (nth) level
+                            .sub-menu > li {        
+                                &.current-node {
+                                    background-color: $simrishamn-menu-light-grey;
+                                }
+
+                                > a {
+                                    padding-left: 90px;
+                                }
                             }
                         }
                     }
                 }
-            }
 
-            .sub-menu {
-                border-left: none;
+                .sub-menu {
+                    border-left: none;
 
-                .current-menu-item > a,
-                .current > a {
-                    font-weight: bold;
+                    .current-menu-item {
+                        background-color: inherit;
+                    }
 
-                    &::before {
-                        content: none;
+                    .current-menu-item > a,
+                    .current > a {
+                        font-weight: bold;
+
+                        &::before {
+                            content: none;
+                        }
                     }
                 }
             }
