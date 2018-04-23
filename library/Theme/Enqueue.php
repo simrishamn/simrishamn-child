@@ -14,7 +14,8 @@ class Enqueue
     {
         add_action('wp_enqueue_scripts', array($this, 'enqueueTheme'));
         add_action('admin_enqueue_scripts', array($this, 'enqueueAdmin'));
-        add_action('wp_enqueue_editor', array($this, 'enqueueEditorStyle'));
+
+        add_filter('mce_css', array($this, 'enqueueEditorStyle'));
         add_filter('mce_external_plugins', array($this, 'enqueueEditorScript'));
     }
 
@@ -77,11 +78,19 @@ class Enqueue
     /**
      * Enqueue editor style.
      *
-     * @return void
+     * @param array $styles The default styles.
+     *
+     * @return array A list of active styles.
      */
-    public function enqueueEditorStyle()
+    public function enqueueEditorStyle($styles)
     {
-        $this->_style('simrishamn-editor', 'editor.min.css');
+        $path = $this->_stylePath . '/editor.min.css';
+        $uri = get_stylesheet_directory_uri() . '/' . $path;
+
+        $styles = preg_split('/\s*,\s*/', trim($styles));
+        $styles[] = $uri;
+
+        return join(',', $styles);
     }
 
     /**
