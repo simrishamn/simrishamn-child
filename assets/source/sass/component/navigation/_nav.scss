@@ -174,7 +174,7 @@
     }
 }
 
-@media screen and #{$screen-lg-up} {    
+@media screen and #{$screen-xl-up} {    
     &.mobile-menu-open #main-content {
         margin-left: 450px;
     }
