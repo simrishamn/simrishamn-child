@@ -1,8 +1,38 @@
+.test {
+    background: linear-gradient(to bottom,transparent,rgba(0,0,0,.8));
+}
+
+.news-grid {
+    max-width: 100%;
+    .grid-md-6 .grid {
+	margin-left: 0px;
+	.grid-md-6 {
+	    margin-bottom: 5px;
+	    padding-left: 10px;
+	}
+    }
+    .box-image::after {
+	background: none;
+    }
+    .grid-item-content {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 25%;
+	color: white;
+	background: rgba(darken(#6b717f, 15), 0.8);
+	h6 {
+	    margin-top: 5px;
+	}
+    }
+}
+
 .news-grid .grid-md-6 {
-    padding-right: 5px;
+    padding-right: 0px;
     .box-post-brick {
 	margin-bottom: 10px;
 	padding-bottom: 75%;
+	height: 98%;
 	@media screen and #{$screen-below-md} {
 	    padding-bottom: 33%;
 	}
