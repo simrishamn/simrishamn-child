@@ -7,7 +7,7 @@
 		<img src="{{ $featured[0]->thumbnail }}"
 		     alt="{{ $featured[0]->post_title }}">
 		<div class="grid-item-content">
-		    <h6 class="">Yvonnes Testnyhet</h6>
+		    <h6 class="">{{ $featured[0]->post_title }}</h6>
 		    {{ $featured[0]->post_excerpt }}
 		</div>
 	    </div>
@@ -24,7 +24,7 @@
 			    <img src="{{ $item->thumbnail }}"
 				 alt="{{ $item->post_title }}">
 			    <div class="grid-item-content">
-				<h6>Yvonnes Testnyhet</h6>
+				<h6>{{ $item->post_title }}</h6>
 			    </div>
 			</div>
 		    </a>
