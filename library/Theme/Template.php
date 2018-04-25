@@ -10,6 +10,8 @@ class Template
     public function __construct()
     {
         add_filter('theme_page_templates', array($this, 'filter'), 20, 1);
+        add_filter('ngettext', array($this, 'register_text'), 20, 3);
+        add_filter('gettext', array($this, 'register_text'), 20, 3);
     }
 
     /**
@@ -25,5 +27,27 @@ class Template
         $templates['full-width.blade.php'] = 'Fullbredd';
 
         return $templates;
+    }
+
+    /**
+     * Filters the login page text labels.
+     *
+     * @param string $text WordPress text labels.
+     *
+     * @return string A (maybe) replaced text label.
+     */
+    public function register_text( $text ) {
+        trigger_error(gettype($text));
+        $text = str_ireplace(
+            'Användarnamn eller e-postadress',
+            'Användarnamn',
+            $text
+        );
+        $text = str_ireplace(
+            'Username or Email Address',
+            'Username',
+            $text
+        );
+        return $text;
     }
 }
