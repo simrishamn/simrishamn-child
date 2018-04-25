@@ -10,6 +10,7 @@ class App
         new \Simrishamn\Theme\Enqueue();
         new \Simrishamn\Theme\Language();
         new \Simrishamn\Theme\Modularity();
+        new \Simrishamn\Theme\Style();
         new \Simrishamn\Theme\Template();
         new \Simrishamn\Theme\TinyMCE();
     }

@@ -17,6 +17,165 @@
     }
 }
 
-.nav-aside .sub-menu .current > a::before, .nav-aside .sub-menu .current-menu-item > a::before, .nav-mobile .sub-menu .current > a::before, .nav-mobile .sub-menu .current-menu-item > a::before {
+.nav-aside .sub-menu .current > a::before,
+.nav-aside .sub-menu .current-menu-item > a::before,
+.nav-mobile .sub-menu .current > a::before,
+.nav-mobile .sub-menu .current-menu-item > a::before {
     background-color: $simrishamn-blue;
+}
+
+
+/** 
+** Mobile (and desktop) menu
+**/
+#mobile-menu {      
+    
+    @media screen and #{$screen-lg-up} {
+        position: absolute;
+        width: 450px;
+        z-index: 2;
+        box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.175);
+        border-right: 1px solid #000;
+        
+        > form.search {
+            display: none;
+        }
+    }
+
+    .nav-mobile {
+
+        @media screen and #{$screen-lg-up} {
+            background-color: $simrishamn-menu-dark-grey;
+            padding: 50px 0;
+        }
+
+        > .nav {
+            li {
+                > a {
+                    padding-top: 7px;
+                    padding-bottom: 7px;
+                    padding-right: 45px;
+                    padding-left: 40px;
+                    
+                    @media screen and #{$screen-lg-up} {
+                        padding-right: 80px;
+                        padding-left: 90px;
+                        
+                        &:hover {
+                            background-color: $simrishamn-menu-active-grey;
+                        }
+                    }
+                }
+
+                > button {   
+                    right: 15px;
+
+                    @media screen and #{$screen-lg-up} {
+                        right: 50px;
+                    }
+
+                    .icon {                            
+                        &::after {
+                            position: absolute;
+                            right: 12px;
+                            top: 10px;
+                            font-family: 'FontAwesome';
+                            font-size: 1em;
+                            content: '\f067';
+                        }
+                    }
+                }
+
+                &.is-expanded {
+                    > button {
+                        .icon {
+                            &::after {
+                                content: '\f068';
+                            }
+                        }
+                    }
+                }
+            }
+
+            // First level
+            > li {
+                &.current-node {
+                    @media screen and #{$screen-lg-up} {
+                        background-color: $simrishamn-menu-medium-grey;
+                    }
+                }
+
+                > a {
+                    padding-left: 10px;
+                    @media screen and #{$screen-lg-up} {
+                        padding-left: 60px;
+                    }
+                }
+
+                // Second level
+                > .sub-menu > li {
+                    &.current-node {
+                        @media screen and #{$screen-lg-up} {
+                            background-color: $simrishamn-menu-light-grey;
+                        }
+                    }
+
+                    > a {
+                        padding-left: 20px;
+                        @media screen and #{$screen-lg-up} {
+                            padding-left: 70px;
+                        }
+                    }
+
+                    // Third level
+                    > .sub-menu > li {
+                        &.current-node {
+                            @media screen and #{$screen-lg-up} {
+                                background-color: $simrishamn-menu-light-grey;
+                            }
+                        }
+
+                        > a {
+                            padding-left: 30px;
+                            @media screen and #{$screen-lg-up} {
+                                padding-left: 80px;
+                            }
+                        }
+                        
+                        // Forth, fifth, sixth (etc) level
+                        .sub-menu > li {        
+                            &.current-node {
+                                @media screen and #{$screen-lg-up} {
+                                    background-color: $simrishamn-menu-light-grey;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .sub-menu {
+                border-left: none;
+
+                .current-menu-item {
+                    background-color: inherit;
+                }
+
+                .current-menu-item > a,
+                .current > a {
+                    font-weight: bold;
+
+                    &::before {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and #{$screen-xl-up} {    
+    &.mobile-menu-open #main-content {
+        margin-left: 450px;
+    }
 }
