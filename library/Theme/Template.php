@@ -22,6 +22,8 @@ class Template
     public function filter($templates)
     {
         unset($templates['one-page.blade.php']);
+        $templates['full-width.blade.php'] = 'Fullbredd';
+
         return $templates;
     }
 }
