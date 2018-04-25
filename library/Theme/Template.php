@@ -9,7 +9,7 @@ class Template
      */
     public function __construct()
     {
-        add_filter('theme_page_templates', array($this, 'filter'), 10, 1);
+        add_filter('theme_page_templates', array($this, 'filter'), 20, 1);
     }
 
     /**
@@ -22,7 +22,6 @@ class Template
     public function filter($templates)
     {
         unset($templates['one-page.blade.php']);
-
         return $templates;
     }
 }
