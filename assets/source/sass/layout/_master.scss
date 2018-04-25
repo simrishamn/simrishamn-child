@@ -13,6 +13,10 @@ html.video-is-playing {
     }
 }
 
+p {
+    word-wrap: break-word;
+}
+
 .admin-bar #site-header {
     @media screen and (max-width: 782px) {
         margin-top: 46px;
