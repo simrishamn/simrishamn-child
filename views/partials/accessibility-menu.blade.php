@@ -3,9 +3,9 @@
     <li> {!! ReadSpeakerHelper_playButton() !!} </li>
   @endif
 
-  <!-- @foreach (apply_filters('accessibility_items', array()) as $item)
-       <li> {!! $item !!} </li>
-       @endforeach -->
+  @foreach (apply_filters('accessibility_items', array()) as $item)
+      <li> {!! $item !!} </li>
+  @endforeach
 
   @if (is_single() && !empty(apply_filters('Municipio/blog/post_settings', array(), $post)))
     <li>
