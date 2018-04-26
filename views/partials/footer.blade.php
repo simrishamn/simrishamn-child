@@ -82,82 +82,58 @@
 
                 {{-- ## Footer widget area begin ## --}}
                 <div class="grid sidebar-footer-area">
-		  <div class="grid-lg-4">
-		    <div class="contact-box">
-		      <h4>Telefonnummer</h4>
-		      <p>0414-81 90 00</p>
-		    </div>
+		    @foreach($footerData as $column)
+			<div class="grid-lg-4">
+			    @foreach($column as $item)
+				<div class="contact-box">
+				    <h4> {{ $item['label'] }} </h4>
+				    @if(is_array($item['value']))
+					@foreach($item['value'] as $link)
+					    <a href="{{ $link['link']['url'] }}">
+						{{ $link['link']['title'] }}
+					    </a>
+					    </br>
+					@endforeach
+				    @else
+					{{ $item['value'] }}
+				    @endif
+				</div>
+			    @endforeach
+			</div>
+		    @endforeach
+		</div>
+          {{-- ## Footer widget area end ## --}}
 
-		    <div class="contact-box">
-		      <h4>E-post</h4>
-		      <p>simrishamns.kommun@simrishamn.se</p>
-		    </div>
+          {{-- ## Footer header begin ## --}}
 
-		    <div class="contact-box">
-		      <h4>Öppettider</h4>
-		      <p>Måndag-Fredag kl. 08.00-16.30</p>
-		    </div>
-		  </div>
+          {{-- ## Footer header end ## --}}
+          </div>
 
-		  <div class="grid-lg-4">
-		    <div class="contact-box">
-		      <h4>Postadress</h4>
-		      <p>Simrishamns kommun, 272 80 Simrishamn</p>
-		    </div>
+        {{-- ## Footer signature ## --}}
 
-		    <div class="contact-box">
-		      <h4>Besöksadress</h4>
-		      <p>Stadshuset, Stortorget, Simrishamn</p>
-		    </div>
-
-		    <div class="contact-box">
-		      <h4>Om Webbplatsen</h4>
-		      <p>A-Ö</p>
-		      <p>Webbkarta</p>
-		    </div>
-		  </div>
-		  <div class="grid-lg-4">
-		    <div class="contact-box">
-		      <h4>Länkar</h4>
-		      <p>Turism</p>
-		      <p>Bibliotek</p>
-		      <p>Marincentrum.se</p>
-		      <p>Österlensmuseum.se</p>
-		    </div>
-		  </div>
-                </div>
-                {{-- ## Footer widget area end ## --}}
-
-                {{-- ## Footer header begin ## --}}
-
-                {{-- ## Footer header end ## --}}
-            </div>
-
-            {{-- ## Footer signature ## --}}
-
-        </div>
+	</div>
     </div>
 
-    {{-- ## Social icons ## --}}
-    @if (have_rows('footer_icons_repeater', 'option'))
-    <div class="container">
-        <div class="grid">
-            <div class="grid-xs-12">
-                <ul class="icons-list">
-                    @foreach(get_field('footer_icons_repeater', 'option') as $link)
-                        <li>
-                            <a href="{{ $link['link_url'] }}" target="_blank" class="link-item-light">
-                                {!! $link['link_icon'] !!}
+  {{-- ## Social icons ## --}}
+  @if (have_rows('footer_icons_repeater', 'option'))
+      <div class="container">
+          <div class="grid">
+              <div class="grid-xs-12">
+                  <ul class="icons-list">
+                      @foreach(get_field('footer_icons_repeater', 'option') as $link)
+                          <li>
+                              <a href="{{ $link['link_url'] }}" target="_blank" class="link-item-light">
+                                  {!! $link['link_icon'] !!}
 
-                                @if (isset($link['link_title']))
-                                <span class="sr-only">{{ $link['link_title'] }}</span>
-                                @endif
-                            </a>
-                        </li>
-                    @endforeach
-                </ul>
-            </div>
-        </div>
-    </div>
-    @endif
+                                  @if (isset($link['link_title']))
+                                      <span class="sr-only">{{ $link['link_title'] }}</span>
+                                  @endif
+                              </a>
+                          </li>
+                      @endforeach
+                  </ul>
+              </div>
+          </div>
+      </div>
+  @endif
 </footer>
