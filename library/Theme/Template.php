@@ -37,7 +37,6 @@ class Template
      * @return string A (maybe) replaced text label.
      */
     public function register_text( $text ) {
-        trigger_error(gettype($text));
         $text = str_ireplace(
             'Användarnamn eller e-postadress',
             'Användarnamn',
