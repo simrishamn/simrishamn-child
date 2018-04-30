@@ -1,0 +1,13 @@
+body:not(.folded) {
+    #adminmenu,
+    #adminmenu .wp-submenu,
+    #adminmenuback,
+    #adminmenuwrap {
+        width: 175px;
+    }
+
+    #wpcontent,
+    #wpfooter {
+        margin-left: 175px;
+    }
+}
