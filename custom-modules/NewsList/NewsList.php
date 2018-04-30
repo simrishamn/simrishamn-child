@@ -4,16 +4,19 @@ namespace Simrishamn\NewsList;
 
 class NewsList extends \Modularity\Module
 {
-    public $slug = 'news-listing';
+    public $slug = 'news-list';
     public $supports = array();
     public function init()
     {
-        $this->nameSingular = __("News", 'modularity');
-        $this->namePlural  = __("News", 'modularity');
+
+        $this->fields = SIMRISHAMN_PATH . '/custom-modules/NewsList/acf/php/mod-news-list.php';
+        $this->nameSingular = __("News", 'simrishamn');
+        $this->namePlural  = __("News", 'simrishamn');
         $this->description  = __(
-            "Description",
+            "Outputs a number of featured and latests posts in a grid- or list manner.",
             'modularity'
         );
+        include_once $this->fields;
     }
 
     public function data() : array
