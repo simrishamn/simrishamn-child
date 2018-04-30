@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: simrishamn\n"
-"POT-Creation-Date: 2018-04-05 15:51+0200\n"
-"PO-Revision-Date: 2018-04-05 15:52+0200\n"
+"POT-Creation-Date: 2018-04-30 14:53+0200\n"
+"PO-Revision-Date: 2018-04-30 14:54+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -20,68 +20,289 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: custom-modules/ActionCard/ActionCard.php:13
+#: custom-modules/ActionCard/ActionCard.php:14
+#: custom-modules/ActionCard/acf/php/mod-action-card.php:7
 msgid "ActionCard"
 msgstr "Ingångspuff"
 
-#: custom-modules/ActionCard/ActionCard.php:14
+#: custom-modules/ActionCard/ActionCard.php:15
 msgid "ActionCards"
 msgstr "Ingångspuffar"
 
-#: custom-modules/ActionCard/ActionCard.php:16
+#: custom-modules/ActionCard/ActionCard.php:17
 msgid "Index-like cards with configurable FontAwesome icons and no excerpt."
-msgstr ""
+msgstr "Puffar med titel, länk och ikon."
 
-#: custom-modules/ColoredIndex/ColoredIndex.php:12
+#: custom-modules/ActionCard/acf/php/mod-action-card.php:11
+msgid "Cards"
+msgstr "Ingångspuffar"
+
+#: custom-modules/ActionCard/acf/php/mod-action-card.php:26
+msgid "Add Card"
+msgstr "Lägg till Puff"
+
+#: custom-modules/ActionCard/acf/php/mod-action-card.php:30
+#: custom-modules/ColoredIndex/acf/php/mod-colored-index.php:86
+msgid "Link type"
+msgstr "Länktyp"
+
+#: custom-modules/ActionCard/acf/php/mod-action-card.php:54
+#: custom-modules/ColoredIndex/acf/php/mod-colored-index.php:110
+msgid "Page"
+msgstr "Länk"
+
+#: custom-modules/ActionCard/acf/php/mod-action-card.php:84
+#: custom-modules/ColoredIndex/acf/php/mod-colored-index.php:140
+msgid "Link url"
+msgstr "Länk"
+
+#: custom-modules/ActionCard/acf/php/mod-action-card.php:108
+#: custom-modules/ActionCard/acf/php/mod-action-card.php:137
+#: custom-modules/ColoredIndex/acf/php/mod-colored-index.php:223
+#: custom-modules/LinkList/acf/php/mod-linklist.php:109
+msgid "Title"
+msgstr "Titel"
+
+#: custom-modules/ActionCard/acf/php/mod-action-card.php:166
+msgid "Icon"
+msgstr "Ikon"
+
+#: custom-modules/ActionCard/acf/php/mod-action-card.php:865
+#: custom-modules/ColoredIndex/acf/php/mod-colored-index.php:38
+msgid "Columns"
+msgstr "Kolumner"
+
+#: custom-modules/ColoredIndex/ColoredIndex.php:13
+#: custom-modules/ColoredIndex/acf/php/mod-colored-index.php:7
 msgid "Colored Index"
 msgstr "Teaserblock"
 
-#: custom-modules/ColoredIndex/ColoredIndex.php:13
+#: custom-modules/ColoredIndex/ColoredIndex.php:14
 msgid "Colored Indices"
 msgstr "Teaserblock"
 
-#: custom-modules/ColoredIndex/ColoredIndex.php:15
+#: custom-modules/ColoredIndex/ColoredIndex.php:16
 msgid ""
 "Outputs a colored index card with image, text & customizable link to a page."
-msgstr ""
+msgstr "Teaserblock med textarea, intern länk och alternativt en bild."
 
-#: custom-modules/InlayIndex/InlayIndex.php:12
+#: custom-modules/ColoredIndex/acf/php/mod-colored-index.php:11
+msgid "Format"
+msgstr "Format"
+
+#: custom-modules/ColoredIndex/acf/php/mod-colored-index.php:67
+msgid "Settings"
+msgstr "Inställningar"
+
+#: custom-modules/ColoredIndex/acf/php/mod-colored-index.php:82
+#: custom-modules/LinkList/acf/php/mod-linklist.php:26
+msgid "Add Row"
+msgstr "Lägg till rad"
+
+#: custom-modules/ColoredIndex/acf/php/mod-colored-index.php:164
+msgid "Image"
+msgstr "Bild"
+
+#: custom-modules/ColoredIndex/acf/php/mod-colored-index.php:191
+msgid "Upload image"
+msgstr "Ladda upp bild"
+
+#: custom-modules/ColoredIndex/acf/php/mod-colored-index.php:250
+msgid "Summary (150)"
+msgstr "Utdrag"
+
+#: custom-modules/ColoredIndex/acf/php/mod-colored-index.php:277
+msgid "Summary (250)"
+msgstr "Utdrag"
+
+#: custom-modules/ColoredIndex/acf/php/mod-colored-index.php:304
+#: custom-modules/LinkList/acf/php/mod-linklist.php:130
+#: custom-modules/NewsList/acf/php/mod-news-list.php:87
+msgid "Color"
+msgstr "Färg"
+
+#: custom-modules/ColoredIndex/acf/php/mod-colored-index.php:335
+msgid "Button Text"
+msgstr "Knapp-text"
+
+#: custom-modules/InlayIndex/InlayIndex.php:13
+#: custom-modules/InlayIndex/acf/php/mod-inlay-index.php:7
 msgid "Inlay Index"
 msgstr "Servicemeddelanden"
 
-#: custom-modules/InlayIndex/InlayIndex.php:13
+#: custom-modules/InlayIndex/InlayIndex.php:14
 msgid "Inlay Indices"
 msgstr "Servicemeddelanden"
 
-#: custom-modules/InlayIndex/InlayIndex.php:15
+#: custom-modules/InlayIndex/InlayIndex.php:16
 msgid "Outputs 2-4 of the latest posts from the selected post-type."
-msgstr ""
+msgstr "Listar 2-4 av de senaste inläggen av vald inläggstyp."
 
-#: custom-modules/LinkList/LinkList.php:12
+#: custom-modules/InlayIndex/acf/php/mod-inlay-index.php:11
+msgid "Post Type"
+msgstr "Inläggstyp"
+
+#: custom-modules/InlayIndex/acf/php/mod-inlay-index.php:31
+msgid "Color: Title"
+msgstr "Färg: Titel"
+
+#: custom-modules/InlayIndex/acf/php/mod-inlay-index.php:46
+msgid "Color: Box"
+msgstr "Färg: Innehåll"
+
+#: custom-modules/LinkList/LinkList.php:13
+#: custom-modules/LinkList/acf/php/mod-linklist.php:7
 msgid "Link List"
 msgstr "Länklista"
 
-#: custom-modules/LinkList/LinkList.php:13
+#: custom-modules/LinkList/LinkList.php:14
 msgid "Link Lists"
 msgstr "Länklistor"
 
-#: custom-modules/LinkList/LinkList.php:15
+#: custom-modules/LinkList/LinkList.php:16
 msgid "Outputs a list of links, with option to choose color."
+msgstr "Visar en lista med länkar."
+
+#: custom-modules/LinkList/acf/php/mod-linklist.php:11
+msgid "Link Items"
+msgstr "Länkar"
+
+#: custom-modules/LinkList/acf/php/mod-linklist.php:30
+msgid "Link Type"
+msgstr "Länktyp"
+
+#: custom-modules/LinkList/acf/php/mod-linklist.php:54
+#: custom-modules/LinkList/acf/php/mod-linklist.php:85
+#: library/Theme/AcfFields/php/options-theme-footer-information.php:124
+#: library/Theme/AcfFields/php/options-theme-footer-information.php:160
+msgid "Link"
+msgstr "Länk"
+
+#: custom-modules/NewsList/NewsList.php:13
+#: custom-modules/NewsList/NewsList.php:14
+msgid "News"
+msgstr "Nyheter"
+
+#: custom-modules/NewsList/NewsList.php:16
+msgid ""
+"Outputs a number of featured and latests posts in a grid- or list manner."
+msgstr "Visar nyheter i rutnät eller listvy."
+
+#: custom-modules/NewsList/acf/php/mod-news-list.php:7
+msgid "News List"
+msgstr "Nyhetslistning"
+
+#: custom-modules/NewsList/acf/php/mod-news-list.php:11
+msgid "Layout"
+msgstr "Utseende"
+
+#: custom-modules/NewsList/acf/php/mod-news-list.php:38
+msgid "Filter"
 msgstr ""
 
-#: custom-modules/RelatedNews/RelatedNews.php:12
-#: custom-modules/RelatedNews/RelatedNews.php:13
-msgid "Related News"
-msgstr "Relaterade Nyheter"
+#: custom-modules/NewsList/acf/php/mod-news-list.php:57
+msgid "Category"
+msgstr "Kategori"
 
-#: custom-modules/RelatedNews/RelatedNews.php:15
-msgid "Description"
-msgstr ""
+#: custom-modules/NewsList/acf/php/mod-news-list.php:114
+#: custom-modules/NewsList/acf/php/mod-news-list.php:137
+msgid "Featured Post"
+msgstr "Framhävd Nyhet"
 
-#: library/admin-bar.php:41
+#: library/Theme/AcfFields/php/options-theme-footer-information.php:7
+msgid "Footer Information"
+msgstr "Information Sidfot"
+
+#: library/Theme/AcfFields/php/options-theme-footer-information.php:11
+msgid "Phone Number"
+msgstr "Telefonnummer"
+
+#: library/Theme/AcfFields/php/options-theme-footer-information.php:48
+msgid "Opening Times"
+msgstr "Öppettider"
+
+#: library/Theme/AcfFields/php/options-theme-footer-information.php:67
+msgid "PO Box"
+msgstr "Postadress"
+
+#: library/Theme/AcfFields/php/options-theme-footer-information.php:86
+msgid "Office Address"
+msgstr "Besöksadress"
+
+#: library/Theme/AcfFields/php/options-theme-footer-information.php:105
+msgid "Internal Links"
+msgstr "Interna Länkar"
+
+#: library/Theme/AcfFields/php/options-theme-footer-information.php:141
+msgid "External Links"
+msgstr "Externa Länkar"
+
+#: library/Theme/AdminBar.php:58
 msgid "News Article"
 msgstr "Nyhet"
 
 #: templates/module/grid.blade.php:49
 msgid "No posts to show…"
-msgstr ""
+msgstr "Inga inlägg att visa..."
+
+#: views/archive.blade.php:84
+msgid "No posts to show"
+msgstr "Inga inlägg att visa"
+
+#: views/partials/archive-filters.blade.php:37
+#: views/partials/archive-filters.blade.php:40
+#: views/partials/archive-filters.blade.php:76
+msgid "Search"
+msgstr "Sök"
+
+#: views/partials/archive-filters.blade.php:47
+msgid "Date published"
+msgstr "Publiceringsdatum"
+
+#: views/partials/archive-filters.blade.php:49
+msgid "From"
+msgstr "Från"
+
+#: views/partials/archive-filters.blade.php:50
+msgid "From date"
+msgstr "Från datum"
+
+#: views/partials/archive-filters.blade.php:51
+msgid "To"
+msgstr "Till"
+
+#: views/partials/archive-filters.blade.php:52
+msgid "To date"
+msgstr "Till datum"
+
+#: views/partials/archive-filters.blade.php:72
+msgid "Clear filters"
+msgstr "Återställ filter"
+
+#: views/partials/blog/post-footer.blade.php:10
+#: views/partials/page-footer.blade.php:11
+msgid "Share the page"
+msgstr "Dela sidan"
+
+#: views/partials/social-share.blade.php:3
+#: views/partials/social-share.blade.php:5
+#: views/partials/social-share.blade.php:9
+#: views/partials/social-share.blade.php:11
+#: views/partials/social-share.blade.php:15
+#: views/partials/social-share.blade.php:17
+msgid "Share on"
+msgstr "Dela på"
+
+#: views/partials/social-share.blade.php:21
+msgid "Share as e-mail"
+msgstr "Dela med e-post"
+
+#: views/partials/social-share.blade.php:23
+msgid "Share with e-mail"
+msgstr "Dela med e-post"
+
+#~ msgid "About"
+#~ msgstr "Om"
+
+#~ msgid "Related News"
+#~ msgstr "Relaterade Nyheter"
