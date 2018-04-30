@@ -9,12 +9,15 @@ class LinkList extends \Modularity\Module
 
   public function init()
   {
+    $this->fields = SIMRISHAMN_PATH . '/custom-modules/LinkList/acf/php/mod-linklist.php';
     $this->nameSingular = __("Link List", 'simrishamn');
     $this->namePlural  = __("Link Lists", 'simrishamn');
     $this->description  = __(
       "Outputs a list of links, with option to choose color.",
       'simrishamn'
     );
+
+    require_once $this->fields;
   }
 
   public function data() : array
