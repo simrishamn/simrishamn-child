@@ -9,12 +9,14 @@ class  ColoredIndex extends \Modularity\Module
 
     public function init()
     {
+        $this->fields = SIMRISHAMN_PATH . '/custom-modules/ColoredIndex/acf/php/mod-colored-index.php';
         $this->nameSingular = __("Colored Index", 'simrishamn');
         $this->namePlural  = __("Colored Indices", 'simrishamn');
         $this->description  = __(
             "Outputs a colored index card with image, text & customizable link to a page.",
             'simrishamn'
         );
+        include_once $this->fields;
     }
 
     public function data() : array
