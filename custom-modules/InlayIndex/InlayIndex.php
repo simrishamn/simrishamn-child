@@ -9,12 +9,15 @@ class InlayIndex extends \Modularity\Module
 
     public function init()
     {
+        $this->fields = SIMRISHAMN_PATH . '/custom-modules/InlayIndex/acf/php/mod-inlay-index.php';
         $this->nameSingular = __("Inlay Index", 'simrishamn');
         $this->namePlural  = __("Inlay Indices", 'simrishamn');
         $this->description  = __(
             "Outputs 2-4 of the latest posts from the selected post-type.",
             'simrishamn'
         );
+
+        require_once $this->fields;
     }
 
     public function data() : array
