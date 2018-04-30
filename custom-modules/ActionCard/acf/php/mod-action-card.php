@@ -4,11 +4,11 @@ if( function_exists('acf_add_local_field_group') ) {
 
     acf_add_local_field_group(array(
         'key' => 'group_5a96bca994c07',
-        'title' => 'ActionCard',
+        'title' => __('ActionCard', 'simrishamn'),
         'fields' => array(
             array(
                 'key' => 'field_5a96bca99c1cd',
-                'label' => 'Cards',
+                'label' => __('Cards', 'simrishamn'),
                 'name' => 'action-card',
                 'type' => 'repeater',
                 'instructions' => '',
@@ -23,11 +23,11 @@ if( function_exists('acf_add_local_field_group') ) {
                 'min' => 1,
                 'max' => 0,
                 'layout' => 'block',
-                'button_label' => 'Lägg till kort',
+                'button_label' => __('Add Card', 'simrishamn'),
                 'sub_fields' => array(
                     array(
                         'key' => 'field_5a96bca99fd22',
-                        'label' => 'Link type',
+                        'label' => __('Link type', 'simrishamn'),
                         'name' => 'link_type',
                         'type' => 'radio',
                         'instructions' => '',
@@ -51,7 +51,7 @@ if( function_exists('acf_add_local_field_group') ) {
                     ),
                     array(
                         'key' => 'field_5a96bca99fda3',
-                        'label' => 'Page',
+                        'label' => __('Page', 'simrishamn'),
                         'name' => 'page',
                         'type' => 'post_object',
                         'instructions' => '',
@@ -81,7 +81,7 @@ if( function_exists('acf_add_local_field_group') ) {
                     ),
                     array(
                         'key' => 'field_5a96bca99fe14',
-                        'label' => 'Link url',
+                        'label' => __('Link url', 'simrishamn'),
                         'name' => 'link_url',
                         'type' => 'url',
                         'instructions' => '',
@@ -105,7 +105,7 @@ if( function_exists('acf_add_local_field_group') ) {
                     ),
                     array(
                         'key' => 'field_5a96bca99ff71',
-                        'label' => 'Titel',
+                        'label' => __('Title', 'simrishamn'),
                         'name' => 'title',
                         'type' => 'text',
                         'instructions' => 'Om du inte vill använda den underliggande sidans titel kan du skriva in en annan titel här.',
@@ -134,7 +134,7 @@ if( function_exists('acf_add_local_field_group') ) {
                     ),
                     array(
                         'key' => 'field_5a96bca99ffe4',
-                        'label' => 'Titel',
+                        'label' => __('Title', 'simrishamn'),
                         'name' => 'title',
                         'type' => 'text',
                         'instructions' => '',
@@ -163,7 +163,7 @@ if( function_exists('acf_add_local_field_group') ) {
                     ),
                     array(
                         'key' => 'field_5a96d768b0bd0',
-                        'label' => 'icon',
+                        'label' => __('Icon', 'simrishamn'),
                         'name' => 'icon',
                         'type' => 'font-awesome',
                         'instructions' => '',
@@ -862,7 +862,7 @@ if( function_exists('acf_add_local_field_group') ) {
             ),
             array(
                 'key' => 'field_5a96bca99c248',
-                'label' => 'Columns',
+                'label' => __('Columns', 'simrishamn'),
                 'name' => 'action_columns',
                 'type' => 'select',
                 'instructions' => '',

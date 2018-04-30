@@ -10,6 +10,7 @@ class ActionCard extends \Modularity\Module
 
     public function init()
     {
+        $this->fields = SIMRISHAMN_PATH . '/custom-modules/ActionCard/acf/php/mod-action-card.php';
         $this->nameSingular = __('ActionCard', 'simrishamn');
         $this->namePlural = __('ActionCards', 'simrishamn');
         $this->description = __(
@@ -23,6 +24,9 @@ class ActionCard extends \Modularity\Module
             10,
             3
         );
+
+        include_once $this->fields;
+
     }
 
     public function data() : array
