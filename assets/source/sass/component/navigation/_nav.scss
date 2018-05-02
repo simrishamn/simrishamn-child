@@ -1,3 +1,5 @@
+$desktop-menu-width: 450px;
+
 .nav-aside {
     
     li {
@@ -32,11 +34,14 @@
     
     @media screen and #{$screen-lg-up} {
         position: absolute;
-        width: 450px;
+        width: $desktop-menu-width;
         z-index: 2;
         box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.175);
-        border-right: 1px solid #000;
-        
+        border-right: 1px solid #000;   
+        top: 28px;
+        min-height: calc(100% - 28px);
+        background-color: $simrishamn-menu-dark-grey;
+
         > form.search {
             display: none;
         }
@@ -47,6 +52,9 @@
         @media screen and #{$screen-lg-up} {
             background-color: $simrishamn-menu-dark-grey;
             padding: 50px 0;
+            position: absolute;
+            min-height: 100%;
+            width: 100%;
         }
 
         > .nav {
@@ -73,28 +81,33 @@
                     @media screen and #{$screen-lg-up} {
                         right: 50px;
                     }
-
-                    .icon {                            
-                        &::after {
-                            position: absolute;
-                            right: 12px;
-                            top: 10px;
-                            font-family: 'FontAwesome';
-                            font-size: 1em;
-                            content: '\f067';
-                        }
-                    }
                 }
 
-                &.is-expanded {
+                &:not(.is-loading) {
                     > button {
-                        .icon {
+                        .icon {                            
                             &::after {
-                                content: '\f068';
+                                position: absolute;
+                                right: 12px;
+                                top: 10px;
+                                font-family: 'FontAwesome';
+                                font-size: 1em;
+                                content: '\f067';
+                            }
+                        }
+                    }
+                    
+                    &.is-expanded {
+                        > button {
+                            .icon {
+                                &::after {
+                                    content: '\f068';
+                                }
                             }
                         }
                     }
                 }
+
             }
 
             // First level
@@ -174,8 +187,20 @@
     }
 }
 
-@media screen and #{$screen-xl-up} {    
-    &.mobile-menu-open #main-content {
-        margin-left: 450px;
+&.mobile-menu-open {
+    @media screen and #{$screen-lg-up} {
+        #wrapper {
+            position: relative;
+        }
+    }
+    
+    @media screen and #{$screen-xl-up} {    
+        #wrapper {
+            > .hero,
+            > #main-content,
+            > .footer-container {
+                margin-left: $desktop-menu-width;
+            }
+        }
     }
 }

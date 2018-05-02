@@ -4,6 +4,7 @@
   </div>
 @endif
 
+<div class="footer-container">
 <section class="color-bars">
   <div class="color-1"></div>
   <div class="color-2"></div>
@@ -137,3 +138,4 @@
       </div>
   @endif
 </footer>
+</div>
