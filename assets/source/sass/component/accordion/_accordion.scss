@@ -1,6 +1,35 @@
+.accordion {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    background-color: $simrishamn-gray;
+    border-radius: 0px;
+}
+
+.accordion-table-head {
+    box-shadow: 0 2px 3px rgba(0,0,0,0.08);
+    background-color: $simrishamn-gray;
+    color: $simrishamn-dark-gray;
+    padding: 10px 10px;
+
+    .column-header {
+        text-align: center;
+    }
+}
+
 .accordion-section {
     border: 0;
     margin-bottom: 5px;
+}
+
+.accordion-search {
+    border: 0px;
+    box-shadow: 0px;
+    background-color: $simrishamn-gray;
+    padding: 0px 8px 8px 8px;
+
+    input:not([type="checkbox"]):not([type="radio"]) {
+        border-radius: 0px;
+        border: 0px;
+    }
 }
 
 .accordion-toggle {
@@ -35,13 +64,5 @@
         top: 50%;
         transform: translateY(-50%);
         padding-right: calc(#{$paddingY} * 2 + 2em);
-    }
-}
-
-.accordion-search {
-    padding: 8px;
-
-    input:not([type="checkbox"]):not([type="radio"]) {
-        border-radius: 0;
     }
 }

@@ -19,6 +19,7 @@ $simrishamn-light-green: #e2e9dc;
 $simrishamn-white: #fff;
 $simrishamn-gray: #EFEFEF;
 $simrishamn-dark-gray: #666666;
+$simrishamn-black: #000000;
 
 $simrishamn-menu-dark-grey: #494848;
 $simrishamn-menu-medium-grey: #656464;
@@ -30,7 +31,7 @@ $simrishamn-colorbar-orange: $simrishamn-light-orange;
 $simrishamn-colorbar-blue: $simrishamn-blue;
 $simrishamn-colorbar-red: $simrishamn-red;
 
-$black: #000000;
+$black: $simrishamn-black;
 $blue: $simrishamn-blue;
 $base-font-color: #252525;
 $box-margin: 4px;
