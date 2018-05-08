@@ -10,6 +10,7 @@ class Style
     public function __construct()
     {
         add_filter('Municipio/mobile_menu_breakpoint', array($this, 'mobile_menu'), 10, 1);
+        add_filter('Municipio/Widget/Header/Links/MapLinks/avalibleLinkTypes', array($this, 'available_link_types'));
     }
 
     /**
@@ -22,5 +23,23 @@ class Style
     public function mobile_menu($classes)
     {
         return '';
+    }
+    
+    /**
+     * Sets the available link types
+     * 
+     * @param array $data The available link types.
+     *
+     * @return array The updated available link types.
+     */
+    public function available_link_types($data)
+    {
+        $data['search_trigger']['classes'] = $data['search_trigger']['classes'] . ' hamburger hamburger--slider';
+        $data['search_trigger']['attributes'] = 'onclick="jQuery(\'.js-search-trigger\').toggleClass(\'is-active\'); jQuery(\'body\').toggleClass(\'search-is-open\'); return false;"';
+        $data['search_trigger']['template'] = 'widget.header-links.partials.burger';
+        
+        $data['menu_trigger']['attributes'] = 'aria-controls="navigation" aria-expanded="true/false" onclick="jQuery(\'.menu-trigger\').toggleClass(\'is-active\');" data-target="#mobile-menu"';
+        
+        return $data;
     }
 }

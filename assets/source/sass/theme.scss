@@ -1,5 +1,6 @@
 @import 'config/color';
 @import 'config/grid';
+@import 'config/variables';
 @import 'layout/master';
 
 .is-child-theme {
@@ -23,5 +24,6 @@
     @import 'layout/archive-posts';
     @import 'layout/main-content';
     @import 'layout/a-z-listing';
+    @import 'layout/pages';
     @import '../../../custom-modules/ColoredIndex/assets/sass/colored-index';
 }

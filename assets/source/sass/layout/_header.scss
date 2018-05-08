@@ -1,14 +1,247 @@
 /* === Header === */
 .c-header--top {
-    line-height: 0.4;
-}
+    line-height: 2.6;
 
-.c-header--primary {
-    // todo: Discuss the maxwidth of this section
     .c-header__row {
-        padding: 10px 0px 10px;
+        padding: 0;
     }
 }
+
+.c-site-header {
+
+    .widget_search,
+    .search-top {
+        display: none;
+        margin: 0;
+        width: auto;
+        padding: 30px 30px 30px 20px;
+        background-color: $simrishamn-dark-blue;
+
+        form {
+            padding: 0;
+        }
+
+        .input-group {
+            @media screen and #{$screen-md-up} {
+                max-width: 350px;
+            }
+        }
+
+        .input-group-addon-btn {
+            .btn {
+                background: transparent;
+                border: 2px solid #fff;
+
+                &:hover,
+                &:focus {
+                    background: $simrishamn-blue;
+                }
+            }
+        }
+
+        .search {
+            display: flex;
+            flex-wrap: no-wrap;
+            align-items: center;
+            margin: -15px;
+        }
+    }
+
+    .c-navbar--header-widget-links {
+        margin: 0;
+        max-height: $top-header-height;
+
+        &.c-navbar {
+            margin-right: 0;
+        }
+
+        button {
+            padding: 2px 20px 5px;
+            
+            // Mobile
+            @media screen and #{$screen-below-md} {
+                padding: 27px 15px 18px;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        // Desktop
+        @media screen and #{$screen-md-up} {
+            .menu-trigger {
+                &.is-active {
+                    .hamburger-inner {
+                        transform: none !important;
+
+                        &:before {
+                            transform: none !important;
+                            opacity: 1;
+                        }
+                        &:after {
+                            transform: none !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .c-navbar__item_button--search {
+
+            &::before {
+                font-size: 25px;
+                top: 6px;
+                position: relative;
+            }
+            &::after {
+                content: 'Sök';
+                display: block;
+            }
+
+            // Mobile
+            @media screen and #{$screen-below-md} {
+                &::before {
+                    top: -5px;
+                }
+            }
+
+            .hamburger-label {
+                display: none;
+            }
+            .hamburger-inner {
+                margin-left: -1px;
+            }
+
+            .hamburger-box {
+                opacity: 1;
+            }
+
+            &:not(.is-active) {
+                .hamburger-box {
+                    display: none;
+                    opacity: 0;
+                }
+            }
+
+            &.is-active {
+                border-radius: 0;
+
+                &::before {
+                    opacity: 0;
+                    position: absolute;
+                }
+                &::after {
+                    content: 'Stäng';
+                }
+            }
+        }
+
+        .hamburger-box {
+            height: auto;
+            padding-bottom: 9px;
+            width: 28px;
+
+            .hamburger-inner {
+                &::before {
+                    top: 9px;
+                }
+                &::after {
+                    top: 18px;
+                }
+            }
+            .hamburger-inner,
+            .hamburger-inner::before,
+            .hamburger-inner::after {
+                height: 4px;
+                width: 30px;
+            }
+            
+            // Mobile
+            @media screen and #{$screen-below-md} {
+                .hamburger-inner {
+                    top: -11px;
+                }
+            }
+        }
+        
+        .hamburger--slider.is-active .hamburger-inner {
+            transform: translate3d(0, 9px, 0) rotate(45deg);
+
+            &::after {    
+                transform: translate3d(0, -17px, 0) rotate(-90deg);
+            }
+        }
+        
+        .hamburger-label {
+            display: block;
+        }
+        .hamburger-label,
+        .c-navbar__item_button--search::after {
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+// Only for desktop header
+.c-header--top {
+    .c-navbar--header-widget-links {
+        .hamburger-inner,
+            .hamburger-inner::before,
+            .hamburger-inner::after {
+                background-color: #fff;
+            }
+    }
+
+    .c-navbar__item_button--search {
+        &.is-active {
+            background: $simrishamn-dark-blue;
+        }
+    }
+}
+
+// Mobile header / desktop content header
+.c-header--primary {
+
+    // todo: Discuss the maxwidth of this section
+    .c-header__row {
+        padding: 15px 25px 20px;
+    }
+
+    .widget_text {
+        margin-bottom: 0;
+        margin-left: 12px;
+
+        h3 {
+            padding-bottom: 0;
+            font-weight: 400;
+        }
+    }
+    
+    // Mobile
+    @media screen and #{$screen-below-md} {
+        border-bottom: 2px solid #ddd;
+
+        .c-header__row {
+            padding: 5px 0;
+            margin: 0 15px;
+        }
+
+        .widget_text {
+            display: none;
+        }
+    }
+}
+
+&.search-is-open {
+    .c-header__item--left {
+        .widget_search {
+            display: flex;
+        }
+    }
+}
+
 
 /* --- Logo --- */
 .c-header__logo.t-municipio a {
@@ -16,8 +249,6 @@
         position: relative;
         width: 82px;
         max-width: 100%;
-        margin-top: -25px;
-        padding-top: 100%;
     }
 }
 

@@ -1,7 +1,7 @@
 @if (isset($headerLayout['headers']) && is_array($headerLayout['headers']) && !empty($headerLayout['headers']))
     <header class="c-site-header">
 
-        <div class="search-top {!! apply_filters('Municipio/desktop_menu_breakpoint','hidden-sm'); !!} hidden-print" id="search">
+        <div class="search-top hidden-md hidden-lg hidden-print" id="search">
             <div class="container">
                 <div class="grid">
                     <div class="grid-sm-12">
@@ -30,6 +30,13 @@
     </header>
     
     <nav id="mobile-menu" class="nav-mobile-menu nav-toggle nav-toggle-expand {!! apply_filters('Municipio/mobile_menu_breakpoint','hidden-md hidden-lg'); !!} hidden-print">
+        <div class="close-button-container">
+            <button class="hamburger hamburger--slider menu-trigger" type="button" data-target="#mobile-menu" onclick="jQuery('.menu-trigger').toggleClass('is-active');">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
         @include('partials.mobile-menu')
     </nav>
 @endif
