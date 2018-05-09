@@ -219,7 +219,8 @@ $desktop-menu-width: 450px;
                 margin-left: $desktop-menu-width;
             }
             
-            > .hero {
+            > .hero,
+            .c-header--primary {
                 padding-left: $desktop-menu-width;
             }
         }
