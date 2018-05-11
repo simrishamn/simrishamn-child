@@ -1,0 +1,20 @@
+#letters {
+    margin-bottom: 30px;
+}
+
+.az-links {
+    li:before {
+	content: unset !important;
+    }
+}
+
+#az-slider #inner-slider {
+
+    .letter-section {
+	margin-left: 40px;
+    }
+
+    .back-to-top {
+	display: none;
+    }
+}
