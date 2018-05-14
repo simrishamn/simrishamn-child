@@ -2,7 +2,7 @@
     @if (get_field('post_show_share', get_the_id()) !== false && get_field('page_show_share', 'option') !== false && is_single())
         <div class="grid">
             <div class="grid-xs-12">
-                <div class="box box-border gutter gutter-horizontal no-margin">
+                <div class="box test no-margin">
                     <div class="gutter gutter-vertical gutter-sm">
 			<div class="grid grid-table grid-va-middle no-margin no-padding">
                             <div class="grid-md-8">

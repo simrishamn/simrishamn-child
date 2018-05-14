@@ -1,8 +1,72 @@
-$desktop-menu-width: 450px;
+
+%plus-minus-icon-default {                          
+    &::after {
+        position: absolute;
+        right: 12px;
+        top: 10px;
+        font-family: 'FontAwesome';
+        font-size: 1em;
+        content: '\f067';
+    }
+}
+
+%plus-minus-icon-open {                          
+    &::after {
+        content: '\f068';
+    }
+}
 
 .nav-aside {
+    background: #fff;
+    padding: 10px;
+
+    .sub-menu {
+        padding-left: 8px;
+        border-left: none;
+
+        .current,
+        .current-menu-item {
+            font-weight: bold;
+
+            > a::before {
+                content: none;
+            }
+        }
+    }
     
+    .has-sub-menu {
+        > [data-load-submenu] {
+            outline: none;
+            margin-top: 6px;
+
+            &:focus {
+                outline: auto 5px -webkit-focus-ring-color;
+            }
+        }
+
+        &:not(.is-loading) {
+            > [data-load-submenu] {
+                .icon {                            
+                    @extend %plus-minus-icon-default;
+                }
+            }
+            
+            &.is-expanded {
+                > [data-load-submenu] {
+                    background-color: transparent;
+
+                    .icon {
+                        &::after {                      
+                            @extend %plus-minus-icon-open;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     li {
+        
         > a {
             padding: 12px;
             
@@ -23,7 +87,7 @@ $desktop-menu-width: 450px;
 .nav-aside .sub-menu .current-menu-item > a::before,
 .nav-mobile .sub-menu .current > a::before,
 .nav-mobile .sub-menu .current-menu-item > a::before {
-    background-color: $simrishamn-blue;
+    //background-color: $simrishamn-blue;
 }
 
 
@@ -85,24 +149,15 @@ $desktop-menu-width: 450px;
 
                 &:not(.is-loading) {
                     > button {
-                        .icon {                            
-                            &::after {
-                                position: absolute;
-                                right: 12px;
-                                top: 10px;
-                                font-family: 'FontAwesome';
-                                font-size: 1em;
-                                content: '\f067';
-                            }
+                        .icon {
+                            @extend %plus-minus-icon-default;
                         }
                     }
                     
                     &.is-expanded {
                         > button {
                             .icon {
-                                &::after {
-                                    content: '\f068';
-                                }
+                                @extend %plus-minus-icon-open;
                             }
                         }
                     }

@@ -8,6 +8,13 @@
     .c-header__row {
         padding: 10px 0px 10px;
     }
+
+    &.c-header--customizer {
+        // Desktop
+        @media screen and #{$screen-md-up} {
+            background: $body-background;    
+        }
+    }
 }
 
 /* --- Logo --- */
