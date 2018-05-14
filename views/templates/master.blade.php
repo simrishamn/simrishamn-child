@@ -99,6 +99,14 @@
         @include('partials.translate')
       @endif
     </div>
+    @if(get_field('scroll_elevator'))
+	<div class="sticky-scroll-elevator">
+	    <a href="#main-content">
+		<i></i>
+		<span>Till toppen</span>
+	    </a>
+	</div>
+    @endif
 
     {!! wp_footer() !!}
 

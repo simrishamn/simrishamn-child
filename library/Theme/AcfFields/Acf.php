@@ -8,7 +8,18 @@ class Acf
 
     public function __construct()
     {
-        add_action('after_setup_theme', array($this, 'includeOptionFields'), 10, 3);
+        add_action('after_setup_theme', array($this, 'includeThemeOptions'), 10, 3);
+        add_action('after_setup_theme', array($this, 'includePageOptions'), 10, 3);
+    }
+
+    /**
+     * Include Page Meta Options ACF.
+     *
+     * @return void
+     */
+    public function includePageOptions()
+    {
+        include_once $this->_path . '/options-page-scroll-elevator.php';
     }
 
     /**
@@ -16,7 +27,7 @@ class Acf
      *
      * @return void
      */
-    public function includeOptionFields()
+    public function includeThemeOptions()
     {
         include_once $this->_path . '/options-theme-footer-information.php';
     }
