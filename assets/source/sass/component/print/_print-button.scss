@@ -1,0 +1,12 @@
+.print-button {
+    color: $simrishamn-darker-gray;
+    cursor: pointer;
+
+    :hover, :active {
+        color: $simrishamn-dark-gray;
+    }
+
+    i.pricon.pricon-print {
+        margin-right: 5px;
+    }
+}

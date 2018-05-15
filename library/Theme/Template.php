@@ -16,6 +16,7 @@ class Template
             'Municipio/controller/base/view_data',
             array($this, 'getFooterData'), 10, 1
         );
+        add_filter('accessibility_items', array($this, 'removePrint'), 20, 1);
     }
 
     /**
@@ -78,5 +79,32 @@ class Template
             $text
         );
         return $text;
+    }
+
+    /**
+     * Removes print from accessability items.
+     *
+     * @param array $items The available items.
+     *
+     * @return string A new array without any print items.
+     */
+    public function removePrint($items)
+    {
+        $filteredItems = array_filter($items, array($this, 'isNotPrint'));
+        return $filteredItems;
+    }
+
+    /**
+     * Determines if an html string contains a window.print() call
+     * inside an onclick event.
+     *
+     * @param string $htmlString the html string to search.
+     *
+     * @return bool True if the string does not contain a javascript
+     * invokation to window.print(). Otherwise false.
+     */
+    public function isNotPrint($item)
+    {
+        return preg_match('/onclick="[^"]*window.print\(\)/', $item) !== 1;
     }
 }

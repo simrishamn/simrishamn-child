@@ -4,15 +4,16 @@
             <div class="grid-xs-12">
                 <div class="box box-border gutter gutter-horizontal no-margin">
                     <div class="gutter gutter-vertical gutter-sm">
-			<div class="grid grid-table grid-va-middle no-margin no-padding">
+                        <div class="grid grid-table grid-va-middle no-margin no-padding">
+                            @include('partials.print-button')
                             <div class="grid-md-8">
-				<i class="pricon pricon-share pricon-lg" style="margin-right:5px;"></i>
-				<strong><?php _e('Share the page', 'municipio'); ?>:</strong> {{ the_title() }}
+                                <i class="pricon pricon-share pricon-lg" style="margin-right:5px;"></i>
+                                <strong><?php _e('Share the page', 'municipio'); ?>:</strong> {{ the_title() }}
                             </div>
                             <div class="grid-md-4 text-right-md text-right-lg">
-				@include('partials.social-share')
+                                @include('partials.social-share')
                             </div>
-			</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -20,21 +21,20 @@
     @endif
 
     @if (!empty(municipio_post_taxonomies_to_display(get_the_id())))
-	<div class="grid grid-table">
-            <div class="grid-md-12">
-		@foreach (municipio_post_taxonomies_to_display(get_the_id()) as $taxonomy => $terms)
-                    @include('partials.blog.post-terms')
-		@endforeach
+    <div class="grid grid-table">
+        <div class="grid-md-12">
+        @foreach (municipio_post_taxonomies_to_display(get_the_id()) as $taxonomy => $terms)
+            @include('partials.blog.post-terms')
+        @endforeach
             </div>
-	</div>
+    </div>
     @endif
 
     <div class="grid grid-table grid-table-autofit {{ is_single() ? 'no-padding' : '' }}">
-	@if (get_field('post_show_author', get_the_id()) !== false)
-            <div class="grid-md-6">
-		@include('partials.timestamps')
-
-            </div>
-	@endif
+    @if (get_field('post_show_author', get_the_id()) !== false)
+        <div class="grid-md-6">
+            @include('partials.timestamps')
+        </div>
+    @endif
     </div>
 </footer>
