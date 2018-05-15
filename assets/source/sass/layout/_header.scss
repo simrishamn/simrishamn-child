@@ -232,6 +232,13 @@
             display: none;
         }
     }
+
+    // Desktop
+    @media screen and #{$screen-md-up} {
+        &.c-header--customizer {
+            background-color: $body-background;    
+        }
+    }
 }
 
 &.search-is-open {

@@ -10,13 +10,13 @@
 
         <div class="{{ $contentGridSize }} grid-print-12" id="readspeaker-read">
 
+            @include('partials.breadcrumbs')
+            
             @if (is_active_sidebar('content-area-top'))
                 <div class="grid sidebar-content-area sidebar-content-area-top">
                     <?php dynamic_sidebar('content-area-top'); ?>
                 </div>
             @endif
-
-            @include('partials.breadcrumbs')
 
             @while(have_posts())
                 {!! the_post() !!}

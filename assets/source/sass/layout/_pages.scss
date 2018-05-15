@@ -1,7 +1,43 @@
+&.page {
+    background: $body-background;
 
-// Start page
-&.page.home {
-    .c-header--primary {
-        display: none;
+    .main-container {
+        > .grid > [class*="grid-"] {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        >.grid:not(.breadcrumbs-wrapper):not(.no-margin-top):first-child {
+            
+            // Desktop
+            @media screen and #{$screen-md-up} {
+                padding-top: 0;
+            }
+        }
+    }
+
+    article {
+        background: #fff;
+        padding: 18px;
+        margin-bottom: 30px;
+
+        &:not(.full) {
+            max-width: none;
+        }
+
+        > h1 {
+            padding: 10px 0;
+        }
+    }
+
+    .page-footer {
+        border-top: 2px solid $breadcrumbs-background;
+        padding: 15px 5px;
+    }
+
+    // Start page
+    &.home {
+        .c-header--primary {
+            display: none;
+        }
     }
 }
