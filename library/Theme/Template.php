@@ -55,7 +55,7 @@ class Template
     public function templateListFilter($templates)
     {
         unset($templates['one-page.blade.php']);
-        $templates['full-width.blade.php'] = 'Fullbredd';
+        $templates['full-width.blade.php'] = 'Sektionssida';
 
         return $templates;
     }
