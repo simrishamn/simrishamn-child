@@ -9,7 +9,7 @@ class Template
      */
     public function __construct()
     {
-        add_filter('theme_page_templates', array($this, 'filter'), 20, 1);
+        add_filter('theme_page_templates', array($this, 'templateListFilter'), 20, 1);
         add_filter('ngettext', array($this, 'register_text'), 20, 3);
         add_filter('gettext', array($this, 'register_text'), 20, 3);
         add_filter(
@@ -52,7 +52,7 @@ class Template
      *
      * @return array A filtered list of templates.
      */
-    public function filter($templates)
+    public function templateListFilter($templates)
     {
         unset($templates['one-page.blade.php']);
         $templates['full-width.blade.php'] = 'Fullbredd';
