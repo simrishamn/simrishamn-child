@@ -9,7 +9,6 @@ class Acf
     public function __construct()
     {
         add_action('after_setup_theme', array($this, 'includeThemeOptions'), 10, 3);
-        add_action('after_setup_theme', array($this, 'includePageOptions'), 10, 3);
     }
 
     /**
