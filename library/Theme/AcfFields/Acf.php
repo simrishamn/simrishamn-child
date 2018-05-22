@@ -13,16 +13,6 @@ class Acf
     }
 
     /**
-     * Include Page Meta Options ACF.
-     *
-     * @return void
-     */
-    public function includePageOptions()
-    {
-        include_once $this->_path . '/options-page-scroll-elevator.php';
-    }
-
-    /**
      * Include Theme Options ACF.
      *
      * @return void
