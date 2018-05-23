@@ -16,13 +16,6 @@ class Modularity
         }
 
         add_filter(
-            'Modularity/Init',
-            array($this, 'modulePageRestriction'),
-            20,
-            2
-        );
-
-        add_filter(
             'Modularity/Editor/SidebarIncompability',
             array($this, 'moduleIncompatibility'),
             20,
@@ -35,6 +28,7 @@ class Modularity
     public function modulePageRestriction()
     {
         $enabledModules = array();
+        //echo print_r(\Modularity\ModuleManager::$enabled);
         switch(\Modularity\Helper\Post::getPostTemplate()) {
         case "front-page":
             array_push(
@@ -82,7 +76,6 @@ class Modularity
             );
             break;
         }
-
         \Modularity\ModuleManager::$enabled = $enabledModules;
     }
 
