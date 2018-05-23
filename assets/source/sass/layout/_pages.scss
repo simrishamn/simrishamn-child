@@ -1,5 +1,4 @@
 &.page {
-    background: $body-background;
 
     .main-container {
         > .grid > [class*="grid-"] {
@@ -40,4 +39,9 @@
             display: none;
         }
     }
+}
+
+&.page,
+&.page-child {
+    background: $body-background;
 }
