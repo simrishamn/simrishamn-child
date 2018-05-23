@@ -47,3 +47,10 @@
         color: $base-font-color;
     }
 }
+
+/* WordPress Widget */
+.modularity-mod-wpwidget {
+    .box {
+        box-shadow: none !important;
+    }
+}

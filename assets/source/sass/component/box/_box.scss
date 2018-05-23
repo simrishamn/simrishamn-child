@@ -1,3 +1,11 @@
+
+// Selector copied from original css (Helsingborg), for setting box-shadow
+&:not(.material-no-shadow) .box:not(.box-news-horizontal):not(.box-panel-secondary):not(.box-news-circular) {
+    &.box-panel {
+        box-shadow: none;
+    }
+}
+
 .box {
 
     a, .link {

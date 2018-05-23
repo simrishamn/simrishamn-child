@@ -1,0 +1,5 @@
+
+// Selector copied from original css (Helsingborg)
+.box-panel > ul:not(.social-feed-gallery):not(.accordion), .sidebar-content-area [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion), .sidebar-content-area-bottom [class^="widget_"]:not(.widget_calendar) > ul:not(.social-feed-gallery):not(.accordion) {
+    background-color: $body-background;
+}
