@@ -141,6 +141,10 @@
     }
 }
 
+.box-index {
+    background: $body-background;
+}
+
 .creamy {
     border: none;
 }
@@ -200,7 +204,7 @@
         .modularity-mod-inlaylist {
             .box-title {
                 background: $simrishamn-orange;
-                border-bottom: 1px solid white;
+                border-bottom: 1px solid $body-background;
                 font-weight: 400;
                 font-size: 20px;
             }
