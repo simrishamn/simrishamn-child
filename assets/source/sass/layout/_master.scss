@@ -111,3 +111,10 @@ html.translated-ltr #site-header {
 article:not(.full) {
     max-width: 700px;
 }
+
+.truncate:hover {
+    // same as on .truncate (i.e. not hover)
+    background-color: inherit;
+    width: 100%;
+    overflow: hidden;
+}
