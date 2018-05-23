@@ -2,7 +2,7 @@
     @if (get_field('post_show_share', get_the_id()) !== false && get_field('page_show_share', 'option') !== false && is_single())
         <div class="grid">
             <div class="grid-xs-12">
-                <div class="box no-margin">
+                <div class="box box-border gutter gutter-horizontal no-margin">
                     <div class="gutter gutter-vertical gutter-sm">
                         <div class="grid grid-table grid-va-middle no-margin no-padding">
                             @include('partials.print-button')
@@ -22,7 +22,7 @@
 
     @if (!empty(municipio_post_taxonomies_to_display(get_the_id())))
     <div class="grid grid-table">
-        <div class="grid-md-12">
+        <div class="grid-md-12 no-padding">
         @foreach (municipio_post_taxonomies_to_display(get_the_id()) as $taxonomy => $terms)
             @include('partials.blog.post-terms')
         @endforeach

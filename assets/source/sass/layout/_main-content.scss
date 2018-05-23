@@ -1,8 +1,15 @@
 .main-content {
     .main-container {
 
-        .page-footer {
+        .page-footer,
+        .post-footer {
             margin-bottom: 20px;
+
+            .grid-table {
+                .grid-xs-12 {
+                    margin-bottom: 5px;
+                }
+            }
         }
     }
 }
