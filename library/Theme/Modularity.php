@@ -100,8 +100,10 @@ class Modularity
         switch ($modulePostType) {
         case "mod-colored-index":
             if ($template == 'page') {
-                unset($sidebarIncompatibilities['right-sidebar']);
-                unset($sidebarIncompatibilities['content-area']);
+                unset(
+                    $sidebarIncompatibilities['right-sidebar'],
+                    $sidebarIncompatibilities['content-area']
+                );
             } elseif ($template =='full-width.blade.php') {
                 unset($sidebarIncompatibilities['content-area']);
             }
@@ -168,6 +170,9 @@ class Modularity
         }
 
         $moduleSpecification['sidebar_incompability'] = array_keys($sidebarIncompatibilities);
+        if ($template == 'front-page') {
+            $moduleSpecification['sidebar_incompability'] = array();
+        }
         return $moduleSpecification;
     }
 
