@@ -149,6 +149,13 @@
     margin-bottom: 0px;
 }
 
+&.home.page .modularity-mod-colored-index {
+    .grid > [class*="grid-"] {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
 .sidebar-content-area-bottom {
     padding: 0;
     margin: auto;
@@ -167,10 +174,14 @@
     .modularity-mod-colored-index {
         .grid > [class*="grid-"] {
             &:not(:first-child) {
-                padding-left: 15px;
+                @media screen and #{$screen-md-up} {
+                    padding-left: 15px;
+                }
             }
             &:not(:last-child) {
-                padding-right: 15px;
+                @media screen and #{$screen-md-up} {
+                    padding-right: 15px;
+                }
             }
         }
     }

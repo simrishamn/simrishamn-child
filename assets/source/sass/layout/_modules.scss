@@ -25,6 +25,15 @@
     }
 }
 
+/* colored index */
+.modularity-mod-colored-index {
+    .grid > [class*="grid-"] {
+        .box-panel {
+            display: flex;
+        }
+    }
+}
+
 .block-title {
     text-align: center;
     h1 {
@@ -41,6 +50,10 @@
     .box-title {
         padding: 15px 5px;
         color: $base-font-color;
+    }
+
+    .accordion-content article {
+        margin-bottom: 0;
     }
 }
 
