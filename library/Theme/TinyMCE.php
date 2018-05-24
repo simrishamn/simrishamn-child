@@ -10,6 +10,7 @@ class TinyMCE
     public function __construct()
     {
         add_filter('mce_buttons', array($this, 'buttons'));
+        add_filter('mce_external_languages', array($this, 'simrishamnLanguages'));
     }
 
     /**
@@ -24,5 +25,10 @@ class TinyMCE
         $active[] = 'infobox';
 
         return $active;
+    }
+
+    public function simrishamnLanguages($simrishamnLocales) {
+        $simrishamnLocales['simrishamn'] = plugin_dir_path(__FILE__) . 'Language/TinyMceLocale.php';
+        return $simrishamnLocales;
     }
 }
