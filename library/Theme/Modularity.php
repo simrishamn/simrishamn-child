@@ -21,6 +21,9 @@ class Modularity
             20,
             2
         );
+        add_action('edit_form_top', function ($post) {
+            \Modularity\ModuleManager::$enabled = $this->modulePageRestriction();
+        }, 10);
 
         $this->load();
     }
@@ -28,7 +31,6 @@ class Modularity
     public function modulePageRestriction()
     {
         $enabledModules = array();
-        //echo print_r(\Modularity\ModuleManager::$enabled);
         switch(\Modularity\Helper\Post::getPostTemplate()) {
         case "front-page":
             array_push(
@@ -76,7 +78,7 @@ class Modularity
             );
             break;
         }
-        \Modularity\ModuleManager::$enabled = $enabledModules;
+        return $enabledModules;
     }
 
     public function moduleIncompatibility($moduleSpecification, $modulePostType)
