@@ -48,8 +48,8 @@
     margin-bottom: 20px;
 
     .box-title {
-        padding: 15px 5px;
-        color: $base-font-color;
+        padding: 15px;
+        color: #fff;
     }
 
     .accordion-content article {
@@ -61,5 +61,13 @@
 .modularity-mod-wpwidget {
     .box {
         box-shadow: none !important;
+    }
+}
+
+.modularity-mod-inlaylist {
+    .box-panel.box-panel-secondary {
+        > ul.nav {
+            background: #fff;
+        }
     }
 }

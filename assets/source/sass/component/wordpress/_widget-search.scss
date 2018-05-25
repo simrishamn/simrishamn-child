@@ -25,6 +25,10 @@
             box-shadow: inset 0px 1px 5px #444;
         }
     }
+
+    input {
+        border-radius: 50px !important;
+    }
 }
 
 header .widget_search {
