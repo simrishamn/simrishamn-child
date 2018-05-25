@@ -1,4 +1,4 @@
 <header class="post-header">
-    <h1><a href="{{ the_permalink() }}">{{ the_title() }}</a></h1>
+    <h1>{{ the_title() }}</h1>
     @include('partials.accessibility-menu')
 </header>

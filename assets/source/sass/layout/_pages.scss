@@ -1,4 +1,5 @@
-&.page {
+&.page,
+&.single-post {
 
     .main-container {
         > .grid > [class*="grid-"] {
@@ -28,11 +29,6 @@
         }
     }
 
-    .page-footer {
-        border-top: 2px solid $breadcrumbs-background;
-        padding: 15px 5px;
-    }
-
     // Start page
     &.home {
         .c-header--primary {
@@ -42,6 +38,7 @@
 }
 
 &.page,
-&.page-child {
+&.page-child,
+&.single-post {
     background: $body-background;
 }

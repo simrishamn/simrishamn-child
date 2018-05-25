@@ -4,11 +4,27 @@
         .page-footer,
         .post-footer {
             margin-bottom: 20px;
+            border-top: 2px solid $breadcrumbs-background;
+            padding: 15px 5px;
 
             .grid-table {
                 .grid-xs-12 {
                     margin-bottom: 5px;
                 }
+            }
+
+            .footer-print-container {
+                @media screen and #{$screen-md-up} {
+                    text-align: right;
+                }
+            }
+
+            .share-page-container {
+                margin-top: 15px;
+            }
+
+            .taxonomies-container {
+                margin-top: 15px;
             }
         }
     }
