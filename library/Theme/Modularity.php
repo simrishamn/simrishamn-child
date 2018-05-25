@@ -42,6 +42,7 @@ class Modularity
                 'mod-slider',
                 'mod-action-card',
                 'mod-news-list'
+
             );
             break;
         case "full-width.blade.php":
@@ -51,7 +52,8 @@ class Modularity
                 'mod-colored-index',
                 'mod-contacts',
                 'mod-linklist',
-                'mod-news-list'
+                'mod-news-list',
+                'mod-inlay-index'
             );
             break;
         case "page":
@@ -64,7 +66,8 @@ class Modularity
                 'mod-slider',
                 'mod-form',
                 'mod-iframe',
-                'mod-fileslist'
+                'mod-fileslist',
+                'mod-inlay-index'
             );
             break;
         case "single":
@@ -157,6 +160,13 @@ class Modularity
             break;
         case "mod-contacts-fixed":
             if ($template == 'page' || $template == 'single') {
+                unset($sidebarIncompatibilities['right-sidebar']);
+            } elseif ($template == 'full-width.blade.php') {
+                unset($sidebarIncompatibilities['content-area']);
+            }
+            break;
+        case "mod-inlay-index":
+            if ($template == 'page') {
                 unset($sidebarIncompatibilities['right-sidebar']);
             } elseif ($template == 'full-width.blade.php') {
                 unset($sidebarIncompatibilities['content-area']);
