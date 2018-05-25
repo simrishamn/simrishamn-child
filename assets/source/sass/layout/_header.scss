@@ -236,7 +236,7 @@
     // Desktop
     @media screen and #{$screen-md-up} {
         &.c-header--customizer {
-            background-color: $body-background;    
+            background: rgba(245, 245, 245, 0.6);
         }
     }
 }
@@ -252,6 +252,8 @@
 
 /* --- Logo --- */
 .c-header__logo.t-municipio a {
+    padding-top: 100%;
+
     @media screen and #{$screen-md-up} {
         position: relative;
         width: 82px;
