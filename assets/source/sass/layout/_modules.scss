@@ -83,6 +83,18 @@
     }
 }
 
+.modularity-mod-image {
+
+    .wp-caption-text {
+        position: absolute;
+        bottom: 0;
+        color: white;
+        background-color: rgba($simrishamn-blue, 0.4);
+        text-shadow: 0 0 20px #000;
+        width: 100%;
+    }
+}
+
 &:not(.home) .hero {
     // Desktop
     @media screen and #{$screen-md-up} {
