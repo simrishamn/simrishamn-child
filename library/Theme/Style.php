@@ -35,7 +35,7 @@ class Style
     public function available_link_types($data)
     {
         $data['search_trigger']['classes'] = $data['search_trigger']['classes'] . ' hamburger hamburger--slider';
-        $data['search_trigger']['attributes'] = 'onclick="jQuery(\'.js-search-trigger\').toggleClass(\'is-active\'); jQuery(\'body\').toggleClass(\'search-is-open\'); return false;"';
+        $data['search_trigger']['attributes'] = 'onclick="jQuery(\'.js-search-trigger\').toggleClass(\'is-active\'); jQuery(\'body\').toggleClass(\'search-is-open\'); jQuery(\'.search .input-group .form-control\').focus(); return false;"';
         $data['search_trigger']['template'] = 'widget.header-links.partials.burger';
         
         $data['menu_trigger']['attributes'] = 'aria-controls="navigation" aria-expanded="true/false" onclick="jQuery(\'.menu-trigger\').toggleClass(\'is-active\');" data-target="#mobile-menu"';
