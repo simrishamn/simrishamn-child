@@ -2,7 +2,7 @@
 
 <footer class="page-footer">
     <div class="grid">
-        <div class="grid-xs-12 grid-md-7">
+        <div class="grid-xs-12 grid-md-7 timestamps-container">
             @include('partials.timestamps')
         </div>
         <div class="grid-xs-12 grid-md-5 footer-print-container">

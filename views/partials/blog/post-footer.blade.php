@@ -1,11 +1,15 @@
 <footer class="post-footer">
     @if (get_field('post_show_share', get_the_id()) !== false && get_field('page_show_share', 'option') !== false && is_single())
         <div class="grid">
-            <div class="grid-xs-12 grid-md-7">
+            <div class="grid-xs-12 grid-md-7 timestamps-container">
                 @if (get_field('post_show_author', get_the_id()) !== false)
                     @include('partials.timestamps')
                 @endif
-                
+            </div>
+            <div class="grid-xs-12 grid-md-5 footer-print-container">
+                @include('partials.print-button')
+            </div>
+            <div class="grid-xs-12">
                 @if (!empty(municipio_post_taxonomies_to_display(get_the_id())))
                     <div class="taxonomies-container">
                         @foreach (municipio_post_taxonomies_to_display(get_the_id()) as $taxonomy => $terms)
@@ -13,9 +17,6 @@
                         @endforeach
                     </div>
                 @endif
-            </div>
-            <div class="grid-xs-12 grid-md-5 footer-print-container">
-                @include('partials.print-button')
             </div>
             <div class="grid-xs-12 share-page-container">
                 <div class="box box-border gutter gutter-horizontal no-margin">

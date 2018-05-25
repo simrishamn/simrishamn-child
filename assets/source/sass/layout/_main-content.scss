@@ -13,18 +13,25 @@
                 }
             }
 
+            .timestamps-container {
+                margin-bottom: 15px;
+            }
+
             .footer-print-container {
+                margin-bottom: 15px;
+
                 @media screen and #{$screen-md-up} {
                     text-align: right;
                 }
             }
 
             .share-page-container {
-                margin-top: 15px;
+                margin-top: 5px;
+                margin-bottom: 15px;
             }
 
             .taxonomies-container {
-                margin-top: 15px;
+                margin-bottom: 15px;
             }
         }
     }

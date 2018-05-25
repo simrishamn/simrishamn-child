@@ -48,6 +48,11 @@
     margin-bottom: 20px;
 
     .box-title {
+        padding: 15px 5px;
+        color: $base-font-color;
+    }
+
+    .box .box-title {
         padding: 15px;
         color: #fff;
     }
@@ -69,5 +74,11 @@
         > ul.nav {
             background: #fff;
         }
+    }
+}
+
+.modularity-mod-iframe {
+    .box-title {
+        color: $base-font-color;
     }
 }
