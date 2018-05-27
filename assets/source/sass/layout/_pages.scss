@@ -31,8 +31,11 @@
 
     // Start page
     &.home {
-        .c-header--primary {
-            display: none;
+        // Desktop
+        @media screen and #{$screen-md-up} {
+            .c-header--primary {
+                display: none;
+            }
         }
     }
 }
