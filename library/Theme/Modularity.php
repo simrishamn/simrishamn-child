@@ -53,8 +53,7 @@ class Modularity
                 'mod-contacts',
                 'mod-linklist',
                 'mod-news-list',
-                'mod-inlay-index',
-                'mod-slider'
+                'mod-inlay-index'
             );
             break;
         case "page":
@@ -62,23 +61,24 @@ class Modularity
                 $enabledModules,
                 'mod-contacts',
                 'mod-colored-index',
-                'mod-linklist',
+                'mod-inlaylist',
                 'mod-image',
                 'mod-slider',
                 'mod-form',
                 'mod-iframe',
                 'mod-fileslist',
-                'mod-inlay-index'
+                'mod-inlay-index',
+                'mod-posts'
             );
             break;
         case "single":
             array_push(
                 $enabledModules,
                 'mod-contacts',
-                'mod-contacts-fixed',
-                'mod-linklist',
+                'mod-inlaylist',
                 'mod-news-list',
-                'mod-fileslist'
+                'mod-fileslist',
+                'mod-posts'
             );
             break;
         }
@@ -114,10 +114,12 @@ class Modularity
                 unset($sidebarIncompatibilities['content-area']);
             }
             break;
-        case "mod-linklist":
+        case "mod-inlaylist":
             if ($template == 'page') {
                 unset($sidebarIncompatibilities['right-sidebar']);
             }
+            break;
+        case "mod-linklist":
             unset($sidebarIncompatibilities['content-area']);
             break;
         case "mod-image":
@@ -149,22 +151,17 @@ class Modularity
                 unset($sidebarIncompatibilities['content-area']);
             }
             break;
-        case "mod-posts-expand":
+        case "mod-posts":
             if ($template == 'page') {
                 unset($sidebarIncompatibilities['content-area']);
+            } elseif ($template == 'single') {
+                unset($sidebarIncompatibilities['right-sidebar']);
             }
             break;
         case "mod-news-list":
             if ($template == 'full-width.blade.php') {
                 unset($sidebarIncompatibilities['bottom-sidebar']);
             } elseif ($template == 'single') {
-                unset($sidebarIncompatibilities['right-sidebar']);
-            }
-            break;
-        case "mod-contacts-fixed":
-            if ($template == 'page' || $template == 'single') {
-                unset($sidebarIncompatibilities['right-sidebar']);
-            } elseif ($template == 'full-width.blade.php') {
                 unset($sidebarIncompatibilities['content-area']);
             }
             break;
