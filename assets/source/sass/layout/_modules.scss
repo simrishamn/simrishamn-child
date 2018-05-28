@@ -85,6 +85,10 @@
 
 .modularity-mod-image {
 
+    > .box {
+        position: relative;
+    }
+
     .wp-caption-text {
         position: absolute;
         bottom: 0;
