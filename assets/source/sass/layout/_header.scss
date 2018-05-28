@@ -203,6 +203,8 @@
 
 // Mobile header / desktop content header
 .c-header--primary {
+    position: relative;
+    z-index: 1;
 
     // todo: Discuss the maxwidth of this section
     .c-header__row {

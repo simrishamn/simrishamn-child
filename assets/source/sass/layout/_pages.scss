@@ -31,6 +31,21 @@
 
     // Start page
     &.home {
+        
+        // Mobile
+        @media screen and #{$screen-below-md} {
+            .hero .slider {
+                padding-top: 100%;
+            }
+        }
+
+        // 900px (some default css we need to override)
+        @media only screen and (max-width: 900px) {
+            .hero .slider .slide {
+                width: 100% !important;
+            }
+        }
+
         // Desktop
         @media screen and #{$screen-md-up} {
             .c-header--primary {
