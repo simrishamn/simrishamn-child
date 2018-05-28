@@ -102,7 +102,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5ae1e94fd8b7f',
-			'label' => __('Internal Links', 'simrishamn'),
+			'label' => __('About the Site', 'simrishamn'),
 			'name' => 'footer_internal_links',
 			'type' => 'repeater',
 			'instructions' => '',

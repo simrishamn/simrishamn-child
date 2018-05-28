@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: simrishamn\n"
-"POT-Creation-Date: 2018-05-28 13:40+0200\n"
-"PO-Revision-Date: 2018-05-28 13:46+0200\n"
+"POT-Creation-Date: 2018-05-28 17:06+0200\n"
+"PO-Revision-Date: 2018-05-28 17:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -19,6 +19,14 @@ msgstr ""
 "_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: bem-views/partials/404/default.blade.php:18
+msgid "Error 404"
+msgstr ""
+
+#: bem-views/partials/404/default.blade.php:54
+msgid "We made a search for you, maybe you were looking for..."
+msgstr ""
 
 #: custom-modules/ActionCard/ActionCard.php:14
 #: custom-modules/ActionCard/acf/php/mod-action-card.php:7
@@ -230,8 +238,8 @@ msgid "Office Address"
 msgstr "Besöksadress"
 
 #: library/Theme/AcfFields/php/options-theme-footer-information.php:105
-msgid "Internal Links"
-msgstr "Interna Länkar"
+msgid "About the Site"
+msgstr "Om Webbplatsen"
 
 #: library/Theme/AcfFields/php/options-theme-footer-information.php:141
 msgid "External Links"
@@ -241,17 +249,17 @@ msgstr "Externa Länkar"
 msgid "News Article"
 msgstr "Nyhet"
 
-#: library/Theme/infobox-mce-locale.php:5
+#: library/Theme/Language/TinyMceLocale.php:5
 msgctxt "Default text shown in the infobox header upon creation"
 msgid "Title"
 msgstr "Rubrik"
 
-#: library/Theme/infobox-mce-locale.php:6
+#: library/Theme/Language/TinyMceLocale.php:6
 msgctxt "Default text shown in the infobox content paragraph upon creation"
 msgid "Content"
 msgstr "Innehåll"
 
-#: library/Theme/infobox-mce-locale.php:7
+#: library/Theme/Language/TinyMceLocale.php:7
 msgctxt "Tooltip text for the infobox button"
 msgid "Infobox"
 msgstr "Faktaruta"
@@ -294,27 +302,26 @@ msgstr "Till datum"
 msgid "Clear filters"
 msgstr "Återställ filter"
 
-#: views/partials/blog/post-footer.blade.php:10
-#: views/partials/page-footer.blade.php:11
+#: views/partials/blog/post-footer.blade.php:27
+#: views/partials/page-footer.blade.php:18
 msgid "Share the page"
 msgstr "Dela sidan"
 
-#: views/partials/social-share.blade.php:3
-#: views/partials/social-share.blade.php:5
-#: views/partials/social-share.blade.php:9
-#: views/partials/social-share.blade.php:11
-#: views/partials/social-share.blade.php:15
-#: views/partials/social-share.blade.php:17
-msgid "Share on"
-msgstr "Dela på"
+#: views/partials/print-button.blade.php:5
+msgid "Print"
+msgstr ""
 
-#: views/partials/social-share.blade.php:21
-msgid "Share as e-mail"
-msgstr "Dela med e-post"
+#~ msgid "Internal Links"
+#~ msgstr "Interna Länkar"
 
-#: views/partials/social-share.blade.php:23
-msgid "Share with e-mail"
-msgstr "Dela med e-post"
+#~ msgid "Share on"
+#~ msgstr "Dela på"
+
+#~ msgid "Share as e-mail"
+#~ msgstr "Dela med e-post"
+
+#~ msgid "Share with e-mail"
+#~ msgstr "Dela med e-post"
 
 #~ msgid "About"
 #~ msgstr "Om"
