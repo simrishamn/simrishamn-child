@@ -129,6 +129,8 @@ class Modularity
         case "mod-slider":
             if ($template == 'page') {
                 unset($sidebarIncompatibilities['content-area-top']);
+            } elseif ($template == 'full-width.blade.php') {
+                unset($sidebarIncompatibilities['slider-area']);
             }
             break;
         case "mod-form":
