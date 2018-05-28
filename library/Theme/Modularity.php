@@ -53,7 +53,8 @@ class Modularity
                 'mod-contacts',
                 'mod-linklist',
                 'mod-news-list',
-                'mod-inlay-index'
+                'mod-inlay-index',
+                'mod-slider'
             );
             break;
         case "page":
