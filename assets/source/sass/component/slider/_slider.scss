@@ -15,6 +15,11 @@
         background-color: rgba($simrishamn-blue, 0.4) !important;
     }
 
+    &, &.text-block-transparent  {
+	background-image: none;
+	background-color: transparent !important;
+    }
+
     span .title {
         font-size: 25pt;
         padding-bottom: 15px;
@@ -32,6 +37,7 @@
         }
     }
 }
+
 
 &.no-js .slider li:first-child {
     display: inline-block;
