@@ -16,14 +16,19 @@
     }
 
     span .title {
-        font-size: 16pt;
+        font-size: 25pt;
+        padding-bottom: 15px;
+
+        @media screen and #{$screen-below-sm} {
+            font-size: 20pt;
+        }
     }
 
     span {
-        font-size: 36pt;
+        font-size: 12pt;
 
         @media screen and #{$screen-below-sm} {
-            font-size: 24pt;
+            font-size: 10pt;
         }
     }
 }
