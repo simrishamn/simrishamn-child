@@ -53,7 +53,8 @@ class Modularity
                 'mod-contacts',
                 'mod-linklist',
                 'mod-news-list',
-                'mod-inlay-index'
+                'mod-inlay-index',
+                'mod-slider'
             );
             break;
         case "page":
@@ -129,6 +130,8 @@ class Modularity
         case "mod-slider":
             if ($template == 'page') {
                 unset($sidebarIncompatibilities['content-area-top']);
+            } elseif ($template == 'full-width.blade.php') {
+                unset($sidebarIncompatibilities['slider-area']);
             }
             break;
         case "mod-form":
