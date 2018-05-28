@@ -7,7 +7,7 @@
 		strlen($slide['textblock_content']) > 0  ? '' : 'text-block-transparent' }}">
     @if (is_front_page())
 	<div class="">
-	    <img src="http://dev.simrishamn.se/wp-content/uploads/2018/05/sim_text_white_backed-1368x416.png"
+	    <img src="{{ get_field('slider_logo', 'option') }}"
 		 alt=""
 		 class="block-level image-responsive"/>
 	</div>
