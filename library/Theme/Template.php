@@ -57,6 +57,11 @@ class Template
         unset($templates['one-page.blade.php']);
         $templates['full-width.blade.php'] = 'Sektionssida';
 
+        global $post;
+        if ($post->post_name == 'krismeddelande'){
+            $templates['global-notice.blade.php'] = 'Krismeddelanden';
+        }
+
         return $templates;
     }
 

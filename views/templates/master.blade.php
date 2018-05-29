@@ -52,24 +52,12 @@
       </div>
     <![endif]-->
 
-    <div id="wrapper">
-      @if (isset($notice) && !empty($notice))
-        <div class="notices">
-          @if (!isset($notice['text']) && is_array($notice))
-            @foreach ($notice as $notice)
-              @include('partials.notice')
-            @endforeach
-          @else
-            @include('partials.notice')
-          @endif
-        </div>
-      @endif
+      <div id="wrapper">
+	  @if (get_field('show_google_translate', 'option') == 'header')
+              @include('partials.translate')
+	  @endif
 
-      @if (get_field('show_google_translate', 'option') == 'header')
-        @include('partials.translate')
-      @endif
-
-      @include('partials.header')
+	  @include('partials.header')
 
       <main id="main-content" class="clearfix main-content">
         @yield('content')
