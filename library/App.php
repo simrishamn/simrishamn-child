@@ -7,6 +7,7 @@ class App
     {
         new \Simrishamn\Theme\AdminBar();
         new \Simrishamn\Theme\Customizer();
+        new \Simrishamn\Theme\DefaultModules();
         new \Simrishamn\Theme\Enqueue();
         new \Simrishamn\Theme\Language();
         new \Simrishamn\Theme\AcfFields\Acf();
