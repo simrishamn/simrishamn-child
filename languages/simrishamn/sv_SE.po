@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: simrishamn\n"
-"POT-Creation-Date: 2018-05-28 17:06+0200\n"
-"PO-Revision-Date: 2018-05-28 17:07+0200\n"
+"POT-Creation-Date: 2018-05-29 16:38+0200\n"
+"PO-Revision-Date: 2018-05-29 16:38+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -19,14 +19,6 @@ msgstr ""
 "_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
-
-#: bem-views/partials/404/default.blade.php:18
-msgid "Error 404"
-msgstr ""
-
-#: bem-views/partials/404/default.blade.php:54
-msgid "We made a search for you, maybe you were looking for..."
-msgstr ""
 
 #: custom-modules/ActionCard/ActionCard.php:14
 #: custom-modules/ActionCard/acf/php/mod-action-card.php:7
@@ -82,6 +74,7 @@ msgstr "Kolumner"
 
 #: custom-modules/ColoredIndex/ColoredIndex.php:13
 #: custom-modules/ColoredIndex/acf/php/mod-colored-index.php:7
+#: library/Theme/DefaultModules.php:37
 msgid "Colored Index"
 msgstr "Teaserblock"
 
@@ -108,6 +101,7 @@ msgid "Add Row"
 msgstr "Lägg till rad"
 
 #: custom-modules/ColoredIndex/acf/php/mod-colored-index.php:164
+#: library/Theme/DefaultModules.php:35
 msgid "Image"
 msgstr "Bild"
 
@@ -206,7 +200,7 @@ msgstr "Utseende"
 
 #: custom-modules/NewsList/acf/php/mod-news-list.php:38
 msgid "Filter"
-msgstr ""
+msgstr "Filter"
 
 #: custom-modules/NewsList/acf/php/mod-news-list.php:57
 msgid "Category"
@@ -249,6 +243,26 @@ msgstr "Externa Länkar"
 msgid "News Article"
 msgstr "Nyhet"
 
+#: library/Theme/DefaultModules.php:36
+msgid "Slider"
+msgstr "Slider"
+
+#: library/Theme/DefaultModules.php:41
+msgid "Contacts v2"
+msgstr "Kontakter v2"
+
+#: library/Theme/DefaultModules.php:42
+msgid "Shared Contacts"
+msgstr "Delade kontakter"
+
+#: library/Theme/DefaultModules.php:48
+msgid "Posts"
+msgstr "Inlägg"
+
+#: library/Theme/DefaultModules.php:49
+msgid "Shared Posts"
+msgstr "Delade inlägg"
+
 #: library/Theme/Language/TinyMceLocale.php:5
 msgctxt "Default text shown in the infobox header upon creation"
 msgid "Title"
@@ -266,7 +280,7 @@ msgstr "Faktaruta"
 
 #: templates/module/grid.blade.php:49
 msgid "No posts to show…"
-msgstr "Inga inlägg att visa..."
+msgstr "Inga inlägg att visa…"
 
 #: views/archive.blade.php:84
 msgid "No posts to show"
@@ -309,22 +323,4 @@ msgstr "Dela sidan"
 
 #: views/partials/print-button.blade.php:5
 msgid "Print"
-msgstr ""
-
-#~ msgid "Internal Links"
-#~ msgstr "Interna Länkar"
-
-#~ msgid "Share on"
-#~ msgstr "Dela på"
-
-#~ msgid "Share as e-mail"
-#~ msgstr "Dela med e-post"
-
-#~ msgid "Share with e-mail"
-#~ msgstr "Dela med e-post"
-
-#~ msgid "About"
-#~ msgstr "Om"
-
-#~ msgid "Related News"
-#~ msgstr "Relaterade Nyheter"
+msgstr "Skriv ut"
