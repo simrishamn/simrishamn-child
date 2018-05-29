@@ -85,7 +85,6 @@ class DefaultModules
 
         return (
             $_REQUEST['page'] == 'modularity-editor' &&
-            $post->post_status != 'published' &&
             count($modules) == 0
         );
     }
