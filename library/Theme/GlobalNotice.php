@@ -31,7 +31,7 @@ class GlobalNotice
         if( function_exists('acf_add_local_field_group') ):
             acf_add_local_field_group(array(
                 'key' => 'group_5b0d148cb105b',
-                'title' => 'Global Notice',
+                'title' => __('Global Notice', 'simrishamn'),
                 'fields' => array(
                     array(
                         'key' => 'field_5b0d665cb5620',
@@ -81,7 +81,7 @@ class GlobalNotice
                     ),
                     array(
                         'key' => 'field_5b0d14d27cf57',
-                        'label' => __('Text', 'simrishamn'),
+                        'label' => __('Message', 'simrishamn'),
                         'name' => 'global_notice_text',
                         'type' => 'wysiwyg',
                         'instructions' => '',
@@ -108,7 +108,7 @@ class GlobalNotice
                     ),
                     array(
                         'key' => 'field_5b0d66c9b5621',
-                        'label' => __('Full Page', 'simrishamn'),
+                        'label' => __('Link to Notice Page', 'simrishamn'),
                         'name' => 'global_notice_page',
                         'type' => 'page_link',
                         'instructions' => '',
