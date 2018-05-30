@@ -9,33 +9,21 @@ class GlobalNotice
      */
     public function __construct()
     {
-        if( function_exists('acf_add_options_page') ) {
-            acf_add_options_page(array(
-                'page_title' => __('Global Notice'),
-                'capability' => 'manage_options',
-                'position' => '5.161',
-                'icon_url' => 'dashicons-warning',
-                'post_id' => 'global_notice',
-                'autoload' => true,
-                'update_button' => __('Update', 'acf'),
-                'updated_message'=> __('Options Updated', 'acf'),
-            ));
-            $this->loadFieldGroup();
+        $this->loadFieldGroup();
 
-            add_filter('Municipio/blade/data', function($data) {
-                $data['notice'] = array(
-                    'active' => get_field('active', 'global_notice'),
-                    'title' => get_field('global_notice_title', 'global_notice'),
-                    'text' => get_field('global_notice_text', 'global_notice'),
-                    'url' => get_field('global_notice_page', 'global_notice'),
-                    'excerpt' => \Simrishamn\Theme\Helper::shortText(
-                        get_field('global_notice_text', 'global_notice'),
-                        150
-                    )
-                );
-                return $data;
-            });
-        }
+        add_filter('Municipio/blade/data', function($data) {
+            $data['notice'] = array(
+                'active' => get_field('active', 'options'),
+                'title' => get_field('global_notice_title', 'options'),
+                'text' => get_field('global_notice_text', 'options'),
+                'url' => get_field('global_notice_page', 'options'),
+                'excerpt' => \Simrishamn\Theme\Helper::shortText(
+                    get_field('global_notice_text', 'options'),
+                    150
+                )
+            );
+            return $data;
+        });
     }
 
     public function loadFieldGroup()
@@ -154,7 +142,7 @@ class GlobalNotice
                         array(
                             'param' => 'options_page',
                             'operator' => '==',
-                            'value' => 'acf-options-global-notice',
+                            'value' => 'acf-options-header',
                         ),
                     ),
                 ),
