@@ -89,11 +89,15 @@
 				<div class="contact-box">
 				    <h4> {{ $item['label'] }} </h4>
 				    @if(is_array($item['value']))
-					@foreach($item['value'] as $link)
-					    <a href="{{ $link['link']['url'] }}">
-						{{ $link['link']['title'] }}
-					    </a>
+					@foreach($item['value'] as $subitem)
+					    @if($subitem['link'])
+						<a href="{{ $subitem['link']['url'] }}">
+						    {{ $subitem['link']['title'] }}
+						</a>
 					    </br>
+					    @elseif($subitem['row'])
+					    <p> {{ $subitem['row'] }} </p>
+					    @endif
 					@endforeach
 				    @else
 					{{ $item['value'] }}
