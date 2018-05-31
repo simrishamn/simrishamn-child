@@ -52,11 +52,13 @@ class NewsList extends \Modularity\Module
     }
 
     public function setMetaData($items) {
-        // TODO: format date & set thumbnail in this function
         foreach($items as $item) {
             if($item) {
                 $item->thumbnail = get_the_post_thumbnail_url($item, 'small');
-                //$item->date_stamp = do_something_with($item->post_date);
+                if (!$item->post_excerpt) {
+                    $item->post_excerpt = \Simrishamn\Theme\Helper::shortText($item->post_content, 350);
+                }
+
             }
         }
     }

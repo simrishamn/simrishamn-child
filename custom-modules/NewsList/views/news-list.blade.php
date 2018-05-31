@@ -25,7 +25,6 @@
 			<div class="box-content content-light-{{ $content_color }}">
 			    <div>
 				<span class="title">
-				    {{ $item->date_stamp }}
 				    {{ $item->post_title }}
 				</span>
 				<p style="color: black;">{{ $item->post_excerpt }}
