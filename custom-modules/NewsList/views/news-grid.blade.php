@@ -1,4 +1,7 @@
 <div class="grid news-grid">
+    @if (!$hideTitle && !empty($post_title))
+	<div class="block-title"> <h1> {{ $post_title }} </h1> </div>
+    @endif
     <div class="grid-md-6">
 	<a href="{{ get_permalink($featured[0]->ID) }}"
 	   class="box box-post-brick">
