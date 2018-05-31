@@ -31,15 +31,7 @@ class InlayIndex extends \Modularity\Module
         $data['items'] = get_posts($args);
         $data['title_color'] = get_field('title_color', $this->ID);
         $data['box_color'] = get_field('excerpt_box_color', $this->ID);
-        $data['classes'] = implode(
-            ' ',
-            apply_filters(
-                'Modularity/Module/Classes',
-                array('box', 'box-panel'),
-                $this->post_type,
-                $this->args
-            )
-        );
+        $data['classes'] = 'box box-panel';
 
         return $data;
     }
