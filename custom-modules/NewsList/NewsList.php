@@ -25,7 +25,7 @@ class NewsList extends \Modularity\Module
         $args = array(
             'numberposts'	=> 3,
             'post_type'		=> 'post',
-            'category' => get_field('filter-p') ? get_field('category', $this->ID) : null
+            'category' => get_field('category', $this->ID)
         );
 
         $data['items'] = get_posts( $args );

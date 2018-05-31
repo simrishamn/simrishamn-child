@@ -77,7 +77,7 @@ acf_add_local_field_group(array(
 			'field_type' => 'select',
 			'allow_null' => 0,
 			'add_term' => 0,
-			'save_terms' => 0,
+			'save_terms' => 1,
 			'load_terms' => 1,
 			'return_format' => 'id',
 			'multiple' => 0,
