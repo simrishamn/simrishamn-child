@@ -32,20 +32,20 @@ class DefaultModules
      */
     public function getDefinition($template)
     {
-        $image = array('mod-image', __('Image', 'modularity'));
-        $slider = array('mod-slider', __('Slider', 'modularity'));
-        $teaser = array('mod-colored-index', __("Colored Index", 'simrishamn'));
+        $image = array('mod-image', __('Image', 'simrishamn'));
+        $slider = array('mod-slider', __('Slider', 'simrishamn'));
+        $teaser = array('mod-colored-index', __('Colored Index', 'simrishamn'));
 
         $contacts = array(
             'mod-contacts',
-            __('Contacts v2', 'modularity'),
+            __('Contacts v2', 'simrishamn'),
             __('Shared Contacts', 'simrishamn'),
             SIMRISHAMN_SHARED_CONTACTS_MODULE
         );
 
         $posts = array(
             'mod-posts',
-            __('Posts', 'modularity'),
+            __('Posts', 'simrishamn'),
             __('Shared Posts', 'simrishamn'),
             SIMRISHAMN_SHARED_POSTS_MODULE
         );

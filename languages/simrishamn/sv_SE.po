@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: simrishamn\n"
-"POT-Creation-Date: 2018-05-30 17:03+0200\n"
-"PO-Revision-Date: 2018-05-30 17:05+0200\n"
+"POT-Creation-Date: 2018-05-31 16:03+0200\n"
+"PO-Revision-Date: 2018-05-31 16:04+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -19,14 +19,6 @@ msgstr ""
 "_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
-
-#: bem-views/partials/404/default.blade.php:18
-msgid "Error 404"
-msgstr ""
-
-#: bem-views/partials/404/default.blade.php:54
-msgid "We made a search for you, maybe you were looking for..."
-msgstr ""
 
 #: custom-modules/ActionCard/ActionCard.php:14
 #: custom-modules/ActionCard/acf/php/mod-action-card.php:7
@@ -285,10 +277,8 @@ msgid "Message"
 msgstr "Meddelande"
 
 #: library/Theme/GlobalNotice.php:111
-#, fuzzy
-#| msgid "Link to full message"
 msgid "Link to Notice Page"
-msgstr "Länk till Krissida"
+msgstr "Länk till Notissida"
 
 #: library/Theme/Language/TinyMceLocale.php:5
 msgctxt "Default text shown in the infobox header upon creation"
