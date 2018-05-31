@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: simrishamn\n"
-"POT-Creation-Date: 2018-05-31 16:03+0200\n"
-"PO-Revision-Date: 2018-05-31 16:04+0200\n"
+"POT-Creation-Date: 2018-05-31 16:19+0200\n"
+"PO-Revision-Date: 2018-05-31 16:19+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -19,6 +19,14 @@ msgstr ""
 "_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: bem-views/partials/404/default.blade.php:18
+msgid "Error 404"
+msgstr ""
+
+#: bem-views/partials/404/default.blade.php:54
+msgid "We made a search for you, maybe you were looking for..."
+msgstr ""
 
 #: custom-modules/ActionCard/ActionCard.php:14
 #: custom-modules/ActionCard/acf/php/mod-action-card.php:7
@@ -176,8 +184,8 @@ msgstr "Länktyp"
 
 #: custom-modules/LinkList/acf/php/mod-linklist.php:54
 #: custom-modules/LinkList/acf/php/mod-linklist.php:85
-#: library/Theme/AcfFields/php/options-theme-footer-information.php:124
-#: library/Theme/AcfFields/php/options-theme-footer-information.php:160
+#: library/Theme/AcfFields/php/options-theme-footer-information.php:187
+#: library/Theme/AcfFields/php/options-theme-footer-information.php:223
 msgid "Link"
 msgstr "Länk"
 
@@ -224,19 +232,24 @@ msgstr "Telefonnummer"
 msgid "Opening Times"
 msgstr "Öppettider"
 
-#: library/Theme/AcfFields/php/options-theme-footer-information.php:67
+#: library/Theme/AcfFields/php/options-theme-footer-information.php:88
 msgid "PO Box"
 msgstr "Postadress"
 
-#: library/Theme/AcfFields/php/options-theme-footer-information.php:86
+#: library/Theme/AcfFields/php/options-theme-footer-information.php:107
+#: library/Theme/AcfFields/php/options-theme-footer-information.php:147
+msgid "Row"
+msgstr "Rad"
+
+#: library/Theme/AcfFields/php/options-theme-footer-information.php:128
 msgid "Office Address"
 msgstr "Besöksadress"
 
-#: library/Theme/AcfFields/php/options-theme-footer-information.php:105
+#: library/Theme/AcfFields/php/options-theme-footer-information.php:168
 msgid "About the Site"
 msgstr "Om Webbplatsen"
 
-#: library/Theme/AcfFields/php/options-theme-footer-information.php:141
+#: library/Theme/AcfFields/php/options-theme-footer-information.php:204
 msgid "External Links"
 msgstr "Externa Länkar"
 
