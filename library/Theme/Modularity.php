@@ -41,8 +41,8 @@ class Modularity
                 'mod-image',
                 'mod-slider',
                 'mod-action-card',
-                'mod-news-list'
-
+                'mod-news-list',
+                'mod-inlaylist'
             );
             break;
         case "full-width.blade.php":
@@ -117,10 +117,15 @@ class Modularity
         case "mod-inlaylist":
             if ($template == 'page') {
                 unset($sidebarIncompatibilities['right-sidebar']);
+            } elseif ($template == 'front-page') {
+                unset($sidebarIncompatibilities['bottom-sidebar']);
             }
             break;
         case "mod-linklist":
             unset($sidebarIncompatibilities['content-area']);
+            if ($template == 'front-page') {
+                unset($sidebarIncompatibilities['content-area']);
+            }
             break;
         case "mod-image":
             if ($template == 'page') {
@@ -163,6 +168,8 @@ class Modularity
                 unset($sidebarIncompatibilities['bottom-sidebar']);
             } elseif ($template == 'single') {
                 unset($sidebarIncompatibilities['content-area']);
+            } elseif ($template == 'front-page') {
+                unset($sidebarIncompatibilities['content-area']);
             }
             break;
         case "mod-inlay-index":
@@ -170,6 +177,13 @@ class Modularity
                 unset($sidebarIncompatibilities['right-sidebar']);
             } elseif ($template == 'full-width.blade.php') {
                 unset($sidebarIncompatibilities['content-area']);
+            } elseif ($template == 'front-page') {
+                unset($sidebarIncompatibilities['content-area-top']);
+            }
+            break;
+        case "mod-actioncard":
+            if ($template == 'front-page') {
+                unset($sidebarIncompatibilities['content-area-top']);
             }
             break;
         }
