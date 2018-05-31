@@ -47,6 +47,7 @@ class NewsList extends \Modularity\Module
                 $this->args
             )
         );
+
         return $data;
     }
 

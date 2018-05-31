@@ -2,22 +2,24 @@
   <div class="block-title"> <h1> {{ $post_title }} </h1> </div>
 
   @foreach($featured as $item)
-    <div class="grid-md-4 news-featured">
-      <div class="box-image">
-	<img src="{{ $item->thumbnail }}" alt="{{ $item->post_title }}">
+      <div class="grid-md-4 news-featured">
+	  <a href="{{ $item->post_name }}">
+	      <div class="box-image">
+		  <img src="{{ $item->thumbnail }}" alt="{{ $item->post_title }}">
+	      </div>
+	      <div class="box box-content">
+		  <span class="title">{{ $item->post_title }}</span>
+		  <p>{{ $item->post_excerpt }}</p>
+	      </div>
+	  </a>
       </div>
-      <div class="box box-content">
-	<span class="title">{{ $item->post_title }}</span>
-	<p>{{ $item->post_excerpt }}</p>
-      </div>
-    </div>
   @endforeach
 
   <div class="grid-md-4">
     <div class="box-panel inlay-index">
       <div class="box-horizontal">
 	@foreach($items as $item)
-	  <a href="">
+	    <a href="{{ $item->post_name }}">
 	    <div class="box-content content-light-{{ $content_color }}">
 	      <div>
 		<span class="title">
