@@ -16,6 +16,10 @@ class DefaultModules
             define('SIMRISHAMN_SHARED_CONTACTS_MODULE', null);
         }
 
+        if (!defined('SIMRISHAMN_SHARED_NOTICES_MODULE')) {
+            define('SIMRISHAMN_SHARED_NOTICES_MODULE', null);
+        }
+
         if (!defined('SIMRISHAMN_SHARED_POSTS_MODULE')) {
             define('SIMRISHAMN_SHARED_POSTS_MODULE', null);
         }
@@ -43,6 +47,13 @@ class DefaultModules
             SIMRISHAMN_SHARED_CONTACTS_MODULE
         );
 
+        $notices = array(
+            'mod-inlay-index',
+            __('Inlay Index', 'simrishamn'),
+            __('Shared Notices', 'simrishamn'),
+            SIMRISHAMN_SHARED_NOTICES_MODULE,
+        );
+
         $posts = array(
             'mod-posts',
             __('Posts', 'simrishamn'),
@@ -54,11 +65,11 @@ class DefaultModules
         case 'page':
             return array(
                 'content-area-top' => array($slider, $image),
-                'right-sidebar' => array($contacts),
+                'right-sidebar' => array($contacts, $notices),
             );
         case 'single':
             return array(
-                'right-sidebar' => array($contacts, $posts),
+                'right-sidebar' => array($contacts, $notices, $posts),
             );
         case 'full-width.blade.php':
             return array(

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: simrishamn\n"
-"POT-Creation-Date: 2018-05-31 16:19+0200\n"
-"PO-Revision-Date: 2018-05-31 16:19+0200\n"
+"POT-Creation-Date: 2018-05-31 16:30+0200\n"
+"PO-Revision-Date: 2018-05-31 16:30+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -19,14 +19,6 @@ msgstr ""
 "_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
-
-#: bem-views/partials/404/default.blade.php:18
-msgid "Error 404"
-msgstr ""
-
-#: bem-views/partials/404/default.blade.php:54
-msgid "We made a search for you, maybe you were looking for..."
-msgstr ""
 
 #: custom-modules/ActionCard/ActionCard.php:14
 #: custom-modules/ActionCard/acf/php/mod-action-card.php:7
@@ -83,7 +75,7 @@ msgstr "Kolumner"
 
 #: custom-modules/ColoredIndex/ColoredIndex.php:13
 #: custom-modules/ColoredIndex/acf/php/mod-colored-index.php:7
-#: library/Theme/DefaultModules.php:37
+#: library/Theme/DefaultModules.php:41
 msgid "Colored Index"
 msgstr "Teaserblock"
 
@@ -110,7 +102,7 @@ msgid "Add Row"
 msgstr "Lägg till rad"
 
 #: custom-modules/ColoredIndex/acf/php/mod-colored-index.php:164
-#: library/Theme/DefaultModules.php:35
+#: library/Theme/DefaultModules.php:39
 msgid "Image"
 msgstr "Bild"
 
@@ -138,6 +130,7 @@ msgstr "Knapp-text"
 
 #: custom-modules/InlayIndex/InlayIndex.php:13
 #: custom-modules/InlayIndex/acf/php/mod-inlay-index.php:7
+#: library/Theme/DefaultModules.php:52
 msgid "Inlay Index"
 msgstr "Servicemeddelanden"
 
@@ -257,23 +250,27 @@ msgstr "Externa Länkar"
 msgid "News Article"
 msgstr "Nyhet"
 
-#: library/Theme/DefaultModules.php:36
+#: library/Theme/DefaultModules.php:40
 msgid "Slider"
 msgstr "Slider"
 
-#: library/Theme/DefaultModules.php:41
+#: library/Theme/DefaultModules.php:45
 msgid "Contacts v2"
 msgstr "Kontakter v2"
 
-#: library/Theme/DefaultModules.php:42
+#: library/Theme/DefaultModules.php:46
 msgid "Shared Contacts"
 msgstr "Delade kontakter"
 
-#: library/Theme/DefaultModules.php:48
+#: library/Theme/DefaultModules.php:53
+msgid "Shared Notices"
+msgstr "Delade notiser"
+
+#: library/Theme/DefaultModules.php:59
 msgid "Posts"
 msgstr "Inlägg"
 
-#: library/Theme/DefaultModules.php:49
+#: library/Theme/DefaultModules.php:60
 msgid "Shared Posts"
 msgstr "Delade inlägg"
 
