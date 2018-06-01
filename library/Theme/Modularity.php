@@ -117,8 +117,11 @@ class Modularity
         case "mod-inlaylist":
             if ($template == 'page') {
                 unset($sidebarIncompatibilities['right-sidebar']);
+                unset($sidebarIncompatibilities['content-area']);
             } elseif ($template == 'front-page') {
                 unset($sidebarIncompatibilities['bottom-sidebar']);
+            } elseif ($template == 'single') {
+                unset($sidebarIncompatibilities['content-area']);
             }
             break;
         case "mod-linklist":
