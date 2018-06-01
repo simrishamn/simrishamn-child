@@ -21,7 +21,7 @@
 	<div class="box-panel inlay-index">
 	    <div class="box-horizontal">
 		@foreach($items as $item)
-		    <a href="{{ $item->post_name }}">
+		    <a href="{{ get_permalink($item->ID) }}">
 			<div class="box-content content-light-{{ $content_color }}">
 			    <div>
 				<span class="title">
