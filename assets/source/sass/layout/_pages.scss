@@ -32,10 +32,23 @@
     // Start page
     &.home {
         
+        // Tablet
+        @media screen and #{$screen-below-lg} {
+            .hero {
+                .slider,
+                .slider::before {
+                     padding-top: 30%;
+                }
+            }
+        }
+
         // Mobile
         @media screen and #{$screen-below-md} {
-            .hero .slider {
-                padding-top: 100%;
+            .hero {
+                .slider,
+                .slider::before {
+                    padding-top: 50%;
+                }
             }
         }
 
