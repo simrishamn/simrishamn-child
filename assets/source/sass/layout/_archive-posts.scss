@@ -1,3 +1,8 @@
+#archive-filter .postform {
+    padding-bottom: 1px;
+    padding-top: 4px;
+}
+
 .archive-content-wrapper {
     @media screen and #{$screen-below-lg} {
 	order: 3;
