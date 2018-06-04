@@ -81,6 +81,12 @@ class Modularity
                 'mod-posts'
             );
             break;
+        case "archive-post":
+            array_push(
+                $enabledModules,
+                'mod-wpwidget'
+            );
+            break;
         }
         return $enabledModules;
     }
@@ -187,6 +193,11 @@ class Modularity
         case "mod-actioncard":
             if ($template == 'front-page') {
                 unset($sidebarIncompatibilities['content-area-top']);
+            }
+            break;
+        case "mod-wpwidget":
+            if ($template == 'archive-post') {
+                unset($sidebarIncompatibilities['right-sidebar']);
             }
             break;
         }
