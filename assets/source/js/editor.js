@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+
 import infobox from './content/infobox.js';
 
 
