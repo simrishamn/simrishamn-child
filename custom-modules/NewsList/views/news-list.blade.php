@@ -5,7 +5,7 @@
 
     @foreach($featured as $item)
 	<div class="grid-md-4 news-featured">
-	    <a href="{{ $item->post_name }}">
+	    <a href="{{ get_permalink($item->ID) }}">
 		<div class="box-image">
 		    <img src="{{ $item->thumbnail }}" alt="{{ $item->post_title }}">
 		</div>
