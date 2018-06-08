@@ -43,21 +43,21 @@ class DefaultModules
         $contacts = array(
             'mod-contacts',
             __('Contacts v2', 'simrishamn'),
-            __('Shared Contacts', 'simrishamn'),
+            strtoupper(__('Do not edit!', 'simrishamn')),
             SIMRISHAMN_SHARED_CONTACTS_MODULE
         );
 
         $notices = array(
             'mod-inlay-index',
             __('Inlay Index', 'simrishamn'),
-            __('Shared Notices', 'simrishamn'),
+            strtoupper(__('Do not edit!', 'simrishamn')),
             SIMRISHAMN_SHARED_NOTICES_MODULE,
         );
 
         $posts = array(
             'mod-posts',
             __('Posts', 'simrishamn'),
-            __('Shared Posts', 'simrishamn'),
+            strtoupper(__('Do not edit!', 'simrishamn')),
             SIMRISHAMN_SHARED_POSTS_MODULE
         );
 

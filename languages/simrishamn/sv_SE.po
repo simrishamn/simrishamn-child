@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: simrishamn\n"
-"POT-Creation-Date: 2018-05-31 16:30+0200\n"
-"PO-Revision-Date: 2018-05-31 16:30+0200\n"
+"POT-Creation-Date: 2018-06-08 10:22+0200\n"
+"PO-Revision-Date: 2018-06-08 10:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -258,21 +258,14 @@ msgstr "Slider"
 msgid "Contacts v2"
 msgstr "Kontakter v2"
 
-#: library/Theme/DefaultModules.php:46
-msgid "Shared Contacts"
-msgstr "Delade kontakter"
-
-#: library/Theme/DefaultModules.php:53
-msgid "Shared Notices"
-msgstr "Delade notiser"
+#: library/Theme/DefaultModules.php:46 library/Theme/DefaultModules.php:53
+#: library/Theme/DefaultModules.php:60
+msgid "Do not edit!"
+msgstr "Redigera ej!"
 
 #: library/Theme/DefaultModules.php:59
 msgid "Posts"
 msgstr "Inlägg"
-
-#: library/Theme/DefaultModules.php:60
-msgid "Shared Posts"
-msgstr "Delade inlägg"
 
 #: library/Theme/GlobalNotice.php:34
 msgid "Global Notice"
@@ -351,8 +344,3 @@ msgstr "Dela sidan"
 #: views/partials/print-button.blade.php:5
 msgid "Print"
 msgstr "Skriv ut"
-
-#, fuzzy
-#~| msgid "Page"
-#~ msgid "Full Page"
-#~ msgstr "Länk"
