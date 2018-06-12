@@ -10,8 +10,11 @@
     @endif
     <div class="{{ municipio_get_thumbnail_source(null, array(400, 350)) ? 'grid-md-7 grid-sm-12' : 'grid-md-12' }}
 		post-horizontal__content">
-      <header class="post-header">
-        <h4><a href="{{ the_permalink() }}">{{ the_title() }}</a></h4>
+	<header class="post-header">
+	    <a href="{{ the_permalink() }}">
+		<h4>{{ the_title() }}</h4>
+		@include('partials.blog.post-info')
+	    </a>
       </header>
 
       <article>
