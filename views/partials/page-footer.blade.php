@@ -2,13 +2,19 @@
 
 <footer class="page-footer">
     <div class="grid">
-        <div class="grid-xs-12 grid-md-7 timestamps-container">
-            @include('partials.timestamps')
-        </div>
-        <div class="grid-xs-12 grid-md-5 footer-print-container">
-            @include('partials.print-button')
-        </div>
-        
+	@if($hideTimestamps)
+	    <div class="grid-xs-12 grid-md-12 footer-print-container">
+		@include('partials.print-button')
+            </div>
+	@else
+	    <div class="grid-xs-12 grid-md-7 timestamps-container">
+		@include('partials.timestamps')
+            </div>
+	    <div class="grid-xs-12 grid-md-5 footer-print-container">
+		@include('partials.print-button')
+            </div>
+	@endif
+
         @if (get_field('post_show_share', get_the_id()) !== false && get_field('page_show_share', 'option') !== false)
         <div class="grid-xs-12 share-page-container">
             <div class="box box-border gutter gutter-horizontal no-margin hidden-print">
