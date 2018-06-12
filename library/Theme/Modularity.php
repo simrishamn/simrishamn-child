@@ -68,7 +68,8 @@ class Modularity
                 'mod-iframe',
                 'mod-fileslist',
                 'mod-inlay-index',
-                'mod-posts'
+                'mod-posts',
+		'mod-table'
             );
             break;
         case "single":
@@ -103,6 +104,13 @@ class Modularity
         );
 
         switch ($modulePostType) {
+        case "mod-table":
+            if ($template == 'page') {
+                unset(
+                    $sidebarIncompatibilities['content-area']
+                );
+            }
+            break;
         case "mod-colored-index":
             if ($template == 'page') {
                 unset(
