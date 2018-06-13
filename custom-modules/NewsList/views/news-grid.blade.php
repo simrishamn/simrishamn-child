@@ -40,7 +40,7 @@
 			    Hitta fler hyter i Nyhetsarkivet!
 			    Lättast är att klicka på Gå Till knappen.
 			</p>
-			<div class="btn-holder">
+			<div>
 			    <a class="btn btn-plain" href="{{ get_post_type_archive_link( 'post' ) }}">
 				Gå Till
 			    </a>
