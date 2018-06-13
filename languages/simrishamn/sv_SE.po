@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: simrishamn\n"
-"POT-Creation-Date: 2018-06-08 10:22+0200\n"
-"PO-Revision-Date: 2018-06-08 10:22+0200\n"
+"POT-Creation-Date: 2018-06-13 16:45+0200\n"
+"PO-Revision-Date: 2018-06-13 16:45+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -240,11 +240,11 @@ msgstr "Besöksadress"
 
 #: library/Theme/AcfFields/php/options-theme-footer-information.php:168
 msgid "About the Site"
-msgstr "Om Webbplatsen"
+msgstr "Om webbplatsen"
 
 #: library/Theme/AcfFields/php/options-theme-footer-information.php:204
 msgid "External Links"
-msgstr "Externa Länkar"
+msgstr "Externa länkar"
 
 #: library/Theme/AdminBar.php:58
 msgid "News Article"
@@ -337,7 +337,7 @@ msgid "Clear filters"
 msgstr "Återställ filter"
 
 #: views/partials/blog/post-footer.blade.php:27
-#: views/partials/page-footer.blade.php:18
+#: views/partials/page-footer.blade.php:24
 msgid "Share the page"
 msgstr "Dela sidan"
 
