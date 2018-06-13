@@ -30,6 +30,12 @@ class Helper
         \Municipio\Helper\Template::add($templateName, $templatePath);
     }
 
+    /**
+     * Returns true if the current page or post is using $TEMPLATE.
+     *
+     * @param string $template The name of the template to compare
+     * to, without extension(s).
+     */
     public static function isTemplate($template) {
         global $post;
         $currentTemplate = str_replace(
