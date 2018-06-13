@@ -4,7 +4,7 @@
       <div class="box box-panel index-info">
         <div class="index-content title-{{$item['color']}}">
           <p>{{ $item['lead'] }}</p>
-          <div class="btn-holder">
+          <div>
             <a href={{ $item['link_url'] }} class="btn btn-plain">{{$item['btn-text']}}</a>
           </div>
         </div>
