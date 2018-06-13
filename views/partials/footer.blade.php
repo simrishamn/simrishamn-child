@@ -91,7 +91,8 @@
 				    @if(is_array($item['value']))
 					@foreach($item['value'] as $subitem)
 					    @if($subitem['link'])
-						<a href="{{ $subitem['link']['url'] }}">
+						<a href="{{ $subitem['link']['url'] }}"
+						   target="{{ $subitem['link']['target'] }}">
 						    {{ $subitem['link']['title'] }}
 						</a>
 					    </br>
