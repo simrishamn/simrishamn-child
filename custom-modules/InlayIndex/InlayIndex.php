@@ -23,9 +23,11 @@ class InlayIndex extends \Modularity\Module
     public function data() : array
     {
         $data = array();
+        $data['post_type'] = get_field('post_types', $this->ID);
+
         $args = array(
             'numberposts'	=> 2,
-            'post_type'		=> get_field('post_types', $this->ID)
+            'post_type'		=> $data['post_type']
         );
 
         $data['items'] = get_posts($args);
