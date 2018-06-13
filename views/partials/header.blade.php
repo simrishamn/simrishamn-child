@@ -1,12 +1,15 @@
 @if (isset($headerLayout['customizer']) && $headerLayout['customizer'])
     @include('partials.header.' . $headerLayout['template'])
-    @if ($notice['active'])
-        <div class="global-notice">
-	    @include('partials.notice')
-            @if(!is_front_page())
-		<div class="clear-below"></div>
-	    @endif
-        </div>
+    @if(!Simrishamn\Theme\Helper::isTemplate('global-notice'))
+	@if ($notice['active'])
+            <div class="global-notice">
+
+		@include('partials.notice')
+		@if(!is_front_page())
+		    <div class="clear-below"></div>
+		@endif
+            </div>
+	@endif
     @endif
     @include('partials.hero')
 @else

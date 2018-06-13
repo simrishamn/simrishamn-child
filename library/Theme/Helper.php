@@ -29,4 +29,14 @@ class Helper
     public static function addTemplate($templateName, $templatePath) {
         \Municipio\Helper\Template::add($templateName, $templatePath);
     }
+
+    public static function isTemplate($template) {
+        global $post;
+        $currentTemplate = str_replace(
+            ".blade.php",
+            "",
+            get_page_template_slug( $post->ID )
+        );
+        return $currentTemplate == $template ? true : false;
+    }
 }
