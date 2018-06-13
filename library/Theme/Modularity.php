@@ -42,7 +42,9 @@ class Modularity
                 'mod-slider',
                 'mod-action-card',
                 'mod-news-list',
-                'mod-inlaylist'
+                'mod-inlaylist',
+		'mod-contacts',
+		'mod-posts'
             );
             break;
         case "full-width.blade.php":
