@@ -8,7 +8,9 @@
 }
 
 .c-site-header {
-
+    .clear-below {
+	margin-bottom: 30px;
+    }
     .widget_search,
     .search-top {
         display: none;
@@ -57,7 +59,7 @@
 
         button {
             padding: 2px 20px 5px;
-            
+
             // Mobile
             @media screen and #{$screen-below-md} {
                 padding: 27px 15px 18px;
@@ -156,7 +158,7 @@
                 height: 4px;
                 width: 30px;
             }
-            
+
             // Mobile
             @media screen and #{$screen-below-md} {
                 .hamburger-inner {
@@ -164,15 +166,15 @@
                 }
             }
         }
-        
+
         .hamburger--slider.is-active .hamburger-inner {
             transform: translate3d(0, 9px, 0) rotate(45deg);
 
-            &::after {    
+            &::after {
                 transform: translate3d(0, -17px, 0) rotate(-90deg);
             }
         }
-        
+
         .hamburger-label {
             display: block;
         }
@@ -220,7 +222,7 @@
             font-weight: 400;
         }
     }
-    
+
     // Mobile
     @media screen and #{$screen-below-md} {
         border-bottom: 2px solid #ddd;
@@ -307,5 +309,11 @@ nav .c-navbar .c-navbar__item.is-current::after {
     .search {
         margin-bottom: 15px;
         font-size: 12px;
+    }
+}
+
+.global-notice {
+    .clear-below {
+	margin-bottom: 30px;
     }
 }

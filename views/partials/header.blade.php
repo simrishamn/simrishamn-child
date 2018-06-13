@@ -1,8 +1,11 @@
 @if (isset($headerLayout['customizer']) && $headerLayout['customizer'])
     @include('partials.header.' . $headerLayout['template'])
     @if ($notice['active'])
-        <div class="notices">
+        <div class="global-notice">
 	    @include('partials.notice')
+            @if(!is_front_page())
+		<div class="clear-below"></div>
+	    @endif
         </div>
     @endif
     @include('partials.hero')
