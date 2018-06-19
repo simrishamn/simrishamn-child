@@ -24,10 +24,10 @@ class Style
     {
         return '';
     }
-    
+
     /**
      * Sets the available link types
-     * 
+     *
      * @param array $data The available link types.
      *
      * @return array The updated available link types.
@@ -37,9 +37,9 @@ class Style
         $data['search_trigger']['classes'] = $data['search_trigger']['classes'] . ' hamburger hamburger--slider';
         $data['search_trigger']['attributes'] = 'onclick="jQuery(\'.js-search-trigger\').toggleClass(\'is-active\'); jQuery(\'body\').toggleClass(\'search-is-open\'); jQuery(\'.search .input-group .form-control\').focus(); return false;"';
         $data['search_trigger']['template'] = 'widget.header-links.partials.burger';
-        
-        $data['menu_trigger']['attributes'] = 'aria-controls="navigation" aria-expanded="true/false" onclick="jQuery(\'.menu-trigger\').toggleClass(\'is-active\');" data-target="#mobile-menu"';
-        
+
+        $data['menu_trigger']['attributes'] = 'aria-controls="navigation" aria-expanded="true/false" onclick="jQuery(\'.menu-trigger\').toggleClass(\'is-active\'); setTimeout(function () { jQuery(\'#mobile-menu li:first a\').focus(); }, 100);" data-target="#mobile-menu"';
+
         return $data;
     }
 }

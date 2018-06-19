@@ -64,10 +64,6 @@
             @media screen and #{$screen-below-md} {
                 padding: 27px 15px 18px;
             }
-
-            &:focus {
-                box-shadow: none;
-            }
         }
 
         // Desktop
