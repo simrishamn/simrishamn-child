@@ -20,5 +20,6 @@ class Acf
     {
         include_once $this->_path . '/options-theme-footer-information.php';
         include_once $this->_path . '/options-theme-front-page-slider.php';
+        include_once $this->_path . '/options-page-scroll-elevator.php';
     }
 }
