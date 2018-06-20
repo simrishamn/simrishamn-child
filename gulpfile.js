@@ -58,9 +58,10 @@ function scriptPipe(name) {
 
 // Register script tasks.
 gulp.task('script-theme', () => scriptPipe('theme'));
+gulp.task('script-helpers', () => scriptPipe('helpers'));
 gulp.task('script-admin', () => scriptPipe('admin'));
 gulp.task('script-editor', () => scriptPipe('editor'));
-gulp.task('script', ['script-theme', 'script-admin', 'script-editor']);
+gulp.task('script', ['script-theme', 'script-helpers', 'script-admin', 'script-editor']);
 
 // File change watches.
 gulp.task('watch', function() {

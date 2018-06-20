@@ -1,3 +1,5 @@
 import 'babel-polyfill';
 
-var Simrishamn;
+var Simrishamn = {};
+
+window['Simrishamn'] = Simrishamn;
