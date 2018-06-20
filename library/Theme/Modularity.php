@@ -32,64 +32,66 @@ class Modularity
     {
         $enabledModules = array();
         switch(\Modularity\Helper\Post::getPostTemplate()) {
-        case "front-page":
-            array_push(
-                $enabledModules,
-                'mod-colored-index',
-                'mod-linklist',
-                'mod-inlay-index',
-                'mod-image',
-                'mod-slider',
-                'mod-action-card',
-                'mod-news-list',
-                'mod-inlaylist',
-		'mod-contacts',
-		'mod-posts'
-            );
-            break;
-        case "full-width.blade.php":
-            array_push(
-                $enabledModules,
-                'mod-image',
-                'mod-colored-index',
-                'mod-contacts',
-                'mod-linklist',
-                'mod-news-list',
-                'mod-inlay-index'
-            );
-            break;
-        case "page":
-            array_push(
-                $enabledModules,
-                'mod-contacts',
-                'mod-colored-index',
-                'mod-inlaylist',
-                'mod-image',
-                'mod-slider',
-                'mod-form',
-                'mod-iframe',
-                'mod-fileslist',
-                'mod-inlay-index',
-                'mod-posts',
-		'mod-table'
-            );
-            break;
-        case "single":
-            array_push(
-                $enabledModules,
-                'mod-contacts',
-                'mod-inlaylist',
-                'mod-news-list',
-                'mod-fileslist',
-                'mod-posts'
-            );
-            break;
-        case "archive-post":
-            array_push(
-                $enabledModules,
-                'mod-wpwidget'
-            );
-            break;
+            case "front-page":
+		array_push(
+                    $enabledModules,
+                    'mod-colored-index',
+                    'mod-linklist',
+                    'mod-inlay-index',
+                    'mod-image',
+                    'mod-slider',
+                    'mod-action-card',
+                    'mod-news-list',
+                    'mod-inlaylist',
+		    'mod-contacts',
+		    'mod-posts'
+		);
+		break;
+            case "full-width.blade.php":
+		array_push(
+                    $enabledModules,
+                    'mod-image',
+                    'mod-colored-index',
+                    'mod-contacts',
+                    'mod-linklist',
+                    'mod-news-list',
+                    'mod-inlay-index',
+		    'mod-index'
+		);
+		break;
+            case "page":
+		array_push(
+                    $enabledModules,
+                    'mod-contacts',
+                    'mod-colored-index',
+                    'mod-inlaylist',
+                    'mod-image',
+                    'mod-slider',
+                    'mod-form',
+                    'mod-iframe',
+                    'mod-fileslist',
+                    'mod-inlay-index',
+                    'mod-posts',
+		    'mod-table',
+		    'mod-index'
+		);
+		break;
+            case "single":
+		array_push(
+                    $enabledModules,
+                    'mod-contacts',
+                    'mod-inlaylist',
+                    'mod-news-list',
+                    'mod-fileslist',
+                    'mod-posts'
+		);
+		break;
+            case "archive-post":
+		array_push(
+                    $enabledModules,
+                    'mod-wpwidget'
+		);
+		break;
         }
         return $enabledModules;
     }
@@ -106,110 +108,120 @@ class Modularity
         );
 
         switch ($modulePostType) {
-        case "mod-table":
-            if ($template == 'page') {
-                unset(
-                    $sidebarIncompatibilities['content-area']
-                );
-            }
-            break;
-        case "mod-colored-index":
-            if ($template == 'page') {
-                unset(
-                    $sidebarIncompatibilities['right-sidebar'],
-                    $sidebarIncompatibilities['content-area']
-                );
-            } elseif ($template =='full-width.blade.php') {
-                unset($sidebarIncompatibilities['content-area']);
-            }
-            break;
-        case "mod-contacts":
-            if ($template == 'page' || $template == 'single') {
-                unset($sidebarIncompatibilities['right-sidebar']);
-            } elseif ($template =='full-width.blade.php') {
-                unset($sidebarIncompatibilities['content-area']);
-            }
-            break;
-        case "mod-inlaylist":
-            if ($template == 'page') {
-                unset($sidebarIncompatibilities['right-sidebar']);
-                unset($sidebarIncompatibilities['content-area']);
-            } elseif ($template == 'front-page') {
-                unset($sidebarIncompatibilities['bottom-sidebar']);
-            } elseif ($template == 'single') {
-                unset($sidebarIncompatibilities['content-area']);
-            }
-            break;
-        case "mod-linklist":
-            unset($sidebarIncompatibilities['content-area']);
-            if ($template == 'front-page') {
-                unset($sidebarIncompatibilities['content-area']);
-            }
-            break;
-        case "mod-image":
-            if ($template == 'page') {
-                unset($sidebarIncompatibilities['content-area-top']);
-            } elseif ($template =='full-width.blade.php') {
-                unset($sidebarIncompatibilities['slider-area']);
-            }
-            break;
-        case "mod-slider":
-            if ($template == 'page') {
-                unset($sidebarIncompatibilities['content-area-top']);
-            } elseif ($template == 'full-width.blade.php') {
-                unset($sidebarIncompatibilities['slider-area']);
-            }
-            break;
-        case "mod-form":
-            if ($template == 'page') {
-                unset($sidebarIncompatibilities['content-area']);
-            }
-            break;
-        case "mod-iframe":
-            if ($template == 'page') {
-                unset($sidebarIncompatibilities['content-area']);
-            }
-            break;
-        case "mod-fileslist":
-            if ($template == 'page' || $template == 'single') {
-                unset($sidebarIncompatibilities['content-area']);
-            }
-            break;
-        case "mod-posts":
-            if ($template == 'page') {
-                unset($sidebarIncompatibilities['content-area']);
-            } elseif ($template == 'single') {
-                unset($sidebarIncompatibilities['right-sidebar']);
-            }
-            break;
-        case "mod-news-list":
-            if ($template == 'full-width.blade.php') {
-                unset($sidebarIncompatibilities['bottom-sidebar']);
-            } elseif ($template == 'single') {
-                unset($sidebarIncompatibilities['content-area']);
-            } elseif ($template == 'front-page') {
-                unset($sidebarIncompatibilities['content-area']);
-            }
-            break;
-        case "mod-inlay-index":
-            if ($template == 'page') {
-                unset($sidebarIncompatibilities['right-sidebar']);
-            } elseif ($template == 'full-width.blade.php') {
-                unset($sidebarIncompatibilities['content-area']);
-            } elseif ($template == 'front-page') {
-                unset($sidebarIncompatibilities['content-area-top']);
-            }
-            break;
-        case "mod-actioncard":
-            if ($template == 'front-page') {
-                unset($sidebarIncompatibilities['content-area-top']);
-            }
-            break;
-        case "mod-wpwidget":
-            if ($template == 'archive-post') {
-                unset($sidebarIncompatibilities['right-sidebar']);
-            }
-            break;
+            case "mod-table":
+		if ($template == 'page') {
+                    unset(
+			$sidebarIncompatibilities['content-area']
+                    );
+		}
+		break;
+            case "mod-colored-index":
+		if ($template == 'page') {
+                    unset(
+			$sidebarIncompatibilities['right-sidebar'],
+			$sidebarIncompatibilities['content-area']
+                    );
+		} elseif ($template =='full-width.blade.php') {
+                    unset($sidebarIncompatibilities['content-area']);
+		}
+		break;
+	    case "mod-index":
+		if ($template == 'page') {
+                    unset(
+			$sidebarIncompatibilities['right-sidebar'],
+			$sidebarIncompatibilities['content-area']
+                    );
+		} elseif ($template =='full-width.blade.php') {
+                    unset($sidebarIncompatibilities['content-area']);
+		}
+		break;
+            case "mod-contacts":
+		if ($template == 'page' || $template == 'single') {
+                    unset($sidebarIncompatibilities['right-sidebar']);
+		} elseif ($template =='full-width.blade.php') {
+                    unset($sidebarIncompatibilities['content-area']);
+		}
+		break;
+            case "mod-inlaylist":
+		if ($template == 'page') {
+                    unset($sidebarIncompatibilities['right-sidebar']);
+                    unset($sidebarIncompatibilities['content-area']);
+		} elseif ($template == 'front-page') {
+                    unset($sidebarIncompatibilities['bottom-sidebar']);
+		} elseif ($template == 'single') {
+                    unset($sidebarIncompatibilities['content-area']);
+		}
+		break;
+            case "mod-linklist":
+		unset($sidebarIncompatibilities['content-area']);
+		if ($template == 'front-page') {
+                    unset($sidebarIncompatibilities['content-area']);
+		}
+		break;
+            case "mod-image":
+		if ($template == 'page') {
+                    unset($sidebarIncompatibilities['content-area-top']);
+		} elseif ($template =='full-width.blade.php') {
+                    unset($sidebarIncompatibilities['slider-area']);
+		}
+		break;
+            case "mod-slider":
+		if ($template == 'page') {
+                    unset($sidebarIncompatibilities['content-area-top']);
+		} elseif ($template == 'full-width.blade.php') {
+                    unset($sidebarIncompatibilities['slider-area']);
+		}
+		break;
+            case "mod-form":
+		if ($template == 'page') {
+                    unset($sidebarIncompatibilities['content-area']);
+		}
+		break;
+            case "mod-iframe":
+		if ($template == 'page') {
+                    unset($sidebarIncompatibilities['content-area']);
+		}
+		break;
+            case "mod-fileslist":
+		if ($template == 'page' || $template == 'single') {
+                    unset($sidebarIncompatibilities['content-area']);
+		}
+		break;
+            case "mod-posts":
+		if ($template == 'page') {
+                    unset($sidebarIncompatibilities['content-area']);
+		} elseif ($template == 'single') {
+                    unset($sidebarIncompatibilities['right-sidebar']);
+		}
+		break;
+            case "mod-news-list":
+		if ($template == 'full-width.blade.php') {
+                    unset($sidebarIncompatibilities['bottom-sidebar']);
+		} elseif ($template == 'single') {
+                    unset($sidebarIncompatibilities['content-area']);
+		} elseif ($template == 'front-page') {
+                    unset($sidebarIncompatibilities['content-area']);
+		}
+		break;
+            case "mod-inlay-index":
+		if ($template == 'page') {
+                    unset($sidebarIncompatibilities['right-sidebar']);
+		} elseif ($template == 'full-width.blade.php') {
+                    unset($sidebarIncompatibilities['content-area']);
+		} elseif ($template == 'front-page') {
+                    unset($sidebarIncompatibilities['content-area-top']);
+		}
+		break;
+            case "mod-actioncard":
+		if ($template == 'front-page') {
+                    unset($sidebarIncompatibilities['content-area-top']);
+		}
+		break;
+            case "mod-wpwidget":
+		if ($template == 'archive-post') {
+                    unset($sidebarIncompatibilities['right-sidebar']);
+		}
+		break;
         }
 
         $moduleSpecification['sidebar_incompability'] = array_keys($sidebarIncompatibilities);
