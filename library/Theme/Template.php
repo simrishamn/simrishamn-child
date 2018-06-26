@@ -19,6 +19,14 @@ class Template
             1
         );
         add_filter('accessibility_items', array($this, 'removePrint'), 20, 1);
+        add_filter('init', array($this, 'addCustomTemplates'), 10, 1);
+    }
+
+    public function addCustomTemplates() {
+	\Municipio\Helper\Template::add(
+	    __('Section Page', 'simrishamn'),
+	    \Municipio\Helper\Template::locateTemplate('section-page.blade.php')
+	);
     }
 
     /**
@@ -60,12 +68,11 @@ class Template
         unset($templates['one-page.blade.php']);
         unset($templates['page-two-column.blade.php']);
 
-        $templates['full-width.blade.php'] = 'Sektionssida';
-
         global $post;
-        if ($post->post_name == 'krismeddelande') {
+
+        if ($post && $post->post_name == 'krismeddelande'){
             $templates['global-notice.blade.php'] = 'Krismeddelanden';
-        } elseif ($post->post_name == 'webbkarta') {
+        } else if ($post && $post->post_name == 'webbkarta') {
             $templates['sitemap.blade.php'] = 'Webbkarta';
         }
 
