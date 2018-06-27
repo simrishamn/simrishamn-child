@@ -46,6 +46,12 @@
     outline: 0;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
 
+    h6 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
     &::before {
         position: absolute;
         right: $paddingY;
