@@ -62,6 +62,8 @@ class Template
         global $post;
         if ($post->post_name == 'krismeddelande'){
             $templates['global-notice.blade.php'] = 'Krismeddelanden';
+        } else if ($post->post_name == 'webbkarta') {
+            $templates['sitemap.blade.php'] = 'Webbkarta';
         }
 
         return $templates;
