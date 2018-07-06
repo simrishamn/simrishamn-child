@@ -9,6 +9,6 @@
           <span class="link-item link-item-outbound title">{{ $item['title'] }}</span>
         </a>
       </li>
-    <?php endforeach; ?>
+    @endforeach
   </ul>
 </div>
