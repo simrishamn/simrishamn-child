@@ -11,7 +11,7 @@ class GlobalNotice
     {
         $this->loadFieldGroup();
 
-        add_filter('Municipio/blade/data', function($data) {
+        add_filter('Municipio/blade/data', function ($data) {
             $data['notice'] = array(
                 'active' => get_field('active', 'options'),
                 'title' => get_field('global_notice_title', 'options'),
@@ -28,7 +28,7 @@ class GlobalNotice
 
     public function loadFieldGroup()
     {
-        if( function_exists('acf_add_local_field_group') ):
+        if (function_exists('acf_add_local_field_group')) :
             acf_add_local_field_group(array(
                 'key' => 'group_5b0d148cb105b',
                 'title' => __('Global Notice', 'simrishamn'),
@@ -165,8 +165,6 @@ class GlobalNotice
                 'active' => 1,
                 'description' => '',
             ));
-
         endif;
-
     }
 }

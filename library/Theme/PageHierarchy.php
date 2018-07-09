@@ -38,8 +38,7 @@ class PageHierarchy
         $pagesArrayIterator = $pagesArrayIterator ?? new \ArrayIterator(get_pages());
         $pagesArrayIterator->next();
 
-        while ($this->morePagesToAdd($pagesArrayIterator, $forPageID))
-        {
+        while ($this->morePagesToAdd($pagesArrayIterator, $forPageID)) {
             $pages[] = $this->getPage($pagesArrayIterator);
         }
 

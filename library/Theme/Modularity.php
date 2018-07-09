@@ -4,7 +4,7 @@ namespace Simrishamn\Theme;
 
 class Modularity
 {
-    private $_path = SIMRISHAMN_PATH . '/custom-modules';
+    private $path = SIMRISHAMN_PATH . '/custom-modules';
 
     /**
      * Constructor.
@@ -31,7 +31,7 @@ class Modularity
     public function modulePageRestriction()
     {
         $enabledModules = array();
-        switch(\Modularity\Helper\Post::getPostTemplate()) {
+        switch (\Modularity\Helper\Post::getPostTemplate()) {
             case "front-page":
                 array_push(
                     $enabledModules,
@@ -248,7 +248,7 @@ class Modularity
      */
     public function load()
     {
-        foreach (glob($this->_path . '/*') as $module) {
+        foreach (glob($this->path . '/*') as $module) {
             modularity_register_module($module, basename($module));
         }
     }

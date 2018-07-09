@@ -4,11 +4,6 @@ namespace Simrishamn\Theme;
 
 class Helper
 {
-    public function __construct()
-    {
-
-    }
-
     /**
      * Returns the first $LEN characters of $TEXT with an ellipsis
      * appended to it.
@@ -26,7 +21,8 @@ class Helper
         return $text;
     }
 
-    public static function addTemplate($templateName, $templatePath) {
+    public static function addTemplate($templateName, $templatePath)
+    {
         \Municipio\Helper\Template::add($templateName, $templatePath);
     }
 
@@ -36,12 +32,13 @@ class Helper
      * @param string $template The name of the template to compare
      * to, without extension(s).
      */
-    public static function isTemplate($template) {
+    public static function isTemplate($template)
+    {
         global $post;
         $currentTemplate = str_replace(
             ".blade.php",
             "",
-            get_page_template_slug( $post->ID )
+            get_page_template_slug($post->ID)
         );
         return $currentTemplate == $template ? true : false;
     }

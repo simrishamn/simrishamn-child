@@ -4,8 +4,8 @@ namespace Simrishamn\Theme;
 
 class Enqueue
 {
-    private $_stylePath = 'assets/dist/css';
-    private $_scriptPath = 'assets/dist/js';
+    private $stylePath = 'assets/dist/css';
+    private $scriptPath = 'assets/dist/js';
 
     /**
      * Constructor.
@@ -27,9 +27,9 @@ class Enqueue
      *
      * @return void
      */
-    private function _style($name, $file)
+    private function style($name, $file)
     {
-        $path = $this->_stylePath . '/' . $file;
+        $path = $this->stylePath . '/' . $file;
         $uri = get_stylesheet_directory_uri() . '/' . $path;
         $mtime = filemtime(get_stylesheet_directory() . '/' . $path);
 
@@ -44,9 +44,9 @@ class Enqueue
      *
      * @return void
      */
-    private function _script($name, $file)
+    private function script($name, $file)
     {
-        $path = $this->_scriptPath . '/' . $file;
+        $path = $this->scriptPath . '/' . $file;
         $uri = get_stylesheet_directory_uri() . '/' . $path;
         $mtime = filemtime(get_stylesheet_directory() . '/' . $path);
 
@@ -56,7 +56,7 @@ class Enqueue
     public function enqueueScripts()
     {
         $this->enqueueTheme();
-        $this->_script('simrishamn-helpers', 'helpers.min.js');
+        $this->script('simrishamn-helpers', 'helpers.min.js');
     }
 
     /**
@@ -66,8 +66,8 @@ class Enqueue
      */
     public function enqueueTheme()
     {
-        $this->_style('simrishamn-theme', 'theme.min.css');
-        $this->_script('simrishamn-theme', 'theme.min.js');
+        $this->style('simrishamn-theme', 'theme.min.css');
+        $this->script('simrishamn-theme', 'theme.min.js');
     }
 
     /**
@@ -77,8 +77,8 @@ class Enqueue
      */
     public function enqueueAdmin()
     {
-        $this->_style('simrishamn-admin', 'admin.min.css');
-        $this->_script('simrishamn-admin', 'admin.min.js');
+        $this->style('simrishamn-admin', 'admin.min.css');
+        $this->script('simrishamn-admin', 'admin.min.js');
     }
 
     /**
@@ -90,7 +90,7 @@ class Enqueue
      */
     public function enqueueEditorStyle($styles)
     {
-        $path = $this->_stylePath . '/editor.min.css';
+        $path = $this->stylePath . '/editor.min.css';
         $uri = get_stylesheet_directory_uri() . '/' . $path;
 
         $styles = preg_split('/\s*,\s*/', trim($styles));
@@ -108,7 +108,7 @@ class Enqueue
      */
     public function enqueueEditorScript($plugins)
     {
-        $path = $this->_scriptPath . '/editor.min.js';
+        $path = $this->scriptPath . '/editor.min.js';
         $uri = get_stylesheet_directory_uri() . '/' . $path;
 
         $plugins['simrishamn'] = $uri;

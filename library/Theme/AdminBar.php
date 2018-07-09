@@ -9,7 +9,7 @@ class AdminBar
      */
     public function __construct()
     {
-        add_action('admin_bar_menu', array($this, 'customize_menu'), 999);
+        add_action('admin_bar_menu', array($this, 'customizeMenu'), 999);
     }
 
     /**
@@ -19,7 +19,7 @@ class AdminBar
      *
      * @return void
      */
-    public function customize_menu($wp_admin_bar)
+    public function customizeMenu($wp_admin_bar)
     {
         if (!current_user_can('administrator')) {
             $wp_admin_bar->remove_menu('customize');

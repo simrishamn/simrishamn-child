@@ -1,7 +1,8 @@
 <?php
 namespace Simrishamn\Theme;
 
-class Customizer {
+class Customizer
+{
     public function __construct()
     {
         add_action('after_setup_theme', array($this, 'customizerHeader'), 5);

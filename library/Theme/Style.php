@@ -9,8 +9,8 @@ class Style
      */
     public function __construct()
     {
-        add_filter('Municipio/mobile_menu_breakpoint', array($this, 'mobile_menu'), 10, 1);
-        add_filter('Municipio/Widget/Header/Links/MapLinks/avalibleLinkTypes', array($this, 'available_link_types'));
+        add_filter('Municipio/mobile_menu_breakpoint', array($this, 'mobileMenu'), 10, 1);
+        add_filter('Municipio/Widget/Header/Links/MapLinks/avalibleLinkTypes', array($this, 'availableLinkTypes'));
     }
 
     /**
@@ -20,7 +20,7 @@ class Style
      *
      * @return string An empty string.
      */
-    public function mobile_menu($classes)
+    public function mobileMenu($classes)
     {
         return '';
     }
@@ -32,7 +32,7 @@ class Style
      *
      * @return array The updated available link types.
      */
-    public function available_link_types($data)
+    public function availableLinkTypes($data)
     {
         $data['search_trigger']['classes'] = $data['search_trigger']['classes'] . ' hamburger hamburger--slider';
         $data['search_trigger']['attributes'] = 'onclick="jQuery(\'.js-search-trigger\').toggleClass(\'is-active\'); jQuery(\'body\').toggleClass(\'search-is-open\'); jQuery(\'.search .input-group .form-control\').focus(); return false;"';

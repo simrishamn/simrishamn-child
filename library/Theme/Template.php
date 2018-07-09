@@ -10,11 +10,13 @@ class Template
     public function __construct()
     {
         add_filter('theme_page_templates', array($this, 'templateListFilter'), 20, 1);
-        add_filter('ngettext', array($this, 'register_text'), 20, 3);
-        add_filter('gettext', array($this, 'register_text'), 20, 3);
+        add_filter('ngettext', array($this, 'registerText'), 20, 3);
+        add_filter('gettext', array($this, 'registerText'), 20, 3);
         add_filter(
             'Municipio/controller/base/view_data',
-            array($this, 'getFooterData'), 10, 1
+            array($this, 'getFooterData'),
+            10,
+            1
         );
         add_filter('accessibility_items', array($this, 'removePrint'), 20, 1);
     }
@@ -26,7 +28,8 @@ class Template
      *
      * @return array Modified list of view data.
      */
-    public function getFooterData($data) {
+    public function getFooterData($data)
+    {
         $data['footerData'] = array(
             array(
                 "phone_number" => get_field_object('footer_phone_number', 'option'),
@@ -60,9 +63,9 @@ class Template
         $templates['full-width.blade.php'] = 'Sektionssida';
 
         global $post;
-        if ($post->post_name == 'krismeddelande'){
+        if ($post->post_name == 'krismeddelande') {
             $templates['global-notice.blade.php'] = 'Krismeddelanden';
-        } else if ($post->post_name == 'webbkarta') {
+        } elseif ($post->post_name == 'webbkarta') {
             $templates['sitemap.blade.php'] = 'Webbkarta';
         }
 
@@ -76,7 +79,8 @@ class Template
      *
      * @return string A (maybe) replaced text label.
      */
-    public function register_text( $text ) {
+    public function registerText($text)
+    {
         $text = str_ireplace(
             'Användarnamn eller e-postadress',
             'Användarnamn',

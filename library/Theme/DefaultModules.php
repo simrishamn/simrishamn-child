@@ -62,20 +62,20 @@ class DefaultModules
         );
 
         switch ($template) {
-        case 'page':
-            return array(
-                'content-area-top' => array($slider, $image),
-                'right-sidebar' => array($contacts, $notices),
-            );
-        case 'single':
-            return array(
-                'right-sidebar' => array($contacts, $notices, $posts),
-            );
-        case 'full-width.blade.php':
-            return array(
-                'slider-area' => array($image),
-                'content-area' => array($teaser, $teaser, $contacts),
-            );
+            case 'page':
+                return array(
+                    'content-area-top' => array($slider, $image),
+                    'right-sidebar' => array($contacts, $notices),
+                );
+            case 'single':
+                return array(
+                    'right-sidebar' => array($contacts, $notices, $posts),
+                );
+            case 'full-width.blade.php':
+                return array(
+                    'slider-area' => array($image),
+                    'content-area' => array($teaser, $teaser, $contacts),
+                );
         }
     }
 
