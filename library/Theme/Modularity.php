@@ -40,6 +40,7 @@ class Modularity
                     'mod-inlay-index',
                     'mod-image',
                     'mod-slider',
+                    'mod-video',
                     'mod-action-card',
                     'mod-news-list',
                     'mod-inlaylist',
@@ -67,6 +68,7 @@ class Modularity
                     'mod-inlaylist',
                     'mod-image',
                     'mod-slider',
+                    'mod-video',
                     'mod-form',
                     'mod-iframe',
                     'mod-fileslist',
@@ -166,6 +168,13 @@ class Modularity
                 }
                 break;
             case "mod-slider":
+                if ($template == 'page') {
+                    unset($sidebarIncompatibilities['content-area-top']);
+                } elseif ($template == 'full-width.blade.php') {
+                    unset($sidebarIncompatibilities['slider-area']);
+                }
+                break;
+            case "mod-video":
                 if ($template == 'page') {
                     unset($sidebarIncompatibilities['content-area-top']);
                 } elseif ($template == 'full-width.blade.php') {
