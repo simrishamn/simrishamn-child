@@ -2,7 +2,7 @@
 
 namespace Simrishamn\ColoredIndex;
 
-class  ColoredIndex extends \Modularity\Module
+class ColoredIndex extends \Modularity\Module
 {
     public $slug = 'colored-index';
     public $supports = array();
@@ -39,8 +39,9 @@ class  ColoredIndex extends \Modularity\Module
         return $data;
     }
 
-    public function template() {
-        if(get_field('format', $this->ID) == 'default') {
+    public function template()
+    {
+        if (get_field('format', $this->ID) == 'default') {
             return $this->slug . '.blade.php';
         }
         return 'colored-info.blade.php';

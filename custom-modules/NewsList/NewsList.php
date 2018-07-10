@@ -11,8 +11,8 @@ class NewsList extends \Modularity\Module
 
         $this->fields = SIMRISHAMN_PATH . '/custom-modules/NewsList/acf/php/mod-news-list.php';
         $this->nameSingular = __("News", 'simrishamn');
-        $this->namePlural  = __("News", 'simrishamn');
-        $this->description  = __(
+        $this->namePlural = __("News", 'simrishamn');
+        $this->description = __(
             "Outputs a number of featured and latests posts in a grid- or list manner.",
             'modularity'
         );
@@ -23,12 +23,12 @@ class NewsList extends \Modularity\Module
     {
         $data = array();
         $args = array(
-            'numberposts'	=> 3,
-            'post_type'		=> 'post',
+            'numberposts' => 3,
+            'post_type' => 'post',
             'category' => get_field('category', $this->ID)
         );
 
-        $data['items'] = get_posts( $args );
+        $data['items'] = get_posts($args);
         $this->setMetaData($data['items']);
 
         $data['featured'] = array(
@@ -51,20 +51,21 @@ class NewsList extends \Modularity\Module
         return $data;
     }
 
-    public function setMetaData($items) {
-        foreach($items as $item) {
-            if($item) {
+    public function setMetaData($items)
+    {
+        foreach ($items as $item) {
+            if ($item) {
                 $item->thumbnail = get_the_post_thumbnail_url($item, 'small');
                 if (!$item->post_excerpt) {
                     $item->post_excerpt = \Simrishamn\Theme\Helper::shortText($item->post_content, 350);
                 }
-
             }
         }
     }
 
-    public function template() {
-        if(get_field('format', $this->ID) == 'default') {
+    public function template()
+    {
+        if (get_field('format', $this->ID) == 'default') {
             return 'news-list.blade.php';
         }
         return 'news-grid.blade.php';

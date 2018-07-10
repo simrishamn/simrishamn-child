@@ -26,7 +26,6 @@ class ActionCard extends \Modularity\Module
         );
 
         include_once $this->fields;
-
     }
 
     public function data() : array

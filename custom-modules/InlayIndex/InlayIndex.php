@@ -11,8 +11,8 @@ class InlayIndex extends \Modularity\Module
     {
         $this->fields = SIMRISHAMN_PATH . '/custom-modules/InlayIndex/acf/php/mod-inlay-index.php';
         $this->nameSingular = __("Inlay Index", 'simrishamn');
-        $this->namePlural  = __("Inlay Indices", 'simrishamn');
-        $this->description  = __(
+        $this->namePlural = __("Inlay Indices", 'simrishamn');
+        $this->description = __(
             "Outputs 2-4 of the latest posts from the selected post-type.",
             'simrishamn'
         );
@@ -26,8 +26,8 @@ class InlayIndex extends \Modularity\Module
         $data['post_type'] = get_field('post_types', $this->ID);
 
         $args = array(
-            'numberposts'	=> 2,
-            'post_type'		=> $data['post_type']
+            'numberposts' => 2,
+            'post_type' => $data['post_type']
         );
 
         $data['items'] = get_posts($args);
