@@ -22,11 +22,12 @@ class Template
         add_filter('init', array($this, 'addCustomTemplates'), 10, 1);
     }
 
-    public function addCustomTemplates() {
-	\Municipio\Helper\Template::add(
-	    __('Section Page', 'simrishamn'),
-	    \Municipio\Helper\Template::locateTemplate('section-page.blade.php')
-	);
+    public function addCustomTemplates()
+    {
+        \Municipio\Helper\Template::add(
+            __('Section Page', 'simrishamn'),
+            \Municipio\Helper\Template::locateTemplate('section-page.blade.php')
+        );
     }
 
     /**
@@ -70,9 +71,9 @@ class Template
 
         global $post;
 
-        if ($post && $post->post_name == 'krismeddelande'){
+        if ($post && $post->post_name == 'krismeddelande') {
             $templates['global-notice.blade.php'] = 'Krismeddelanden';
-        } else if ($post && $post->post_name == 'webbkarta') {
+        } elseif ($post && $post->post_name == 'webbkarta') {
             $templates['sitemap.blade.php'] = 'Webbkarta';
         }
 

@@ -24,7 +24,7 @@ class Modularity
      */
     public function isActive()
     {
-	return function_exists('modularity_register_module');
+        return function_exists('modularity_register_module');
     }
 
     /**
