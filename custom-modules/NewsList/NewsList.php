@@ -29,7 +29,7 @@ class NewsList extends \Modularity\Module
         );
 
         $data['items'] = get_posts($args);
-        $this->setMetaData($data['items']);
+        $this->setMetaData($data['items'], 150);
 
         $data['featured'] = array(
             get_field('featured_one', $this->ID),
@@ -51,13 +51,23 @@ class NewsList extends \Modularity\Module
         return $data;
     }
 
-    public function setMetaData($items)
+    public function setMetaData($items, $excerpt_length=270)
     {
-        foreach ($items as $item) {
+        foreach($items as $item) {
             if ($item) {
                 $item->thumbnail = get_the_post_thumbnail_url($item, 'small');
-                if (!$item->post_excerpt) {
-                    $item->post_excerpt = \Simrishamn\Theme\Helper::shortText($item->post_content, 350);
+                $excerpt = $item->post_excerpt ? $item->post_excerpt : $item->post_content;
+
+                $item->post_excerpt = \Simrishamn\Theme\Helper::shortText(
+                    $excerpt,
+                    $excerpt_length
+                );
+
+                if(strlen($item->post_title) > 25) {
+                    $item->post_title = \Simrishamn\Theme\Helper::shortText(
+                        $item->post_title,
+                        25
+                    );
                 }
             }
         }

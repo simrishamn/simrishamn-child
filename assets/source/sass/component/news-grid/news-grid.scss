@@ -1,7 +1,3 @@
-.test {
-    background: linear-gradient(to bottom,transparent,rgba(0,0,0,.8));
-}
-
 .news-grid {
     max-width: 100%;
     .grid-md-6 .grid {
@@ -98,18 +94,11 @@
     }
 
     .box-horizontal .box-content {
-	max-height: 125px;
+	max-height: 120px;
+	min-height: 120px;
 	overflow: hidden;
 	display: flex;
-	@media screen and #{$screen-below-lg} {
-	    background-image: linear-gradient(180deg,transparent,#cecece4d)
-	}
-	div#fade{
-	    height: 30px;
-	    bottom: 0;
-	    left: 0;
-	    width: 100%;
-	}
+	padding-top: 10px;
     }
 
     .box-image {
