@@ -67,7 +67,7 @@ class Helpers {
     /**
      * Toggle the menu
      */
-    toggleMenu() {
+    toggleMenu(el) {
         const menuTriggerSelector = '.menu-trigger',
             isActiveClass = 'is-active',
             toggleActive = !$(menuTriggerSelector).hasClass(isActiveClass);
@@ -76,6 +76,7 @@ class Helpers {
             this.tryInvoke(() => this.focusElement('#mobile-menu li:first a'), 10, 100);
         }
 
+        el.setAttribute('aria-expanded', toggleActive);
         $(menuTriggerSelector).toggleClass(isActiveClass);
     }
 }
