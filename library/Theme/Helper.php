@@ -5,18 +5,20 @@ namespace Simrishamn\Theme;
 class Helper
 {
     /**
-     * Returns the first $LEN characters of $TEXT with an ellipsis
-     * appended to it.
+     * Returns the first $LEN characters of $TEXT. If $ELLIPSIS,
+     * appended an ellipsis before returning.
      *
      * If $LEN is longer than $TEXT, do nothing.
      *
      * @param string $text The text to shorten.
      * @param int $len The length of the returned text.
+     * @param bool $ellipsis Append an ellipsis to the string.
      */
-    public static function shortText($text, $len)
+    public static function shortText($text, $len, $ellipsis=true)
     {
         if (strlen($text) > $len) {
-            return substr($text, 0, $len) . '...';
+            $text = rtrim(substr($text, 0, $len));
+            return $text . ($ellipsis ? '...' : '');
         }
         return $text;
     }
