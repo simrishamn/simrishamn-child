@@ -51,9 +51,9 @@ class NewsList extends \Modularity\Module
         return $data;
     }
 
-    public function setMetaData($items, $excerpt_length=270)
+    public function setMetaData($items, $excerpt_length = 270)
     {
-        foreach($items as $item) {
+        foreach ($items as $item) {
             if ($item) {
                 $item->thumbnail = get_the_post_thumbnail_url($item, 'small');
                 $excerpt = $item->post_excerpt ? $item->post_excerpt : $item->post_content;
@@ -63,7 +63,7 @@ class NewsList extends \Modularity\Module
                     $excerpt_length
                 );
 
-                if(strlen($item->post_title) > 25) {
+                if (strlen($item->post_title) > 25) {
                     $item->post_title = \Simrishamn\Theme\Helper::shortText(
                         $item->post_title,
                         25

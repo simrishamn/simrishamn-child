@@ -14,7 +14,7 @@ class Helper
      * @param int $len The length of the returned text.
      * @param bool $ellipsis Append an ellipsis to the string.
      */
-    public static function shortText($text, $len, $ellipsis=true)
+    public static function shortText($text, $len, $ellipsis = true)
     {
         if (strlen($text) > $len) {
             $text = rtrim(substr($text, 0, $len));
