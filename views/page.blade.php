@@ -4,14 +4,19 @@
 
 <div class="container main-container">
 
-    <div class="grid {{ implode(' ', apply_filters('Municipio/Page/MainGrid/Classes', wp_get_post_parent_id(get_the_id()) != 0 ? array('no-margin-top') : array())) }}">
+    <div class="grid
+                {{ implode(' ', apply_filters(
+                    'Municipio/Page/MainGrid/Classes',
+                    wp_get_post_parent_id(get_the_id()) != 0 ? array('no-margin-top') : array()
+                   ))
+                }}">
 
         @include('partials.sidebar-left')
 
         <div class="{{ $contentGridSize }} grid-print-12" id="readspeaker-read">
 
             @include('partials.breadcrumbs')
-            
+
             @if (is_active_sidebar('content-area-top'))
                 <div class="grid sidebar-content-area sidebar-content-area-top">
                     <?php dynamic_sidebar('content-area-top'); ?>
@@ -34,7 +39,6 @@
                 @include('partials.page-footer')
             </div>
         </div>
-
         @include('partials.sidebar-right')
     </div>
 
