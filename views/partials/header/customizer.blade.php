@@ -1,5 +1,6 @@
 @if (isset($headerLayout['headers']) && is_array($headerLayout['headers']) && !empty($headerLayout['headers']))
     <div class="sticky-scroll">
+        <a id="skip-content" href="#main-content" role="navigation"></a>
         <header class="c-site-header">
 
             <div class="search-top hidden-md hidden-lg hidden-print" id="search">

@@ -59,7 +59,6 @@
             </div>
         <![endif]-->
         <div id="wrapper">
-            <a id="skip-content" href="#main-content" role="navigation"></a>
 	    @if (get_field('show_google_translate', 'option') == 'header')
                 @include('partials.translate')
 	    @endif
