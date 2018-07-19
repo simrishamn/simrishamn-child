@@ -11,6 +11,14 @@ a:focus {
     }
 }
 
+.post-horizontal__content {
+    a:focus {
+	h4 {
+	    background-color: $simrishamn-orange !important;
+	}
+    }
+}
+
 #skip-content {
     padding: 10px;
     position: absolute;
