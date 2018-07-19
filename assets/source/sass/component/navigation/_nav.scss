@@ -11,6 +11,13 @@ a:focus {
     }
 }
 
+#skip-content {
+    padding: 10px;
+    position: absolute;
+    min-height: 10px;
+    min-width: 10px;
+    padding-bottom: 60px;
+}
 
 %plus-minus-icon-default {
     &::after {
