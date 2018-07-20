@@ -69,6 +69,7 @@ class NewsList extends \Modularity\Module
                         25
                     );
                 }
+                $item->category = get_the_category($item->ID)[0]->name;
             }
         }
     }
