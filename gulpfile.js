@@ -9,6 +9,7 @@ var buffer = require('vinyl-buffer');
 var concat = require('gulp-concat');
 var cssnano = require('gulp-cssnano');
 var gettext = require('gulp-gettext');
+var gzip = require('gulp-gzip');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var source = require('vinyl-source-stream');
@@ -33,6 +34,7 @@ function stylePipe(name) {
             mergeLonghand: false,
             zindex: false
         }))
+        .pipe(gzip({append: false, level: 9}))
         .pipe(gulp.dest('assets/dist/css'));
 }
 
@@ -53,6 +55,7 @@ function scriptPipe(name) {
         .pipe(gulp.dest('assets/dist/js'))
         .pipe(rename(`${name}.min.js`))
         .pipe(uglify())
+        .pipe(gzip({append: false, level: 9}))
         .pipe(gulp.dest('assets/dist/js'));
 }
 

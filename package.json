@@ -17,6 +17,7 @@
     "gulp-copy": "1.1.0",
     "gulp-cssnano": "^2.1.0",
     "gulp-gettext": "^0.3.0",
+    "gulp-gzip": "^1.4.2",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
