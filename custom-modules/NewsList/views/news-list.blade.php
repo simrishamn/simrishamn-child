@@ -42,7 +42,7 @@
                 <div class="btn-holder border-{{ $content_color }}">
                     <a class="btn btn-plain"
                        href="{{ get_post_type_archive_link( 'post' ) }}">
-                        Gå till Nyhetsarkiv
+                        Visa mer
                     </a>
                 </div>
             </div>

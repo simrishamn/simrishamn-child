@@ -43,12 +43,11 @@
                 <div class="box box-post-brick index-content title-{{$content_color}}">
                     <div class="brick-container">
                         <p>
-                            Hitta fler hyter i Nyhetsarkivet!
-                            Lättast är att klicka på Gå Till-knappen.
+                            Klicka på Visa mer för att komma till Nyhetsarkivet!
                         </p>
                         <div>
                             <a class="btn btn-plain" href="{{ get_post_type_archive_link( 'post' ) }}">
-                                Gå Till
+                                Visa mer
                             </a>
                         </div>
                     </div>
