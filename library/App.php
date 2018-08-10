@@ -16,5 +16,6 @@ class App
         new \Simrishamn\Theme\Template();
         new \Simrishamn\Theme\TinyMCE();
         new \Simrishamn\Theme\GlobalNotice();
+        new \Simrishamn\Theme\Login();
     }
 }

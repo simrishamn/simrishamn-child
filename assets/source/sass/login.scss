@@ -1,0 +1,71 @@
+/*css to style login page, change variables to change theme colors*/
+$theme-primary: #0069b3;
+$theme-dark: #054877;
+$theme-secondary: #e56526;
+$lightest-gray: #F5F5F5;
+$white: #FFFFFF;
+$gray: #EFEFEF;
+$dark-gray: #666666;
+$darker-gray: #333333;
+
+/*setting colors to use*/
+$background: $lightest-gray;
+$form-background: $white;
+$text-color: $theme-primary;
+$button: $theme-primary;
+$focus-color: $theme-secondary;
+
+body.login {
+    background: $background;
+    font-size: 16px;
+}
+
+.login.wp-core-ui .button-primary {
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+    color: $button;
+    border: 1px solid $button;
+    font-size: 1.2em;
+    text-shadow: none;
+}
+
+.login form {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: $form-background;	
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+}
+
+.login label {
+    color: $text-color;
+    font-size: 1em;
+}
+
+.login form .input, .login form input[type="checkbox"], .login input[type="text"] {
+    background: $white;
+    apperance: none;
+    padding: 7.5px 10px;
+    border: 1px solid $gray;
+    font-size: .9em;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+    line-height: 1.6;
+}
+
+.login input[type="text"] {
+    width: 100%;
+}
+
+/*Focus & Hover*/
+.login.wp-core-ui .button-primary:hover {
+    background-color: $lightest-gray;
+    color: $theme-dark;
+    border: 1px solid $theme-dark;
+    font-size: 1.2em;
+    text-shadow: none;
+}
+
+.login :focus, .forgetmenot:focus-within {
+    border: 4px solid $focus-color !important;
+    background-color: $focus-color !important;
+    color: $white !important;
+}

@@ -40,7 +40,8 @@ function stylePipe(name) {
 gulp.task('style-theme', () => stylePipe('theme'));
 gulp.task('style-admin', () => stylePipe('admin'));
 gulp.task('style-editor', () => stylePipe('editor'));
-gulp.task('style', ['style-theme', 'style-admin', 'style-editor']);
+gulp.task('style-login', () => stylePipe('login'));
+gulp.task('style', ['style-theme', 'style-admin', 'style-editor', 'style-login']);
 
 // Compile application scripts.
 function scriptPipe(name) {
