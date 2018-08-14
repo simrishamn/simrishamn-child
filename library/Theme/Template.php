@@ -10,8 +10,6 @@ class Template
     public function __construct()
     {
         add_filter('theme_page_templates', array($this, 'templateListFilter'), 20, 1);
-        add_filter('ngettext', array($this, 'registerText'), 20, 3);
-        add_filter('gettext', array($this, 'registerText'), 20, 3);
         add_filter(
             'Municipio/controller/base/view_data',
             array($this, 'getFooterData'),
@@ -78,28 +76,6 @@ class Template
         }
 
         return $templates;
-    }
-
-    /**
-     * Filters the login page text labels.
-     *
-     * @param string $text WordPress text labels.
-     *
-     * @return string A (maybe) replaced text label.
-     */
-    public function registerText($text)
-    {
-        $text = str_ireplace(
-            'Användarnamn eller e-postadress',
-            'Användarnamn',
-            $text
-        );
-        $text = str_ireplace(
-            'Username or Email Address',
-            'Username',
-            $text
-        );
-        return $text;
     }
 
     /**
