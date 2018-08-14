@@ -20,7 +20,8 @@ class GlobalNotice
                 'excerpt' => \Simrishamn\Theme\Helper::shortText(
                     get_field('global_notice_text', 'options'),
                     150
-                )
+                ),
+                'linkText' => __('Read more', 'simrishamn')
             );
             return $data;
         });
