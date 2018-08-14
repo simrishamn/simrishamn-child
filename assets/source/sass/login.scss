@@ -32,7 +32,7 @@ body.login {
 
 .login form {
     font-family: 'Open Sans', Arial, sans-serif;
-    background-color: $form-background;	
+    background-color: $form-background;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
 }
 
@@ -43,7 +43,7 @@ body.login {
 
 .login form .input, .login form input[type="checkbox"], .login input[type="text"] {
     background: $white;
-    apperance: none;
+    appearance: none;
     padding: 7.5px 10px;
     border: 1px solid $gray;
     font-size: .9em;
