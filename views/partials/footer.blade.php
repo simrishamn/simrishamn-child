@@ -46,14 +46,6 @@
         <div class="grid">
           <div class="{{ get_field('footer_signature_show', 'option') ? 'grid-md-10' : 'grid-md-12' }}">
 
-            {{-- ## Footer header begin ## --}}
-            @if (get_field('footer_logotype_vertical_position', 'option') == 'top' || !get_field('footer_logotype_vertical_position', 'option'))
-              <div class="grid">
-		<div class="grid-md-12">
-		  @if (get_field('footer_logotype', 'option') != 'hide')
-		    {!! municipio_get_logotype(get_field('footer_logotype', 'option'), false, true, false, false) !!}
-		  @endif
-
 		  <nav class="{{ !get_field('footer_signature_show', 'option') ? 'pull-right' : '' }}">
 		    <ul class="nav nav-help nav-horizontal">
 		      {!!
@@ -78,13 +70,21 @@
 		  </nav>
 		</div>
               </div>
-                @endif
-                {{-- ## Footer header end ## --}}
 
                 {{-- ## Footer widget area begin ## --}}
                 <div class="grid sidebar-footer-area">
+                
+            {{-- ## Footer header begin ## --}}
+        @if (get_field('footer_logotype_vertical_position', 'option') == 'top' || !get_field('footer_logotype_vertical_position', 'option'))
+		  @if (get_field('footer_logotype', 'option') != 'hide')
+		  <div class="grid-lg-3">
+		    {!! municipio_get_logotype(get_field('footer_logotype', 'option'), false, true, false, false) !!}
+		    </div>
+		  @endif 
+		  @endif
+        
 		    @foreach($footerData as $column)
-			<div class="grid-lg-4">
+			<div class="grid-lg-3">
 			    @foreach($column as $item)
 				<div class="contact-box">
 				    <h4> {{ $item['label'] }} </h4>
