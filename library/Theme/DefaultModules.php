@@ -12,10 +12,6 @@ class DefaultModules
      */
     public function __construct()
     {
-        if (!defined('SIMRISHAMN_SHARED_CONTACTS_MODULE')) {
-            define('SIMRISHAMN_SHARED_CONTACTS_MODULE', null);
-        }
-
         if (!defined('SIMRISHAMN_SHARED_NOTICES_MODULE')) {
             define('SIMRISHAMN_SHARED_NOTICES_MODULE', null);
         }
