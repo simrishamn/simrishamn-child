@@ -75,6 +75,8 @@
                 <div class="grid sidebar-footer-area">
                 
             {{-- ## Footer header begin ## --}}
+            
+        {{-- ## Logotype begin ## --}}    
         @if (get_field('footer_logotype_vertical_position', 'option') == 'top' || !get_field('footer_logotype_vertical_position', 'option'))
 		  @if (get_field('footer_logotype', 'option') != 'hide')
 		  <div class="grid-lg-3">
@@ -82,6 +84,8 @@
 		    </div>
 		  @endif 
 		  @endif
+		  
+		  {{-- ## Contact fields ## --}}
           <div class="grid-lg-6">
           <h3> {{ $footerData['contact']['label'] }} </h3>
           <div class="grid">
@@ -106,16 +110,17 @@
 				    @endif
 				    </div>
                     @endif
-                    
-            @endforeach
+                @endforeach
             </div>
             </div>
+            
+            {{-- ## Link fields ## --}}
             <div class="grid-lg-3">
             <h3> {{ $footerData['links']['label'] }} </h3>
-            <div class="grid-lg-6 contact-box">
+            <div class="grid">
             @foreach($footerData['links'] as $item)
                 @if(!is_string($item))
-                <div class="contact-box">
+                <div class="grid-lg-6 contact-box">
                     <h4> {{ $item['label'] }} </h4>
                     @if(is_array($item['value']))
 					@foreach($item['value'] as $subitem)
@@ -136,26 +141,12 @@
                     @endif
             @endforeach
             </div>
-            </div>
-		    </div>
-		</div>
-          {{-- ## Footer widget area end ## --}}
-
-          {{-- ## Footer header begin ## --}}
-
-          {{-- ## Footer header end ## --}}
-          </div>
-
-        {{-- ## Footer signature ## --}}
-
-	</div>
-    </div>
-
-  {{-- ## Social icons ## --}}
-  @if (have_rows('footer_icons_repeater', 'option'))
-      <div class="container">
-          <div class="grid">
-              <div class="grid-xs-12">
+            {{-- ## Social icons ## --}}
+            @if (have_rows('footer_icons_repeater', 'option'))
+            <div class="container">
+            <h3> {{ __('Follow us in social media', 'simrishamn') }} </h3>
+                <div class="grid">
+                    <div class="grid-xs-12">
                   <ul class="icons-list">
                       @foreach(get_field('footer_icons_repeater', 'option') as $link)
                           <li>
@@ -170,8 +161,17 @@
                       @endforeach
                   </ul>
               </div>
+            </div>
+            </div>
+            @endif
+            </div>
+		    </div>
+		</div>
           </div>
-      </div>
-  @endif
+
+	</div>
+    </div>
+
+  
 </footer>
 </div>

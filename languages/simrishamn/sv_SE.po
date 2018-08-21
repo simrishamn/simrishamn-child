@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: simrishamn\n"
-"POT-Creation-Date: 2018-08-20 10:47+0200\n"
-"PO-Revision-Date: 2018-08-20 10:48+0200\n"
+"POT-Creation-Date: 2018-08-21 14:05+0200\n"
+"PO-Revision-Date: 2018-08-21 14:05+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -300,11 +300,19 @@ msgstr "Faktaruta"
 
 #: library/Theme/Template.php:28
 msgid "Section Page"
-msgstr ""
+msgstr "Section Page"
 
 #: library/Theme/Template.php:44
 msgid "Contact information"
 msgstr "Kontakt"
+
+#: library/Theme/Template.php:52
+msgid "Useful links"
+msgstr "Användbara länkar"
+
+#: library/Theme/Template.php:56
+msgid "Follow us in social media"
+msgstr "Följ oss i sociala medier"
 
 #: templates/module/grid.blade.php:49
 msgid "No posts to show…"

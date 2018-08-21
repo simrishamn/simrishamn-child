@@ -9,24 +9,46 @@
 
     .sidebar-footer-area {
         margin-top: 25px;
+        
+        h3 {
+            font-size: 1.2rem;
+            color: black;
+        }
 
         .grid-md-4 {
 
         }
 
         .contact-box {
-            margin-bottom: 35px;
+            margin-bottom: 15px;
 
             h4 {
-                    font-size: 16px;
+                    font-size: 14px;
                     color: black;
                     font-family: 'Open Sans', serif;
                     padding-bottom: 0;
             }
+        
         }
-    }
-}
-
+        
+        .icons-list {
+            text-align: left;
+        
+            li {
+                margin-right: 1em;
+                
+                a {
+                font-size: 1.5em;
+                color: #0069b4;
+            }
+            }
+        }   
+        
+    }                              
+    
+}    
+    
+    
 div .widget_media_image {
     padding-bottom: 0;
     margin-bottom: -8px;
