@@ -82,13 +82,14 @@
 		    </div>
 		  @endif 
 		  @endif
-        
-		    @foreach($footerData as $column)
-			<div class="grid-lg-3">
-			    @foreach($column as $item)
-				<div class="contact-box">
-				    <h4> {{ $item['label'] }} </h4>
-				    @if(is_array($item['value']))
+          <div class="grid-lg-6">
+          <h3> {{ $footerData['contact']['label'] }} </h3>
+          <div class="grid">
+          @foreach($footerData['contact'] as $item)
+              @if(!is_string($item))
+              <div class="grid-lg-6 contact-box">
+                <h4> {{ $item['label'] }} </h4>
+                @if(is_array($item['value']))
 					@foreach($item['value'] as $subitem)
 					    @if($subitem['link'])
 						<a href="{{ $subitem['link']['url'] }}"
@@ -103,10 +104,40 @@
 				    @else
 					{{ $item['value'] }}
 				    @endif
-				</div>
-			    @endforeach
-			</div>
-		    @endforeach
+				    </div>
+                    @endif
+                    
+            @endforeach
+            </div>
+            </div>
+            <div class="grid-lg-3">
+            <h3> {{ $footerData['links']['label'] }} </h3>
+            <div class="grid-lg-6 contact-box">
+            @foreach($footerData['links'] as $item)
+                @if(!is_string($item))
+                <div class="contact-box">
+                    <h4> {{ $item['label'] }} </h4>
+                    @if(is_array($item['value']))
+					@foreach($item['value'] as $subitem)
+					    @if($subitem['link'])
+						<a href="{{ $subitem['link']['url'] }}"
+						   target="{{ $subitem['link']['target'] }}">
+						    {{ $subitem['link']['title'] }}
+						</a>
+					    </br>
+					    @elseif($subitem['row'])
+					    <p> {{ $subitem['row'] }} </p>
+					    @endif
+					@endforeach
+				    @else
+					{{ $item['value'] }}
+				    @endif
+				    </div>
+                    @endif
+            @endforeach
+            </div>
+            </div>
+		    </div>
 		</div>
           {{-- ## Footer widget area end ## --}}
 

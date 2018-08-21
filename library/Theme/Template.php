@@ -61,21 +61,22 @@ class Template
      */
     public function getFooterData($data)
     {
-        $data['footerData'] = array(
-            array(
+        $data['footerData'] = [
+            "contact" => [
+                "label" => __('Contact information', 'simrishamn'),
                 "phone_number" => get_field_object('footer_phone_number', 'option'),
                 "email" => get_field_object('footer_email', 'option'),
-                "opening_times" => get_field_object('opening_times', 'option')
-            ),
-            array(
+                "opening_times" => get_field_object('opening_times', 'option'),
                 "post_box" => get_field_object('post_box', 'option'),
-                "office_address" => get_field_object('office_address', 'option'),
-            ),
-            array (
+                "office_address" => get_field_object('office_address', 'option')
+            ],
+            "links" => [
+                "label" => __('Useful links', 'simrishamn'),
                 "external_links" => get_field_object('footer_external_links', 'option'),
                 "internal_links" => get_field_object('footer_internal_links', 'option')
-            )
-        );
+            ],
+            "social" => ["label" => __('Follow us', 'simrishamn')]
+        ];
         return $data;
     }
 
