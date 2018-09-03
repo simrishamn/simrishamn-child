@@ -43,7 +43,9 @@ class Helper
                 "",
                 get_page_template_slug($post->ID)
             );
+            return $currentTemplate == $template;
         }
-        return $currentTemplate == $template;
+        return false;
+
     }
 }
