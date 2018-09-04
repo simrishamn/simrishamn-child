@@ -1,7 +1,7 @@
 /**
  * Simrishamn helpers
  */
-class Helpers {
+export default class Helpers {
     /**
      * Focus an element in the dom
      *
@@ -80,6 +80,3 @@ class Helpers {
         $(menuTriggerSelector).toggleClass(isActiveClass);
     }
 }
-
-Simrishamn = Simrishamn || {};
-Simrishamn.helpers = new Helpers();

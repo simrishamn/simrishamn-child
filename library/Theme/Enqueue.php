@@ -56,7 +56,6 @@ class Enqueue
     public function enqueueScripts()
     {
         $this->enqueueTheme();
-        $this->script('simrishamn-helpers', 'helpers.js');
     }
 
     /**
