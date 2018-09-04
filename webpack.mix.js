@@ -1,5 +1,5 @@
 const Compression = require('compression-webpack-plugin');
-const Mix = require('laravel-mix')
+const Mix = require('laravel-mix');
 
 const config = {
     plugins: [
