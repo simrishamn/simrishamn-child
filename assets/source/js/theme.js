@@ -1,5 +1,8 @@
 import 'babel-polyfill';
+import Helpers from './theme/helpers';
 
-var Simrishamn = {};
+const Simrishamn = {
+    helpers: new Helpers(),
+};
 
 window['Simrishamn'] = Simrishamn;
