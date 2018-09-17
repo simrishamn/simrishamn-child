@@ -100,16 +100,5 @@
 }
 
 &:not(.home) .hero {
-    // Desktop
-    @media screen and #{$screen-md-up} {
-
-        .modularity-mod-image,
-        .modularity-mod-slider {
-            margin-bottom: -97px;
-        }
-
-        margin-bottom: 117px;
-    }
-
     margin-bottom: 20px;
 }
