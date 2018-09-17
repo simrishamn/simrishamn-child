@@ -102,7 +102,6 @@
 &:not(.home) .hero {
     // Desktop
     @media screen and #{$screen-md-up} {
-        margin-top: -117px;
 
         .modularity-mod-image,
         .modularity-mod-slider {
