@@ -7,7 +7,7 @@
             padding-right: 10px;
         }
         >.grid:not(.breadcrumbs-wrapper):not(.no-margin-top):first-child {
-            
+
             // Desktop
             @media screen and #{$screen-md-up} {
                 padding-top: 0;
@@ -31,7 +31,7 @@
 
     // Start page
     &.home {
-        
+
         // Tablet
         @media screen and #{$screen-below-lg} {
             .hero {
@@ -56,13 +56,6 @@
         @media only screen and (max-width: 900px) {
             .hero .slider .slide {
                 width: 100% !important;
-            }
-        }
-
-        // Desktop
-        @media screen and #{$screen-md-up} {
-            .c-header--primary {
-                display: none;
             }
         }
     }
