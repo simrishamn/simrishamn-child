@@ -2,22 +2,16 @@
 .c-header--top {
     line-height: 2.6;
 
-    .c-header__row {
-        padding: 0;
-    }
-}
-
-.c-site-header {
-    .clear-below {
-	margin-bottom: 30px;
-    }
     .widget_search,
     .search-top {
-        display: none;
         margin: 0;
         width: auto;
-        padding: 30px 30px 30px 20px;
-        background-color: $simrishamn-dark-blue;
+        padding: 40px 40px 0px 20px;
+
+	::-moz-placeholder {
+	    color: black;
+	    opacity: 1;
+	}
 
         form {
             padding: 0;
@@ -27,16 +21,23 @@
             @media screen and #{$screen-md-up} {
                 max-width: 350px;
             }
+	    width: 300px;
+	    ::placeholder {
+		opacity: 1;
+	    }
+
         }
 
         .input-group-addon-btn {
             .btn {
-                background: transparent;
-                border: 2px solid #fff;
+                background: #fff;
+		color: $simrishamn-blue;
+		font-size: 14px;
+		margin-bottom: 5px;
 
                 &:hover,
                 &:focus {
-                    background: $simrishamn-blue;
+                    background: $simrishamn-gray;
                 }
             }
         }
@@ -47,6 +48,16 @@
             align-items: center;
             margin: -15px;
         }
+    }
+
+    .c-header__row {
+        padding: 0;
+    }
+}
+
+.c-site-header {
+    .clear-below {
+	margin-bottom: 30px;
     }
 
     .c-navbar--header-widget-links {
@@ -178,18 +189,27 @@
         .c-navbar__item_button--search::after {
             font-size: 11px;
             text-transform: uppercase;
+	    display: none;
         }
     }
 }
 
 // Only for desktop header
 .c-header--top {
+    box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 1;
+
+    .c-header__row {
+	height: 130px;
+    }
+
     .c-navbar--header-widget-links {
         .hamburger-inner,
-            .hamburger-inner::before,
-            .hamburger-inner::after {
-                background-color: #fff;
-            }
+        .hamburger-inner::before,
+        .hamburger-inner::after {
+            background-color: #fff;
+        }
     }
 
     .c-navbar__item_button--search {
@@ -197,16 +217,26 @@
             background: $simrishamn-dark-blue;
         }
     }
+
+    .widget_text {
+	text-transform: uppercase;
+	font-size: 16px;
+	margin-top: 45px;
+
+	h3 {
+	    margin-left: 15px;
+	    font-weight: 400;
+	}
+    }
 }
+
 
 // Mobile header / desktop content header
 .c-header--primary {
     position: relative;
-    z-index: 1;
 
-    // todo: Discuss the maxwidth of this section
     .c-header__row {
-        padding: 15px 25px 20px;
+        padding: 5px 25px 15px;
     }
 
     .widget_text {
@@ -221,22 +251,16 @@
 
     // Mobile
     @media screen and #{$screen-below-md} {
-        border-bottom: 2px solid #ddd;
-
         .c-header__row {
             padding: 5px 0;
             margin: 0 15px;
-        }
-
-        .widget_text {
-            display: none;
         }
     }
 
     // Desktop
     @media screen and #{$screen-md-up} {
         &.c-header--customizer {
-            background: rgba(245, 245, 245, 0.6);
+
         }
     }
 }
@@ -252,8 +276,6 @@
 
 /* --- Logo --- */
 .c-header__logo.t-municipio a {
-    padding-top: 100%;
-
     @media screen and #{$screen-md-up} {
         position: relative;
         width: 82px;
@@ -263,24 +285,40 @@
 
 /* --- Navbar --- */
 nav .c-navbar .c-navbar__item {
-    margin-right: 10px;
     height: 45px;
-    padding-bottom: 20px;
 
     a {
-        padding: 10px 5px 5px 0px;
         text-align: center;
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 1.1;
-        color: $simrishamn-blue;
         word-break: break-word;
+	font-size: 18px;
+	line-height: 1.1;
+	font-weight: 500;
+	padding: 7px;
+	padding-bottom: 8px;
+
+	@media screen and #{$screen-below-lg} {
+	    padding-left: 5px;
+	    padding-right: 5px;
+	}
+
+	@media screen and (max-width: 900px) {
+	    font-size: 14px;
+	    margin-top: 4px;
+	    padding-bottom: 12px;
+	}
     }
+
+
+}
+
+// Hide the extra search trigger by default
+#nav-search {
+    visibility: hidden;
 }
 
 nav .c-navbar .c-navbar__item a:hover:not(.is-current),
 nav .c-navbar .c-navbar__item.is-current a {
-    border-bottom: 5px solid $simrishamn-red;
+    background-color: $simrishamn-pale-blue;
     text-decoration: none;
 }
 
@@ -312,7 +350,7 @@ nav .c-navbar .c-navbar__item.is-current::after {
     .clear-below {
 	margin-bottom: 30px;
     }
-    
+
     a {
         color: white;
         text-decoration: underline;

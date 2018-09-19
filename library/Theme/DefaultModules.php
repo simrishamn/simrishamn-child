@@ -12,10 +12,6 @@ class DefaultModules
      */
     public function __construct()
     {
-        if (!defined('SIMRISHAMN_SHARED_CONTACTS_MODULE')) {
-            define('SIMRISHAMN_SHARED_CONTACTS_MODULE', null);
-        }
-
         if (!defined('SIMRISHAMN_SHARED_NOTICES_MODULE')) {
             define('SIMRISHAMN_SHARED_NOTICES_MODULE', null);
         }
@@ -40,13 +36,6 @@ class DefaultModules
         $slider = array('mod-slider', __('Slider', 'simrishamn'));
         $teaser = array('mod-colored-index', __('Colored Index', 'simrishamn'));
 
-        $contacts = array(
-            'mod-contacts',
-            __('Contacts v2', 'simrishamn'),
-            strtoupper(__('Do not edit!', 'simrishamn')),
-            SIMRISHAMN_SHARED_CONTACTS_MODULE
-        );
-
         $notices = array(
             'mod-inlay-index',
             __('Inlay Index', 'simrishamn'),
@@ -65,16 +54,16 @@ class DefaultModules
             case 'page':
                 return array(
                     'content-area-top' => array($slider, $image),
-                    'right-sidebar' => array($contacts, $notices),
+                    'right-sidebar' => array($notices),
                 );
             case 'single':
                 return array(
-                    'right-sidebar' => array($contacts, $notices, $posts),
+                    'right-sidebar' => array($notices, $posts),
                 );
             case 'full-width.blade.php':
                 return array(
                     'slider-area' => array($image),
-                    'content-area' => array($teaser, $teaser, $contacts),
+                    'content-area' => array($teaser, $teaser),
                 );
         }
     }
