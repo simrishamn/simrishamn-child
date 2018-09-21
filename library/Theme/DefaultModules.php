@@ -62,7 +62,6 @@ class DefaultModules
                 );
             case 'full-width.blade.php':
                 return array(
-                    'slider-area' => array($image),
                     'content-area' => array($teaser, $teaser),
                 );
         }
