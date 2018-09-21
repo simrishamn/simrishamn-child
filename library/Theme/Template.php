@@ -20,6 +20,25 @@ class Template
         );
         add_filter('accessibility_items', array($this, 'removePrint'), 20, 1);
         add_filter('init', array($this, 'addCustomTemplates'), 10, 1);
+        add_action('admin_init', array($this, 'removeContentEditor'));
+    }
+
+
+    /**
+     * Hides the content editor for full-width (section page) template.
+     *
+    */
+    public function removeContentEditor() {
+        $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'];
+
+	if(!isset($post_id))
+            return;
+
+        error_log(get_post_meta($post_id, '_wp_page_template', true));
+
+        if(get_post_meta($post_id, '_wp_page_template', true) == 'full-width.blade.php') {
+            remove_post_type_support( 'page', 'editor' );
+        }
     }
 
     public function addCustomTemplates()
