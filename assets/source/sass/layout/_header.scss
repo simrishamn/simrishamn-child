@@ -2,6 +2,10 @@
 .c-header--top {
     line-height: 2.6;
 
+    .c-header__logo.t-municipio a {
+	padding-top: 0px !important;
+    }
+
     .widget_search,
     .search-top {
         margin: 0;
