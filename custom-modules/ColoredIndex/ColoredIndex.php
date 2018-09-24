@@ -13,7 +13,7 @@ class ColoredIndex extends \Modularity\Module
         $this->nameSingular = __("Colored Index", 'simrishamn');
         $this->namePlural  = __("Colored Indices", 'simrishamn');
         $this->description  = __(
-            "Outputs a colored index card with image, text & customizable link to a page.",
+            "Outputs a colored index card text & customizable link to a page.",
             'simrishamn'
         );
         include_once $this->fields;
