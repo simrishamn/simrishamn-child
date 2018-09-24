@@ -5,7 +5,9 @@
         <div class="index-content title-{{$item['color']}}">
           <p>{{ $item['lead'] }}</p>
           <div>
-            <a href={{ $item['link_url'] }} class="btn btn-plain">{{$item['btn-text']}}</a>
+              <a href={{ $item['link_url'] }} class="btn btn-plain">
+                  {{$item['btn-text']}}
+              </a>
           </div>
         </div>
       </div>
