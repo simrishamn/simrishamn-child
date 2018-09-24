@@ -174,7 +174,7 @@
             }
         }
     }
-    
+
     .modularity-mod-colored-index {
         .grid > [class*="grid-"] {
             &:not(:first-child) {
@@ -206,7 +206,7 @@
                 background: $simrishamn-orange;
                 border-bottom: 1px solid $body-background;
                 font-weight: 400;
-                font-size: 20px;
+                font-size: 18px;
             }
             .nav {
                 padding-bottom: 15px;
@@ -217,7 +217,7 @@
                     background: $simrishamn-light-orange;
                     .title {
                         color: white !important;
-                        font-size: 20px !important;
+                        font-size: 18px !important;
                         &:after {
                             content: "";
                         }
