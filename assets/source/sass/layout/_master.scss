@@ -108,6 +108,11 @@ html.translated-ltr #site-header {
     background-color: $simrishamn-gray;
 }
 
+.title-yellow {
+    background-color: $simrishamn-pale-yellow;
+    color: black;
+}
+
 .truncate:hover {
     // same as on .truncate (i.e. not hover)
     background-color: inherit;
