@@ -34,22 +34,24 @@
 
 .accordion-toggle {
     $paddingX: 0px;
-    $paddingY: 30px;
+    $paddingY: 15px;
 
     height: 75px;
     padding: $paddingX $paddingY;
     background: $simrishamn-blue;
     color: $simrishamn-white;
-    font-weight: 800;
 
     z-index: 1;
     outline: 0;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
 
-    h6 {
+    h2 {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+
+	font-weight: 800;
+	font-size: 15px;
     }
 
     &::before {
