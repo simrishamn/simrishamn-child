@@ -210,7 +210,7 @@ acf_add_local_field_group(array(
 			'red' => 'Red',
 			'blue' => 'Blue',
 			'green' => 'Green',
-                        'pale-yellow' => 'Yellow',
+                        'yellow' => 'Yellow',
 		    ),
 		    'default_value' => array(
 			0 => 'blue',
