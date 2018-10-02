@@ -111,6 +111,10 @@ html.translated-ltr #site-header {
 .title-yellow {
     background-color: $simrishamn-pale-yellow;
     color: black;
+
+    h4 {
+      color: black;
+    }
 }
 
 .truncate:hover {
