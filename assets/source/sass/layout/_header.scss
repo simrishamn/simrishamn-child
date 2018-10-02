@@ -290,6 +290,7 @@
 /* --- Navbar --- */
 nav .c-navbar .c-navbar__item {
     height: 45px;
+    max-width: 140px;
 
     a {
         text-align: center;
@@ -311,8 +312,6 @@ nav .c-navbar .c-navbar__item {
 	    padding-bottom: 12px;
 	}
     }
-
-
 }
 
 // Hide the extra search trigger by default
@@ -320,15 +319,18 @@ nav .c-navbar .c-navbar__item {
     visibility: hidden;
 }
 
-nav .c-navbar .c-navbar__item a:hover:not(.is-current),
-nav .c-navbar .c-navbar__item.is-current a {
+.c-navbar .c-navbar__item a:hover:not(.is-current),
+.c-navbar .c-navbar__item.is-current a,
+.c-navbar .c-navbar__item a:hover:not(.is-current),
+.c-navbar .c-navbar__item.is-current-ancestor a {
     background-color: $simrishamn-pale-blue;
     text-decoration: none;
 }
 
-nav .c-navbar .c-navbar__item.is-current::after {
-    // Remove the arrow indicating selected menu item
-    all: unset;
+.c-navbar .c-navbar__item.is-current::after,
+.c-navbar .c-navbar__item.is-current-ancestor:not(.c-navbar__sub)::after,
+.c-navbar .c-navbar__item.is-current::after {
+    display: none;
 }
 
 /* --- Search --- */
