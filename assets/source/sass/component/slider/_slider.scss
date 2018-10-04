@@ -1,43 +1,43 @@
 .slider .text-block {
-    width: 30em;
+    text-align: left;
 
-    @media screen and #{$screen-below-md} {
-        width: 100%;
-    }
-
-    top: 0;
-    right: auto;
+    top: auto;
     bottom: 0;
-    left: 0;
+    background-image: none;
+    background-color: rgba($simrishamn-blue, 0.6) !important;
 
-    &, &.text-block-center {
-        background-image: none;
-        background-color: rgba($simrishamn-blue, 0.4) !important;
-    }
-
-    &, &.text-block-transparent  {
+    &.text-block-transparent  {
 	background-image: none;
 	background-color: transparent !important;
     }
 
-    span .title {
-        font-size: 25pt;
-        padding-bottom: 15px;
-
-        @media screen and #{$screen-below-sm} {
-            font-size: 20pt;
-        }
-    }
-
-    span {
-        font-size: 12pt;
+    .text-block-content {
+	font-size: 12pt;
+	width: 95%;
+	max-width: 1240px;
+	margin: 0 auto;
 
         @media screen and #{$screen-below-sm} {
             font-size: 10pt;
         }
     }
-}
 
+    & .title {
+        font-size: 25pt;
+	margin-top: -10px;
+        @media screen and #{$screen-below-sm} {
+            font-size: 20pt;
+        }
+    }
+
+    & p {
+	padding-bottom: 20px;
+	max-width: 60%;
+	@media screen and #{$screen-below-md} {
+	    max-width: 100%;
+        }
+    }
+}
 
 &.no-js .slider li:first-child {
     display: inline-block;
