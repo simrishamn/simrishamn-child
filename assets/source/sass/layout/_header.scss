@@ -73,7 +73,7 @@
         }
 
         button {
-            padding: 2px 20px 5px;
+            padding: 2px 10px 5px;
 
             // Mobile
             @media screen and #{$screen-below-md} {
@@ -239,6 +239,17 @@
 .c-header--primary {
     position: relative;
 
+    .c-header__widget {
+	min-width: 100%;
+	@media screen and #{$screen-below-md} {
+	    min-width: 0;
+	}
+    }
+
+    .c-header__item:not(:last-child) {
+	margin-right: 0px;
+    }
+
     .c-header__row {
         padding: 5px 25px 15px;
     }
@@ -288,28 +299,38 @@
 }
 
 /* --- Navbar --- */
-nav .c-navbar .c-navbar__item {
-    height: 45px;
-    max-width: 140px;
+nav {
+    &:not(#mobile-menu) {
+	margin-left: 5%;
+    }
 
-    a {
-        text-align: center;
-        word-break: break-word;
-	font-size: 18px;
-	line-height: 1.1;
-	font-weight: 500;
-	padding: 7px;
-	padding-bottom: 8px;
+    .c-navbar .c-navbar__item {
+	height: 45px;
 
-	@media screen and #{$screen-below-lg} {
-	    padding-left: 5px;
-	    padding-right: 5px;
-	}
+	a {
+            text-align: center;
+            word-break: break-word;
+	    font-size: 18px;
+	    line-height: 1.1;
+	    font-weight: 500;
+	    padding: 7px 13px;
+	    padding-bottom: 8px;
+	    max-width: 157px;
 
-	@media screen and (max-width: 900px) {
-	    font-size: 14px;
-	    margin-top: 4px;
-	    padding-bottom: 12px;
+	    @media screen and #{$screen-below-lg} {
+		padding-left: 5px;
+		padding-right: 5px;
+	    }
+
+	    @media screen and (max-width: 1040px) {
+		font-size: 16px;
+	    }
+
+	    @media screen and (max-width: 970px) {
+		font-size: 14px;
+		margin-top: 4px;
+		padding-bottom: 12px;
+	    }
 	}
     }
 }
