@@ -31,7 +31,7 @@ class Template
     public function removeContentEditor() {
         $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'];
 
-	if(!isset($post_id))
+        if(!isset($post_id))
             return;
 
         error_log(get_post_meta($post_id, '_wp_page_template', true));
@@ -43,10 +43,13 @@ class Template
 
     public function addCustomTemplates()
     {
-        \Municipio\Helper\Template::add(
-            __('Section Page', 'simrishamn'),
-            \Municipio\Helper\Template::locateTemplate('section-page.blade.php')
-        );
+        // Example
+        //////////////////////////////////////////////////////////////////////////////
+        // \Municipio\Helper\Template::add(                                         //
+        //     __('My Template', 'simrishamn'),                                     //
+        //     \Municipio\Helper\Template::locateTemplate('my-template.blade.php')  //
+        // );                                                                       //
+        //////////////////////////////////////////////////////////////////////////////
     }
 
     /**
@@ -87,6 +90,8 @@ class Template
     {
         unset($templates['one-page.blade.php']);
         unset($templates['page-two-column.blade.php']);
+
+        $templates['full-width.blade.php'] = __('Full Width', 'simrishamn');
 
         global $post;
 

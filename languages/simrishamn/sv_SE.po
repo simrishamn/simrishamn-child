@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: simrishamn\n"
-"POT-Creation-Date: 2018-09-24 13:12+0200\n"
-"PO-Revision-Date: 2018-09-24 13:12+0200\n"
+"POT-Creation-Date: 2018-10-05 16:10+0200\n"
+"PO-Revision-Date: 2018-10-05 16:12+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: sv_SE\n"
@@ -207,6 +207,23 @@ msgstr "Kategori"
 msgid "Featured Post"
 msgstr "Framhävd Nyhet"
 
+#: custom-modules/Teaser/Teaser.php:13
+msgid "Teaser Block"
+msgstr ""
+
+#: custom-modules/Teaser/Teaser.php:14
+msgid "Teaser Blocks"
+msgstr ""
+
+#: custom-modules/Teaser/Teaser.php:16
+#, fuzzy
+#| msgid ""
+#| "Outputs a colored index card with image, text & customizable link to a "
+#| "page."
+msgid ""
+"Outputs a Teaser Block with lead text, image & customizable link to a page."
+msgstr "Länkbox med textarea och intern länk."
+
 #: library/Theme/AcfFields/php/options-theme-footer-information.php:7
 msgid "Footer Information"
 msgstr "Information Sidfot"
@@ -295,9 +312,9 @@ msgctxt "Tooltip text for the infobox button"
 msgid "Infobox"
 msgstr "Faktaruta"
 
-#: library/Theme/Template.php:47
-msgid "Section Page"
-msgstr ""
+#: library/Theme/Template.php:94
+msgid "Full Width"
+msgstr "Sektionssida"
 
 #: templates/module/grid.blade.php:49
 msgid "No posts to show…"
