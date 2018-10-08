@@ -2,14 +2,14 @@
     margin-top: 0px !important;
     padding-top: 5px;
     background-color: $simrishamn-white;
-    
+
     .container {
 
     }
 
     .sidebar-footer-area {
         margin-top: 25px;
-        
+
         h3 {
             font-size: 1.2rem;
             color: black;
@@ -24,36 +24,39 @@
             margin-bottom: 10px;
 
             h4 {
-                    font-size: 14px;
-                    color: black;
-                    font-family: 'Open Sans', serif;
-                    padding-bottom: 0;
+                font-size: 14px;
+                color: black;
+                font-family: 'Open Sans', serif;
+                padding-bottom: 0;
             }
-        
+
         }
-        
-        .container {
-            margin-top: 15px;
-        }
-        
+
+	.social-box {
+	    margin-left: 0px;
+	    margin-top: 30px;
+	}
+
         .icons-list {
             text-align: left;
-        
+
             li {
                 margin-right: 1em;
-                
+
                 a {
-                font-size: 1.5em;
-                color: #0069b4;
+                    font-size: 1.5em;
+                    color: #0069b4;
+                }
             }
-            }
-        }   
-        
-    }                              
-    
-}    
-    
-    
+        }
+
+	.logo-container {
+	    max-width: 275px;
+	}
+    }
+}
+
+
 div .widget_media_image {
     padding-bottom: 0;
     margin-bottom: -8px;

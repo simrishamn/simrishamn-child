@@ -27,7 +27,7 @@ class Template
     /**
      * Hides the content editor for full-width (section page) template.
      *
-    */
+     */
     public function removeContentEditor() {
         $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'];
 
@@ -68,7 +68,8 @@ class Template
                 "post_box" => get_field_object('post_box', 'option'),
                 "email" => get_field_object('footer_email', 'option'),
                 "office_address" => get_field_object('office_address', 'option'),
-                "opening_times" => get_field_object('opening_times', 'option')
+                "opening_times" => get_field_object('opening_times', 'option'),
+                "organization_number" => get_field_object('organization_number', 'option')
             ],
             "links" => [
                 "label" => __('Useful links', 'simrishamn'),
