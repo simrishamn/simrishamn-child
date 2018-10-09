@@ -59,16 +59,10 @@ class NewsList extends \Modularity\Module
                 $excerpt = $item->post_excerpt ? $item->post_excerpt : $item->post_content;
 
                 $item->post_excerpt = \Simrishamn\Theme\Helper::shortText(
-                    $excerpt,
+                    strip_shortcodes(get_extended($excerpt)['extended']),
                     $excerpt_length
                 );
 
-                if (strlen($item->post_title) > 25) {
-                    $item->post_title = \Simrishamn\Theme\Helper::shortText(
-                        $item->post_title,
-                        25
-                    );
-                }
                 $item->category = get_the_category($item->ID)[0]->name;
             }
         }
