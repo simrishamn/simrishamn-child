@@ -22,19 +22,23 @@ class NewsList extends \Modularity\Module
     public function data() : array
     {
         $data = array();
-        $args = array(
-            'numberposts' => 3,
-            'post_type' => 'post',
-            'category' => get_field('category', $this->ID)
-        );
-
-        $data['items'] = get_posts($args);
-        $this->setMetaData($data['items'], 150);
-
         $data['featured'] = array(
             get_field('featured_one', $this->ID),
             get_field('featured_two', $this->ID)
         );
+
+        $args = array(
+            'post__not_in' => array(
+                $data['featured'][0]->ID,
+                $data['featured'][0]->ID
+            ),
+            'numberposts' => 3,
+            'post_type' => 'post',
+            'category' => get_field('category', $this->ID)
+        );
+        $data['items'] = get_posts($args);
+
+        $this->setMetaData($data['items'], 150);
         $this->setMetaData($data['featured']);
 
         $data['content_color'] = get_field('content_color', $this->ID);
