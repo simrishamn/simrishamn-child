@@ -25,6 +25,18 @@
 
 .news-grid .grid-md-6 {
     padding-right: 0px;
+    @media screen and #{$screen-below-md} {
+	padding-left: 0px;
+	margin-bottom: 5px;
+    }
+
+    .grid .grid-md-6 {
+	@media screen and #{$screen-below-md} {
+	    padding-left: 0px;
+	    margin-bottom: 5px;
+	}
+    }
+
     .box-post-brick {
 	margin-bottom: 10px;
 	padding-bottom: 75%;
@@ -68,9 +80,6 @@
 	.brick-container {
 	    position: absolute;
 	    margin-top: 10%;
-	    @media screen and #{$screen-below-md} {
-
-	    }
 	}
 
 	@media screen and #{$screen-below-lg} {
@@ -92,6 +101,14 @@
 		}
 	    }
 	}
+
+	@media screen and #{$screen-below-md} {
+	    padding-bottom: 15%;
+	    .brick-container {
+		margin-top: 20px;
+		width: 500px;
+	    }
+	}
     }
 }
 
@@ -101,9 +118,6 @@
     padding: 10px;
     padding-bottom: 45px;
     background-color: transparent;
-    .grid-md-4 {
-	max-width: 448px;
-    }
 
     .box-horizontal .box-content {
 	max-height: 120px;

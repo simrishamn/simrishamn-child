@@ -61,6 +61,9 @@ class NewsList extends \Modularity\Module
             if ($item) {
                 $item->thumbnail = get_the_post_thumbnail_url($item, 'small');
                 $excerpt = $item->post_excerpt ? $item->post_excerpt : $item->post_content;
+                if(get_extended($excerpt)['extended']) {
+                    $excerpt = get_extended($excerpt)['extended'];
+                }
 
                 $item->post_excerpt = \Simrishamn\Theme\Helper::shortText(
                     strip_shortcodes(get_extended($excerpt)['extended']),
