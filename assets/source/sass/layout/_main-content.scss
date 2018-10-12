@@ -37,18 +37,23 @@
     }
 
     .post-date {
-	font-size: .85em;
-	color: #777;
+	   font-size: .85em;
+	   color: #777;
+    }
+
+    .news-article ol {
+        margin-left: 0px;
+        padding-left: 0px;
     }
 
     .section-page {
-	h1 {
-	    margin-left: 15px;
-	}
+	   h1 {
+	       margin-left: 15px;
+	   }
 
-	.content {
-	    margin-bottom: 15px;
-	    height: 50px;
-	}
+	   .content {
+	       margin-bottom: 15px;
+	       height: 50px;
+	   }
     }
 }

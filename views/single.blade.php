@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container main-container">
+<div class="container main-container news-article">
 
     <div class="grid">
         <div class="grid-md-12 grid-lg-9">
