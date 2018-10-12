@@ -10,7 +10,7 @@
                     wp_get_post_parent_id(get_the_id()) != 0 ? array('no-margin-top') : array()
                    ))
                 }}">
-    
+
         @include('partials.breadcrumbs')
         @include('partials.sidebar-left')
 

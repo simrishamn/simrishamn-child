@@ -12,7 +12,7 @@
 
             <div class="grid-md-8 grid-print-12" id="readspeaker-read">
                 <div class="content">
-                    @while(have_posts())
+                @while(have_posts())
                         {!! the_post() !!}
                         <h1>{{ the_title() }}</h1>
                     @endwhile
