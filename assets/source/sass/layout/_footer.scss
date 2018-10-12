@@ -1,10 +1,14 @@
+.footer-container {
+    overflow: hidden;
+}
+
 .main-footer {
     margin-top: 0px !important;
     padding-top: 5px;
     background-color: $simrishamn-white;
 
     .container {
-
+	max-width: 1300px;
     }
 
     .sidebar-footer-area {
@@ -52,6 +56,13 @@
 
 	.logo-container {
 	    max-width: 275px;
+
+	    text-align: center;
+	    margin-right: 10px;
+
+	    .logotype {
+		max-width: 100%;
+	    }
 	}
     }
 }
