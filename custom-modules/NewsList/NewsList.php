@@ -66,7 +66,7 @@ class NewsList extends \Modularity\Module
                 }
 
                 $item->post_excerpt = \Simrishamn\Theme\Helper::shortText(
-                    strip_shortcodes(get_extended($excerpt)['extended']),
+                    strip_shortcodes($excerpt),
                     $excerpt_length
                 );
 
