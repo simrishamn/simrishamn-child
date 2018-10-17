@@ -46,19 +46,21 @@ a:focus {
 .nav-aside {
     background: #fff;
 
-    li + li {
-        border-top: none;
-    }
+    li {
+        > a:hover {
+            background-color: $simrishamn-light-blue !important;
+            color: $simrishamn-black;
+            text-decoration: underline;
+        }
 
-    li > a:hover {
-        background-color: $simrishamn-light-blue !important;
-        color: $simrishamn-black;
-        text-decoration: underline;
-    }
+        + li {
+            border-top: none;
+        }
 
-    li button {
-        border: none !important;
-        background-color: transparent !important;
+        button {
+            border: none !important;
+            background-color: transparent !important;
+        }
     }
 
     .sub-menu {
@@ -67,8 +69,12 @@ a:focus {
 
         .current,
         .current-menu-item {
-            font-weight: bold;
-            
+            > a {
+                text-decoration: underline;
+                background-color: $simrishamn-light-blue !important;
+                color: $simrishamn-black;
+            }
+
             > a::before {
                 content: none;
             }
@@ -145,7 +151,8 @@ a:focus {
     > li {
         &.current-node {
             > a {
-                font-weight: 600;
+                background-color: $simrishamn-light-blue !important;
+                color: $simrishamn-black;
             }
         }
     }
