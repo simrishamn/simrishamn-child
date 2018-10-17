@@ -1,6 +1,6 @@
 <div class="{{ $classes }} inlay-index">
   <h4 class="box-title" style="background-color: {{ $title_color }};">
-    {!! apply_filters('the_title', $post_title) !!} </h4>
+    {!! apply_filters('the_title', $post_title) !!}n </h4>
   <div class="box box-horizontal" style="margin-bottom: 5px;">
     @foreach($items as $item)
       <a href={!! get_permalink($item->ID) !!}>
@@ -13,11 +13,15 @@
       </a>
     @endforeach
   </div>
-  <div class="btn-holder" style="border-color: {{ $title_color }}">
+  <div class="btn-holder" style="
+    border-color: {{ $box_color }};
+    background-color: {{ $box_color }};
+    margin-top: 0px;
+  ">
       <a class="btn btn-plain"
-	 href="{{ get_post_type_archive_link( $post_type ) }}"
-	 style="color: {{ $title_color }}">
-	  Visa mer
+	    href="{{ get_post_type_archive_link( $post_type ) }}"
+	    style="background-color: {{ $box_color }}; font-size: 1em;">
+	      + Visa fler Servicemeddelanden
       </a>
   </div>
 </div>
