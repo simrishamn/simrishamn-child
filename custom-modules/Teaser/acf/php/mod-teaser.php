@@ -94,7 +94,7 @@ acf_add_local_field_group(array(
 		    'placeholder' => '',
 		    'prepend' => '',
 		    'append' => '',
-		    'maxlength' => 15,
+		    'maxlength' => 40,
 		),
 		array(
 		    'key' => 'field_5ba8e75373fac',
