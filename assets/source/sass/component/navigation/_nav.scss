@@ -6,15 +6,15 @@
 a:focus {
     border: none !important;
     div {
-	background-color: $simrishamn-focus !important;
+	    background-color: $simrishamn-focus !important;
     }
 }
 
 .post-horizontal__content {
     a:focus {
-	h4 {
-	    background-color: $simrishamn-focus !important;
-	}
+	    h4 {
+	        background-color: $simrishamn-focus !important;
+	    }
     }
 }
 
@@ -45,19 +45,68 @@ a:focus {
 
 .nav-aside {
     background: #fff;
-    padding: 10px;
+
+    li {
+        > a:hover {
+            background-color: $simrishamn-light-blue !important;
+            color: $simrishamn-black;
+            text-decoration: underline;
+        }
+
+        + li {
+            border-top: none;
+        }
+
+        button {
+            border: none !important;
+            background-color: transparent !important;
+        }
+    }
 
     .sub-menu {
-        padding-left: 8px;
+        border-top: none;
         border-left: none;
 
         .current,
         .current-menu-item {
-            font-weight: bold;
+            > a {
+                text-decoration: underline;
+                background-color: $simrishamn-light-blue !important;
+                color: $simrishamn-black;
+            }
 
             > a::before {
                 content: none;
             }
+        }
+
+        li li li a {
+            border-left: 24px solid transparent;
+        }
+
+        li li a {
+            border-left: 16px solid transparent;
+        }
+
+        li a {
+            border-left: 8px solid transparent;
+        }
+    }
+
+    > .current > a {
+        background-color: $simrishamn-light-blue !important;
+        color: $simrishamn-black;
+    }
+
+    li.is-expanded * {
+        background-color: $simrishamn-medium-blue;
+
+        &:hover {
+            background-color: $simrishamn-light-blue;
+        }
+
+        > button {
+            background-color: transparent !important;
         }
     }
 
@@ -95,7 +144,6 @@ a:focus {
     li {
         > a {
             padding: 12px;
-
         }
     }
 
@@ -103,7 +151,8 @@ a:focus {
     > li {
         &.current-node {
             > a {
-                font-weight: 600;
+                background-color: $simrishamn-light-blue !important;
+                color: $simrishamn-black;
             }
         }
     }
