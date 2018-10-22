@@ -5,10 +5,8 @@
 <div class="container main-container news-article">
 
     <div class="grid">
+        @include('partials.breadcrumbs')
         <div class="grid-md-12 grid-lg-9">
-            
-            @include('partials.breadcrumbs')
-            
             @if (is_single() && is_active_sidebar('content-area-top'))
                 <div class="grid sidebar-content-area sidebar-content-area-top">
                     <?php dynamic_sidebar('content-area-top'); ?>
