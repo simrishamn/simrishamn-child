@@ -49,6 +49,11 @@
         .breadcrumbs-wrapper {
             padding-left: 10px; // makes up for lost padding when only having two content containers in single.blade grid.
         }
+        @media screen and #{$screen-below-lg} {
+            .sidebar-right-sidebar {
+                display: flex !important;
+            }
+        }
     }
 
 
