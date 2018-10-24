@@ -3,7 +3,9 @@
         <div class="{{$columnClass}} teaser-block">
             <a href={{ $item['link_url'] }}>
                 <div class="box box-panel title-{{$item['color']}} teaser-content">
-                    <img src="{{$item['image']}}"/>
+                    <figure class="flexbox-img-cropper">
+                        <img src="{{$item['image']}}"/>
+                    </figure>
                     <h4 class="">
                         {{$item['title']}}
                     </h4>
