@@ -42,10 +42,12 @@
             <div class="grid-md-6">
                 <div class="box box-post-brick index-content title-{{$content_color}}">
                     <div class="brick-container">
-                        <p>
-                            Klicka på Visa mer för att komma till Nyhetsarkivet!
-                        </p>
-                        <div>
+                        <div class="call-to-action">
+                            <p>
+                                Klicka på visa mer för att komma till nyhetsarkivet!
+                            </p>
+                        </div>
+                        <div class="news-archive-button">
                             <a class="btn btn-plain" href="{{ get_post_type_archive_link( 'post' ) }}">
                                 Visa mer
                             </a>
