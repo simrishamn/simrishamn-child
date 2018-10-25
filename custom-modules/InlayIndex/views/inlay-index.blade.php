@@ -1,6 +1,6 @@
 <div class="{{ $classes }} inlay-index">
   <h4 class="box-title" style="background-color: {{ $title_color }};">
-    {!! apply_filters('the_title', $post_title) !!}n </h4>
+    {!! apply_filters('the_title', $post_title) !!} </h4>
   <div class="box box-horizontal" style="margin-bottom: 5px;">
     @foreach($items as $item)
       <a href={!! get_permalink($item->ID) !!}>
