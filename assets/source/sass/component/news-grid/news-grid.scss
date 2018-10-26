@@ -102,6 +102,7 @@
 		}
 
 		@media screen and #{$screen-below-md} {
+			position: absolute;
 		    padding-bottom: 15%;
 		}
     }
