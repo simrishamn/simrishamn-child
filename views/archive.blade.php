@@ -1,8 +1,8 @@
 @extends('templates.master')
 
 @section('content')
-<div class="container main-container">
-    @include('partials.breadcrumbs')
+<div class="container main-container archive-page">
+  @include('partials.breadcrumbs')
 
   <div class="grid">
     <?php
