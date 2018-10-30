@@ -37,7 +37,7 @@ class Helper
     public static function isTemplate($template)
     {
         global $post;
-        if( $post ) {
+        if ($post) {
             $currentTemplate = str_replace(
                 ".blade.php",
                 "",
@@ -46,6 +46,5 @@ class Helper
             return $currentTemplate == $template;
         }
         return false;
-
     }
 }

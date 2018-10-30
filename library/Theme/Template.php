@@ -28,16 +28,18 @@ class Template
      * Hides the content editor for full-width (section page) template.
      *
      */
-    public function removeContentEditor() {
+    public function removeContentEditor()
+    {
         $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'];
 
-        if(!isset($post_id))
+        if (!isset($post_id)) {
             return;
+        }
 
         error_log(get_post_meta($post_id, '_wp_page_template', true));
 
-        if(get_post_meta($post_id, '_wp_page_template', true) == 'full-width.blade.php') {
-            remove_post_type_support( 'page', 'editor' );
+        if (get_post_meta($post_id, '_wp_page_template', true) == 'full-width.blade.php') {
+            remove_post_type_support('page', 'editor');
         }
     }
 
