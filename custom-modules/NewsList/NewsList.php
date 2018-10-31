@@ -60,13 +60,14 @@ class NewsList extends \Modularity\Module
         foreach ($items as $item) {
             if ($item) {
                 $item->thumbnail = get_the_post_thumbnail_url($item, 'small');
+
                 $excerpt = $item->post_excerpt ? $item->post_excerpt : $item->post_content;
-                if (get_extended($excerpt)['extended']) {
-                    $excerpt = get_extended($excerpt)['extended'];
+                if (get_extended($excerpt)['main']) {
+                    $excerpt = get_extended($excerpt)['main'];
                 }
 
                 $item->post_excerpt = \Simrishamn\Theme\Helper::shortText(
-                    strip_shortcodes($excerpt),
+                    wp_strip_all_tags(strip_shortcodes($excerpt)),
                     $excerpt_length
                 );
 
