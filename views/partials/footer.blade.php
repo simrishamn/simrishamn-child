@@ -79,14 +79,14 @@
         {{-- ## Logotype begin ## --}}
         @if (get_field('footer_logotype_vertical_position', 'option') == 'top' || !get_field('footer_logotype_vertical_position', 'option'))
 		  @if (get_field('footer_logotype', 'option') != 'hide')
-		  <div class="grid-lg-3 logo-container">
+		  <div class="logo-container">
 		    {!! municipio_get_logotype(get_field('footer_logotype', 'option'), false, true, false, false) !!}
 		    </div>
 		  @endif
 		  @endif
 
 		  {{-- ## Contact fields ## --}}
-          <div class="grid-lg-6">
+          <div class="grid-lg-5">
               <h3> {{ $footerData['contact']['label'] }} </h3>
               <div class="grid">
                   @foreach($footerData['contact'] as $item)
@@ -115,7 +115,7 @@
           </div>
 
           {{-- ## Link fields ## --}}
-          <div class="grid-lg-3">
+          <div class="grid-lg-4">
               <h3> {{ $footerData['links']['label'] }} </h3>
               <div class="grid">
                   @foreach($footerData['links'] as $item)

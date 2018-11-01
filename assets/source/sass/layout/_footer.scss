@@ -13,15 +13,13 @@
 
     .sidebar-footer-area {
         margin-top: 25px;
+	word-wrap: break-word;
+	word-break: break-all;
 
         h3 {
             font-size: 1.2rem;
             color: black;
             font-family: 'Open Sans', serif;
-        }
-
-        .grid-md-4 {
-
         }
 
         .contact-box {
