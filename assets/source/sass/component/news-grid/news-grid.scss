@@ -78,12 +78,17 @@
 	    	}
 		}
 		.brick-container {
+			width: 100%; // fixes flexbox issues in IE.
 			margin-top: 10%;
 			display:flex;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			position: absolute;
+
+			.call-to-action {
+				width: 100%; // fixes flexbox issues in IE.
+			}
 		}
 
 			@media screen and #{$screen-below-lg} {
