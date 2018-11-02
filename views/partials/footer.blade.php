@@ -105,9 +105,14 @@
 					    <p> {{ $subitem['row'] }} </p>
 				      @endif
 				  @endforeach
-			      @else
+			      @elseif($item['label'] == 'E-post')
+                                  <a href="mailto:{{ $item['value'] }}">
+                                      {{ $item['value'] }}
+                                  </a>
+                              @else
 				  {{ $item['value'] }}
 			      @endif
+
 			  </div>
                       @endif
                   @endforeach
