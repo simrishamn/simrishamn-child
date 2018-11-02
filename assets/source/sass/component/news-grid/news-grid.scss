@@ -84,11 +84,11 @@
 			justify-content: center;
 			align-items: center;
 			position: absolute;
-
 		}
 
 			@media screen and #{$screen-below-lg} {
 	    		.brick-container {
+					margin-top: 50px;
 					position: relative;
 					p {
 		    			padding: 0px 5px 0 5px;
@@ -102,7 +102,7 @@
 		}
 
 		@media screen and #{$screen-below-md} {
-			position: absolute;
+				position: relative;
 		    padding-bottom: 15%;
 		}
     }
