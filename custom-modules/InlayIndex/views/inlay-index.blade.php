@@ -20,7 +20,7 @@
   ">
       <a class="btn btn-plain"
 	    href="{{ get_post_type_archive_link( $post_type ) }}"
-	    style="background-color: {{ $box_color }}; font-size: 1em;">
+	    style="background-color: {{ $box_color }};">
 	      + Visa fler servicemeddelanden
       </a>
   </div>
