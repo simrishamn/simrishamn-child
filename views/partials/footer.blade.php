@@ -176,5 +176,19 @@
 </div>
   </div>
   </div>
+
+
+<script type="text/javascript">
+// Script som integrerar siteimprove
+
+/*<![CDATA[*/
+(function() {
+var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+sz.src = '//siteimproveanalytics.com/js/siteanalyze_7828.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+})();
+/*]]>*/
+</script> 
+
 </footer>
 </div>
