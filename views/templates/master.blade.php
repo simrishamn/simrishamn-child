@@ -23,7 +23,7 @@
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="format-detection" content="telephone=yes">
         <meta name="HandheldFriendly" content="true" />
-
+        <meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION }}" />
         <script>
          var ajaxurl = '{!! apply_filters('Municipio/ajax_url_in_head', admin_url('admin-ajax.php')) !!}';
         </script>
