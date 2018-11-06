@@ -1,5 +1,6 @@
 {
     "name": "sigmavaxjo/simrishamn-child",
+    "version": "18.11.0",
     "description": "Municipio child theme for Simrishamn",
     "type": "wordpress-theme",
     "license": "MIT",

@@ -1,5 +1,6 @@
 &.page,
-&.single-post {
+&.single-post,
+&.single-servicemeddelande {
 
     .main-container {
         > .grid > [class*="grid-"] {
@@ -7,7 +8,7 @@
             padding-right: 10px;
         }
         >.grid:not(.breadcrumbs-wrapper):not(.no-margin-top):first-child {
-            
+
             // Desktop
             @media screen and #{$screen-md-up} {
                 padding-top: 0;
@@ -31,7 +32,7 @@
 
     // Start page
     &.home {
-        
+
         // Tablet
         @media screen and #{$screen-below-lg} {
             .hero {
@@ -58,18 +59,12 @@
                 width: 100% !important;
             }
         }
-
-        // Desktop
-        @media screen and #{$screen-md-up} {
-            .c-header--primary {
-                display: none;
-            }
-        }
     }
 }
 
 &.page,
 &.page-child,
-&.single-post {
+&.single-post,
+&.single-servicemeddelande {
     background: $body-background;
 }

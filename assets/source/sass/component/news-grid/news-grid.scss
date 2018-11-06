@@ -1,85 +1,115 @@
 .news-grid {
     max-width: 100%;
     .grid-md-6 .grid {
-	margin-left: 0px;
-	.grid-md-6 {
-	    margin-bottom: 5px;
-	    padding-left: 10px;
-	}
+        margin-left: 0px;
+        .grid-md-6 {
+            margin-bottom: 5px;
+            padding-left: 10px;
+        }
     }
     .box-image::after {
-	background: none;
+        background: none;
     }
     .grid-item-content {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 25%;
-	color: white;
-	background: rgba(darken(#6b717f, 15), 0.8);
-	h6 {
-	    margin-top: 5px;
-	}
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 25%;
+        color: white;
+        background: rgba(darken(#6b717f, 15), 0.8);
+        h6 {
+            margin-top: 5px;
+        }
     }
 }
 
 .news-grid .grid-md-6 {
     padding-right: 0px;
+    @media screen and #{$screen-below-md} {
+        padding-left: 0px;
+        margin-bottom: 5px;
+    }
+
+    .grid .grid-md-6 {
+        @media screen and #{$screen-below-md} {
+            padding-left: 0px;
+            margin-bottom: 5px;
+        }
+    }
+
     .box-post-brick {
-	margin-bottom: 10px;
-	padding-bottom: 75%;
-	height: 98%;
-	@media screen and #{$screen-below-md} {
-	    padding-bottom: 33%;
-	}
+        margin-bottom: 10px;
+        padding-bottom: 75%;
+        height: 98%;
+        @media screen and #{$screen-below-md} {
+            padding-bottom: 33%;
+        }
     }
+
+    .box-stripe {
+        text-transform: inherit;
+    }
+
+    .news-grid-featured {
+        .box-stripe {
+            margin-top: 45px;
+        }
+    }
+
     .grid-item-content {
-	font-size: 12px;
-	line-height: 1.3;
-	h6 {
-	    padding-bottom: 2px;
-	    line-height: 1.1;
-	}
+        font-size: 12px;
+        line-height: 1.3;
+        h6 {
+            padding-bottom: 2px;
+            line-height: 1.1;
+        }
     }
+
     .index-content {
-	p {
-	    line-height: 1.2;
-	    font-size: 16px;
-	    padding: 20px 20px 0 20px;
-	}
-	.btn-holder {
-	    padding-top: 0px;
-	    .btn-plain {
-		margin-top: 15px;
-	    }
-	}
-	.brick-container {
-	    position: absolute;
-	    margin-top: 10%;
-	    @media screen and #{$screen-below-md} {
+        p {
+            line-height: 1.2;
+            font-size: 16px;
+            padding: 20px 20px 0 20px;
+        }
+        .btn-holder {
+            padding-top: 0px;
+            .btn-plain {
+                margin-top: 15px;
+            }
+        }
+        .brick-container {
+            width: 100%; // fixes flexbox issues in IE.
+            margin-top: 10%;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
 
-	    }
-	}
+            .call-to-action {
+                width: 100%; // fixes flexbox issues in IE.
+            }
+        }
 
-	@media screen and #{$screen-below-lg} {
-	    .brick-container {
-		margin-top: 5px;
-		width: 75%;
-		left: 15%;
-		p {
-		    padding: 0px 5px 0 5px;
-		    font-size: 13px;
-		}
-		.btn-holder {
-		    margin-top: 0px;
-		    padding: 0;
-		    .btn-plain {
-			margin-top: 5px;
-			padding: 5px 40px 5px 40px;
-		    }
-		}
-	    }
-	}
+        @media screen and #{$screen-below-lg} {
+            .brick-container {
+                margin-top: 50px;
+                position: relative;
+                p {
+                    padding: 0px 5px 0 5px;
+                    font-size: 13px;
+                }
+                .btn-plain {
+                    margin-top: 5px;
+                    padding: 5px 40px 5px 40px;
+                }
+            }
+        }
+
+        @media screen and #{$screen-below-md} {
+            position: relative;
+            padding-bottom: 15%;
+        }
     }
 }
 
@@ -89,52 +119,52 @@
     padding: 10px;
     padding-bottom: 45px;
     background-color: transparent;
-    .grid-md-4 {
-	max-width: 448px;
-    }
 
     .box-horizontal .box-content {
-	max-height: 120px;
-	min-height: 120px;
-	overflow: hidden;
-	display: flex;
-	padding-top: 10px;
+        max-height: 120px;
+        min-height: 120px;
+        overflow: hidden;
+        display: flex;
+        padding-top: 10px;
     }
 
     .box-image {
-	max-height: 245px;
-	img {
-	    width: 410px;
-	    height: 245px;
-	    width: 100%;
-	}
+        max-height: 245px;
+        img {
+            width: 410px;
+            height: 245px;
+            width: 100%;
+        }
     }
 
     p {
-	overflow: hidden;
+        overflow: hidden;
     }
 
     .news-featured {
-	padding: 5px;
-	a {
-	    color: black;
-	    &:hover,
-	    &:focus {
-		text-decoration: none;
-	    }
-	}
-	.box-content {
-	    max-width: 100%;
-	    height: 185px;
-	    padding: 10px 20px;
-	    overflow: hidden;
-	    background-color: white;
-	}
+        padding: 5px;
 
-	p {
-	    font-weight: 600;
-	    font-size: 12px;
-	    overflow: hidden;
-	}
+        .box-content {
+            max-width: 100%;
+            height: 185px;
+            padding: 10px 20px;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        a {
+            color: black;
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+
+        p {
+            font-weight: 600;
+            font-size: 12px;
+            overflow: hidden;
+        }
+
     }
 }

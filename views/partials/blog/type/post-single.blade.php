@@ -2,7 +2,7 @@
 <div class="grid">
     <div class="grid-xs-12">
         <div class="post post-single">
-            <article id="article">
+            <article id="main-content">
 
                 @include('partials.blog.post-header')
 

@@ -22,19 +22,23 @@ class NewsList extends \Modularity\Module
     public function data() : array
     {
         $data = array();
-        $args = array(
-            'numberposts' => 3,
-            'post_type' => 'post',
-            'category' => get_field('category', $this->ID)
-        );
-
-        $data['items'] = get_posts($args);
-        $this->setMetaData($data['items'], 150);
-
         $data['featured'] = array(
             get_field('featured_one', $this->ID),
             get_field('featured_two', $this->ID)
         );
+
+        $args = array(
+            'post__not_in' => array(
+                $data['featured'][0]->ID,
+                $data['featured'][0]->ID
+            ),
+            'numberposts' => 3,
+            'post_type' => 'post',
+            'category' => get_field('category', $this->ID)
+        );
+        $data['items'] = get_posts($args);
+
+        $this->setMetaData($data['items'], 150);
         $this->setMetaData($data['featured']);
 
         $data['content_color'] = get_field('content_color', $this->ID);
@@ -56,19 +60,18 @@ class NewsList extends \Modularity\Module
         foreach ($items as $item) {
             if ($item) {
                 $item->thumbnail = get_the_post_thumbnail_url($item, 'small');
+
                 $excerpt = $item->post_excerpt ? $item->post_excerpt : $item->post_content;
+                if (get_extended($excerpt)['main']) {
+                    $excerpt = get_extended($excerpt)['main'];
+                }
 
                 $item->post_excerpt = \Simrishamn\Theme\Helper::shortText(
-                    $excerpt,
+                    wp_strip_all_tags(strip_shortcodes($excerpt)),
                     $excerpt_length
                 );
 
-                if (strlen($item->post_title) > 25) {
-                    $item->post_title = \Simrishamn\Theme\Helper::shortText(
-                        $item->post_title,
-                        25
-                    );
-                }
+                $item->category = get_the_category($item->ID)[0]->name;
             }
         }
     }

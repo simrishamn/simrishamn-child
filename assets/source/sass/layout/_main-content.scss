@@ -37,7 +37,44 @@
     }
 
     .post-date {
-	font-size: .85em;
-	color: #777;
+	   font-size: .85em;
+	   color: #777;
+    }
+
+    .news-article {
+        ol {
+            margin-left: 0px;
+            padding-left: 0px;
+        }
+        .breadcrumbs-wrapper {
+            padding-left: 10px; // makes up for lost padding when only having two content containers in single.blade grid.
+        }
+        @media screen and #{$screen-below-lg} {
+            .sidebar-right-sidebar {
+                display: flex !important;
+            }
+        }
+    }
+
+    .archive-page {
+        ol {
+            margin-left: 0px;
+            padding-left: 0px;
+        }
+        h1 {
+            padding-left: 15px;
+        }
+    }
+
+
+    .section-page {
+	   h1 {
+	       margin-left: 15px;
+	   }
+
+	   .content {
+	       margin-bottom: 15px;
+	       height: 50px;
+	   }
     }
 }

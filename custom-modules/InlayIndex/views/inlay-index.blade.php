@@ -13,11 +13,15 @@
       </a>
     @endforeach
   </div>
-  <div class="btn-holder" style="border-color: {{ $title_color }}">
+  <div class="btn-holder" style="
+    border-color: {{ $box_color }};
+    background-color: {{ $box_color }};
+    margin-top: 0px;
+  ">
       <a class="btn btn-plain"
-	 href="{{ get_post_type_archive_link( $post_type ) }}"
-	 style="color: {{ $title_color }}">
-	  Visa mer
+	    href="{{ get_post_type_archive_link( $post_type ) }}"
+	    style="background-color: {{ $box_color }};">
+	      + Visa fler servicemeddelanden
       </a>
   </div>
 </div>

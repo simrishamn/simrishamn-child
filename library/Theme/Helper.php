@@ -37,11 +37,14 @@ class Helper
     public static function isTemplate($template)
     {
         global $post;
-        $currentTemplate = str_replace(
-            ".blade.php",
-            "",
-            get_page_template_slug($post->ID)
-        );
-        return $currentTemplate == $template ? true : false;
+        if ($post) {
+            $currentTemplate = str_replace(
+                ".blade.php",
+                "",
+                get_page_template_slug($post->ID)
+            );
+            return $currentTemplate == $template;
+        }
+        return false;
     }
 }

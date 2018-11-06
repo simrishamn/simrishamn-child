@@ -20,14 +20,38 @@ class Template
         );
         add_filter('accessibility_items', array($this, 'removePrint'), 20, 1);
         add_filter('init', array($this, 'addCustomTemplates'), 10, 1);
+        add_action('admin_init', array($this, 'removeContentEditor'));
+    }
+
+
+    /**
+     * Hides the content editor for full-width (section page) template.
+     *
+     */
+    public function removeContentEditor()
+    {
+        $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'];
+
+        if (!isset($post_id)) {
+            return;
+        }
+
+        error_log(get_post_meta($post_id, '_wp_page_template', true));
+
+        if (get_post_meta($post_id, '_wp_page_template', true) == 'full-width.blade.php') {
+            remove_post_type_support('page', 'editor');
+        }
     }
 
     public function addCustomTemplates()
     {
-        \Municipio\Helper\Template::add(
-            __('Section Page', 'simrishamn'),
-            \Municipio\Helper\Template::locateTemplate('section-page.blade.php')
-        );
+        // Example
+        //////////////////////////////////////////////////////////////////////////////
+        // \Municipio\Helper\Template::add(                                         //
+        //     __('My Template', 'simrishamn'),                                     //
+        //     \Municipio\Helper\Template::locateTemplate('my-template.blade.php')  //
+        // );                                                                       //
+        //////////////////////////////////////////////////////////////////////////////
     }
 
     /**
@@ -39,21 +63,23 @@ class Template
      */
     public function getFooterData($data)
     {
-        $data['footerData'] = array(
-            array(
+        $data['footerData'] = [
+            "contact" => [
+                "label" => __('Contact information', 'simrishamn'),
                 "phone_number" => get_field_object('footer_phone_number', 'option'),
-                "email" => get_field_object('footer_email', 'option'),
-                "opening_times" => get_field_object('opening_times', 'option')
-            ),
-            array(
                 "post_box" => get_field_object('post_box', 'option'),
+                "email" => get_field_object('footer_email', 'option'),
                 "office_address" => get_field_object('office_address', 'option'),
-            ),
-            array (
+                "opening_times" => get_field_object('opening_times', 'option'),
+                "organization_number" => get_field_object('organization_number', 'option')
+            ],
+            "links" => [
+                "label" => __('Useful links', 'simrishamn'),
                 "external_links" => get_field_object('footer_external_links', 'option'),
                 "internal_links" => get_field_object('footer_internal_links', 'option')
-            )
-        );
+            ],
+            "social" => __('Follow us in social media', 'simrishamn')
+        ];
         return $data;
     }
 
@@ -68,6 +94,8 @@ class Template
     {
         unset($templates['one-page.blade.php']);
         unset($templates['page-two-column.blade.php']);
+
+        $templates['full-width.blade.php'] = __('Full Width', 'simrishamn');
 
         global $post;
 
