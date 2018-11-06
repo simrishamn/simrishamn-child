@@ -59,7 +59,7 @@ class NewsList extends \Modularity\Module
     {
         foreach ($items as $item) {
             if ($item) {
-                $item->thumbnail = get_the_post_thumbnail_url($item, 'small');
+                $item->thumbnail = get_the_post_thumbnail_url($item, 'medium');
 
                 $excerpt = $item->post_excerpt ? $item->post_excerpt : $item->post_content;
                 if (get_extended($excerpt)['main']) {
