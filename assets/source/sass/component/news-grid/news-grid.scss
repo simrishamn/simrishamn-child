@@ -27,13 +27,15 @@
             }
         }
 
-
         h6 {
-            @media screen and #{$screen-below-sm} {
-                font-size: 1.1em;
+            @media screen and #{$screen-below-lg} {
+                font-size: 1em;
             }
+	    @media screen and #{$screen-below-md} {
+		font-size: 1.6em;
+	    }
             margin-top: 5px;
-            font-size: 1.2em;
+            font-size: 1.3em;
         }
     }
 }
@@ -109,10 +111,9 @@
         @media screen and #{$screen-below-lg} {
             .brick-container {
                 margin-top: 50px;
-                position: relative;
                 p {
-                    padding: 0px 5px 0 5px;
-                    font-size: 13px;
+                    padding: 0px 5px 10px 5px;
+                    font-size: 0.8em;
                 }
                 .btn-plain {
                     margin-top: 5px;
@@ -122,9 +123,12 @@
         }
 
         @media screen and #{$screen-below-md} {
-            position: relative;
-            padding-bottom: 15%;
-        }
+            .brick-container {
+		p {
+		    font-size: 1.2em;
+		}
+            }
+	}
     }
 }
 
