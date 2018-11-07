@@ -21,6 +21,11 @@
             height: 40%;
         }
 
+        .post-excerpt-container {
+            @media screen and #{$screen-below-md} {
+                display: none;
+            }
+        }
 
 
         h6 {

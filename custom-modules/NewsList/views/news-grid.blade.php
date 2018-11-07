@@ -14,7 +14,9 @@
                      alt="{{ $featured[0]->post_title }}">
                 <div class="grid-item-content">
                     <h6 class="">{{ $featured[0]->post_title }}</h6>
+                    <p class="post-excerpt-container">
                     {{ $featured[0]->post_excerpt }}
+                    </p>
                 </div>
             </div>
         </a>
