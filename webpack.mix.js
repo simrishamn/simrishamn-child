@@ -18,5 +18,4 @@ Mix.webpackConfig(config)
    .sass('assets/source/sass/admin.scss', 'assets/dist/css')
    .sass('assets/source/sass/editor.scss', 'assets/dist/css')
    .sass('assets/source/sass/theme.scss', 'assets/dist/css')
-   .sass('custom-modules/Teaser/assets/sass/teaser.scss', 'assets/dist/css')
    .sourceMaps();
