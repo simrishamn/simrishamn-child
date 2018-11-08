@@ -29,10 +29,10 @@
 .box-panel-secondary {
     background-color: $simrishamn-blue;
     h4 {
-	border-bottom: none;
+        border-bottom: none;
     }
     .box-content {
-	background-color: white;
+        background-color: white;
     }
 }
 
@@ -58,9 +58,9 @@
     }
 
     .title {
-	color: black;
-	font-size: 15px;
-	font-weight: 600;
+        color: black;
+        font-size: 15px;
+        font-weight: 600;
     }
 
     > h5 {
@@ -79,11 +79,12 @@
 
 .grid-xs-12 {
     .modularity-mod-action-card {
-	margin-bottom: 0;
+        margin-bottom: 0;
     }
+
     .grid-md-12 {
-	padding-left: 15px;
-	padding-right: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
 

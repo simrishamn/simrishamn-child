@@ -8,13 +8,13 @@
     background-color: $simrishamn-white;
 
     .container {
-	max-width: 1300px;
+        max-width: 1300px;
     }
 
     .sidebar-footer-area {
         margin-top: 25px;
-	word-wrap: break-word;
-	word-break: break-all;
+        word-wrap: break-word;
+        word-break: break-all;
 
         h3 {
             font-size: 1.2rem;
@@ -34,10 +34,10 @@
 
         }
 
-	.social-box {
-	    margin-left: 0px;
-	    margin-top: 30px;
-	}
+        .social-box {
+            margin-left: 0px;
+            margin-top: 30px;
+        }
 
         .icons-list {
             text-align: left;
@@ -52,16 +52,16 @@
             }
         }
 
-	.logo-container {
-	    max-width: 275px;
+        .logo-container {
+            max-width: 275px;
 
-	    text-align: center;
-	    margin-right: 10px;
+            text-align: center;
+            margin-right: 10px;
 
-	    .logotype {
-		max-width: 100%;
-	    }
-	}
+            .logotype {
+                max-width: 100%;
+            }
+        }
     }
 }
 
