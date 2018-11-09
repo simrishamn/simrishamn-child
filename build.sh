@@ -10,4 +10,4 @@ done
 # Build assets.
 npm install
 npm run production
-npm run lint || true
+npm run sass-lint

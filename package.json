@@ -8,7 +8,7 @@
     "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
     "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "lint": "node_modules/sass-lint/bin/sass-lint.js --verbose --no-exit || true"
+    "sass-lint": "node_modules/.bin/sass-lint --verbose --no-exit || true"
   },
   "devDependencies": {
     "babel-polyfill": "^6.26.0",
