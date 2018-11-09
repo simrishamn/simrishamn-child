@@ -14,12 +14,9 @@
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: 33%;
+        height: auto;
         color: white;
         background: rgba(darken(#6b717f, 15), 0.8);
-        @media screen and #{$screen-below-sm} {
-            height: 40%;
-        }
 
         .post-excerpt-container {
             @media screen and #{$screen-below-md} {
@@ -27,15 +24,13 @@
             }
         }
 
+
         h6 {
-            @media screen and #{$screen-below-lg} {
-                font-size: 1em;
+            @media screen and #{$screen-below-sm} {
+                font-size: 1.1em;
             }
-	    @media screen and #{$screen-below-md} {
-		font-size: 1.6em;
-	    }
             margin-top: 5px;
-            font-size: 1.3em;
+            font-size: 1.2em;
         }
     }
 }
@@ -59,7 +54,7 @@
         padding-bottom: 75%;
         height: 98%;
         @media screen and #{$screen-below-md} {
-            padding-bottom: 33%;
+            padding-bottom: 50%;
         }
     }
 
@@ -69,7 +64,7 @@
 
     .news-grid-featured {
         .box-stripe {
-            margin-top: 45px;
+            margin-top: 30px;
         }
     }
 
@@ -110,10 +105,11 @@
 
         @media screen and #{$screen-below-lg} {
             .brick-container {
-                margin-top: 25px;
+                margin-top: 50px;
+                position: relative;
                 p {
-                    padding: 0px 5px 10px 5px;
-                    font-size: 0.8em;
+                    padding: 0px 5px 0 5px;
+                    font-size: 13px;
                 }
                 .btn-plain {
                     margin-top: 5px;
@@ -122,22 +118,10 @@
             }
         }
 
-	@media screen and #{$screen-below-md} {
-            .brick-container {
-		margin-top: 50px;
-		p {
-		    font-size: 1.3em;
-		}
-            }
-	}
-        @media screen and #{$screen-below-sm} {
-            .brick-container {
-		margin-top: 20px;
-		p {
-		    font-size: 1em;
-		}
-            }
-	}
+        @media screen and #{$screen-below-md} {
+            position: relative;
+            padding-bottom: 15%;
+        }
     }
 }
 
