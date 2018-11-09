@@ -1,5 +1,5 @@
 function applyModularityAdditions() {
-    const query = "meta[name=modularity-additions]";
+    const query = 'meta[name=modularity-additions]';
     const content = jQuery(query).attr('content');
     const modules = Modularity.Editor.Module;
 

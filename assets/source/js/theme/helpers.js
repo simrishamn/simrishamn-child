@@ -10,8 +10,8 @@ export default class Helpers {
      * otherwise false
      */
     focusElement(selector) {
-        var jqueryElement = $(selector),
-            isVisible = $(jqueryElement).is(':visible');
+        const jqueryElement = $(selector);
+        const isVisible = $(jqueryElement).is(':visible');
 
         if (isVisible) {
             $(jqueryElement).focus();
@@ -68,9 +68,9 @@ export default class Helpers {
      * Toggle the menu
      */
     toggleMenu(el) {
-        const menuTriggerSelector = '.menu-trigger',
-            isActiveClass = 'is-active',
-            toggleActive = !$(menuTriggerSelector).hasClass(isActiveClass);
+        const menuTriggerSelector = '.menu-trigger';
+        const isActiveClass = 'is-active';
+        const toggleActive = !$(menuTriggerSelector).hasClass(isActiveClass);
 
         if (toggleActive) {
             this.tryInvoke(() => this.focusElement('#mobile-menu li:first a'), 10, 100);

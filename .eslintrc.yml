@@ -4,5 +4,8 @@ env:
   commonjs: true
   es6: true
   jquery: true
+globals:
+  Modularity: true
+  tinymce: true
 rules:
   indent: ["error", 4]
