@@ -4,19 +4,17 @@
 
 .az-links {
     li:before {
-	content: unset !important;
-	content: none !important;
-
+        content: unset !important;
+        content: none !important;
     }
 }
 
 #az-slider #inner-slider {
-
     .letter-section {
-	margin-left: 40px;
+        margin-left: 40px;
     }
 
     .back-to-top {
-	display: none;
+        display: none;
     }
 }

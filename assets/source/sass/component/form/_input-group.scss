@@ -1,7 +1,7 @@
 .input-group {
     .input-group-addon {
-	background-color: #fff;
-	border: none;
+        background-color: #fff;
+        border: none;
     }
 
     .input-group-addon-btn {
@@ -9,6 +9,8 @@
     }
 
     .form-control {
-        line-height: 1px; // IE Bugfix,  stops the input value from rendering according to original height value of input field.
+        // IE Bugfix. Stops the input value from rendering
+        // according to original height value of input field.
+        line-height: 1px;
     }
 }

@@ -3,7 +3,7 @@
     line-height: 2.6;
 
     .c-header__logo.t-municipio a {
-	padding-top: 0px !important;
+        padding-top: 0px !important;
     }
 
     .widget_search,
@@ -12,32 +12,33 @@
         width: auto;
         padding: 40px 40px 0px 20px;
 
-	::-moz-placeholder {
-	    color: black;
-	    opacity: 1;
-	}
+        ::-moz-placeholder {
+            color: black;
+            opacity: 1;
+        }
 
         form {
             padding: 0;
         }
 
         .input-group {
+            width: 300px;
+
+            ::placeholder {
+                opacity: 1;
+            }
+
             @media screen and #{$screen-md-up} {
                 max-width: 350px;
             }
-	    width: 300px;
-	    ::placeholder {
-		opacity: 1;
-	    }
-
         }
 
         .input-group-addon-btn {
             .btn {
                 background: #fff;
-		color: $simrishamn-blue;
-		font-size: 14px;
-		margin-bottom: 5px;
+                color: $simrishamn-blue;
+                font-size: 14px;
+                margin-bottom: 5px;
 
                 &:hover,
                 &:focus {
@@ -61,7 +62,7 @@
 
 .c-site-header {
     .clear-below {
-	margin-bottom: 30px;
+        margin-bottom: 30px;
     }
 
     .c-navbar--header-widget-links {
@@ -189,11 +190,12 @@
         .hamburger-label {
             display: block;
         }
+
         .hamburger-label,
         .c-navbar__item_button--search::after {
             font-size: 11px;
             text-transform: uppercase;
-	    display: none;
+            display: none;
         }
     }
 }
@@ -205,7 +207,7 @@
     z-index: 1;
 
     .c-header__row {
-	height: 130px;
+        height: 130px;
     }
 
     .c-navbar--header-widget-links {
@@ -223,14 +225,14 @@
     }
 
     .widget_text {
-	text-transform: uppercase;
-	font-size: 16px;
-	margin-top: 45px;
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-top: 45px;
 
-	h3 {
-	    margin-left: 15px;
-	    font-weight: 400;
-	}
+        h3 {
+            margin-left: 15px;
+            font-weight: 400;
+        }
     }
 }
 
@@ -240,14 +242,15 @@
     position: relative;
 
     .c-header__widget {
-	min-width: 100%;
-	@media screen and #{$screen-below-md} {
-	    min-width: 0;
-	}
+        min-width: 100%;
+
+        @media screen and #{$screen-below-md} {
+            min-width: 0;
+        }
     }
 
     .c-header__item:not(:last-child) {
-	margin-right: 0px;
+        margin-right: 0px;
     }
 
     .c-header__row {
@@ -301,37 +304,37 @@
 /* --- Navbar --- */
 nav {
     &:not(#mobile-menu) {
-	margin-left: 5%;
+        margin-left: 5%;
     }
 
     .c-navbar .c-navbar__item {
-	height: 45px;
+        height: 45px;
 
-	a {
+        a {
             text-align: center;
             word-break: break-word;
-	    font-size: 18px;
-	    line-height: 1.1;
-	    font-weight: 500;
-	    padding: 7px 13px;
-	    padding-bottom: 8px;
-	    max-width: 157px;
+            font-size: 18px;
+            line-height: 1.1;
+            font-weight: 500;
+            padding: 7px 13px;
+            padding-bottom: 8px;
+            max-width: 157px;
 
-	    @media screen and #{$screen-below-lg} {
-		padding-left: 5px;
-		padding-right: 5px;
-	    }
+            @media screen and #{$screen-below-lg} {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
 
-	    @media screen and (max-width: 1040px) {
-		font-size: 16px;
-	    }
+            @media screen and (max-width: 1040px) {
+                font-size: 16px;
+            }
 
-	    @media screen and (max-width: 970px) {
-		font-size: 14px;
-		margin-top: 4px;
-		padding-bottom: 12px;
-	    }
-	}
+            @media screen and (max-width: 970px) {
+                font-size: 14px;
+                margin-top: 4px;
+                padding-bottom: 12px;
+            }
+        }
     }
 }
 
@@ -367,6 +370,7 @@ nav {
         padding: 10px;
         height: 35px;
     }
+
     .search {
         margin-bottom: 15px;
         font-size: 12px;
@@ -375,11 +379,11 @@ nav {
 
 .global-notice {
     .clear-below {
-	margin-bottom: 30px;
+        margin-bottom: 30px;
     }
 
     a {
         color: white;
         text-decoration: underline;
-}
+    }
 }
