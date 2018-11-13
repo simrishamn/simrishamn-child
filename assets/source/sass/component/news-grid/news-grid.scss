@@ -103,7 +103,7 @@
         @media screen and #{$screen-below-lg} {
             .brick-container {
                 margin-top: 50px;
-                position: relative;
+                position: absolute;
                 p {
                     padding: 0px 5px 0 5px;
                     font-size: 13px;
