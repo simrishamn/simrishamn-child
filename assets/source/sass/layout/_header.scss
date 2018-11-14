@@ -341,6 +341,9 @@ nav {
 // Hide the extra search trigger by default
 #nav-search {
     visibility: hidden;
+    @media screen and #{$screen-below-md} {
+	visibility: visible;
+    }
 }
 
 .c-navbar .c-navbar__item a:hover:not(.is-current),
