@@ -7,15 +7,15 @@
     background-color: rgba($simrishamn-blue, 0.8) !important;
 
     &.text-block-transparent  {
-	background-image: none;
-	background-color: transparent !important;
+        background-image: none;
+        background-color: transparent !important;
     }
 
     .text-block-content {
-	font-size: 12pt;
-	width: 95%;
-	max-width: 1240px;
-	margin: 0 auto;
+        font-size: 12pt;
+        width: 95%;
+        max-width: 1240px;
+        margin: 0 auto;
 
         @media screen and #{$screen-below-sm} {
             font-size: 10pt;
@@ -24,17 +24,19 @@
 
     & .title {
         font-size: 25pt;
-	margin-top: -10px;
+        margin-top: -10px;
+
         @media screen and #{$screen-below-sm} {
             font-size: 20pt;
         }
     }
 
     & p {
-	padding-bottom: 20px;
-	max-width: 60%;
-	@media screen and #{$screen-below-md} {
-	    max-width: 100%;
+        padding-bottom: 20px;
+        max-width: 60%;
+
+        @media screen and #{$screen-below-md} {
+            max-width: 100%;
         }
     }
 }
