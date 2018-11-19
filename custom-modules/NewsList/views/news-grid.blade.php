@@ -6,12 +6,13 @@
         <a href="{{ get_permalink($featured[0]->ID) }}"
            class="box box-post-brick news-grid-featured">
             <div class="box-image"
-                 style="background-image:url({{ $featured[0]->medium }});">
+                 style="background-image:url({{ get_the_post_thumbnail_url(
+                                                $featured[0]->ID,
+                                                'large'
+                                                )}});">
                 <div class="box-stripe">
                     {{ $featured[0]->category }}
                 </div>
-                <img src="{{ $featured[0]->medium }}"
-                     alt="{{ $featured[0]->post_title }}">
                 <div class="grid-item-content">
                     <h6 class="">{{ $featured[0]->post_title }}</h6>
                     <p class="post-excerpt-container">
@@ -28,12 +29,13 @@
                     <a href="{{ get_permalink($item->ID) }}"
                        class="box box-post-brick" style="">
                         <div class="box-image"
-                             style="background-image:url({{ $item->medium }});">
+                             style="background-image:url({{ get_the_post_thumbnail_url(
+                                                            $item->ID,
+                                                            'large'
+                                                            )}});">
                             <div class="box-stripe">
                                 {{ $item->category }}
                             </div>
-                            <img src="{{ $item->medium }}"
-                                 alt="{{ $item->post_title }}">
                             <div class="grid-item-content">
                                 <h6>{{ $item->post_title }}</h6>
                             </div>
