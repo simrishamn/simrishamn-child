@@ -25,8 +25,7 @@
                 display: none;
             }
             font-size: 0.85em;
-            margin-top: 0;
-            margin-bottom: 2px;
+            padding: 0em 0.7em 1.4em 0.7em;
         }
 
 
@@ -38,8 +37,7 @@
                 font-size: 0.95em;
             }
             font-size: 1.05em;
-            padding-top: 1px; 
-            padding-bottom: 5px; 
+            padding: 0.2em 0.4em 0.8em 0.4em;
         }
     }
 }
@@ -68,12 +66,18 @@
     }
 
     .box-stripe {
+        opacity: 0.7;
         text-transform: inherit;
+        margin-top: 1.4em;
     }
 
     .news-grid-featured {
-        .box-stripe {
-            margin-top: 30px;
+        h6 {
+            @media screen and #{$screen-md-up} {
+                padding-bottom: 0em;
+                padding-left: 0.55em;
+            } 
+            
         }
     }
 
