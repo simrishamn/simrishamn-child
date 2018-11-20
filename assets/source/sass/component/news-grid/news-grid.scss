@@ -109,27 +109,22 @@
                 position: absolute;
                 p {
                     padding: 0px 5px 0 5px;
-                    font-size: 13px;
-                }
-        @media screen and #{$screen-below-lg} {
-            p {
-                font-size: 16px;
-            }
-        }
-                .btn-plain {
-                    margin-top: 5px;
-                    padding: 5px 40px 5px 40px;
+                    font-size: 0.9em;
                 }
             }
+            .btn-plain {
+                margin-top: 5px;
+                padding: 5px 40px 5px 40px;
+            }
         }
-
-        @media screen and #{$screen-below-md} {
-            position: relative;
-            padding-bottom: 15%;
-            height: 100px;
-        }
-
     }
+
+    @media screen and #{$screen-below-md} {
+        position: relative;
+        padding-bottom: 15%;
+        height: 100px;
+    }
+
 }
 
 .news-list {
