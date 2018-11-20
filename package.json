@@ -11,8 +11,10 @@
     "sass-lint": "node_modules/.bin/sass-lint --verbose --no-exit",
     "eslint": "node_modules/.bin/eslint assets/source/js"
   },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  },
   "devDependencies": {
-    "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "compression-webpack-plugin": "^1.1.12",
     "eslint": "^5.8.0",
