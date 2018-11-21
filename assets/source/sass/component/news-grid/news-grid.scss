@@ -87,12 +87,14 @@
             font-size: 16px;
             padding: 20px 20px 0 20px;
         }
+
         .btn-holder {
             padding-top: 0px;
             .btn-plain {
                 margin-top: 15px;
             }
         }
+        
         .brick-container {
             width: 100%; // fixes flexbox issues in IE.
             height: 100%;
@@ -121,14 +123,13 @@
                 padding: 5px 40px 5px 40px;
             }
         }
+        
+        @media screen and #{$screen-below-md} {
+            position: relative;
+            padding-bottom: 15%;
+            height: 100px;
+        }
     }
-
-    @media screen and #{$screen-below-md} {
-        position: relative;
-        padding-bottom: 15%;
-        height: 100px;
-    }
-
 }
 
 .news-list {
