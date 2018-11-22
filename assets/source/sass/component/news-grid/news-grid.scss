@@ -66,7 +66,6 @@
     }
 
     .box-stripe {
-        opacity: 0.7;
         text-transform: inherit;
         margin-top: 1.4em;
     }
@@ -94,7 +93,7 @@
                 margin-top: 15px;
             }
         }
-        
+
         .brick-container {
             width: 100%; // fixes flexbox issues in IE.
             height: 100%;
