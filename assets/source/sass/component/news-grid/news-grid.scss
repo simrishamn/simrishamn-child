@@ -19,14 +19,15 @@
         background: rgba(darken(#6b717f, 15), 0.8);
         padding-left: 5px;
         padding-right: 5px;
+        min-height: 28%;
+        max-height: 66%;
 
         .post-excerpt-container {
             @media screen and #{$screen-below-md} {
                 display: none;
             }
             font-size: 0.85em;
-            margin-top: 0;
-            margin-bottom: 2px;
+            padding: 0em 0.7em 1.4em 0.7em;
         }
 
 
@@ -38,8 +39,8 @@
                 font-size: 0.95em;
             }
             font-size: 1.05em;
-            padding-top: 1px;
-            padding-bottom: 5px;
+            line-height: 1.25em;
+            padding: 0.2em 0.4em 0.4em 0.4em;
         }
     }
 }
@@ -69,11 +70,17 @@
 
     .box-stripe {
         text-transform: inherit;
+        margin-top: 1.4em;
+        font-size: 0.75em;
     }
 
     .news-grid-featured {
-        .box-stripe {
-            margin-top: 30px;
+        h6 {
+            @media screen and #{$screen-md-up} {
+                padding-bottom: 0em;
+                padding-left: 0.55em;
+            } 
+            
         }
     }
 
@@ -83,12 +90,14 @@
             font-size: 16px;
             padding: 20px 20px 0 20px;
         }
+
         .btn-holder {
             padding-top: 0px;
             .btn-plain {
                 margin-top: 15px;
             }
         }
+
         .brick-container {
             width: 100%; // fixes flexbox issues in IE.
             height: 100%;
@@ -117,14 +126,13 @@
                 padding: 5px 40px 5px 40px;
             }
         }
+        
+        @media screen and #{$screen-below-md} {
+            position: relative;
+            padding-bottom: 15%;
+            height: 100px;
+        }
     }
-
-    @media screen and #{$screen-below-md} {
-        position: relative;
-        padding-bottom: 15%;
-        height: 100px;
-    }
-
 }
 
 .news-list {
