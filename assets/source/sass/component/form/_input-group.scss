@@ -9,8 +9,6 @@
     }
 
     .form-control {
-        // IE Bugfix. Stops the input value from rendering
-        // according to original height value of input field.
-        line-height: 1px;
+        line-height: 1;
     }
 }
