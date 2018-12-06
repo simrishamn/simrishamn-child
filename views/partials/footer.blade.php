@@ -80,7 +80,7 @@
         @if (get_field('footer_logotype_vertical_position', 'option') == 'top' || !get_field('footer_logotype_vertical_position', 'option'))
 		  @if (get_field('footer_logotype', 'option') != 'hide')
 		  <div class="logo-container">
-		    {!! municipio_get_logotype(get_field('footer_logotype', 'option'), false, true, false, false) !!}
+		    {!! municipio_get_logotype('standard') !!}
 		    </div>
 		  @endif
 		  @endif

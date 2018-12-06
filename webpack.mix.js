@@ -1,6 +1,10 @@
 const Compression = require('compression-webpack-plugin');
 const Mix = require('laravel-mix');
 
+const options = {
+    clearConsole: false,
+};
+
 const config = {
     plugins: [
         new Compression({
@@ -11,7 +15,7 @@ const config = {
     ],
 };
 
-Mix.webpackConfig(config)
+Mix.options(options).webpackConfig(config)
    .js('assets/source/js/admin.js', 'assets/dist/js')
    .js('assets/source/js/editor.js', 'assets/dist/js')
    .js('assets/source/js/theme.js', 'assets/dist/js')
