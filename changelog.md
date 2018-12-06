@@ -1,5 +1,13 @@
 # Simrishamn Changelog
 
+## 2018-12-06 - 18.12.0
+
+* SIEW-247: Logotyp i sidfot syns inte i produktionsmiljön i IE
+* SIEW-253: Problem med rubriker i Inläggsmodul i mobil/surfplatta
+* SIEW-265: Missing title field in mod-slider
+* SIEW-275: Hela sidans rubrik syns inte i mobilläget
+* SIEW-276: Text i sökfält syns bara halvt i iPhone
+
 ## 2018-11-15 - 18.11.1
 
 * SIEW-253: Formatering av nyhetsrubrik
