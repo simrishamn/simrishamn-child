@@ -57,7 +57,8 @@ export default class Helpers {
                     return result;
                 }
 
-                return this.delayedInvokation(() => this.tryInvoke(func, tryInterval, maximumTries, (currentTry + 1)),
+                return this.delayedInvokation(
+                    () => this.tryInvoke(func, tryInterval, maximumTries, (currentTry + 1)),
                     tryInterval);
             }).catch((reason) => {
                 console.error(reason);
