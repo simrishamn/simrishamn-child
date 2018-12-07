@@ -342,7 +342,7 @@ nav {
 #nav-search {
     visibility: hidden;
     @media screen and #{$screen-below-md} {
-	visibility: visible;
+        visibility: visible;
     }
 }
 
