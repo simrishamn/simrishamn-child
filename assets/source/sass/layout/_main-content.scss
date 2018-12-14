@@ -41,6 +41,10 @@
         color: #777;
     }
 
+    .comment-form-comment {
+        background-color: #fff; // Only affects upphandlingsbloggen since comments are disabled on main site.
+    }
+
     .news-article {
         ol {
             margin-left: 0px;
