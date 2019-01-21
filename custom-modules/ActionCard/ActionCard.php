@@ -3,7 +3,7 @@
 namespace Simrishamn\ActionCard;
 
 class ActionCard extends \Modularity\Module
-{
+{   
     public $slug = 'action-card';
     public $hideTitle = true;
     public $supports = array();
@@ -30,7 +30,8 @@ class ActionCard extends \Modularity\Module
 
     public function data() : array
     {
-        $data = array();
+        $data = get_fields($this->ID);
+        
         $data['classes'] = implode(
             ' ',
             apply_filters(
@@ -41,12 +42,13 @@ class ActionCard extends \Modularity\Module
             )
         );
 
-        $data['columnClass'] = 'grid-md-2';
-        if (!empty(get_field('action_columns', $this->ID))) {
-            $data['columnClass'] = get_field('action_columns', $this->ID);
-        }
+        if(!empty($data['action_columns']))
+            $data['columnClass'] = $data['action_columns'];
+        else
+            $data['columnClass'] = 'grid-md-2';
 
-        $data['items'] = $this->prepareItems(get_field('action-card', $this->ID));
+        $data['items'] = $this->prepareItems($data['action-card']);
+
         return $data;
     }
 

@@ -22,8 +22,7 @@ class InlayIndex extends \Modularity\Module
 
     public function data() : array
     {
-        $data = array();
-        $data['post_type'] = get_field('post_types', $this->ID);
+        $data = get_fields($this->ID);
 
         $args = array(
             'numberposts' => 2,
@@ -31,8 +30,7 @@ class InlayIndex extends \Modularity\Module
         );
 
         $data['items'] = get_posts($args);
-        $data['title_color'] = get_field('title_color', $this->ID);
-        $data['box_color'] = get_field('excerpt_box_color', $this->ID);
+        $data['box_color'] = $data['excerpt_box_color'];
         $data['classes'] = 'box box-panel';
 
         return $data;

@@ -21,11 +21,9 @@ class Teaser extends \Modularity\Module
 
     public function data() : array
     {
-        $data = array();
-        $data['items'] = get_field('teaser', $this->ID);
-        $data['color'] = get_field('color', $this->ID);
-        $data['lead'] = get_field('lead', $this->ID);
-        $data['columnClass'] = get_field('index_columns', $this->ID);
+        $data = get_fields($this->ID);
+        $data['items'] = $data['teaser'];
+        $data['columnClass'] = $data['index_columns'];
         $data['classes'] = implode(
             ' ',
             apply_filters(

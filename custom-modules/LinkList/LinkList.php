@@ -22,9 +22,8 @@ class LinkList extends \Modularity\Module
 
     public function data() : array
     {
-        $data = array();
-        $data['items'] = get_field('items', $this->ID);
-        $data['color'] = get_field('color', $this->ID);
+        $data = get_fields($this->ID);
+        
         $data['classes'] = implode(
             ' ',
             apply_filters(

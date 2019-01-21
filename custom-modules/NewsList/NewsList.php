@@ -6,6 +6,7 @@ class NewsList extends \Modularity\Module
 {
     public $slug = 'news-list';
     public $supports = array();
+    
     public function init()
     {
 
@@ -21,10 +22,10 @@ class NewsList extends \Modularity\Module
 
     public function data() : array
     {
-        $data = array();
+        $data = get_fields($this->ID);
         $data['featured'] = array(
-            get_field('featured_one', $this->ID),
-            get_field('featured_two', $this->ID)
+            $data['featured_one'],
+            $data['featured_two']
         );
 
         $args = array(
@@ -34,14 +35,13 @@ class NewsList extends \Modularity\Module
             ),
             'numberposts' => 3,
             'post_type' => 'post',
-            'category' => get_field('category', $this->ID)
+            'category' => $data['category']
         );
         $data['items'] = get_posts($args);
 
         $this->setMetaData($data['items'], 150);
         $this->setMetaData($data['featured']);
 
-        $data['content_color'] = get_field('content_color', $this->ID);
         $data['classes'] = implode(
             ' ',
             apply_filters(
