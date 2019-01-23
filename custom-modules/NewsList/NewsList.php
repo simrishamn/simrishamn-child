@@ -4,55 +4,52 @@ namespace Simrishamn\NewsList;
 
 class NewsList extends \Modularity\Module
 {
-    public $slug = 'news-list';
-    public $supports = array();
+    
+    public $nameSingular    = 'News';
+    public $namePlural      = 'News';
+    public $description     = 'Outputs a number of featured and latests posts in a grid- or list manner.';
     
     public function init()
     {
 
-        $this->fields = SIMRISHAMN_PATH . '/custom-modules/NewsList/acf/php/mod-news-list.php';
-        $this->nameSingular = __("News", 'simrishamn');
-        $this->namePlural = __("News", 'simrishamn');
-        $this->description = __(
-            "Outputs a number of featured and latests posts in a grid- or list manner.",
-            'modularity'
-        );
+        $Module = \CustomModuleHelper::setModule($this);
+        
+        foreach ($Module as $key => $val)
+        {
+            $this->{$key} = $val;
+        }
+        
         include_once $this->fields;
+        
     }
 
     public function data() : array
     {
+        
         $data = get_fields($this->ID);
-        $data['featured'] = array(
-            $data['featured_one'],
-            $data['featured_two']
-        );
 
-        $args = array(
-            'post__not_in' => array(
+        $args = [
+            'post__not_in' => [
                 $data['featured'][0]->ID,
                 $data['featured'][1]->ID
-            ),
+            ],
             'numberposts' => 3,
             'post_type' => 'post',
             'category' => $data['category']
-        );
-        $data['items'] = get_posts($args);
-
+        ];
+        
+        $data = array_replace($data, [
+            'featured' => [$data['featured_one'], $data['featured_two']],
+            'items' => get_posts($args),
+            'columnClass' => $columnClass,
+            'classes' => \CustomModuleHelper::classes(['box', 'box-panel'], $this)
+        ]);
+        
         $this->setMetaData($data['items'], 150);
         $this->setMetaData($data['featured']);
 
-        $data['classes'] = implode(
-            ' ',
-            apply_filters(
-                'Modularity/Module/Classes',
-                array('box', 'box-panel'),
-                $this->post_type,
-                $this->args
-            )
-        );
-
         return $data;
+        
     }
 
     public function setMetaData($items, $excerpt_length = 270)
@@ -78,10 +75,9 @@ class NewsList extends \Modularity\Module
 
     public function template()
     {
-        if (get_field('format', $this->ID) == 'default') {
-            return 'news-list.blade.php';
-        }
-        return 'news-grid.blade.php';
+        
+        return (get_field('format', $this->ID) == 'default') ? $this->slug . '.blade.php' : 'news-grid.blade.php';
+
     }
 
     /**

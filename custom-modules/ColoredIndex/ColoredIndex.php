@@ -4,45 +4,45 @@ namespace Simrishamn\ColoredIndex;
 
 class ColoredIndex extends \Modularity\Module
 {
-    public $slug = 'colored-index';
-    public $supports = array();
+    
+    public $nameSingular    = 'Colored Index';
+    public $namePlural      = 'Colored Indices';
+    public $description     = 'Outputs a colored index card text & customizable link to a page.';
 
     public function init()
     {
-        $this->fields = SIMRISHAMN_PATH . '/custom-modules/ColoredIndex/acf/php/mod-colored-index.php';
-        $this->nameSingular = __("Colored Index", 'simrishamn');
-        $this->namePlural  = __("Colored Indices", 'simrishamn');
-        $this->description  = __(
-            "Outputs a colored index card text & customizable link to a page.",
-            'simrishamn'
-        );
+        
+        $Module = \CustomModuleHelper::setModule($this);
+        
+        foreach ($Module as $key => $val)
+        {
+            $this->{$key} = $val;
+        }
+        
         include_once $this->fields;
+        
     }
 
     public function data() : array
     {
+        
         $data = get_fields($this->ID);
-        $data['items'] = $data['colored-index'];
-        $data['columnClass'] = $data['index_columns'];
-        $data['classes'] = implode(
-            ' ',
-            apply_filters(
-                'Modularity/Module/Classes',
-                array('box', 'box-panel'),
-                $this->post_type,
-                $this->args
-            )
-        );
+        
+        $data = array_replace($data, [
+            'items' => $data['colored-index'],
+            'columnClass' => $data['index_columns'],
+            'classes' => \CustomModuleHelper::classes(['box', 'box-panel'], $this)
+        ]);
 
         return $data;
+        
     }
 
-    public function template()
+    public function template() : string
     {
-        if (get_field('format', $this->ID) == 'default') {
-            return $this->slug . '.blade.php';
-        }
-        return 'colored-info.blade.php';
+        
+        return (get_field('format', $this->ID) == 'default') ? $this->slug . '.blade.php' : 'colored-info.blade.php';
+        
     }
 
     /**

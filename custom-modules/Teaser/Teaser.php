@@ -4,37 +4,38 @@ namespace Simrishamn\Teaser;
 
 class Teaser extends \Modularity\Module
 {
-    public $slug = 'teaser';
-    public $supports = array();
+    
+    public $nameSingular    = 'Teaser Block';
+    public $namePlural      = 'Teaser Blocks';
+    public $description     = 'Outputs a Teaser Block with lead text, image & customizable link to a page.';
 
     public function init()
     {
-        $this->fields = SIMRISHAMN_PATH . '/custom-modules/Teaser/acf/php/mod-teaser.php';
-        $this->nameSingular = __("Teaser Block", 'simrishamn');
-        $this->namePlural  = __("Teaser Blocks", 'simrishamn');
-        $this->description  = __(
-            "Outputs a Teaser Block with lead text, image & customizable link to a page.",
-            'simrishamn'
-        );
+        
+        $Module = \CustomModuleHelper::setModule($this);
+        
+        foreach ($Module as $key => $val)
+        {
+            $this->{$key} = $val;
+        }
+        
         include_once $this->fields;
+        
     }
 
     public function data() : array
     {
+        
         $data = get_fields($this->ID);
-        $data['items'] = $data['teaser'];
-        $data['columnClass'] = $data['index_columns'];
-        $data['classes'] = implode(
-            ' ',
-            apply_filters(
-                'Modularity/Module/Classes',
-                array('box', 'box-panel'),
-                $this->post_type,
-                $this->args
-            )
-        );
+        
+        $data = array_replace($data, [
+            'items' => $data['teaser'],
+            'columnClass' => $data['index_columns'],
+            'classes' => \CustomModuleHelper::classes(['box', 'box-panel'], $this)
+        ]);
 
         return $data;
+        
     }
 
     /**

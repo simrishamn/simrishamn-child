@@ -4,52 +4,47 @@ namespace Simrishamn\ActionCard;
 
 class ActionCard extends \Modularity\Module
 {   
-    public $slug = 'action-card';
-    public $hideTitle = true;
-    public $supports = array();
+    
+    public $nameSingular    = 'ActionCard';
+    public $namePlural      = 'ActionCards';
+    public $description     = 'Index-like cards with configurable FontAwesome icons and no excerpt.';
+    
+    public $hideTitle       = true;
 
     public function init()
     {
-        $this->fields = SIMRISHAMN_PATH . '/custom-modules/ActionCard/acf/php/mod-action-card.php';
-        $this->nameSingular = __('ActionCard', 'simrishamn');
-        $this->namePlural = __('ActionCards', 'simrishamn');
-        $this->description = __(
-            'Index-like cards with configurable FontAwesome icons and no excerpt.',
-            'simrishamn'
-        );
-
-        add_filter(
-            'acf/fields/post_object/query/key=field_action-card',
-            array($this, 'postObjectQuery'),
-            10,
-            3
-        );
-
+        
+        $Module = \CustomModuleHelper::setModule($this);
+        
+        foreach ($Module as $key => $val)
+        {
+            $this->{$key} = $val;
+        }
+        
+        add_filter('acf/fields/post_object/query/key=field_action-card', [$this, 'postObjectQuery'], 10, 3);
+        
         include_once $this->fields;
+        
     }
 
     public function data() : array
     {
+        
         $data = get_fields($this->ID);
         
-        $data['classes'] = implode(
-            ' ',
-            apply_filters(
-                'Modularity/Module/Classes',
-                array('box', 'box-index', 'box-action'),
-                $this->post_type,
-                $this->args
-            )
-        );
+        $columnClass = 'grid-md-2';
 
         if(!empty($data['action_columns']))
-            $data['columnClass'] = $data['action_columns'];
-        else
-            $data['columnClass'] = 'grid-md-2';
-
-        $data['items'] = $this->prepareItems($data['action-card']);
+            $columnClass = $data['action_columns'];
+        
+        $data = array_replace($data, [
+            'items' => $this->prepareItems($data['action-card']),
+            'columnClass' => $columnClass,
+            'classes' => \CustomModuleHelper::classes(['box', 'box-index', 'box-action'], $this)
+        ]);
 
         return $data;
+        
     }
 
     public function prepareItems($items)
