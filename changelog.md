@@ -1,5 +1,12 @@
 # Simrishamn Changelog
 
+## 2019-01-24 - 19.01.0
+* SIEW-247: Footer Logotype issue
+* SIEW-251: Favicon
+* SIEW-258: Comment field background color
+* SIEW-285: Incorrect font loading
+* SIEW-287: Single row menu
+
 ## 2018-12-06 - 18.12.0
 
 * SIEW-247: Logotyp i sidfot syns inte i produktionsmiljön i IE
