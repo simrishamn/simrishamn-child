@@ -5,13 +5,15 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="msapplication-config" content="{{ get_stylesheet_directory_uri() }}/assets/docs/browserconfig.xml">
+        
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
-        <link rel="apple-touch-icon" sizes="152x152" href="{{ get_stylesheet_directory_uri() }}/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ get_stylesheet_directory_uri() }}/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ get_stylesheet_directory_uri() }}/favicon-16x16.png">
-        <link rel="manifest" href="{{ get_stylesheet_directory_uri() }}/site.webmanifest">
-        <link rel="mask-icon" href="{{ get_stylesheet_directory_uri() }}/safari-pinned-tab.svg" color="#0069b4">
+        <link rel="apple-touch-icon" sizes="152x152" href="{{ get_stylesheet_directory_uri() }}/assets/images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ get_stylesheet_directory_uri() }}/assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ get_stylesheet_directory_uri() }}/assets/images/favicon-16x16.png">
+        <link rel="manifest" href="{{ get_stylesheet_directory_uri() }}/assets/docs/site.webmanifest">
+        <link rel="mask-icon" href="{{ get_stylesheet_directory_uri() }}/assets/images/safari-pinned-tab.svg" color="#0069b4">
         <meta name="msapplication-TileColor" content="#0069b4">
         <meta name="theme-color" content="#0069b4">
 
