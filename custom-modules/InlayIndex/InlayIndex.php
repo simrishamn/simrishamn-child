@@ -4,38 +4,40 @@ namespace Simrishamn\InlayIndex;
 
 class InlayIndex extends \Modularity\Module
 {
-    public $slug = 'inlay-index';
-    public $supports = array();
+    
+    public $nameSingular    = 'Inlay Index';
+    public $namePlural      = 'Inlay Indices';
+    public $description     = 'Outputs 2-4 of the latest posts from the selected post-type.';
 
     public function init()
     {
-        $this->fields = SIMRISHAMN_PATH . '/custom-modules/InlayIndex/acf/php/mod-inlay-index.php';
-        $this->nameSingular = __("Inlay Index", 'simrishamn');
-        $this->namePlural = __("Inlay Indices", 'simrishamn');
-        $this->description = __(
-            "Outputs 2-4 of the latest posts from the selected post-type.",
-            'simrishamn'
-        );
-
-        require_once $this->fields;
+        
+        $Module = \Simrishamn\Theme\CustomModuleHelper::setModule($this);
+        
+        foreach ($Module as $key => $val)
+        {
+            $this->{$key} = $val;
+        }
+        
+        include_once $this->fields;
+        
     }
 
     public function data() : array
     {
-        $data = array();
-        $data['post_type'] = get_field('post_types', $this->ID);
+        
+        $data = get_fields($this->ID);
 
-        $args = array(
-            'numberposts' => 2,
-            'post_type' => $data['post_type']
-        );
-
-        $data['items'] = get_posts($args);
-        $data['title_color'] = get_field('title_color', $this->ID);
-        $data['box_color'] = get_field('excerpt_box_color', $this->ID);
-        $data['classes'] = 'box box-panel';
+        $args = ['numberposts' => 2, 'post_type' => $data['post_type']];
+        
+        $data = array_replace($data, [
+            'items' => get_posts($args),
+            'box_color' => $data['excerpt_box_color'],
+            'classes' => 'box box-panel'
+        ]);
 
         return $data;
+        
     }
 
     /**
