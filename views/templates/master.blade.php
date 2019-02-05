@@ -1,37 +1,21 @@
-<?php
-
-    $title = apply_filters('Municipio/pageTitle', wp_title('|', false, 'right') . get_bloginfo('name'));
-
-?>
+@php ($title = apply_filters('Municipio/pageTitle', wp_title('|', false, 'right') . get_bloginfo('name')))
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
     <head>
-        <meta property="og:title" content="<?php echo $title; ?>" />
+        <meta property="og:title" content="{{ $title }}" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="{{ the_permalink() }}" />
-        <?php
-        
-            if(has_post_thumbnail())
-                echo '<meta property="og:image" content="' . get_the_post_thumbnail_url() . '" />';
-        ?>
+        @if(has_post_thumbnail())
+            <meta property="og:image" content="{{ get_the_post_thumbnail_url() }}" />
+        @endif
         <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <meta name="msapplication-config" content="{{ get_stylesheet_directory_uri() }}/assets/docs/browserconfig.xml">
-        <meta name="msapplication-TileColor" content="#0069b4">
-        <meta name="theme-color" content="#0069b4">
-        
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
-        <link rel="apple-touch-icon" sizes="152x152" href="{{ get_stylesheet_directory_uri() }}/assets/images/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ get_stylesheet_directory_uri() }}/assets/images/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ get_stylesheet_directory_uri() }}/assets/images/favicon/favicon-16x16.png">
-        <link rel="manifest" href="{{ get_stylesheet_directory_uri() }}/assets/docs/site.webmanifest">
-        <link rel="mask-icon" href="{{ get_stylesheet_directory_uri() }}/assets/images/favicon/safari-pinned-tab.svg" color="#0069b4">
-
-        <title><?php echo $title; ?></title>
+        <title>{{ $title }}</title>
 
         <meta name="description" content="{{ bloginfo('description') }}" />
         <meta name="pubdate" content="{{ the_time('Y-m-d') }}">
