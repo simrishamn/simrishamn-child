@@ -1,5 +1,10 @@
 # Simrishamn Changelog
 
+## 2019-02-12 - 19.02.0
+* SIEW-293: Clean up root folder
+* SIEW-295: Fix share link-bug
+* SIEW-296: Add OpenGraph tags
+
 ## 2019-01-24 - 19.01.0
 * SIEW-247: Footer Logotype issue
 * SIEW-251: Favicon
