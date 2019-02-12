@@ -9,7 +9,7 @@ export default class Helpers {
      * @return {boolean} true if the element was visible and could be focused,
      * otherwise false
      */
-    focusElement(selector) {
+    static focusElement(selector) {
         const jqueryElement = $(selector);
         const isVisible = $(jqueryElement).is(':visible');
 
@@ -28,7 +28,7 @@ export default class Helpers {
      * @return {Promise} A promise which resolves to the function result after
      * it has completed its execution
      */
-    delayedInvokation(func, delay) {
+    static delayedInvokation(func, delay) {
         return new Promise((resolve) => {
             setTimeout(() => resolve(func()), delay);
         });
@@ -57,8 +57,10 @@ export default class Helpers {
                     return result;
                 }
 
-                return this.delayedInvokation(() => this.tryInvoke(func, tryInterval, maximumTries, (currentTry + 1)),
-                    tryInterval);
+                return this.delayedInvokation(
+                    () => this.tryInvoke(func, tryInterval, maximumTries, (currentTry + 1)),
+                    tryInterval,
+                );
             }).catch((reason) => {
                 console.error(reason);
             });

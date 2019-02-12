@@ -79,8 +79,7 @@
             @media screen and #{$screen-md-up} {
                 padding-bottom: 0em;
                 padding-left: 0.55em;
-            } 
-            
+            }
         }
     }
 
@@ -126,7 +125,6 @@
                 padding: 5px 40px 5px 40px;
             }
         }
-        
         @media screen and #{$screen-below-md} {
             position: relative;
             padding-bottom: 15%;
