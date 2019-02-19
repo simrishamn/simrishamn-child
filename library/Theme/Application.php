@@ -1,7 +1,7 @@
 <?php
-namespace Simrishamn;
+namespace Simrishamn\Theme;
 
-class App
+class Application
 {
     public function __construct()
     {
@@ -10,7 +10,7 @@ class App
         new \Simrishamn\Theme\DefaultModules();
         new \Simrishamn\Theme\Enqueue();
         new \Simrishamn\Theme\Language();
-        new \Simrishamn\Theme\AcfFields\Acf();
+        new \Simrishamn\Theme\AcfFields();
         new \Simrishamn\Theme\Modularity();
         new \Simrishamn\Theme\Style();
         new \Simrishamn\Theme\Template();
