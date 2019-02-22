@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import './content/header';
 import Helpers from './theme/helpers';
 
