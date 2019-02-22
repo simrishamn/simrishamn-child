@@ -1,5 +1,8 @@
 # Simrishamn Changelog
 
+## 2019-02-12 - 19.02.1
+* NOJIRA: Add manual loader for Kirki
+
 ## 2019-02-12 - 19.02.0
 * SIEW-293: Clean up root folder
 * SIEW-295: Fix share link-bug
