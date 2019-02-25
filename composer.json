@@ -14,6 +14,11 @@
             "email": "rasmus.sjostrom@sigma.se"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Simrishamn\\": "library"
+        }
+    },
     "extra": {
         "installer-name": "simrishamn"
     }
