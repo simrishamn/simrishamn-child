@@ -25,4 +25,4 @@ unset($vendor);
 unset($loader);
 
 // Run app class.
-new Simrishamn\App();
+new Simrishamn\Theme\Application();

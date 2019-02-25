@@ -1,8 +1,8 @@
 <?php
 
-namespace Simrishamn\Theme\AcfFields;
+namespace Simrishamn\Theme;
 
-class Acf
+class AcfFields
 {
     private $_path = SIMRISHAMN_PATH . '/library/Theme/AcfFields/php';
 
@@ -18,7 +18,7 @@ class Acf
      */
     public function includeThemeOptions()
     {
-        foreach (glob($this->_path . '/theme-options/*') as $module) {
+        foreach (glob($this->_path . '/*') as $module) {
             include_once $module;
         }
     }

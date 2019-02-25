@@ -29,7 +29,7 @@ class TinyMCE
 
     public function simrishamnLanguages($simrishamnLocales)
     {
-        $simrishamnLocales['simrishamn'] = plugin_dir_path(__FILE__) . 'Language/TinyMceLocale.php';
+        $simrishamnLocales['simrishamn'] = SIMRISHAMN_PATH . '/library/Language/TinyMceLocale.php';
         return $simrishamnLocales;
     }
 }
