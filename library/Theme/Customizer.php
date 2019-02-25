@@ -5,29 +5,17 @@ class Customizer
 {
     public function __construct()
     {
-        add_action('after_setup_theme', array($this, 'customizerHeader'), 5);
+        add_action('after_setup_theme', [$this, 'enableCustomizer'], 5);
     }
 
-    public function customizerHeader()
+    public function enableCustomizer()
     {
-        add_filter(
-            'Municipio/Controller/BaseController/Customizer',
-            array($this, 'activateCustomizerFeatures')
-        );
+        $enable = function ($boolean) {
+            return true;
+        };
 
-        add_filter(
-            'Municipio/Theme/Enqueue/Bem',
-            array($this, 'activateCustomizerFeatures')
-        );
-
-        add_filter(
-            'Municipio/Widget/Widgets/CustomizerWidgets',
-            array($this, 'activateCustomizerFeatures')
-        );
-    }
-
-    public function activateCustomizerFeatures($boolean)
-    {
-        return true;
+        add_filter('Municipio/Controller/BaseController/Customizer', $enable);
+        add_filter('Municipio/Theme/Enqueue/Bem', $enable);
+        add_filter('Municipio/Widget/Widgets/CustomizerWidgets', $enable);
     }
 }
