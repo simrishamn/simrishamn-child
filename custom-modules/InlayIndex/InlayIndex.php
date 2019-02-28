@@ -2,24 +2,23 @@
 
 namespace Simrishamn\InlayIndex;
 
+use \Simrishamn\Theme\CustomModuleHelper;
+
 class InlayIndex extends \Modularity\Module
 {
-    
-    public $nameSingular    = 'Inlay Index';
-    public $namePlural      = 'Inlay Indices';
-    public $description     = 'Outputs 2-4 of the latest posts from the selected post-type.';
 
     public function init()
     {
         
-        $Module = \Simrishamn\Theme\CustomModuleHelper::setModule($this);
+        $this->nameSingular = __('Inlay Index', CustomModuleHelper::DOMAIN);
+        $this->namePlural   = __('Inlay Indices', CustomModuleHelper::DOMAIN);
+        $this->namePlural   = __('Outputs 2-4 of the latest posts from the selected post-type.', CustomModuleHelper::DOMAIN);
         
-        foreach ($Module as $key => $val)
-        {
+        $Module = CustomModuleHelper::setModule($this);
+        
+        foreach ($Module as $key => $val) {
             $this->{$key} = $val;
         }
-        
-        include_once $this->fields;
         
     }
 

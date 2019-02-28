@@ -2,28 +2,29 @@
 
 namespace Simrishamn\LinkList;
 
+use \Simrishamn\Theme\CustomModuleHelper;
+
 class LinkList extends \Modularity\Module
 {
-    
-    public $nameSingular    = 'Link List';
-    public $namePlural      = 'Link Lists';
-    public $description     = 'Outputs a list of links, with option to choose color.';
     
     public function init()
     {
         
-        $Module = \Simrishamn\Theme\CustomModuleHelper::setModule($this);
+        $this->nameSingular = __('Link List', CustomModuleHelper::DOMAIN);
+        $this->namePlural   = __('Link Lists', CustomModuleHelper::DOMAIN);
+        $this->namePlural   = __('Outputs a list of links, with option to choose color.', CustomModuleHelper::DOMAIN);
         
-        foreach ($Module as $key => $val)
-        {
+        $Module = CustomModuleHelper::setModule($this);
+        
+        foreach ($Module as $key => $val) {
             $this->{$key} = $val;
         }
         
         // Already registered slug & fields as "linklist", breaks if changed to correct kebab-case
         $this->slug     = 'linklist';
-        $this->fields   = \Simrishamn\Theme\CustomModuleHelper::fields(\Simrishamn\Theme\CustomModuleHelper::moduleName($this), 'linklist');
+        $this->fields   = CustomModuleHelper::fields(CustomModuleHelper::moduleName($this), 'linklist');
 
-        require_once $this->fields;
+        include_once $this->fields;
         
     }
 
@@ -33,7 +34,7 @@ class LinkList extends \Modularity\Module
         $data = get_fields($this->ID);
 
         $data = array_replace($data, [
-            'classes' => \Simrishamn\Theme\CustomModuleHelper::classes(['box', 'box-panel'], $this)
+            'classes' => CustomModuleHelper::classes(['box', 'box-panel'], $this)
         ]);
         
         return $data;

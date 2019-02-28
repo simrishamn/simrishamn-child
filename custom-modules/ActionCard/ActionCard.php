@@ -2,28 +2,27 @@
 
 namespace Simrishamn\ActionCard;
 
+use \Simrishamn\Theme\CustomModuleHelper;
+
 class ActionCard extends \Modularity\Module
 {   
-    
-    public $nameSingular    = 'ActionCard';
-    public $namePlural      = 'ActionCards';
-    public $description     = 'Index-like cards with configurable FontAwesome icons and no excerpt.';
     
     public $hideTitle       = true;
 
     public function init()
     {
         
-        $Module = \Simrishamn\Theme\CustomModuleHelper::setModule($this);
+        $this->nameSingular = __('ActionCard', CustomModuleHelper::DOMAIN);
+        $this->namePlural   = __('ActionCards', CustomModuleHelper::DOMAIN);
+        $this->namePlural   = __('Index-like cards with configurable FontAwesome icons and no excerpt.', CustomModuleHelper::DOMAIN);
         
-        foreach ($Module as $key => $val)
-        {
+        $Module = CustomModuleHelper::setModule($this);
+        
+        foreach ($Module as $key => $val) {
             $this->{$key} = $val;
         }
         
         add_filter('acf/fields/post_object/query/key=field_action-card', [$this, 'postObjectQuery'], 10, 3);
-        
-        include_once $this->fields;
         
     }
 
@@ -40,7 +39,7 @@ class ActionCard extends \Modularity\Module
         $data = array_replace($data, [
             'items' => $this->prepareItems($data['action-card']),
             'columnClass' => $columnClass,
-            'classes' => \Simrishamn\Theme\CustomModuleHelper::classes(['box', 'box-index', 'box-action'], $this)
+            'classes' => CustomModuleHelper::classes(['box', 'box-index', 'box-action'], $this)
         ]);
 
         return $data;

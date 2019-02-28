@@ -27,9 +27,8 @@ class CustomModuleHelper
         $obj->slug          = self::kebabcase($obj->moduleName);
         $obj->fields        = self::fields($obj->moduleName);
         
-        $obj->nameSingular  = self::translate($object->nameSingular);
-        $obj->namePlural    = self::translate($object->namePlural);
-        $obj->description   = self::translate($object->description);
+        if (file_exists($obj->fields))
+            include_once $obj->fields;
         
         return $obj;
         
@@ -61,7 +60,12 @@ class CustomModuleHelper
         
         $string = preg_replace('~[^\pL\d]+~u', '-', $string);
         
-        setlocale(LC_ALL, 'sv_SE.utf8');
+        setlocale(LC_MONETARY, get_locale());
+        
+        $locale = localeconv();
+        
+        if ($locale['int_curr_symbol'] == "")
+            setlocale(LC_MONETARY, 'sv_SE.utf8');
         
         $string = iconv('utf-8', 'us-ascii//TRANSLIT', $string);
 
@@ -79,19 +83,6 @@ class CustomModuleHelper
             throw new \Exception('No slug was set.');
         
         return $string;
-        
-    }
-    
-    /**
-     * Translate via WordPress __() function
-     *
-     * @param string $string The string to be translated
-     * @return string The translated string
-     */
-    public static function translate ($string) : string
-    {
-        
-        return __($string, self::DOMAIN);
         
     }
     

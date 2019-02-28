@@ -2,24 +2,23 @@
 
 namespace Simrishamn\NewsList;
 
+use \Simrishamn\Theme\CustomModuleHelper;
+
 class NewsList extends \Modularity\Module
 {
     
-    public $nameSingular    = 'News';
-    public $namePlural      = 'News';
-    public $description     = 'Outputs a number of featured and latests posts in a grid- or list manner.';
-    
     public function init()
     {
-
-        $Module = \Simrishamn\Theme\CustomModuleHelper::setModule($this);
         
-        foreach ($Module as $key => $val)
-        {
+        $this->nameSingular = __('News', CustomModuleHelper::DOMAIN);
+        $this->namePlural   = __('News', CustomModuleHelper::DOMAIN);
+        $this->namePlural   = __('Outputs a number of featured and latests posts in a grid- or list manner.', CustomModuleHelper::DOMAIN);
+
+        $Module = CustomModuleHelper::setModule($this);
+        
+        foreach ($Module as $key => $val) {
             $this->{$key} = $val;
         }
-        
-        include_once $this->fields;
         
     }
 
@@ -42,7 +41,7 @@ class NewsList extends \Modularity\Module
             'featured' => [$data['featured_one'], $data['featured_two']],
             'items' => get_posts($args),
             'columnClass' => $columnClass,
-            'classes' => \Simrishamn\Theme\CustomModuleHelper::classes(['box', 'box-panel'], $this)
+            'classes' => CustomModuleHelper::classes(['box', 'box-panel'], $this)
         ]);
         
         $this->setMetaData($data['items'], 150);

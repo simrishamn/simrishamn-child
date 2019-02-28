@@ -2,24 +2,23 @@
 
 namespace Simrishamn\ColoredIndex;
 
+use \Simrishamn\Theme\CustomModuleHelper;
+
 class ColoredIndex extends \Modularity\Module
 {
-    
-    public $nameSingular    = 'Colored Index';
-    public $namePlural      = 'Colored Indices';
-    public $description     = 'Outputs a colored index card text & customizable link to a page.';
 
     public function init()
     {
         
-        $Module = \Simrishamn\Theme\CustomModuleHelper::setModule($this);
+        $this->nameSingular = __('Colored Index', CustomModuleHelper::DOMAIN);
+        $this->namePlural   = __('Colored Indices', CustomModuleHelper::DOMAIN);
+        $this->namePlural   = __('Outputs a colored index card text & customizable link to a page.', CustomModuleHelper::DOMAIN);
         
-        foreach ($Module as $key => $val)
-        {
+        $Module = CustomModuleHelper::setModule($this);
+        
+        foreach ($Module as $key => $val) {
             $this->{$key} = $val;
         }
-        
-        include_once $this->fields;
         
     }
 
@@ -31,7 +30,7 @@ class ColoredIndex extends \Modularity\Module
         $data = array_replace($data, [
             'items' => $data['colored-index'],
             'columnClass' => $data['index_columns'],
-            'classes' => \Simrishamn\Theme\CustomModuleHelper::classes(['box', 'box-panel'], $this)
+            'classes' => CustomModuleHelper::classes(['box', 'box-panel'], $this)
         ]);
 
         return $data;

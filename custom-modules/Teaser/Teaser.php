@@ -2,24 +2,23 @@
 
 namespace Simrishamn\Teaser;
 
+use \Simrishamn\Theme\CustomModuleHelper;
+
 class Teaser extends \Modularity\Module
 {
-    
-    public $nameSingular    = 'Teaser Block';
-    public $namePlural      = 'Teaser Blocks';
-    public $description     = 'Outputs a Teaser Block with lead text, image & customizable link to a page.';
 
     public function init()
     {
         
+        $this->nameSingular = __('Teaser Block', CustomModuleHelper::DOMAIN);
+        $this->namePlural   = __('Teaser Blocks', CustomModuleHelper::DOMAIN);
+        $this->namePlural   = __('Outputs a Teaser Block with lead text, image & customizable link to a page.', CustomModuleHelper::DOMAIN);
+        
         $Module = \Simrishamn\Theme\CustomModuleHelper::setModule($this);
         
-        foreach ($Module as $key => $val)
-        {
+        foreach ($Module as $key => $val) {
             $this->{$key} = $val;
         }
-        
-        include_once $this->fields;
         
     }
 
@@ -31,7 +30,7 @@ class Teaser extends \Modularity\Module
         $data = array_replace($data, [
             'items' => $data['teaser'],
             'columnClass' => $data['index_columns'],
-            'classes' => \Simrishamn\Theme\CustomModuleHelper::classes(['box', 'box-panel'], $this)
+            'classes' => CustomModuleHelper::classes(['box', 'box-panel'], $this)
         ]);
 
         return $data;
