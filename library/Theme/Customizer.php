@@ -5,12 +5,6 @@ class Customizer
 {
     public function __construct()
     {
-        add_action('after_setup_theme', [$this, 'enableCustomizer'], 5);
-        add_filter('kirki/config', [$this, 'configureKirki'], 20);
-    }
-
-    public function enableCustomizer()
-    {
         $enable = function ($boolean) {
             return true;
         };
@@ -18,6 +12,8 @@ class Customizer
         add_filter('Municipio/Controller/BaseController/Customizer', $enable);
         add_filter('Municipio/Theme/Enqueue/Bem', $enable);
         add_filter('Municipio/Widget/Widgets/CustomizerWidgets', $enable);
+
+        add_filter('kirki/config', [$this, 'configureKirki'], 20);
     }
 
     public function configureKirki($config)
