@@ -9,8 +9,8 @@ class Style
      */
     public function __construct()
     {
-        add_filter('Municipio/mobile_menu_breakpoint', array($this, 'mobileMenu'), 10, 1);
-        add_filter('Municipio/Widget/Header/Links/MapLinks/avalibleLinkTypes', array($this, 'availableLinkTypes'));
+        add_filter('Municipio/mobile_menu_breakpoint', [$this, 'mobileMenu']);
+        add_filter('Municipio/Widget/Header/Links/MapLinks/avalibleLinkTypes', [$this, 'availableLinkTypes']);
     }
 
     /**

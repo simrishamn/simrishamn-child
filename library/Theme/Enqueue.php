@@ -12,11 +12,11 @@ class Enqueue
      */
     public function __construct()
     {
-        add_action('wp_enqueue_scripts', array($this, 'enqueueScripts'));
-        add_action('admin_enqueue_scripts', array($this, 'enqueueAdmin'));
+        add_action('wp_enqueue_scripts', [$this, 'enqueueScripts']);
+        add_action('admin_enqueue_scripts', [$this, 'enqueueAdmin']);
 
-        add_filter('mce_css', array($this, 'enqueueEditorStyle'));
-        add_filter('mce_external_plugins', array($this, 'enqueueEditorScript'));
+        add_filter('mce_css', [$this, 'enqueueEditorStyle']);
+        add_filter('mce_external_plugins', [$this, 'enqueueEditorScript']);
     }
 
     /**
