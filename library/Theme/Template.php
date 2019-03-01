@@ -19,7 +19,6 @@ class Template
             1
         );
         add_filter('accessibility_items', array($this, 'removePrint'), 20, 1);
-        add_filter('init', array($this, 'addCustomTemplates'), 10, 1);
         add_action('admin_init', array($this, 'removeContentEditor'));
     }
 
@@ -41,17 +40,6 @@ class Template
         if (get_post_meta($post_id, '_wp_page_template', true) == 'full-width.blade.php') {
             remove_post_type_support('page', 'editor');
         }
-    }
-
-    public function addCustomTemplates()
-    {
-        // Example
-        //////////////////////////////////////////////////////////////////////////////
-        // \Municipio\Helper\Template::add(                                         //
-        //     __('My Template', 'simrishamn'),                                     //
-        //     \Municipio\Helper\Template::locateTemplate('my-template.blade.php')  //
-        // );                                                                       //
-        //////////////////////////////////////////////////////////////////////////////
     }
 
     /**
