@@ -20,7 +20,7 @@ class DefaultModules
             define('SIMRISHAMN_SHARED_POSTS_MODULE', null);
         }
 
-        add_action('admin_head', array($this, 'render'));
+        add_action('admin_head', [$this, 'render']);
     }
 
     /**
@@ -32,38 +32,38 @@ class DefaultModules
      */
     public function getDefinition($template)
     {
-        $image = array('mod-image', __('Image', 'simrishamn'));
-        $slider = array('mod-slider', __('Slider', 'simrishamn'));
-        $teaser = array('mod-colored-index', __('Colored Index', 'simrishamn'));
+        $image = ['mod-image', __('Image', 'simrishamn')];
+        $slider = ['mod-slider', __('Slider', 'simrishamn')];
+        $teaser = ['mod-colored-index', __('Colored Index', 'simrishamn')];
 
-        $notices = array(
+        $notices = [
             'mod-inlay-index',
             __('Inlay Index', 'simrishamn'),
             strtoupper(__('Do not edit!', 'simrishamn')),
             SIMRISHAMN_SHARED_NOTICES_MODULE,
-        );
+        ];
 
-        $posts = array(
+        $posts = [
             'mod-posts',
             __('Posts', 'simrishamn'),
             strtoupper(__('Do not edit!', 'simrishamn')),
             SIMRISHAMN_SHARED_POSTS_MODULE
-        );
+        ];
 
         switch ($template) {
             case 'page':
-                return array(
-                    'content-area-top' => array($slider, $image),
-                    'right-sidebar' => array($notices),
-                );
+                return [
+                    'content-area-top' => [$slider, $image],
+                    'right-sidebar' => [$notices],
+                ];
             case 'single':
-                return array(
-                    'right-sidebar' => array($notices, $posts),
-                );
+                return [
+                    'right-sidebar' => [$notices, $posts],
+                ];
             case 'full-width.blade.php':
-                return array(
-                    'content-area' => array($teaser, $teaser),
-                );
+                return [
+                    'content-area' => [$teaser, $teaser],
+                ];
         }
     }
 

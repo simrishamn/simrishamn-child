@@ -9,7 +9,7 @@ class AdminBar
      */
     public function __construct()
     {
-        add_action('admin_bar_menu', array($this, 'customizeMenu'), 999);
+        add_action('admin_bar_menu', [$this, 'customizeMenu'], 999);
     }
 
     /**
@@ -25,7 +25,7 @@ class AdminBar
             $wp_admin_bar->remove_menu('customize');
         }
 
-        $unused = array(
+        $unused = [
             'comments',
             'new-user',
             'new-media',
@@ -48,16 +48,16 @@ class AdminBar
             'new-mod-linklist',
             'new-mod-related-news',
             'new-servicemeddelande',
-        );
+        ];
 
-        array_walk($unused, array($wp_admin_bar, 'remove_menu'));
+        array_walk($unused, [$wp_admin_bar, 'remove_menu']);
 
-        $wp_admin_bar->add_menu(array(
+        $wp_admin_bar->add_menu([
             'parent' => 'new-content',
             'id' => 'new-post',
             'title' => __('News Article', 'simrishamn'),
             'href' => admin_url('post-new.php'),
             'meta' => false,
-        ));
+        ]);
     }
 }
