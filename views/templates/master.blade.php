@@ -22,6 +22,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="{{ get_stylesheet_directory_uri() }}/favicon-16x16.png">
         <link rel="manifest" href="{{ get_stylesheet_directory_uri() }}/site.webmanifest">
         <link rel="mask-icon" href="{{ get_stylesheet_directory_uri() }}/safari-pinned-tab.svg" color="#0069b4">
+        <meta name="msapplication-config" content="{{ get_stylesheet_directory_uri() }}/assets/docs/browserconfig.xml">
         <meta name="msapplication-TileColor" content="#0069b4">
         <meta name="theme-color" content="#0069b4">
 
