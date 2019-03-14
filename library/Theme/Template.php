@@ -9,20 +9,13 @@ class Template
      */
     public function __construct()
     {
-        add_filter('theme_page_templates', array($this, 'templateListFilter'), 20, 1);
-        add_filter('ngettext', array($this, 'registerText'), 20, 3);
-        add_filter('gettext', array($this, 'registerText'), 20, 3);
-        add_filter(
-            'Municipio/controller/base/view_data',
-            array($this, 'getFooterData'),
-            10,
-            1
-        );
-        add_filter('accessibility_items', array($this, 'removePrint'), 20, 1);
-        add_filter('init', array($this, 'addCustomTemplates'), 10, 1);
-        add_action('admin_init', array($this, 'removeContentEditor'));
+        add_filter('theme_page_templates', [$this, 'templateListFilter'], 20);
+        add_filter('ngettext', [$this, 'registerText'], 20);
+        add_filter('gettext', [$this, 'registerText'], 20);
+        add_filter('Municipio/controller/base/view_data', [$this, 'getFooterData']);
+        add_filter('accessibility_items', [$this, 'removePrint'], 20);
+        add_action('admin_init', [$this, 'removeContentEditor']);
     }
-
 
     /**
      * Hides the content editor for full-width (section page) template.
@@ -41,17 +34,6 @@ class Template
         if (get_post_meta($post_id, '_wp_page_template', true) == 'full-width.blade.php') {
             remove_post_type_support('page', 'editor');
         }
-    }
-
-    public function addCustomTemplates()
-    {
-        // Example
-        //////////////////////////////////////////////////////////////////////////////
-        // \Municipio\Helper\Template::add(                                         //
-        //     __('My Template', 'simrishamn'),                                     //
-        //     \Municipio\Helper\Template::locateTemplate('my-template.blade.php')  //
-        // );                                                                       //
-        //////////////////////////////////////////////////////////////////////////////
     }
 
     /**
@@ -139,7 +121,7 @@ class Template
      */
     public function removePrint($items)
     {
-        $filteredItems = array_filter($items, array($this, 'isNotPrint'));
+        $filteredItems = array_filter($items, [$this, 'isNotPrint']);
         return $filteredItems;
     }
 

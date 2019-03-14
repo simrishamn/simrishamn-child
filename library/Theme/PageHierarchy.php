@@ -34,7 +34,7 @@ class PageHierarchy
 
     private function generatePageHierarchy(?int $forPageID = null, ?\ArrayIterator $pagesArrayIterator = null): array
     {
-        $pages = array();
+        $pages = [];
         $pagesArrayIterator = $pagesArrayIterator ?? new \ArrayIterator(get_pages());
         $pagesArrayIterator->next();
 
@@ -58,12 +58,12 @@ class PageHierarchy
         $currentPage = $pagesArrayIterator->current();
         $subPages = $this->generatePageHierarchy($currentPage->ID, $pagesArrayIterator);
 
-        return array(
+        return [
             "title" => $currentPage->post_title,
             "ID" => $currentPage->ID,
             "uri" => get_page_uri($currentPage->ID),
             "sub_pages" => $subPages,
             "has_sub_pages" => sizeof($subPages) > 0
-        );
+        ];
     }
 }

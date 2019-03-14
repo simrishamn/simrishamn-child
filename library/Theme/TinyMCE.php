@@ -9,8 +9,8 @@ class TinyMCE
      */
     public function __construct()
     {
-        add_filter('mce_buttons', array($this, 'buttons'));
-        add_filter('mce_external_languages', array($this, 'simrishamnLanguages'));
+        add_filter('mce_buttons', [$this, 'buttons']);
+        add_filter('mce_external_languages', [$this, 'simrishamnLanguages']);
     }
 
     /**
@@ -29,7 +29,7 @@ class TinyMCE
 
     public function simrishamnLanguages($simrishamnLocales)
     {
-        $simrishamnLocales['simrishamn'] = plugin_dir_path(__FILE__) . 'Language/TinyMceLocale.php';
+        $simrishamnLocales['simrishamn'] = SIMRISHAMN_PATH . '/library/Language/TinyMceLocale.php';
         return $simrishamnLocales;
     }
 }

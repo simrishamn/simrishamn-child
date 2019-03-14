@@ -9,13 +9,13 @@ function applyModularityAdditions() {
 
     const data = JSON.parse(content) || {};
 
-    for (const [target, entries] of Object.entries(data)) {
+    Object.entries(data).forEach(([target, entries]) => {
         const area = jQuery(`#modularity-mb-${target} ul`);
 
-        for (const params of entries) {
+        entries.forEach((params) => {
             modules.addModule(area, ...params);
-        }
-    }
+        });
+    });
 }
 
 export default () => {

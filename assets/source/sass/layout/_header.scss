@@ -306,7 +306,7 @@ nav {
     &:not(#mobile-menu) {
         margin-left: 5%;
     }
-    
+
     .c-navbar {
         margin:-5px -15px -15px -15px;
     }
@@ -314,7 +314,7 @@ nav {
     .c-navbar .c-navbar__item {
         display: table;
         height: 70px;
-        
+
         a {
             text-align: center;
             word-break: break-word;
@@ -350,7 +350,7 @@ nav {
 #nav-search {
     visibility: hidden;
     @media screen and #{$screen-below-md} {
-	visibility: visible;
+        visibility: visible;
     }
 }
 
