@@ -24,10 +24,10 @@ class InlayIndex extends \Modularity\Module
 
     public function data() : array
     {
-        
+      
         $data = get_fields($this->ID);
 
-        $args = ['numberposts' => 2, 'post_type' => $data['post_type']];
+        $args = ['numberposts' => 2, 'post_type' => $data['post_types']];
         
         $data = array_replace($data, [
             'items' => get_posts($args),
