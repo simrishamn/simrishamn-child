@@ -4,7 +4,7 @@ namespace Simrishamn\Theme;
 
 class AcfFields
 {
-    private $_path = SIMRISHAMN_PATH . '/library/Theme/AcfFields/php';
+    private $_path = SIMRISHAMN_PATH . '/library/AcfFields/php';
 
     public function __construct()
     {
