@@ -9,8 +9,24 @@ class Style
      */
     public function __construct()
     {
-        add_filter('Municipio/mobile_menu_breakpoint', array($this, 'mobileMenu'), 10, 1);
-        add_filter('Municipio/Widget/Header/Links/MapLinks/avalibleLinkTypes', array($this, 'availableLinkTypes'));
+        add_filter('Municipio/mobile_menu_breakpoint', [$this, 'mobileMenu']);
+        add_filter('Municipio/Widget/Header/Links/MapLinks/avalibleLinkTypes', [$this, 'availableLinkTypes']);
+        add_filter('body_class', [$this, 'isSubsite'], 20);
+    }
+
+    /**
+     * Puts current site blogname in the list of body classes
+     *
+     * @param array $classes The list of classes.
+     *
+     * @return array $classes The updated list of classes.
+     */
+    public function isSubsite($classes)
+    {
+        if(!is_main_site()) {
+            array_push($classes, 'is-subsite', get_option('blogname'));
+        }
+        return $classes;
     }
 
     /**

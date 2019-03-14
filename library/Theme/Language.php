@@ -9,8 +9,8 @@ class Language
      */
     public function __construct()
     {
-        add_action('after_setup_theme', array($this, 'load'), 10, 3);
-        add_filter('gettext', array($this, 'translate'), 10, 2);
+        add_action('after_setup_theme', [$this, 'load']);
+        add_filter('gettext', [$this, 'translate'], 10, 2);
     }
 
     /**

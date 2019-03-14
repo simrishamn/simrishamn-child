@@ -2,40 +2,43 @@
 
 namespace Simrishamn\LinkList;
 
+use \Simrishamn\Theme\CustomModuleHelper;
+
 class LinkList extends \Modularity\Module
 {
-    public $slug = 'linklist';
-    public $supports = array();
-
+    
     public function init()
     {
-        $this->fields = SIMRISHAMN_PATH . '/custom-modules/LinkList/acf/php/mod-linklist.php';
-        $this->nameSingular = __("Link List", 'simrishamn');
-        $this->namePlural  = __("Link Lists", 'simrishamn');
-        $this->description  = __(
-            "Outputs a list of links, with option to choose color.",
-            'simrishamn'
-        );
+        
+        $this->nameSingular = __('Link List', CustomModuleHelper::DOMAIN);
+        $this->namePlural   = __('Link Lists', CustomModuleHelper::DOMAIN);
+        $this->namePlural   = __('Outputs a list of links, with option to choose color.', CustomModuleHelper::DOMAIN);
+        
+        $Module = CustomModuleHelper::setModule($this);
+        
+        foreach ($Module as $key => $val) {
+            $this->{$key} = $val;
+        }
+        
+        // Already registered slug & fields as "linklist", breaks if changed to correct kebab-case
+        $this->slug     = 'linklist';
+        $this->fields   = CustomModuleHelper::fields(CustomModuleHelper::moduleName($this), 'linklist');
 
-        require_once $this->fields;
+        include_once $this->fields;
+        
     }
 
     public function data() : array
     {
-        $data = array();
-        $data['items'] = get_field('items', $this->ID);
-        $data['color'] = get_field('color', $this->ID);
-        $data['classes'] = implode(
-            ' ',
-            apply_filters(
-                'Modularity/Module/Classes',
-                array('box', 'box-panel'),
-                $this->post_type,
-                $this->args
-            )
-        );
+        
+        $data = get_fields($this->ID);
 
+        $data = array_replace($data, [
+            'classes' => CustomModuleHelper::classes(['box', 'box-panel'], $this)
+        ]);
+        
         return $data;
+        
     }
 
   /**

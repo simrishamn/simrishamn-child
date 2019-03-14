@@ -2,49 +2,46 @@
 
 namespace Simrishamn\ColoredIndex;
 
+use \Simrishamn\Theme\CustomModuleHelper;
+
 class ColoredIndex extends \Modularity\Module
 {
-    public $slug = 'colored-index';
-    public $supports = array();
 
     public function init()
     {
-        $this->fields = SIMRISHAMN_PATH . '/custom-modules/ColoredIndex/acf/php/mod-colored-index.php';
-        $this->nameSingular = __("Colored Index", 'simrishamn');
-        $this->namePlural  = __("Colored Indices", 'simrishamn');
-        $this->description  = __(
-            "Outputs a colored index card text & customizable link to a page.",
-            'simrishamn'
-        );
-        include_once $this->fields;
+        
+        $this->nameSingular = __('Colored Index', CustomModuleHelper::DOMAIN);
+        $this->namePlural   = __('Colored Indices', CustomModuleHelper::DOMAIN);
+        $this->namePlural   = __('Outputs a colored index card text & customizable link to a page.', CustomModuleHelper::DOMAIN);
+        
+        $Module = CustomModuleHelper::setModule($this);
+        
+        foreach ($Module as $key => $val) {
+            $this->{$key} = $val;
+        }
+        
     }
 
     public function data() : array
     {
-        $data = array();
-        $data['items'] = get_field('colored-index', $this->ID);
-        $data['color'] = get_field('color', $this->ID);
-        $data['lead'] = get_field('lead', $this->ID);
-        $data['columnClass'] = get_field('index_columns', $this->ID);
-        $data['classes'] = implode(
-            ' ',
-            apply_filters(
-                'Modularity/Module/Classes',
-                array('box', 'box-panel'),
-                $this->post_type,
-                $this->args
-            )
-        );
+        
+        $data = get_fields($this->ID);
+        
+        $data = array_replace($data, [
+            'items' => $data['colored-index'],
+            'columnClass' => $data['index_columns'],
+            'classes' => CustomModuleHelper::classes(['box', 'box-panel'], $this)
+        ]);
 
         return $data;
+        
     }
 
-    public function template()
+    public function template() : string
     {
-        if (get_field('format', $this->ID) == 'default') {
-            return $this->slug . '.blade.php';
-        }
-        return 'colored-info.blade.php';
+        
+        return (get_field('format', $this->ID) == 'default') ? $this->slug . '.blade.php' : 'colored-info.blade.php';
+        
     }
 
     /**

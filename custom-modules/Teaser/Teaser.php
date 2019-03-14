@@ -2,41 +2,39 @@
 
 namespace Simrishamn\Teaser;
 
+use \Simrishamn\Theme\CustomModuleHelper;
+
 class Teaser extends \Modularity\Module
 {
-    public $slug = 'teaser';
-    public $supports = array();
 
     public function init()
     {
-        $this->fields = SIMRISHAMN_PATH . '/custom-modules/Teaser/acf/php/mod-teaser.php';
-        $this->nameSingular = __("Teaser Block", 'simrishamn');
-        $this->namePlural  = __("Teaser Blocks", 'simrishamn');
-        $this->description  = __(
-            "Outputs a Teaser Block with lead text, image & customizable link to a page.",
-            'simrishamn'
-        );
-        include_once $this->fields;
+        
+        $this->nameSingular = __('Teaser Block', CustomModuleHelper::DOMAIN);
+        $this->namePlural   = __('Teaser Blocks', CustomModuleHelper::DOMAIN);
+        $this->namePlural   = __('Outputs a Teaser Block with lead text, image & customizable link to a page.', CustomModuleHelper::DOMAIN);
+        
+        $Module = \Simrishamn\Theme\CustomModuleHelper::setModule($this);
+        
+        foreach ($Module as $key => $val) {
+            $this->{$key} = $val;
+        }
+        
     }
 
     public function data() : array
     {
-        $data = array();
-        $data['items'] = get_field('teaser', $this->ID);
-        $data['color'] = get_field('color', $this->ID);
-        $data['lead'] = get_field('lead', $this->ID);
-        $data['columnClass'] = get_field('index_columns', $this->ID);
-        $data['classes'] = implode(
-            ' ',
-            apply_filters(
-                'Modularity/Module/Classes',
-                array('box', 'box-panel'),
-                $this->post_type,
-                $this->args
-            )
-        );
+        
+        $data = get_fields($this->ID);
+        
+        $data = array_replace($data, [
+            'items' => $data['teaser'],
+            'columnClass' => $data['index_columns'],
+            'classes' => CustomModuleHelper::classes(['box', 'box-panel'], $this)
+        ]);
 
         return $data;
+        
     }
 
     /**
