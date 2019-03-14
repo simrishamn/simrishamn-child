@@ -1,5 +1,8 @@
 # Simrishamn Changelog
 
+## 2019-03-14 - 19.03.1
+* NOJIRA: Fix load path for custom theme options
+
 ## 2019-03-14 - 19.03.0
 * SIEW-288: Remove babel-polyfill imports
 * SIEW-299: Fix expandable list (posts) module css
