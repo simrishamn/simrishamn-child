@@ -1,0 +1,25 @@
+.c-navbar .c-navbar__item {
+
+    &.is-current a,
+    &.is-current-ancestor a,
+    a:hover,
+    a:hover:not(.is-current) {
+        background-color: #dce581;
+    }
+
+}
+
+.nav-mobile {
+    background-color: #b1cb34;
+
+    a,
+    a:hover,
+    .current, .nav-mobile .current-menu-item > a {
+        color: #000000 !important;
+    }
+
+    .current, .nav-mobile .current-menu-item, .nav-mobile .current-node, .nav-mobile a:hover {
+        background-color: #dce581;
+    }
+
+}
