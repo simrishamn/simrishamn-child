@@ -33,3 +33,7 @@
     @import '../../../custom-modules/ColoredIndex/assets/sass/colored-index';
     @import '../../../custom-modules/Teaser/assets/sass/teaser';
 }
+
+.is-subsite {
+    @import 'subsites/sinab';
+}
