@@ -23,7 +23,7 @@ build_script:
   - bash build.sh
 
 after_build:
-  - zip -r "$ARTIFACT" . -x ".git/*" -x "node_modules/*" -x "vendor/*/*"
+  - zip -r "$ARTIFACT" . -x ".git*" -x "node_modules/*" -x "vendor/*/*"
 
 deploy_script:
   - http --form POST "$WPR_URL" "$WPR_AUTH" "$WPR_FILES" --check-status
