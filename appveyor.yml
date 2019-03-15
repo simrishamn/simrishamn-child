@@ -1,0 +1,32 @@
+image: ubuntu1804
+stack: node 8
+build: off
+
+cache:
+  - node_modules -> package.json
+
+install:
+  - sudo apt-get update
+  - sudo apt-get -fy install composer httpie slugify
+  - npm install
+
+before_build:
+  - 'PROJECT="$(composer config name)"'
+  - 'VERSION="${APPVEYOR_REPO_TAG_NAME:-dev-$APPVEYOR_REPO_BRANCH}"'
+  - 'ARTIFACT="$(slugify $PROJECT $VERSION).zip"'
+  - 'WPR_URL="$WPR_HOST/publish.php"'
+  - 'WPR_AUTH="Authorization: Key $WPR_KEY"'
+  - 'WPR_FILES="files[]@$ARTIFACT"'
+
+build_script:
+  - composer config version "$VERSION"
+  - bash build.sh
+
+after_build:
+  - zip -r "$ARTIFACT" . -x ".git/*" -x "node_modules/*" -x "vendor/*/*"
+
+deploy_script:
+  - http --form POST "$WPR_URL" "$WPR_AUTH" "$WPR_FILES" --check-status
+
+artifacts:
+  - path: '*.zip'
