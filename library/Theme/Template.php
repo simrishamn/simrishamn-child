@@ -15,6 +15,9 @@ class Template
         add_filter('Municipio/controller/base/view_data', [$this, 'getFooterData']);
         add_filter('accessibility_items', [$this, 'removePrint'], 20);
         add_action('admin_init', [$this, 'removeContentEditor']);
+
+        // Fix for htmlchars in titles
+        remove_filter('the_title', 'wptexturize');
     }
 
     /**
