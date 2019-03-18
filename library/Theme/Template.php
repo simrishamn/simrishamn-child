@@ -18,6 +18,7 @@ class Template
 
         // Fix for htmlchars in titles
         remove_filter('the_title', 'wptexturize');
+        remove_filter('the_title', 'convert_chars');
     }
 
     /**
