@@ -12,7 +12,9 @@ install:
 
 before_build:
   - 'PROJECT="$(composer config name)"'
-  - 'VERSION="${APPVEYOR_REPO_TAG_NAME:-dev-$APPVEYOR_REPO_BRANCH}"'
+  - 'TAG="$(git describe --match="[0-9]*" --abbrev=0)"'
+  - 'BUILD="$TAG.$APPVEYOR_BUILD_NUMBER"'
+  - 'VERSION="${APPVEYOR_REPO_TAG_NAME:-$BUILD}"'
   - 'ARTIFACT="$(slugify $PROJECT $VERSION).zip"'
   - 'WPR_URL="$WPR_HOST/publish.php"'
   - 'WPR_AUTH="Authorization: Key $WPR_KEY"'
