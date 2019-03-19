@@ -35,5 +35,6 @@
 }
 
 .is-subsite {
-    @import 'subsites/sinab';
+    @import 'subsites/sinab/main';
+    @import 'subsites/naringslivsutveckling/main';
 }
