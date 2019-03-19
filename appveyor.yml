@@ -2,6 +2,13 @@ image: ubuntu1804
 stack: node 8
 build: off
 
+for:
+  - deploy: off
+    branches:
+      except:
+        - master
+        - develop
+
 cache:
   - node_modules -> package.json
 
