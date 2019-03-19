@@ -16,9 +16,6 @@ before_build:
   - 'BUILD="$TAG.$APPVEYOR_BUILD_NUMBER"'
   - 'VERSION="${APPVEYOR_REPO_TAG_NAME:-$BUILD}"'
   - 'ARTIFACT="$(slugify $PROJECT $VERSION).zip"'
-  - 'WPR_URL="$WPR_HOST/publish.php"'
-  - 'WPR_AUTH="Authorization: Key $WPR_KEY"'
-  - 'WPR_FILES="files[]@$ARTIFACT"'
 
 build_script:
   - composer config version "$VERSION"
@@ -27,8 +24,13 @@ build_script:
 after_build:
   - zip -r "$ARTIFACT" . -x ".git*" -x "node_modules/*" -x "vendor/*/*"
 
-deploy_script:
-  - http --form POST "$WPR_URL" "$WPR_AUTH" "$WPR_FILES" --check-status
+deploy_script: >
+  http --form POST
+  "$WPR_HOST/publish.php"
+  "Authorization: Key $WPR_KEY"
+  "files[]@$ARTIFACT"
+  --check-status
+  --timeout 600
 
 artifacts:
   - path: '*.zip'
