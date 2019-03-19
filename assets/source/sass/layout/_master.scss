@@ -13,6 +13,10 @@ html.video-is-playing {
     }
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, .widget_calendar caption, h1, h2, h3, h4, h5, h6 {
+    padding-bottom: .6em;
+}
+
 p {
     word-wrap: break-word;
 }
