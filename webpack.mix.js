@@ -3,6 +3,7 @@ const Mix = require('laravel-mix');
 
 const options = {
     clearConsole: false,
+    processCssUrls: false
 };
 
 const config = {
