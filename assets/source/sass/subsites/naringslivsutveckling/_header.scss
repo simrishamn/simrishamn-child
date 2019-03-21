@@ -1,0 +1,16 @@
+.c-header__logo.t-municipio a img, .c-header__logo.t-municipio a svg {
+    min-width: 250px;
+}
+
+.c-header--customizer {
+
+    &.c-header--top {
+        background:url('./../../images/subsites/naringslivsutveckling/header-naringslivsutveckling.png') no-repeat bottom center;
+        background-size:cover;
+    }
+
+    &.c-header--primary {
+        background-color: #b1cb34;
+    }
+
+}

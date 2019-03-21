@@ -24,7 +24,11 @@ class Style
     public function isSubsite($classes)
     {
         if(!is_main_site()) {
-            array_push($classes, 'is-subsite', get_option('blogname'));
+
+            $subsiteName = sanitize_title(get_option('blogname'));
+
+            array_push($classes, 'is-subsite', $subsiteName);
+
         }
         return $classes;
     }
