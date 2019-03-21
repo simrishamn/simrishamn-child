@@ -1,5 +1,11 @@
 # Simrishamn Changelog
 
+## 2019-03-21 - 19.03.2
+* SIEW-108: Fix breaking changes in updated styleguide
+* SIEW-272: Fix InlayIndex not displaying correct post types
+* SIEW-304: Add styling for subsites
+* NOJIRA: Add build server configuration
+
 ## 2019-03-14 - 19.03.1
 * NOJIRA: Fix load path for custom theme options
 
@@ -31,7 +37,6 @@
 * SIEW-287: Single row menu
 
 ## 2018-12-06 - 18.12.0
-
 * SIEW-247: Logotyp i sidfot syns inte i produktionsmiljön i IE
 * SIEW-253: Problem med rubriker i Inläggsmodul i mobil/surfplatta
 * SIEW-265: Missing title field in mod-slider
@@ -39,14 +44,12 @@
 * SIEW-276: Text i sökfält syns bara halvt i iPhone
 
 ## 2018-11-15 - 18.11.1
-
 * SIEW-253: Formatering av nyhetsrubrik
 * SIEW-254: Cookiemeddelande avaktiverat utan JavaScript
 * SIEW-259: Förkortade URL:er
 * SIEW-260: Visa sökikon i mobil- och surfplatteläge
 
 ## 2018-11-6 - 18.11.0 Initial Release
-
 Ärenden från sista månaden innan release:
 
 * SIEW-29: Nyhetsmodul fixar
