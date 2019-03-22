@@ -6,27 +6,23 @@ use \Simrishamn\Theme\CustomModuleHelper;
 
 class ColoredIndex extends \Modularity\Module
 {
-
     public function init()
     {
-        
         $this->nameSingular = __('Colored Index', CustomModuleHelper::DOMAIN);
         $this->namePlural   = __('Colored Indices', CustomModuleHelper::DOMAIN);
         $this->namePlural   = __('Outputs a colored index card text & customizable link to a page.', CustomModuleHelper::DOMAIN);
-        
+
         $Module = CustomModuleHelper::setModule($this);
-        
+
         foreach ($Module as $key => $val) {
             $this->{$key} = $val;
         }
-        
     }
 
     public function data() : array
     {
-        
         $data = get_fields($this->ID);
-        
+
         $data = array_replace($data, [
             'items' => $data['colored-index'],
             'columnClass' => $data['index_columns'],
@@ -34,14 +30,11 @@ class ColoredIndex extends \Modularity\Module
         ]);
 
         return $data;
-        
     }
 
     public function template() : string
     {
-        
         return (get_field('format', $this->ID) == 'default') ? $this->slug . '.blade.php' : 'colored-info.blade.php';
-        
     }
 
     /**

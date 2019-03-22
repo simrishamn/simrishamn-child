@@ -6,29 +6,25 @@ use \Simrishamn\Theme\CustomModuleHelper;
 
 class InlayIndex extends \Modularity\Module
 {
-
     public function init()
     {
-        
         $this->nameSingular = __('Inlay Index', CustomModuleHelper::DOMAIN);
         $this->namePlural   = __('Inlay Indices', CustomModuleHelper::DOMAIN);
         $this->namePlural   = __('Outputs 2-4 of the latest posts from the selected post-type.', CustomModuleHelper::DOMAIN);
-        
+
         $Module = CustomModuleHelper::setModule($this);
-        
+
         foreach ($Module as $key => $val) {
             $this->{$key} = $val;
         }
-        
     }
 
     public function data() : array
     {
-      
         $data = get_fields($this->ID);
 
         $args = ['numberposts' => 2, 'post_type' => $data['post_types']];
-        
+
         $data = array_replace($data, [
             'items' => get_posts($args),
             'box_color' => $data['excerpt_box_color'],
@@ -36,7 +32,6 @@ class InlayIndex extends \Modularity\Module
         ]);
 
         return $data;
-        
     }
 
     /**

@@ -6,25 +6,21 @@ use \Simrishamn\Theme\CustomModuleHelper;
 
 class NewsList extends \Modularity\Module
 {
-    
     public function init()
     {
-        
         $this->nameSingular = __('News', CustomModuleHelper::DOMAIN);
         $this->namePlural   = __('News', CustomModuleHelper::DOMAIN);
         $this->namePlural   = __('Outputs a number of featured and latests posts in a grid- or list manner.', CustomModuleHelper::DOMAIN);
 
         $Module = CustomModuleHelper::setModule($this);
-        
+
         foreach ($Module as $key => $val) {
             $this->{$key} = $val;
         }
-        
     }
 
     public function data() : array
     {
-        
         $data = get_fields($this->ID);
 
         $args = [
@@ -36,19 +32,18 @@ class NewsList extends \Modularity\Module
             'post_type' => 'post',
             'category' => $data['category']
         ];
-        
+
         $data = array_replace($data, [
             'featured' => [$data['featured_one'], $data['featured_two']],
             'items' => get_posts($args),
             'columnClass' => $columnClass,
             'classes' => CustomModuleHelper::classes(['box', 'box-panel'], $this)
         ]);
-        
+
         $this->setMetaData($data['items'], 150);
         $this->setMetaData($data['featured']);
 
         return $data;
-        
     }
 
     public function setMetaData($items, $excerpt_length = 270)
@@ -74,9 +69,7 @@ class NewsList extends \Modularity\Module
 
     public function template()
     {
-        
         return (get_field('format', $this->ID) == 'default') ? $this->slug . '.blade.php' : 'news-grid.blade.php';
-
     }
 
     /**

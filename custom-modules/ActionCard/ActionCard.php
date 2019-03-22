@@ -5,37 +5,34 @@ namespace Simrishamn\ActionCard;
 use \Simrishamn\Theme\CustomModuleHelper;
 
 class ActionCard extends \Modularity\Module
-{   
-    
+{
     public $hideTitle       = true;
 
     public function init()
     {
-        
         $this->nameSingular = __('ActionCard', CustomModuleHelper::DOMAIN);
         $this->namePlural   = __('ActionCards', CustomModuleHelper::DOMAIN);
         $this->namePlural   = __('Index-like cards with configurable FontAwesome icons and no excerpt.', CustomModuleHelper::DOMAIN);
-        
+
         $Module = CustomModuleHelper::setModule($this);
-        
+
         foreach ($Module as $key => $val) {
             $this->{$key} = $val;
         }
-        
+
         add_filter('acf/fields/post_object/query/key=field_action-card', [$this, 'postObjectQuery'], 10, 3);
-        
     }
 
     public function data() : array
     {
-        
         $data = get_fields($this->ID);
-        
+
         $columnClass = 'grid-md-2';
 
-        if(!empty($data['action_columns']))
+        if (!empty($data['action_columns'])) {
             $columnClass = $data['action_columns'];
-        
+        }
+
         $data = array_replace($data, [
             'items' => $this->prepareItems($data['action-card']),
             'columnClass' => $columnClass,
@@ -43,7 +40,6 @@ class ActionCard extends \Modularity\Module
         ]);
 
         return $data;
-        
     }
 
     public function prepareItems($items)
