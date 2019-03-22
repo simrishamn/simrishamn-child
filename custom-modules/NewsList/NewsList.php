@@ -25,8 +25,8 @@ class NewsList extends \Modularity\Module
 
         $args = [
             'post__not_in' => [
-                $data['featured'][0]->ID,
-                $data['featured'][1]->ID
+                $data['featured_one']->ID,
+                $data['featured_two']->ID
             ],
             'numberposts' => 3,
             'post_type' => 'post',
