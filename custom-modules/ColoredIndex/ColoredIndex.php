@@ -10,7 +10,7 @@ class ColoredIndex extends \Modularity\Module
     {
         $this->nameSingular = __('Colored Index', CustomModuleHelper::DOMAIN);
         $this->namePlural   = __('Colored Indices', CustomModuleHelper::DOMAIN);
-        $this->namePlural   = __('Outputs a colored index card text & customizable link to a page.', CustomModuleHelper::DOMAIN);
+        $this->description  = __('Outputs a colored index card text & customizable link to a page.', CustomModuleHelper::DOMAIN);
 
         $Module = CustomModuleHelper::setModule($this);
 

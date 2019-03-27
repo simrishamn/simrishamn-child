@@ -10,7 +10,7 @@ class Teaser extends \Modularity\Module
     {
         $this->nameSingular = __('Teaser Block', CustomModuleHelper::DOMAIN);
         $this->namePlural   = __('Teaser Blocks', CustomModuleHelper::DOMAIN);
-        $this->namePlural   = __('Outputs a Teaser Block with lead text, image & customizable link to a page.', CustomModuleHelper::DOMAIN);
+        $this->description  = __('Outputs a Teaser Block with lead text, image & customizable link to a page.', CustomModuleHelper::DOMAIN);
 
         $Module = \Simrishamn\Theme\CustomModuleHelper::setModule($this);
 

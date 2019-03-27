@@ -10,7 +10,7 @@ class LinkList extends \Modularity\Module
     {
         $this->nameSingular = __('Link List', CustomModuleHelper::DOMAIN);
         $this->namePlural   = __('Link Lists', CustomModuleHelper::DOMAIN);
-        $this->namePlural   = __('Outputs a list of links, with option to choose color.', CustomModuleHelper::DOMAIN);
+        $this->description  = __('Outputs a list of links, with option to choose color.', CustomModuleHelper::DOMAIN);
 
         $Module = CustomModuleHelper::setModule($this);
 
