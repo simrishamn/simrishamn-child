@@ -10,7 +10,7 @@ class NewsList extends \Modularity\Module
     {
         $this->nameSingular = __('News', CustomModuleHelper::DOMAIN);
         $this->namePlural   = __('News', CustomModuleHelper::DOMAIN);
-        $this->namePlural   = __('Outputs a number of featured and latests posts in a grid- or list manner.', CustomModuleHelper::DOMAIN);
+        $this->description  = __('Outputs a number of featured and latests posts in a grid- or list manner.', CustomModuleHelper::DOMAIN);
 
         $Module = CustomModuleHelper::setModule($this);
 

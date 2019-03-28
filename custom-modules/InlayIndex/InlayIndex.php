@@ -10,7 +10,7 @@ class InlayIndex extends \Modularity\Module
     {
         $this->nameSingular = __('Inlay Index', CustomModuleHelper::DOMAIN);
         $this->namePlural   = __('Inlay Indices', CustomModuleHelper::DOMAIN);
-        $this->namePlural   = __('Outputs 2-4 of the latest posts from the selected post-type.', CustomModuleHelper::DOMAIN);
+        $this->description  = __('Outputs 2-4 of the latest posts from the selected post-type.', CustomModuleHelper::DOMAIN);
 
         $Module = CustomModuleHelper::setModule($this);
 

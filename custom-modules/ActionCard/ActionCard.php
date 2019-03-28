@@ -12,7 +12,7 @@ class ActionCard extends \Modularity\Module
     {
         $this->nameSingular = __('ActionCard', CustomModuleHelper::DOMAIN);
         $this->namePlural   = __('ActionCards', CustomModuleHelper::DOMAIN);
-        $this->namePlural   = __('Index-like cards with configurable FontAwesome icons and no excerpt.', CustomModuleHelper::DOMAIN);
+        $this->description  = __('Index-like cards with configurable FontAwesome icons and no excerpt.', CustomModuleHelper::DOMAIN);
 
         $Module = CustomModuleHelper::setModule($this);
 
