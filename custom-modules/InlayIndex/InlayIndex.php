@@ -27,6 +27,7 @@ class InlayIndex extends \Modularity\Module
 
         $data = array_replace($data, [
             'items' => get_posts($args),
+            'post_type' => $data['post_types'],
             'box_color' => $data['excerpt_box_color'],
             'classes' => 'box box-panel'
         ]);
