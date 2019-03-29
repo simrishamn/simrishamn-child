@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ruleset name="sigmavaxjo/simrishamn-child">
+    <rule ref="PSR2"/>
+
+    <file>custom-modules</file>
+    <file>library</file>
+
+    <exclude-pattern>.*/acf/.*</exclude-pattern>
+    <exclude-pattern>.*/AcfFields/.*</exclude-pattern>
+
+    <arg name="colors"/>
+    <arg name="warning-severity" value="0"/>
+</ruleset>
