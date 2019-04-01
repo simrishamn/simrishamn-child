@@ -3,7 +3,7 @@ const Mix = require('laravel-mix');
 
 const options = {
     clearConsole: false,
-    processCssUrls: false
+    processCssUrls: false,
 };
 
 const config = {
@@ -11,16 +11,20 @@ const config = {
         new Compression({
             include: /\/dist\//,
             test: /\.(js|css)$/,
-            asset: '[path][query]',
+            filename: '[path][query]',
         }),
     ],
 };
 
-Mix.options(options).webpackConfig(config)
-   .js('assets/source/js/admin.js', 'assets/dist/js')
-   .js('assets/source/js/editor.js', 'assets/dist/js')
-   .js('assets/source/js/theme.js', 'assets/dist/js')
-   .sass('assets/source/sass/admin.scss', 'assets/dist/css')
-   .sass('assets/source/sass/editor.scss', 'assets/dist/css')
-   .sass('assets/source/sass/theme.scss', 'assets/dist/css')
-   .sourceMaps();
+Mix
+    .js('assets/source/js/admin.js', 'js')
+    .js('assets/source/js/editor.js', 'js')
+    .js('assets/source/js/theme.js', 'js')
+    .sass('assets/source/sass/admin.scss', 'css')
+    .sass('assets/source/sass/editor.scss', 'css')
+    .sass('assets/source/sass/theme.scss', 'css')
+    .setPublicPath('assets/dist')
+    .webpackConfig(config)
+    .options(options)
+    .sourceMaps()
+    .version();
