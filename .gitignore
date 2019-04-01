@@ -1,5 +1,4 @@
 .projectile
-mix-manifest.json
 package-lock.json
 node_modules
 assets/dist

@@ -12,15 +12,20 @@
     "eslint": "node_modules/.bin/eslint assets/source/js"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0"
+    "core-js": "^3.0.0",
+    "regenerator-runtime": "^0.13.2"
   },
   "devDependencies": {
-    "babel-preset-env": "^1.7.0",
-    "compression-webpack-plugin": "^1.1.12",
-    "eslint": "^5.8.0",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "compression-webpack-plugin": "^2.0.0",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "laravel-mix": "^2.1.14",
-    "sass-lint": "^1.12.1"
+    "eslint-plugin-import": "^2.16.0",
+    "laravel-mix": "^4.0.15",
+    "sass": "^1.17.3",
+    "sass-lint": "^1.12.1",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.6.10"
   }
 }
