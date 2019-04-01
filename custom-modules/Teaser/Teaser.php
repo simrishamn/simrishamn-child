@@ -6,27 +6,23 @@ use \Simrishamn\Theme\CustomModuleHelper;
 
 class Teaser extends \Modularity\Module
 {
-
     public function init()
     {
-        
         $this->nameSingular = __('Teaser Block', CustomModuleHelper::DOMAIN);
         $this->namePlural   = __('Teaser Blocks', CustomModuleHelper::DOMAIN);
-        $this->namePlural   = __('Outputs a Teaser Block with lead text, image & customizable link to a page.', CustomModuleHelper::DOMAIN);
-        
+        $this->description  = __('Outputs a Teaser Block with lead text, image & customizable link to a page.', CustomModuleHelper::DOMAIN);
+
         $Module = \Simrishamn\Theme\CustomModuleHelper::setModule($this);
-        
+
         foreach ($Module as $key => $val) {
             $this->{$key} = $val;
         }
-        
     }
 
     public function data() : array
     {
-        
         $data = get_fields($this->ID);
-        
+
         $data = array_replace($data, [
             'items' => $data['teaser'],
             'columnClass' => $data['index_columns'],
@@ -34,7 +30,6 @@ class Teaser extends \Modularity\Module
         ]);
 
         return $data;
-        
     }
 
     /**

@@ -1,0 +1,16 @@
+@media screen and #{$screen-lg-up} {
+    #algolia-autocomplete-listbox-0 {
+        min-width: 500px;
+        margin-top: 10px;
+        margin-left: -200px;
+        border-radius: 10px;
+
+        .aa-suggestion:first-child {
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        .aa-suggestion:last-child {
+            border-radius: 0px 0px 10px 10px;
+        }
+    }
+}

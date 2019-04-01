@@ -23,12 +23,10 @@ class Style
      */
     public function isSubsite($classes)
     {
-        if(!is_main_site()) {
-
+        if (!is_main_site()) {
             $subsiteName = sanitize_title(get_option('blogname'));
 
             array_push($classes, 'is-subsite', $subsiteName);
-
         }
         return $classes;
     }
