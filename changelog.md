@@ -1,5 +1,10 @@
 # Simrishamn Changelog
 
+## 2019-04-01 - 19.04.0
+* SIEW-255: Add styling for algolia search
+* SIEW-311: News no longer show twice if featured
+* SIEW-312: Fix post type returning false
+
 ## 2019-03-21 - 19.03.2
 * SIEW-108: Fix breaking changes in updated styleguide
 * SIEW-272: Fix InlayIndex not displaying correct post types
