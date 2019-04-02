@@ -11,7 +11,7 @@
 
             @if (is_active_sidebar('content-area-top'))
                 <div class="grid sidebar-content-area sidebar-content-area-top">
-                    <?php dynamic_sidebar('content-area-top'); ?>
+                    @php dynamic_sidebar('content-area-top'); @endphp
                 </div>
             @endif
 
@@ -23,7 +23,7 @@
 
             @if (is_active_sidebar('content-area'))
                 <div class="grid sidebar-content-area sidebar-content-area-bottom">
-                    <?php dynamic_sidebar('content-area'); ?>
+                    @php dynamic_sidebar('content-area'); @endphp
                 </div>
             @endif
 

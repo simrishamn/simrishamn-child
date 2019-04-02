@@ -24,6 +24,6 @@
     @include('partials.hero')
 
     @if (is_active_sidebar('top-sidebar'))
-        <?php dynamic_sidebar('top-sidebar'); ?>
+        @php dynamic_sidebar('top-sidebar'); @endphp
     @endif
 @endif

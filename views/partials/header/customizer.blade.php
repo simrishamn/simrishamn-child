@@ -11,7 +11,7 @@
                     <div class="{{$header['rowClass']}}">
                         @foreach ($header['items'] as $item)
                             <div class="{{$item['class']}}">
-                                <?php dynamic_sidebar($item['id']); ?>
+                                @php dynamic_sidebar($item['id']); @endphp
                             </div>
                         @endforeach
 

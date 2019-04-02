@@ -5,14 +5,17 @@
   @include('partials.breadcrumbs')
 
   <div class="grid">
-    <?php
+    @php
+
     $cols = 'grid-md-12';
+
     if (is_active_sidebar('right-sidebar') && get_field('archive_' . sanitize_title($postType) . '_show_sidebar_navigation', 'option')) {
-    $cols = 'grid-md-8 grid-lg-6';
+        $cols = 'grid-md-8 grid-lg-6';
     } elseif (is_active_sidebar('right-sidebar') || get_field('archive_' . sanitize_title($postType) . '_show_sidebar_navigation', 'option')) {
-    $cols = 'grid-md-12 grid-lg-9';
+        $cols = 'grid-md-12 grid-lg-9';
     }
-    ?>
+
+    @endphp
 
     @if (get_field('archive_' . sanitize_title($postType) . '_title', 'option') || is_category() || is_date())
       <div class="grid">
@@ -47,7 +50,7 @@
     @if (get_field('archive_' . sanitize_title($postType) . '_filter_position', 'option') == 'content')
       <div class="grid filter-content">
         @include('partials.archive-filters')
-	<?php dynamic_sidebar('content-area-top'); ?>
+	@php dynamic_sidebar('content-area-top'); @endphp
       </div>
     @endif
 
@@ -65,7 +68,7 @@
       @else
         <div class="grid" @if (in_array($template, array('cards'))) data-equal-container @endif>
              @if (have_posts())
-          <?php $postNum = 0; ?>
+          @php $postNum = 0; @endphp
           @while(have_posts())
             {!! the_post() !!}
 
@@ -77,11 +80,11 @@
               @include('partials.blog.type.post-' . $template)
             @endif
 
-            <?php $postNum++; ?>
+            @php $postNum++; @endphp
           @endwhile
              @else
           <div class="grid-xs-12">
-            <div class="notice info pricon pricon-info-o pricon-space-right"><?php _e('No posts to show', 'municipio'); ?>…</div>
+            <div class="notice info pricon pricon-info-o pricon-space-right">{{ __('No posts to show', 'municipio') }}…</div>
           </div>
              @endif
         </div>
@@ -90,7 +93,7 @@
 
         @if (is_active_sidebar('content-area'))
           <div class="grid sidebar-content-area sidebar-content-area-bottom">
-            <?php dynamic_sidebar('content-area'); ?>
+            @php dynamic_sidebar('content-area'); @endphp
           </div>
         @endif
 
