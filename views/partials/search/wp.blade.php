@@ -1,4 +1,4 @@
-<?php global $wp_query; ?>
+@php global $wp_query; @endphp
 
 <section class="creamy gutter-vertical gutter-lg clearfix">
     <div class="container">
@@ -13,7 +13,7 @@
     </div>
 </section>
 
-<?php do_action('search_notices'); ?>
+@php do_action('search_notices'); @endphp
 
 @if ($resultCount === 0)
 
@@ -21,7 +21,7 @@
         <div class="grid gutter gutter-lg gutter-top">
             <div class="grid-lg-12">
                 <div class="notice info">
-                    <i class="fa fa-info-circle"></i> <?php _e('Found no matching results on your search…', 'municipio'); ?>
+                    <i class="fa fa-info-circle"></i> {{ __('Found no matching results on your search…', 'municipio') }}
                 </div>
             </div>
         </div>
@@ -51,7 +51,7 @@
                                 <div class="grid">
                                     @while(have_posts())
                                         {!! the_post() !!}
-                                        <?php
+                                        @php
                                         $date = apply_filters('Municipio/search_result/date', get_the_modified_date(), get_post());
                                         $permalink = apply_filters('Municipio/search_result/permalink_url', get_permalink(), get_post());
                                         $permalinkText = apply_filters('Municipio/search_result/permalink_text', get_permalink(), get_post());
@@ -65,7 +65,7 @@
                                         if (is_array($thumbnail)) {
                                         $thumbnail = $thumbnail[0];
                                         }
-                                        ?>
+                                        @endphp
                                         @include('partials.search.result-item-grid')
                                     @endwhile
                                 </div>
@@ -74,7 +74,7 @@
                                     @while(have_posts())
                                         {!! the_post() !!}
                                         <li>
-                                            <?php
+                                            @php
                                             $date = apply_filters('Municipio/search_result/date', get_the_modified_date(), get_post());
                                             $permalink = apply_filters('Municipio/search_result/permalink_url', get_permalink(), get_post());
                                             $permalinkText = apply_filters('Municipio/search_result/permalink_text', get_permalink(), get_post());
@@ -88,7 +88,7 @@
                                             if (is_array($thumbnail)) {
                                             $thumbnail = $thumbnail[0];
                                             }
-                                            ?>
+                                            @endphp
                                             @include('partials.search.result-item')
                                         </li>
                                     @endwhile

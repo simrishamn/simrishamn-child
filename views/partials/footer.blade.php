@@ -1,6 +1,6 @@
 @if (is_active_sidebar('bottom-sidebar'))
   <div class="sidebar-bottom-fullwidth">
-    <?php dynamic_sidebar('bottom-sidebar'); ?>
+    @php dynamic_sidebar('bottom-sidebar'); @endphp
   </div>
 @endif
 
@@ -188,7 +188,7 @@ sz.src = '//siteimproveanalytics.com/js/siteanalyze_7828.js';
 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
 })();
 /*]]>*/
-</script> 
+</script>
 
 </footer>
 </div>

@@ -1,4 +1,4 @@
-<?php global $post; ?>
+@php global $post; @endphp
 <article id="main-content" class="clearfix">
     <h1>{{ the_title() }}</h1>
 

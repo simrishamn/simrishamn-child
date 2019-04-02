@@ -34,22 +34,22 @@
     <div class="grid">
       @if (in_array('text_search', $enabledHeaderFilters))
         <div class="grid-sm-12 grid-md-auto">
-          <label for="filter-keyword" class="text-sm sr-only"><strong><?php _e('Search', 'municipio'); ?>:</strong></label>
+          <label for="filter-keyword" class="text-sm sr-only"><strong>{{ __('Search', 'municipio') }}:</strong></label>
           <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-search"></i></span>
-            <input type="text" name="s" id="filter-keyword" class="form-control" value="{{ $searchQuery }}" placeholder="<?php _e('Search', 'municipio'); ?>">
+            <input type="text" name="s" id="filter-keyword" class="form-control" value="{{ $searchQuery }}" placeholder="{{ __('Search', 'municipio') }}">
           </div>
         </div>
       @endif
 
       @if (in_array('date_range', $enabledHeaderFilters))
         <div class="grid-sm-12 grid-md-auto">
-          <label for="filter-date-from" class="text-sm sr-only"><strong><?php _e('Date published', 'municipio'); ?>:</strong></label>
+          <label for="filter-date-from" class="text-sm sr-only"><strong>{{ __('Date published', 'municipio') }}:</strong></label>
           <div class="input-group">
-            <span class="input-group-addon"><?php _e('From', 'municipio'); ?>:</span>
-            <input type="text" name="from" placeholder="<?php _e('From date', 'municipio'); ?>…" id="filter-date-from" class="form-control datepicker-range datepicker-range-from" value="{{ isset($_GET['from']) && !empty($_GET['from']) ? sanitize_text_field($_GET['from']) : '' }}" readonly>
-            <span class="input-group-addon"><?php _e('To', 'municipio'); ?>:</span>
-            <input type="text" name="to" placeholder="<?php _e('To date', 'municipio'); ?>" class="form-control datepicker-range datepicker-range-to" value="{{ isset($_GET['to']) && !empty($_GET['to']) ? sanitize_text_field($_GET['to']) : '' }}" readonly>
+            <span class="input-group-addon">{{ __('From', 'municipio') }}:</span>
+            <input type="text" name="from" placeholder="{{ __('From date', 'municipio') }}…" id="filter-date-from" class="form-control datepicker-range datepicker-range-from" value="{{ isset($_GET['from']) && !empty($_GET['from']) ? sanitize_text_field($_GET['from']) : '' }}" readonly>
+            <span class="input-group-addon">{{ __('To', 'municipio') }}:</span>
+            <input type="text" name="to" placeholder="{{ __('To date', 'municipio') }}" class="form-control datepicker-range datepicker-range-to" value="{{ isset($_GET['to']) && !empty($_GET['to']) ? sanitize_text_field($_GET['to']) : '' }}" readonly>
           </div>
         </div>
       @endif
@@ -69,11 +69,11 @@
 
       @if($queryString)
         <div class="grid-sm-12 hidden-sm hidden-xs grid-md-fit-content">
-          <a class="btn btn-block pricon pricon-close pricon-space-right" href="{{ $archiveUrl }}"><?php _e('Clear filters', 'municipio'); ?></a>
+          <a class="btn btn-block pricon pricon-close pricon-space-right" href="{{ $archiveUrl }}">{{ __('Clear filters', 'municipio') }}</a>
         </div>
       @endif
       <div class="grid-sm-12 grid-md-fit-content">
-        <input type="submit" value="<?php _e('Search', 'municipio'); ?>" class="btn btn-primary btn-block">
+        <input type="submit" value="{{ __('Search', 'municipio') }}" class="btn btn-primary btn-block">
       </div>
     </div>
 
@@ -107,7 +107,7 @@
               <div class="box box-panel box-panel-secondary" data-equal-item>
                 <h4 class="box-title">{{ $taxonomy->label }}</h4>
                 <div class="box-content">
-                  <?php $taxonomy->slug = $taxKey; $dropdown = \Municipio\Content\PostFilters::getMultiTaxDropdown($taxonomy, 0, 'list-hierarchical'); ?>
+                  @php $taxonomy->slug = $taxKey; $dropdown = \Municipio\Content\PostFilters::getMultiTaxDropdown($taxonomy, 0, 'list-hierarchical'); @endphp
                   {!! $dropdown !!}
                 </div>
               </div>

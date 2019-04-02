@@ -7,7 +7,7 @@
             @include('partials.blog.taxonomy-filters')
         @endif
 
-        <?php dynamic_sidebar('right-sidebar'); ?>
+        @php dynamic_sidebar('right-sidebar'); @endphp
     </div>
     @endif
 </aside>

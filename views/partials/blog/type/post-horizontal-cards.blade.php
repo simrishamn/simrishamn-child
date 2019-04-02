@@ -1,4 +1,4 @@
-<?php global $post; ?>
+@php global $post; @endphp
 <div class="post post-horizontal">
   <div class="grid">
     @if (municipio_get_thumbnail_source(null, array(300, 350)))

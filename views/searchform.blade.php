@@ -1,7 +1,7 @@
-<?php
+@php
     global $searchFormNode;
     $searchFormNode = ($searchFormNode) ? $searchFormNode+1 : 1;
-?>
+@endphp
 <div class="search" itemscope itemtype="http://schema.org/WebSite">
     <meta itemprop="url" content="{{ home_url() }}">
 
@@ -15,7 +15,7 @@
         @endif
 
         <div class="input-group">
-            <input itemprop="query-input" required id="searchkeyword-{{ $searchFormNode }}" autocomplete="off" class="form-control form-control-lg" type="search" name="s" placeholder="{{ get_field('search_placeholder_text', 'option') ? get_field('search_placeholder_text', 'option') : 'What are you looking for?' }}" value="<?php echo (!empty(get_search_query())) ? get_search_query() : ''; ?>">
+            <input itemprop="query-input" required id="searchkeyword-{{ $searchFormNode }}" autocomplete="off" class="form-control form-control-lg" type="search" name="s" placeholder="{{ get_field('search_placeholder_text', 'option') ? get_field('search_placeholder_text', 'option') : 'What are you looking for?' }}" value="{{ (!empty(get_search_query())) ? get_search_query() : '' }}">
             <span class="input-group-addon-btn">
                 <input type="submit" class="btn btn-primary btn-lg" value="{{ get_field('search_button_text', 'option') ? get_field('search_button_text', 'option') : __('Search', 'municipio') }}">
             </span>

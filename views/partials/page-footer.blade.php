@@ -1,4 +1,4 @@
-<?php do_action('customer-feedback'); ?>
+@php do_action('customer-feedback'); @endphp
 
 <footer class="page-footer">
     <div class="grid">
@@ -21,7 +21,7 @@
                 <div class="gutter gutter-vertical gutter-sm">
                     <div class="grid grid-table grid-va-middle no-margin no-padding">
                         <div class="grid-md-8">
-                            <i class="pricon pricon-share pricon-lg" style="margin-right:5px;"></i> <strong><?php _e('Share the page', 'municipio'); ?>:</strong> {{ the_title() }}
+                            <i class="pricon pricon-share pricon-lg" style="margin-right:5px;"></i> <strong>{{ __('Share the page', 'municipio') }}:</strong> {{ the_title() }}
                         </div>
                         <div class="grid-md-4 text-right-md text-right-lg">
                             @include('partials.social-share')
