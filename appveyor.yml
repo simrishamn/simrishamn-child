@@ -11,12 +11,11 @@ for:
         - /\d+\.\d+\.\d+/
 
 cache:
-  - node_modules -> package.json
+  - node_modules -> package.json, package-lock.json
 
 install:
   - sudo apt-get update
-  - sudo apt-get -fy install composer httpie slugify
-  - npm install
+  - sudo apt-get -fy install composer httpie php-codesniffer slugify
 
 before_build:
   - 'PROJECT="$(composer config name)"'
