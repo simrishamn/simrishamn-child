@@ -1,5 +1,4 @@
 .projectile
-package-lock.json
 node_modules
 assets/dist
 *.mo
