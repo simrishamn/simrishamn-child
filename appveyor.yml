@@ -22,10 +22,12 @@ before_build:
   - 'TAG="$(git describe --match="[0-9]*" --abbrev=0)"'
   - 'BUILD="$TAG.$APPVEYOR_BUILD_NUMBER"'
   - 'VERSION="${APPVEYOR_REPO_TAG_NAME:-$BUILD}"'
+  - 'UNSTABLE="$(git describe --match="[0-9]*" | grep "-")"'
+  - 'STABILITY="$(test -z $UNSTABLE && echo stable || echo dev)"'
   - 'ARTIFACT="$(slugify $PROJECT $VERSION).zip"'
 
 build_script:
-  - composer config version "$VERSION"
+  - composer config version "$VERSION-$STABILITY"
   - bash build.sh
 
 after_build:
