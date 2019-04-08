@@ -43,26 +43,142 @@ class Template
      *
      * @return array Modified list of view data.
      */
-    public function getFooterData($data)
+    public function getFooterData($data) : array
     {
-        $data['footerData'] = [
-            "contact" => [
-                "label" => __('Contact information', 'simrishamn'),
-                "phone_number" => get_field_object('footer_phone_number', 'option'),
-                "post_box" => get_field_object('post_box', 'option'),
-                "email" => get_field_object('footer_email', 'option'),
-                "office_address" => get_field_object('office_address', 'option'),
-                "opening_times" => get_field_object('opening_times', 'option'),
-                "organization_number" => get_field_object('organization_number', 'option')
-            ],
-            "links" => [
-                "label" => __('Useful links', 'simrishamn'),
-                "external_links" => get_field_object('footer_external_links', 'option'),
-                "internal_links" => get_field_object('footer_internal_links', 'option')
-            ],
-            "social" => __('Follow us in social media', 'simrishamn')
-        ];
+        $columns = get_field_object('column_amount', 'option')['value'];
+
+        if ($columns == 3) {
+            $columnData = get_field_object('3_columns', 'option');
+
+            $data['footerData'] = [
+                "contact" => [
+                    "label" => __('Contact information', 'simrishamn'),
+                    "phone_number" => [
+                        "label" => $this->getLabelFromTitle($columnData['sub_fields'], 'footer_phone_number'),
+                        "value" => $columnData['value']['footer_phone_number']
+                    ],
+                    "post_box" => [
+                        "label" => $this->getLabelFromTitle($columnData['sub_fields'], 'post_box'),
+                        "value" => $columnData['value']['post_box']
+                    ],
+                    "email" => [
+                        "label" => $this->getLabelFromTitle($columnData['sub_fields'], 'footer_email'),
+                        "value" => $columnData['value']['footer_email'],
+                        "type"  => "email"
+                    ],
+                    "office_address" => [
+                        "label" => $this->getLabelFromTitle($columnData['sub_fields'], 'office_address'),
+                        "value" => $columnData['value']['office_address']
+                    ],
+                    "opening_times" => [
+                        "label" => $this->getLabelFromTitle($columnData['sub_fields'], 'opening_times'),
+                        "value" => $columnData['value']['opening_times']
+                    ],
+                    "organization_number" => [
+                        "label" => $this->getLabelFromTitle($columnData['sub_fields'], 'organization_number'),
+                        "value" => $columnData['value']['organization_number']
+                    ]
+                ],
+                "links" => [
+                    "label" => __('Useful links', 'simrishamn'),
+                    "external_links" => [
+                        "label" => $this->getLabelFromTitle($columnData['sub_fields'], 'footer_external_links'),
+                        "value" => $columnData['value']['footer_external_links']
+                    ],
+                    "internal_links" => [
+                        "label" => $this->getLabelFromTitle($columnData['sub_fields'], 'footer_internal_links'),
+                        "value" => $columnData['value']['footer_internal_links']
+                    ]
+                ]
+            ];
+        }
+
+        if ($columns == 4) {
+            $columnData = get_field_object('4_columns', 'option');
+
+            $data['footerData'] = [
+                "contact_column_1" => [
+                    "label" => __('Contact information', 'simrishamn'),
+                    "post_box" => [
+                        "label" => $this->getLabelFromTitle($columnData['sub_fields'], 'post_box_2'),
+                        "value" => $columnData['value']['contact_column_1']['post_box_2']
+                    ],
+                    "office_address" => [
+                        "label" => $this->getLabelFromTitle($columnData['sub_fields'], 'office_address_2'),
+                        "value" => $columnData['value']['contact_column_1']['office_address_2']
+                    ],
+                    "phone_number" => [
+                        "label" => $this->getLabelFromTitle($columnData['sub_fields'], 'footer_phone_number_2'),
+                        "value" => $columnData['value']['contact_column_1']['footer_phone_number_2']
+                    ],
+                    "email" => [
+                        "label" => $this->getLabelFromTitle($columnData['sub_fields'], 'footer_email_2'),
+                        "value" => $columnData['value']['contact_column_1']['footer_email_2'],
+                        "type"  => "email"
+                    ]
+                ],
+                "contact_column_2" => [
+                    "label" => __('Contact information', 'simrishamn'),
+                    "post_box" => [
+                        "label" => $this->getLabelFromTitle($columnData['sub_fields'], 'post_box_3'),
+                        "value" => $columnData['value']['contact_column_2']['post_box_3']
+                    ],
+                    "office_address" => [
+                        "label" => $this->getLabelFromTitle($columnData['sub_fields'], 'office_address_3'),
+                        "value" => $columnData['value']['contact_column_2']['office_address_3']
+                    ],
+                    "phone_number" => [
+                        "label" => $this->getLabelFromTitle($columnData['sub_fields'], 'footer_phone_number_3'),
+                        "value" => $columnData['value']['contact_column_2']['footer_phone_number_3']
+                    ],
+                    "email" => [
+                        "label" => $this->getLabelFromTitle($columnData['sub_fields'], 'footer_email_3'),
+                        "value" => $columnData['value']['contact_column_2']['footer_email_3'],
+                        "type"  => "email"
+                    ]
+                ],
+                "links" => [
+                    "label" => __('Useful links', 'simrishamn'),
+                    "external_links" => [
+                        "label" => $this->getLabelFromTitle($columnData['sub_fields'], 'footer_external_links_2'),
+                        "value" => $columnData['value']['footer_external_links_2']
+                    ]
+                ]
+            ];
+        }
+
+        // Add amount of columns
+        $data['footerData']['columns'] = $columns;
+
+        // Add social media title
+        $data['footerData']['social'] = __('Follow us in social media', 'simrishamn');
+
         return $data;
+    }
+
+    /**
+     * Recursive checking for label from title
+     *
+     * @param array $haystack Haystack array
+     * @param string $needle Needle string to search for
+     *
+     * @return string Recursive array or the label string
+     */
+    public function getLabelFromTitle($haystack, $needle) : ?string
+    {
+        foreach($haystack as $key => $value) {
+            if (is_array($value)) {
+                $sub = $this->getLabelFromTitle($value, $needle);
+
+                if (is_string($sub)) {
+                    return $sub;
+                }
+            } else if ($value === $needle) {
+                return $haystack['label'];
+            }
+        }
+
+        return null;
     }
 
     /**
