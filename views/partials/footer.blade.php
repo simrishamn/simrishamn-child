@@ -79,6 +79,12 @@
                 @include('partials.footer.three-columns')
             @endif
 
+            @if ($footerData['presentedBy'])
+                <div class="presented-by">
+                    <small>{{ $footerData['presentedBy'] }}</small>
+                </div>
+            @endif
+
         </div>
 
     </div>

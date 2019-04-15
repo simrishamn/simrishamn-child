@@ -153,6 +153,9 @@ class Template
         // Add social media title
         $data['footerData']['social'] = __('Follow us in social media', 'simrishamn');
 
+        // Add presented by text
+        $data['footerData']['presentedBy'] = get_field_object('presented_by', 'option')['value'];
+
         return $data;
     }
 
