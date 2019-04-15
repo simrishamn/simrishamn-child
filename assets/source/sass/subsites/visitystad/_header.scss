@@ -1,8 +1,8 @@
 .c-header--customizer {
-    background-color: #72b6c1;
+    background-color: $header-bg;
 
     .widget_text h3 {
-        color: #fafafa;
+        color: $simrishamn-darker-gray;
         font-weight: 900;
         font-size: 2rem;
         padding-bottom: 0;
