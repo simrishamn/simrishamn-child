@@ -1,5 +1,5 @@
 .color-bars {
-    background-color: #72b6c1;
+    background-color:$header-bg;
 
     .color-1,
     .color-2,
@@ -12,7 +12,7 @@
 .main-footer {
     .logotype {
         span.h1 {
-            color: #72b6c1;
+            color: $header-bg;
         }
     }
 }
