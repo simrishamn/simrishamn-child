@@ -1,0 +1,44 @@
+[
+    {
+        "key": "group_5cb44283241e3",
+        "title": "Presented by",
+        "fields": [
+            {
+                "key": "field_5cb442e948ceb",
+                "label": "Presented by",
+                "name": "presented_by",
+                "type": "text",
+                "instructions": "Shows a presented by text at the bottom of the footer.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "acf-options-footer"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]

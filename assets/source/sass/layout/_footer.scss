@@ -62,6 +62,14 @@
                 max-width: 100%;
             }
         }
+
+        .presented-by {
+            text-align: center;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid $breadcrumbs-background;
+        }
+
     }
 }
 
