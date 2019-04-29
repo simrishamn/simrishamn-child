@@ -1,0 +1,14 @@
+.slider {
+    .text-block {
+        color: $simrishamn-darker-gray;
+        background-color: rgba($header-bg, 0.8) !important;
+    }
+
+    .flickity-page-dots {
+        .dot {
+            &.is-selected {
+                background-color: $simrishamn-darker-gray;
+            }
+        }
+    }
+}
