@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html @php language_attributes(); @endphp>
     <head>
-        <meta property="og:title" content="{{ $title }}" />
+        <meta property="og:title" content="{!! $title !!}" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="{{ the_permalink() }}" />
         @if(has_post_thumbnail())
