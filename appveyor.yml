@@ -11,18 +11,18 @@ for:
         - /\d+\.\d+\.\d+/
 
 cache:
-  - node_modules -> package.json
+  - node_modules -> package.json, package-lock.json
 
 install:
   - sudo apt-get update
-  - sudo apt-get -fy install composer httpie slugify
-  - npm install
+  - sudo apt-get -fy install composer httpie php-codesniffer slugify
 
 before_build:
   - 'PROJECT="$(composer config name)"'
   - 'TAG="$(git describe --match="[0-9]*" --abbrev=0)"'
   - 'BUILD="$TAG.$APPVEYOR_BUILD_NUMBER"'
-  - 'VERSION="${APPVEYOR_REPO_TAG_NAME:-$BUILD}"'
+  - 'SUFFIX="$(test -z $APPVEYOR_REPO_TAG_NAME && echo "-dev" || true)"'
+  - 'VERSION="${APPVEYOR_REPO_TAG_NAME:-$BUILD}${SUFFIX}"'
   - 'ARTIFACT="$(slugify $PROJECT $VERSION).zip"'
 
 build_script:

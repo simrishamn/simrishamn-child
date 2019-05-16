@@ -1,8 +1,10 @@
-@php ($title = apply_filters('Municipio/pageTitle', wp_title('|', false, 'right') . get_bloginfo('name')))
+@php
+    $title = apply_filters('Municipio/pageTitle', wp_title('|', false, 'right') . get_bloginfo('name'));
+@endphp
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html @php language_attributes(); @endphp>
     <head>
-        <meta property="og:title" content="{{ $title }}" />
+        <meta property="og:title" content="{!! $title !!}" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="{{ the_permalink() }}" />
         @if(has_post_thumbnail())
@@ -12,7 +14,7 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
         <title>{{ $title }}</title>
@@ -33,7 +35,7 @@
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="format-detection" content="telephone=yes">
         <meta name="HandheldFriendly" content="true" />
-        @if( defined('GOOGLE_SITE_VERIFICATION'))
+        @if (defined('GOOGLE_SITE_VERIFICATION'))
             <meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION }}" />
         @endif
         <script>
@@ -88,7 +90,7 @@
 	            @endif
                     <div class="grid" id="content-area-bottom">
 
-	                <?php dynamic_sidebar('content-area-bottom'); ?>
+	                @php dynamic_sidebar('content-area-bottom'); @endphp
                     </div>
                             </section>
                 @endif

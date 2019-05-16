@@ -12,7 +12,7 @@ class Enqueue
      */
     public function __construct()
     {
-        add_action('wp_enqueue_scripts', [$this, 'enqueueScripts']);
+        add_action('wp_enqueue_scripts', [$this, 'enqueueTheme']);
         add_action('admin_enqueue_scripts', [$this, 'enqueueAdmin']);
 
         add_filter('mce_css', [$this, 'enqueueEditorStyle']);
@@ -51,11 +51,6 @@ class Enqueue
         $mtime = filemtime(get_stylesheet_directory() . '/' . $path);
 
         wp_enqueue_script($name, $uri, '', $mtime, true);
-    }
-
-    public function enqueueScripts()
-    {
-        $this->enqueueTheme();
     }
 
     /**

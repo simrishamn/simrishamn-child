@@ -1,0 +1,21 @@
+.c-header--customizer {
+    background-color: $header-bg;
+
+    .widget_text {
+        margin-left: 15px;
+        line-height: 1.5;
+
+        h3 {
+            color: $simrishamn-darker-gray;
+            font-weight: 900;
+            font-size: 1.5rem;
+            padding-bottom: 0;
+            margin-left: 0;
+        }
+
+        p {
+            font-weight: 600;
+        }
+    }
+
+}

@@ -1,0 +1,18 @@
+.color-bars {
+    background-color:$header-bg;
+
+    .color-1,
+    .color-2,
+    .color-3,
+    .color-4 {
+        display: none;
+    }
+}
+
+.main-footer {
+    .logotype {
+        span.h1 {
+            color: $header-bg;
+        }
+    }
+}
