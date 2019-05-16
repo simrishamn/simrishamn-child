@@ -1,5 +1,10 @@
 # Simrishamn Changelog
 
+## 2019-05-16 - 19.05.0
+* SIEW-280: Add fourth column to footer
+* SIEW-314: Use blade PHP tags
+* SIEW-318: Fix escape characters in Facebook sharing
+
 ## 2019-04-01 - 19.04.0
 * SIEW-255: Add styling for algolia search
 * SIEW-311: News no longer show twice if featured
