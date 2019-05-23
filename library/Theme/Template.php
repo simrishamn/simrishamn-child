@@ -147,6 +147,8 @@ class Template
             ];
         }
 
+        $data['footerData'] = $this->removeEmptyValuesFooter($data['footerData']);
+
         // Add amount of columns
         $data['footerData']['columns'] = $columns;
 
@@ -156,6 +158,34 @@ class Template
         // Add presented by text
         $data['footerData']['presentedBy'] = get_field_object('presented_by', 'option')['value'];
 
+        return $data;
+    }
+
+    /**
+     * Removes empty values inside row array,
+     * this function is very specific to footer data
+     * 
+     * @param array $data Array of footer data
+     * 
+     * @return array $data Footer data without empty values
+     */
+    public function removeEmptyValuesFooter($data) : array
+    {
+        foreach ($data as $type => &$array) {
+            if ($type == 'links') {
+                continue;
+            }
+
+            foreach ($array as $key => &$item) {
+                if (
+                    (is_array($item['value']) && empty(trim($item['value'][0]['row']))) ||
+                    (is_string($item['value']) && empty(trim($item['value'])))
+                ) {
+                    unset($array[$key]);
+                }
+            }
+        }
+        
         return $data;
     }
 
