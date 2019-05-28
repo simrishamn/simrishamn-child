@@ -164,9 +164,9 @@ class Template
     /**
      * Removes empty values inside row array,
      * this function is very specific to footer data
-     * 
+     *
      * @param array $data Array of footer data
-     * 
+     *
      * @return array $data Footer data without empty values
      */
     public function removeEmptyValuesFooter($data) : array
@@ -177,15 +177,14 @@ class Template
             }
 
             foreach ($array as $key => &$item) {
-                if (
-                    (is_array($item['value']) && empty(trim($item['value'][0]['row']))) ||
+                if ((is_array($item['value']) && empty(trim($item['value'][0]['row']))) ||
                     (is_string($item['value']) && empty(trim($item['value'])))
                 ) {
                     unset($array[$key]);
                 }
             }
         }
-        
+
         return $data;
     }
 
@@ -199,7 +198,7 @@ class Template
      */
     public function getLabelFromTitle($haystack, $needle) : ?string
     {
-        foreach($haystack as $key => $value) {
+        foreach ($haystack as $key => $value) {
             if (is_array($value)) {
                 $sub = $this->getLabelFromTitle($value, $needle);
 
