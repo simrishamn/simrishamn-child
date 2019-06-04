@@ -89,7 +89,7 @@
                         "key": "field_5ae1e878d8b7c",
                         "label": "Opening Times",
                         "name": "opening_times",
-                        "type": "text",
+                        "type": "repeater",
                         "instructions": "",
                         "required": 1,
                         "conditional_logic": 0,
@@ -98,11 +98,32 @@
                             "class": "",
                             "id": ""
                         },
-                        "default_value": "Måndag-Fredag kl. 08:00-16:30",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "maxlength": ""
+                        "collapsed": "",
+                        "min": 1,
+                        "max": 0,
+                        "layout": "table",
+                        "button_label": "",
+                        "sub_fields": [
+                            {
+                                "key": "field_5ce299ce06b62",
+                                "label": "Row",
+                                "name": "row",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "Måndag-Fredag kl. 08:00-16:30",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            }
+                        ]
                     },
                     {
                         "key": "field_5ae1e8d0d8b7d",

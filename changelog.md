@@ -1,5 +1,9 @@
 # Simrishamn Changelog
 
+## 2019-06-04 - 19.06.0
+* SIEW-280: Add support for multiple rows on Opening Times
+* NOJIRA: Remove arrays with empty values in footer
+
 ## 2019-05-16 - 19.05.0
 * SIEW-280: Add fourth column to footer
 * SIEW-314: Use blade PHP tags
