@@ -1,0 +1,8 @@
+.accordion-toggle {
+    background: $header-bg;
+    color: $simrishamn-darker-gray;
+
+    &::before {
+        color: $simrishamn-darker-gray;
+    }
+}
