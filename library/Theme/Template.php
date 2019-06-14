@@ -171,6 +171,10 @@ class Template
      */
     public function removeEmptyValuesFooter($data) : array
     {
+        if (!$data) {
+            return [];
+        }
+        
         foreach ($data as $type => &$array) {
             if ($type == 'links') {
                 continue;
