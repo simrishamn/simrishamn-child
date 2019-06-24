@@ -1,5 +1,9 @@
 # Simrishamn Changelog
 
+## 2019-06-20 - 19.06.1
+* SIEW-329: Change colors of VisitYstad accordions
+* NOJIRA: Fixes error when footer is empty
+
 ## 2019-06-04 - 19.06.0
 * SIEW-280: Add support for multiple rows on Opening Times
 * NOJIRA: Remove arrays with empty values in footer
