@@ -1,5 +1,9 @@
 # Simrishamn Changelog
 
+## 2019-07-23 - 19.07.0
+* NOJIRA: Update README.md
+* NOJIRA: Upgrade NPM packages
+
 ## 2019-06-20 - 19.06.1
 * SIEW-329: Change colors of VisitYstad accordions
 * NOJIRA: Fixes error when footer is empty
