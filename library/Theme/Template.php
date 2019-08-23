@@ -181,6 +181,10 @@ class Template
             }
 
             foreach ($array as $key => &$item) {
+                if (!isset($item['value'])) {
+                    continue;
+                }
+                
                 if ((is_array($item['value']) && empty(trim($item['value'][0]['row']))) ||
                     (is_string($item['value']) && empty(trim($item['value'])))
                 ) {
