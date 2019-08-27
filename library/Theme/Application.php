@@ -16,5 +16,6 @@ class Application
         new Template();
         new TinyMCE();
         new GlobalNotice();
+        new Recaptcha();
     }
 }
