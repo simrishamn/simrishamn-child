@@ -1,5 +1,8 @@
 # Simrishamn Changelog
 
+## 2019-08-29 - 19.08.0
+* SIEW-335: Add ReCAPTCHA to login page
+
 ## 2019-07-23 - 19.07.0
 * NOJIRA: Update README.md
 * NOJIRA: Upgrade NPM packages
