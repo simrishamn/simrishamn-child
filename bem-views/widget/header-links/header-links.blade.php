@@ -3,9 +3,6 @@
     @section('widget')
         <ul class="c-navbar c-navbar--header-widget-links {{$themeClass}}">
             @foreach ($links as $link)
-                @if ($link['acf_fc_layout'] == 'search_trigger')
-                    {{ ${$link['attributes'] = ' id="nav-search"'} }}
-                @endif
                 <li class="c-navbar__item">
                     @if (isset($link['template']) && $link['template'])
                         @include($link['template'])

@@ -2,7 +2,7 @@
     $title = apply_filters('Municipio/pageTitle', wp_title('|', false, 'right') . get_bloginfo('name'));
 @endphp
 <!DOCTYPE html>
-<html @php language_attributes(); @endphp>
+<html {!! $languageAttributes !!}>
     <head>
         <meta property="og:title" content="{!! $title !!}" />
         <meta property="og:type" content="website" />
@@ -39,7 +39,7 @@
             <meta name="google-site-verification" content="{{ GOOGLE_SITE_VERIFICATION }}" />
         @endif
         <script>
-         var ajaxurl = '{!! apply_filters('Municipio/ajax_url_in_head', admin_url('admin-ajax.php')) !!}';
+            var ajaxurl = '{!! apply_filters('Municipio/ajax_url_in_head', admin_url('admin-ajax.php')) !!}';
         </script>
 
         <!--[if lt IE 9]>
@@ -57,7 +57,7 @@
 
         {!! wp_head() !!}
     </head>
-    <body {!! body_class('no-js') !!}>
+    <body class="{{ $bodyClass }} {!! body_class('no-js') !!}">
         <!--[if lt IE 9]>
             <div class="notice info browserupgrade">
             <div class="container">
@@ -73,28 +73,29 @@
             </div>
         <![endif]-->
         <div id="wrapper">
-	    @if (get_field('show_google_translate', 'option') == 'header')
-                @include('partials.translate')
-	    @endif
 
-	    @include('partials.header')
+        {{-- Site header --}}
+        @section('header')
+            @if (isset($headerLayout['template']))
+                @includeIf('partials.header.' . $headerLayout['template'])
+            @endif
+        @show
 
-            <main class="clearfix main-content" role="main">
-                @yield('content')
+        <main class="clearfix main-content" role="main">
+            @yield('content')
 
-                @if (is_active_sidebar('content-area-bottom'))
-	            @if(is_front_page())
-	                <section class="gutter-xl gutter-vertical sidebar-content-area-bottom clear-below">
-	            @else
-	                    <section class="gutter-xl gutter-vertical sidebar-content-area-bottom">
-	            @endif
-                    <div class="grid" id="content-area-bottom">
-
-	                @php dynamic_sidebar('content-area-bottom'); @endphp
-                    </div>
-                            </section>
-                @endif
-            </main>
+            @if (is_active_sidebar('content-area-bottom'))
+            @if(is_front_page())
+                <section class="gutter-xl gutter-vertical sidebar-content-area-bottom clear-below">
+            @else
+                <section class="gutter-xl gutter-vertical sidebar-content-area-bottom">
+            @endif
+                <div class="grid" id="content-area-bottom">
+                    @php dynamic_sidebar('content-area-bottom'); @endphp
+                </div>
+            </section>
+            @endif
+        </main>
 
             @include('partials.footer')
 
@@ -109,12 +110,12 @@
             @endif
         </div>
         @if(get_field('scroll_elevator'))
-	    <div class="sticky-scroll-elevator">
-	        <a href="#main-content">
-		    <i></i>
-		    <span>Till toppen</span>
-	        </a>
-	    </div>
+        <div class="sticky-scroll-elevator">
+            <a href="#main-content">
+            <i></i>
+            <span>Till toppen</span>
+            </a>
+        </div>
         @endif
 
         {!! wp_footer() !!}
