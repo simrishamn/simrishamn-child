@@ -1,3 +1,116 @@
+header#site-header {
+    .customizer-header-top {
+        line-height: 2.6;
+        background: $simrishamn-blue;
+        box-shadow: 0 1px 2px 2px rgba(#000, 0.4);
+        position: relative;
+        z-index: 1;
+
+        .container {
+            padding: 0;
+
+            .grid.c-header__body {
+                height: 130px;
+
+                > div {
+                    &:nth-child(1) {
+                        display: block;
+                        width: auto;
+                    }
+
+                    &:nth-child(1),
+                    &:nth-child(2) {
+                        justify-content: flex-start;
+                    }
+
+                    &:nth-child(3) {
+                        justify-content: flex-end;
+
+                        .search {
+                            justify-content: flex-end;
+                            margin-bottom: 15px;
+                            font-size: 12px;
+                            padding: 40px 40px 0px 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .widget_text {
+            h3 {
+                text-transform: uppercase;
+                font-size: 19px;
+                line-height: 24px;
+                font-weight: 400;
+                color: $simrishamn-white;
+            }
+        }
+
+        .widget_search,
+        .search-top {
+            margin: 0;
+            width: auto;
+
+            ::-moz-placeholder {
+                color: black;
+                opacity: 1;
+            }
+
+            form {
+                padding: 0;
+            }
+
+            .input-group {
+                width: 300px;
+
+                ::placeholder {
+                    opacity: 1;
+                }
+
+                @media screen and #{$screen-md-up} {
+                    max-width: 350px;
+                }
+            }
+
+            .input-group-addon-btn {
+                .btn {
+                    background: #fff;
+                    color: $simrishamn-blue;
+                    font-size: 14px;
+                    margin-bottom: 5px;
+
+                    &:hover,
+                    &:focus {
+                        background: $simrishamn-gray;
+                    }
+                }
+            }
+
+            .search {
+                display: flex;
+                flex-wrap: no-wrap;
+                align-items: center;
+                margin: -15px;
+            }
+        }
+    }
+
+    .customizer-header-primary {
+        color: $simrishamn-black;
+        background-color: $simrishamn-menu-background-blue;
+        padding: 5px 25px 15px;
+
+        a {
+            color: $simrishamn-black;
+        }
+
+        .grid {
+            padding: 0;
+        }
+    }
+}
+
 /* === Header === */
 .c-header--top {
     line-height: 2.6;
