@@ -1,7 +1,6 @@
 @extends('partials.header')
 
 @section('before-header-body')
-
     <div class="print-only container">
         <div class="grid">
             <div class="grid-sm-12">
@@ -12,7 +11,13 @@
 @stop
 
 @section('after-header-body')
-
+    @if(!Simrishamn\Theme\Helper::isTemplate('global-notice'))
+        @if ($notice['active'])
+            <div class="global-notice">
+                @include('partials.notice')
+            </div>
+        @endif
+    @endif
 @stop
 
 @section('header-body')
