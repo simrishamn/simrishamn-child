@@ -17,7 +17,7 @@ class Helper
     public static function shortText($text, $len, $ellipsis = true)
     {
         if (strlen($text) > $len) {
-            $text = rtrim(substr($text, 0, $len));
+            $text = rtrim(mb_substr($text, 0, $len));
             return $text . ($ellipsis ? '...' : '');
         }
         return $text;
