@@ -1,4 +1,6 @@
 # Simrishamn Changelog
+## 2019-10-10 - 19.10.0
+* SIEW-337 Make Helper shortText method to use multi-byte safe substr
 
 ## 2019-08-29 - 19.08.0
 * SIEW-335: Add ReCAPTCHA to login page
