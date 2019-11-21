@@ -42,8 +42,9 @@ header#site-header {
         }
 
         .widget_text {
+            text-transform: uppercase;
+            
             h3 {
-                text-transform: uppercase;
                 font-size: 19px;
                 line-height: 24px;
                 font-weight: 400;
