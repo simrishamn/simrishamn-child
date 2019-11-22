@@ -1,16 +1,28 @@
-.c-header__logo.t-municipio a img, .c-header__logo.t-municipio a svg {
-    min-width: 250px;
+.c-header__logo a img,
+.c-header__logo a svg {
+    max-width: 250px;
+    width: auto;
+
+    @media screen and (max-width: 32.4375em) {
+        max-width: 180px;
+    }
 }
 
-.c-header--customizer {
+header {
+    &#site-header {
+        .c-header--customizer {
+            &.customizer-header-top {
+                background:url('./../../images/subsites/simrishamnsbostader/sinab-header.png') no-repeat bottom center;
+                background-size:cover;
+            }
+        
+            &.customizer-header-primary {
+                background-color: #666666;
 
-    &.c-header--top {
-        background:url('./../../images/subsites/simrishamnsbostader/sinab-header.png') no-repeat bottom center;
-        background-size:cover;
+                a {
+                    color: #ffffff;
+                }
+            }
+        }
     }
-
-    &.c-header--primary {
-        background-color: #666666;
-    }
-
 }
