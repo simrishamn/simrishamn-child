@@ -293,12 +293,11 @@ header#site-header {
 
 /* --- Navbar --- */
 nav {
-    &:not(#mobile-menu) {
-        margin-left: 5%;
-    }
-
     .c-navbar {
         margin:-5px -15px -15px -15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .c-navbar .c-navbar__item {
