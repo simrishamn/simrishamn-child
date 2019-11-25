@@ -33,14 +33,14 @@
                                 </div>
                             </div>
                         </div>
-                        @include('partials.navigation.search-top')
-                        <nav id="mobile-menu"
-                             class="nav-mobile-menu nav-toggle nav-toggle-expand
-                                 {!! apply_filters('Municipio/mobile_menu_breakpoint','hidden-md hidden-lg'); !!}
-                                 hidden-print">
-                            @include('partials.mobile-menu')
-                        </nav>
                     </div>
+                    @include('partials.navigation.search-top')
+                    <nav id="mobile-menu"
+                            class="nav-mobile-menu nav-toggle nav-toggle-expand
+                                {!! apply_filters('Municipio/mobile_menu_breakpoint','hidden-md hidden-lg'); !!}
+                                hidden-print">
+                        @include('partials.mobile-menu')
+                    </nav>
                 @else
                     <div {!! $header->wrapper !!}>
                         <div {!! $header->container !!}>
