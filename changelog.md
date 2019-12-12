@@ -1,5 +1,8 @@
 # Simrishamn Changelog
 
+## 2019-12-12 - 19.12.0
+* SIEW-292: Sync Municipio
+
 ## 2019-11-07 - 19.11.0
 * SIEW-340: Update ESLint Utils from 1.4.0 to 1.4.3
 
