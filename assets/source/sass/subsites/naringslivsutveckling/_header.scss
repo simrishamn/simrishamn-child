@@ -1,16 +1,24 @@
-.c-header__logo.t-municipio a img, .c-header__logo.t-municipio a svg {
-    min-width: 250px;
+.c-header__logo a img,
+.c-header__logo a svg {
+    max-width: 250px;
+    width: auto;
+
+    @media screen and (max-width: 32.4375em) {
+        max-width: 180px;
+    }
 }
 
-.c-header--customizer {
-
-    &.c-header--top {
-        background:url('./../../images/subsites/naringslivsutveckling/header-naringslivsutveckling.png') no-repeat bottom center;
-        background-size:cover;
+header {
+    &#site-header {
+        .c-header--customizer {
+            &.customizer-header-top {
+                background:url('./../../images/subsites/naringslivsutveckling/header-naringslivsutveckling.png') no-repeat bottom center;
+                background-size:cover;
+            }
+        
+            &.customizer-header-primary {
+                background-color: #b1cb34;
+            }
+        }
     }
-
-    &.c-header--primary {
-        background-color: #b1cb34;
-    }
-
 }
