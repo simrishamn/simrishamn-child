@@ -2,7 +2,8 @@ $header-bg: #f0eae5;
 
 &.visit-ystad,
 &.skane-sydost,
-&.vad-hander {
+&.vad-hander,
+&.vad-hander-i-sydostra-skane {
     @import 'header';
     @import 'slider';
     @import 'accordion';
