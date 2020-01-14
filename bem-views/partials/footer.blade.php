@@ -121,7 +121,10 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz
         background-color: rgb(0,0,0); /* Fallback color */
         background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
       }
-
+      main.clearfix.main-content {
+    position: relative;
+    z-index: 0;
+}
       /* Modal Content */
       .modal-content1 {
         background-color: #fefefe;
