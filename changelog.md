@@ -1,6 +1,10 @@
 # Simrishamn Changelog
 
 ## 2019-12-19 - 19.12.1
+* SIEW-Transtaltion: Updated Translation
+
+
+## 2019-12-19 - 19.12.1
 * SIEW-357: Updated api-event-manager-integration
 * SIEW-358: Update VisitYstad possible css names
 ​
