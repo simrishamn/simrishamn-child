@@ -161,9 +161,8 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz
 
 
 
-
     <script>
-      // Get the modal
+
       var modal = document.getElementById("myModal1");
 
       // Get the button that opens the modal
