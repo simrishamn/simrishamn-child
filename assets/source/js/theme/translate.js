@@ -10,6 +10,7 @@ function initTranslate() {
     buttons.forEach((button) => {
         button.onclick = () => {
             modal.style.display = 'block';
+            return false;
         };
     });
 
