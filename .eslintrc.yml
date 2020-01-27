@@ -9,3 +9,4 @@ globals:
   tinymce: true
 rules:
   indent: ["error", 4]
+  no-param-reassign: [2, { "props": false }]
