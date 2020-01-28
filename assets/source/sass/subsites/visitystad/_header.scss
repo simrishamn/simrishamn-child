@@ -7,6 +7,10 @@ header {
                 color: #000000;
             }
 
+            a:hover {
+                background-color: rgba(0, 0, 0, 0.05);
+            }
+
             .widget_text {
                 margin-left: 15px;
                 line-height: 1.5;

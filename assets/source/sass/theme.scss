@@ -2,6 +2,7 @@
 @import 'config/grid';
 @import 'config/variables';
 @import 'layout/master';
+@import 'layout/translate';
 
 .is-child-theme {
     @import 'mixin/form';
