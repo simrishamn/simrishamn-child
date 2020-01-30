@@ -17,5 +17,6 @@ class Application
         new TinyMCE();
         new GlobalNotice();
         new Recaptcha();
+        new Widget();
     }
 }

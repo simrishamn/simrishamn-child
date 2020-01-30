@@ -1,9 +1,12 @@
 # Simrishamn Changelog
 
+## 2020-01-30 - 20.01.0
+* SIEW-364: Redo translation modal
+
 ## 2019-12-19 - 19.12.1
-* SIEW-357: Updated api-event-manager-integration
+* SIEW-357: Update api-event-manager-integration
 * SIEW-358: Update VisitYstad possible css names
-​
+
 ## 2019-12-12 - 19.12.0
 * SIEW-292: Sync Municipio
 
