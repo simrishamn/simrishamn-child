@@ -1,5 +1,8 @@
 # Simrishamn Changelog
 
+## 2020-03-19 - 20.03.0
+* SIEW-367: Add template override for search
+
 ## 2020-01-30 - 20.01.0
 * SIEW-364: Redo translation modal
 

@@ -81,7 +81,7 @@
             @endif
         @show
 
-        @include('partials.translate-modal');
+        @include('partials.translate-modal')
 
         <main class="clearfix main-content" role="main">
             @yield('content')
