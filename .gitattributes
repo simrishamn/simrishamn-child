@@ -1,0 +1,16 @@
+*.php text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.sass text eol=lf
+*.scss text eol=lf
+*.xml text eol=lf
+*.svg text eol=lf
+*.json text eol=lf
+*.po text eol=lf
+*.md text eol=lf
+*.sh text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.webmanifest text eol=lf
+.* text eol=lf
