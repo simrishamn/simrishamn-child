@@ -48,8 +48,9 @@
           <div class="input-group">
             <span class="input-group-addon">{{ __('From', 'municipio') }}:</span>
             <input type="text" name="from" placeholder="{{ __('From date', 'municipio') }}…" id="filter-date-from" class="form-control datepicker-range datepicker-range-from" value="{{ isset($_GET['from']) && !empty($_GET['from']) ? sanitize_text_field($_GET['from']) : '' }}" readonly>
+            <label for="filter-date-to" class="text-sm sr-only"><strong>{{ __('To published', 'municipio') }}:</strong></label>
             <span class="input-group-addon">{{ __('To', 'municipio') }}:</span>
-            <input type="text" name="to" placeholder="{{ __('To date', 'municipio') }}" class="form-control datepicker-range datepicker-range-to" value="{{ isset($_GET['to']) && !empty($_GET['to']) ? sanitize_text_field($_GET['to']) : '' }}" readonly>
+            <input type="text" name="to" placeholder="{{ __('To date', 'municipio') }}" id="filter-date-to" class="form-control datepicker-range datepicker-range-to" value="{{ isset($_GET['to']) && !empty($_GET['to']) ? sanitize_text_field($_GET['to']) : '' }}" readonly>
           </div>
         </div>
       @endif
@@ -57,7 +58,7 @@
       @if (isset($enabledTaxonomyFilters->primary) && !empty($enabledTaxonomyFilters->primary))
         @foreach ($enabledTaxonomyFilters->primary as $taxKey => $tax)
           <div class="grid-sm-12 {{ $tax->type == 'multi' ? 'grid-md-fit-content' : 'grid-md-auto' }}">
-            <label for="filter-{{ $taxKey }}" class="text-sm sr-only">{{ $tax->label }}</label>
+            <label for="filter[{{ $taxKey }}]" class="text-sm sr-only">{{ $tax->label }}</label>
             @if ($tax->type === 'single')
               @include('partials.archive-filters.select')
             @else
