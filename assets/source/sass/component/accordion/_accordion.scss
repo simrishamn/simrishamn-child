@@ -37,6 +37,7 @@
     $paddingY: 15px;
 
     height: 75px;
+    width: 100%;
     padding: $paddingX $paddingY;
     background: $simrishamn-blue;
     color: $simrishamn-white;
@@ -44,6 +45,7 @@
     z-index: 1;
     outline: 0;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    border: none;
 
     h3,
     h4 {
@@ -73,6 +75,11 @@
         top: 50%;
         transform: translateY(-50%);
         padding-right: calc(#{$paddingY} * 2 + 2em);
+    }
+
+    &:focus {
+        box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5) !important;
+        border: none !important;
     }
 }
 

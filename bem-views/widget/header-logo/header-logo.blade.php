@@ -32,8 +32,8 @@
         @endif
     </style>
     <div class="c-header__logo {{$themeClass}}" data-tooltip="{{ $language['logoLabel'] }}">
-        <a href="{{$home}}" title="{{ $language['logoLabel'] }}">
-            {!! $logotype !!}
-        </a>
+    <div class="logo-container">
+            {!! municipio_get_logotype('standard') !!}
+        </div>
     </div>
 @stop
