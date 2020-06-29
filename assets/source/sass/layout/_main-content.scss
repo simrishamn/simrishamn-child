@@ -48,6 +48,14 @@
         .share-social a {
             color: #666666;
         }
+
+        article a {
+            color: #0074C7 !important;
+        }
+
+        article a:hover {
+            text-decoration: underline !important;
+        }
     }
 
     .post-date {
