@@ -36,6 +36,15 @@
     }
 }
 
+.mod-table {
+    .box-panel-secondary {
+        label, .dataTables_info, a {
+            color: white !important;
+            opacity: 1 !important;
+        }
+    }
+}
+
 .box-title {
     font-family: 'Open Sans', serif !important;
     padding: 15px;
