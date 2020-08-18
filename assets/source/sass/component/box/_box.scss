@@ -38,7 +38,11 @@
 
 .mod-table {
     .box-panel-secondary {
-        label, .dataTables_info, a {
+        a {
+            color: #0069B3 !important;
+        }
+
+        label, .dataTables_info, .paginate_button {
             color: white !important;
             opacity: 1 !important;
         }
