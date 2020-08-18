@@ -43,6 +43,11 @@ html.translated-ltr #site-header {
     }
 }
 
+#cookie-consent .btn-primary, .social-feed-button a.btn  {
+    background-color: #0069B3 !important;
+    border-color: #0069B3 !important;
+}
+
 .title-blue {
     background-color: $simrishamn-blue !important;
     color: white;

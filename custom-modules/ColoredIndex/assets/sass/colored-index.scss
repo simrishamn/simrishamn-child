@@ -1,9 +1,19 @@
 .index-content {
+	color: black !important;
     justify-content: space-between;
     flex-direction: column;
     display: flex;
     text-align: center;
     width: 100%;
+
+    &.box-post-brick {
+        color: white !important;
+
+        .btn-plain {
+            color: white !important;
+            border-color: white !important;
+        }
+    }
 
     .box-title {
         border-bottom: 1px solid $body-background;
@@ -20,8 +30,8 @@
 
     .btn-plain {
         background-color: transparent;
-        color: white;
-        border: 1px solid white;
+        color: black !important;
+        border: 1px solid black;
         padding: 5px 50px 5px 50px;
         margin-top: 20px;
         margin-bottom: 10px;

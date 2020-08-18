@@ -77,6 +77,12 @@
     }
 }
 
+.box-panel-secondary {
+    .link-item::before {
+        color: #0069B3;
+    }
+}
+
 .modularity-mod-iframe {
     .box-title {
         color: $base-font-color;
