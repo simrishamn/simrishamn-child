@@ -83,7 +83,7 @@
 
         @include('partials.translate-modal')
 
-        <main class="clearfix main-content" role="main">
+        <main class="clearfix main-content" role="main" id="main-content">
             @yield('content')
 
             @if (is_active_sidebar('content-area-bottom'))
