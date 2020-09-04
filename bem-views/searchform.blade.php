@@ -16,7 +16,7 @@
         @endif
             <input itemprop="query-input" id="searchkeyword-{{ $searchFormNode }}" autocomplete="off" class="form-control form-control-lg" type="search" name="s" placeholder="{{ get_field('search_placeholder_text', 'option') ? get_field('search_placeholder_text', 'option') : 'What are you looking for?' }}" value="{{ (!empty(get_search_query())) ? get_search_query() : '' }}">
             <span class="input-group-addon-btn">
-                <input type="submit" class="btn btn-primary btn-lg" value="{{ get_field('search_button_text', 'option') ? get_field('search_button_text', 'option') : __('Search', 'municipio') }}">
+                <input type="submit" class="btn btn-lg" value="{{ get_field('search_button_text', 'option') ? get_field('search_button_text', 'option') : __('Search', 'municipio') }}">
             </span>
       </div>
     </form>
