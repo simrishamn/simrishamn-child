@@ -43,9 +43,14 @@ html.translated-ltr #site-header {
     }
 }
 
-#cookie-consent .btn-primary, .social-feed-button a.btn  {
+.btn-primary, #cookie-consent .btn-primary, .social-feed-button a.btn {
     background-color: #0069B3 !important;
     border-color: #0069B3 !important;
+}
+
+aside .btn-primary {
+    background-color: #5ba1d8 !important;
+    border-color: #5ba1d8 !important;
 }
 
 .title-blue {
