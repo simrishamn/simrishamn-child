@@ -111,20 +111,12 @@ aside .btn-primary {
     }
 }
 
-.index-info .title-red div a.btn-plain {
-    color: white !important;
-}
-
-.index-info .title-blue div a.btn-plain {
-    color: white !important;
-}
-
-.index-info .title-green div a.btn-plain {
-    color: white !important;
-}
-
-.index-info .title-blue-gray div a.btn-plain {
-    color: white !important;
+.index-info {
+    .title-red, .title-blue, .title-green, .title-blue-gray {
+        div a.btn-plain {
+            color: white !important;
+        }
+    }
 }
 
 .content-red {
