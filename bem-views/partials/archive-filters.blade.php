@@ -31,7 +31,8 @@
       @endforeach
     @endif
 
-    <div class="grid">
+    <div role="group" aria-labelledby="filtering-label" class="grid">
+    <label class="text-sm sr-only" id="filtering-label">Filtreringsval</label>
       @if (in_array('text_search', $enabledHeaderFilters))
         <div class="grid-sm-12 grid-md-auto">
           <label for="filter-keyword" class="text-sm sr-only"><strong>{{ __('Search', 'municipio') }}:</strong></label>
@@ -46,10 +47,12 @@
         <div class="grid-sm-12 grid-md-auto">
           <label for="filter-date-from" class="text-sm sr-only"><strong>{{ __('Date published', 'municipio') }}:</strong></label>
           <div class="input-group">
-            <span class="input-group-addon">{{ __('From', 'municipio') }}:</span>
+            <label class="input-group-addon" for="filter-date-from">{{ __('From', 'municipio') }}:</label>
             <input type="text" name="from" placeholder="{{ __('From date', 'municipio') }}…" id="filter-date-from" class="form-control datepicker-range datepicker-range-from" value="{{ isset($_GET['from']) && !empty($_GET['from']) ? sanitize_text_field($_GET['from']) : '' }}" readonly>
-            <span class="input-group-addon">{{ __('To', 'municipio') }}:</span>
-            <input type="text" name="to" placeholder="{{ __('To date', 'municipio') }}" class="form-control datepicker-range datepicker-range-to" value="{{ isset($_GET['to']) && !empty($_GET['to']) ? sanitize_text_field($_GET['to']) : '' }}" readonly>
+
+            <label for="filter-date-to" class="text-sm sr-only"><strong>{{ __('To published', 'municipio') }}:</strong></label>
+            <label class="input-group-addon" for="filter-date-to">{{ __('To', 'municipio') }}:</label>
+            <input type="text" name="to" placeholder="{{ __('To date', 'municipio') }}" id="filter-date-to" class="form-control datepicker-range datepicker-range-to" value="{{ isset($_GET['to']) && !empty($_GET['to']) ? sanitize_text_field($_GET['to']) : '' }}" readonly>
           </div>
         </div>
       @endif
@@ -57,7 +60,7 @@
       @if (isset($enabledTaxonomyFilters->primary) && !empty($enabledTaxonomyFilters->primary))
         @foreach ($enabledTaxonomyFilters->primary as $taxKey => $tax)
           <div class="grid-sm-12 {{ $tax->type == 'multi' ? 'grid-md-fit-content' : 'grid-md-auto' }}">
-            <label for="filter-{{ $taxKey }}" class="text-sm sr-only">{{ $tax->label }}</label>
+            <label for="filter[{{ $taxKey }}]" class="text-sm sr-only">{{ $tax->label }}</label>
             @if ($tax->type === 'single')
               @include('partials.archive-filters.select')
             @else
@@ -105,8 +108,8 @@
           @foreach ($enabledTaxonomyFilters->folded as $taxKey => $taxonomy)
             <div class="grid-md-4">
               <div class="box box-panel box-panel-secondary" data-equal-item>
-                <h4 class="box-title">{{ $taxonomy->label }}</h4>
-                <div class="box-content">
+                <h4 class="box-title" id="box-panel-title">{{ $taxonomy->label }}</h4>
+                <div role="group" aria-labelledby="box-panel-title" class="box-content">
                   @php $taxonomy->slug = $taxKey; $dropdown = \Municipio\Content\PostFilters::getMultiTaxDropdown($taxonomy, 0, 'list-hierarchical'); @endphp
                   {!! $dropdown !!}
                 </div>

@@ -54,7 +54,7 @@
       </div>
     @endif
 
-    <div id="main-content" class="{{ $cols }} archive-content-wrapper">
+    <div class="{{ $cols }} archive-content-wrapper">
       @if (is_active_sidebar('content-area-top'))
         <div class="grid sidebar-content-area sidebar-content-area-top">
 	  @if (get_field('archive_' . sanitize_title($postType) . '_filter_position', 'option') == 'top')

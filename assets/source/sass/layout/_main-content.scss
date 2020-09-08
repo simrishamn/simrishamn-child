@@ -28,17 +28,39 @@
             .share-page-container {
                 margin-top: 5px;
                 margin-bottom: 15px;
+
+                .box {
+                    border: 1px solid #666666 !important;
+                }
             }
 
             .taxonomies-container {
                 margin-bottom: 15px;
             }
         }
+
+        .page-numbers {
+            a.page-numbers {
+                border: 1px solid #6F6F6F !important;
+            }
+        }
+
+        .share-social a {
+            color: #666666;
+        }
+
+        article a {
+            color: #0074C7;
+        }
+
+        article a:hover {
+            text-decoration: underline !important;
+        }
     }
 
     .post-date {
         font-size: .85em;
-        color: #777;
+        color: #666666;
     }
 
     .comment-form-comment {

@@ -3,7 +3,7 @@
 @stop
 
 <header id="site-header" class="{{ apply_filters('Views/Partials/Header/HeaderClass', $headerLayout['classes']) }}">
-    <a id="skip-content" href="#main-content" role="navigation"></a>
+    <a id="skip-content" href="#main-content" role="navigation" aria-label="Skip content"></a>
     {{-- Before header body --}}
     @section('before-header-body')
         @include('partials.navigation.search-top')

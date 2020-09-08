@@ -83,7 +83,7 @@
 
         @include('partials.translate-modal')
 
-        <main class="clearfix main-content" role="main">
+        <main class="clearfix main-content" role="main" id="main-content">
             @yield('content')
 
             @if (is_active_sidebar('content-area-bottom'))
@@ -107,9 +107,6 @@
 
             @include('partials.vertical-menu')
 
-            @if (in_array(get_field('show_google_translate', 'option'), array('footer', 'fold')))
-                @include('partials.translate')
-            @endif
         </div>
         @if(get_field('scroll_elevator'))
         <div class="sticky-scroll-elevator">

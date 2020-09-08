@@ -18,5 +18,6 @@ class Application
         new GlobalNotice();
         new Recaptcha();
         new Widget();
+        new ParentFunctionOverrides();
     }
 }

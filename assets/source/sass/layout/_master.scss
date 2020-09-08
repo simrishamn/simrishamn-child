@@ -43,9 +43,24 @@ html.translated-ltr #site-header {
     }
 }
 
-.title-blue {
+.btn-primary, #cookie-consent .btn-primary, .social-feed-button a.btn {
+    background-color: #0069B3 !important;
+    border-color: #0069B3 !important;
+}
+
+aside .btn-primary {
+    background-color: #5ba1d8 !important;
+    border-color: #5ba1d8 !important;
+}
+
+.title-blue, .index-info .title-blue p {
     background-color: $simrishamn-blue !important;
     color: white;
+
+    a.btn-plain {
+        border-color: white !important;
+        color: white !important;
+    }
 }
 
 .content-blue {
@@ -66,9 +81,14 @@ html.translated-ltr #site-header {
     }
 }
 
-.title-green {
+.title-green, .index-info .title-green p {
     background-color: $simrishamn-green !important;
     color: white;
+
+    a.btn-plain {
+        border-color: white !important;
+        color: white !important;
+    }
 }
 
 .content-green {
@@ -81,9 +101,22 @@ html.translated-ltr #site-header {
     color: white;
 }
 
-.title-red {
+.title-red, .index-info .title-red p {
     background-color: $simrishamn-red !important;
-    color: white;
+    color: white !important;
+
+    a.btn-plain {
+        border-color: white !important;
+        color: white !important;
+    }
+}
+
+.index-info {
+    .title-red, .title-blue, .title-green, .title-blue-gray {
+        div a.btn-plain {
+            color: white !important;
+        }
+    }
 }
 
 .content-red {
@@ -96,7 +129,7 @@ html.translated-ltr #site-header {
     color: white;
 }
 
-.content-orange {
+.content-orange, .index-info .title-orange {
     background-color: $simrishamn-light-orange !important;
     color: white;
 }
@@ -106,16 +139,22 @@ html.translated-ltr #site-header {
     color: black !important;
 }
 
-.content-gray {
-    background-color: lightgrey;
+.content-gray, .index-info .title-gray {
+    background-color: lightgrey !important;
     .btn-holder .btn-plain {
         color: black !important;
         border-color: black !important;
     }
 }
 
-.title-blue-gray {
+.title-blue-gray, .index-info .title-blue-gray p {
     background-color: $simrishamn-blue !important;
+    color: white !important;
+
+    a.btn-plain {
+        border-color: white !important;
+        color: white !important;
+    }
 }
 
 .content-blue-gray {

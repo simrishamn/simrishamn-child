@@ -36,11 +36,24 @@
     }
 }
 
+.mod-table, .modularity-mod-table {
+    .box-panel-secondary {
+        a {
+            color: #0069B3 !important;
+        }
+
+        label, .dataTables_info, .paginate_button {
+            color: white !important;
+            opacity: 1 !important;
+        }
+    }
+}
+
 .box-title {
     font-family: 'Open Sans', serif !important;
     padding: 15px;
     width: 100%;
-    color: white;
+    color: white !important;
     font-weight: 600;
     font-size: 21px;
 }
@@ -93,14 +106,14 @@
     box-shadow: none !important;
 
     .box-content {
-        background-color: $simrishamn-light-blue !important;
+        background-color: #0069B3 !important;
         text-align: center;
         padding: 15px 5px;
     }
 
     .fa {
         font-size: 56px;
-        color: $simrishamn-blue;
+        color: #FFFFFF;
         margin-top: 0px;
     }
 
@@ -132,7 +145,7 @@
                 &:after {
                     font-family: FontAwesome;
                     content: "\f061";
-                    color: $simrishamn-blue;
+                    color: #444444;
                     vertical-align: 0;
                     position: absolute;
                     right: 0;
