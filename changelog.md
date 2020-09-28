@@ -1,5 +1,8 @@
 # Simrishamn Changelog
 
+## 2020-09-08 - 21.00.0
+* SIEW-370: WCAG fixes
+
 ## 2020-03-19 - 20.03.0
 * SIEW-367: Add template override for search
 
