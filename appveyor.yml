@@ -19,7 +19,7 @@ install:
 
 before_build:
   - 'PROJECT="$(composer config name)"'
-  - 'TAG="$(git describe --match="[0-9]*" --abbrev=0)"'
+  - 'TAG="$(git describe --match="[0-9]*" --abbrev=0 --tags)"'
   - 'BUILD="$TAG.$APPVEYOR_BUILD_NUMBER"'
   - 'SUFFIX="$(test -z $APPVEYOR_REPO_TAG_NAME && echo "-dev" || true)"'
   - 'VERSION="${APPVEYOR_REPO_TAG_NAME:-$BUILD}${SUFFIX}"'
