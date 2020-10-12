@@ -23,14 +23,10 @@
                         @php dynamic_sidebar('content-area'); @endphp
                     </div>
                 @endif
-
-                <div class="hidden-xs hidden-sm hidden-md hidden-print">
-                    @include('partials.page-footer', ['hideTimestamps' => true])
-                </div>
             </div>
         </div>
 
-        <div class="grid hidden-lg hidden-xl">
+        <div class="grid">
             <div class="grid-sm-12">
                 @include('partials.page-footer')
             </div>
