@@ -25,7 +25,6 @@
                 @endif
             </div>
         </div>
-
         <div class="grid">
             <div class="grid-sm-12">
                 @include('partials.page-footer')
