@@ -33,7 +33,6 @@
                     @php dynamic_sidebar('content-area'); @endphp
                 </div>
             @endif
-
         </div>
         @include('partials.sidebar-right')
     </div>

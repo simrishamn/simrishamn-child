@@ -17,14 +17,10 @@
 		    @include('partials.accessibility-menu')
 		</article>
             @endif
-
-            <div class="hidden-xs hidden-sm hidden-md hidden-print">
-		@include('partials.page-footer')
-            </div>
         </div>
     </div>
 
-    <div class="grid hidden-lg hidden-xl">
+    <div class="grid">
         <div class="grid-sm-12">
             @include('partials.page-footer')
         </div>
