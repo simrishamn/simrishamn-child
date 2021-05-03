@@ -1,5 +1,5 @@
-image: ubuntu1804
-stack: node 8
+image: ubuntu2004
+stack: node 14
 build: off
 
 for:
