@@ -1,5 +1,8 @@
 # Simrishamn Changelog
 
+## 2021-02-16 - 21.03.0
+* SIEW-370: Final WCAG fixes
+
 ## 2020-10-01 - 21.02.0
 * SIEW-370: WCAG fixes
 
