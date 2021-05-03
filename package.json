@@ -4,10 +4,10 @@
   "description": "Municipio child theme for Simrishamn",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "dev": "mix",
+    "hot": "mix watch --hot",
+    "production": "mix --production",
+    "watch": "mix watch",
     "sass-lint": "node_modules/.bin/sass-lint --verbose --no-exit",
     "eslint": "node_modules/.bin/eslint assets/source/js"
   },
@@ -16,17 +16,18 @@
     "regenerator-runtime": "^0.13.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "compression-webpack-plugin": "^3.0.0",
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.0",
+    "compression-webpack-plugin": "^7.1.2",
     "cross-env": "^6.0.3",
-    "eslint": "^6.1.0",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-plugin-import": "^2.18.2",
-    "laravel-mix": "^4.1.2",
-    "sass": "^1.22.7",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "laravel-mix": "^6.0.18",
+    "postcss": "^8.2.13",
+    "sass": "^1.32.12",
     "sass-lint": "^1.13.1",
-    "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.6.10"
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.36.2"
   }
 }
