@@ -19,5 +19,6 @@ class Application
         new Recaptcha();
         new Widget();
         new ParentFunctionOverrides();
+        new WordpressAdminConfig();
     }
 }
