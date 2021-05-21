@@ -1,5 +1,9 @@
 # Simrishamn Changelog
 
+# 2021-05-21 - 21.04.0
+* SIEW-382: Update all dependencies
+* SIEW-382: Hide update warning dashboard widgets in admin
+
 ## 2021-02-16 - 21.03.0
 * SIEW-370: Final WCAG fixes
 
