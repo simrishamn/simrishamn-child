@@ -1,5 +1,8 @@
 # Simrishamn Changelog
 
+# 2021-06-21 21.04.1
+* SIEW-429: Correct CSS error for ordered lists
+
 # 2021-05-21 - 21.04.0
 * SIEW-382: Update all dependencies
 * SIEW-382: Hide update warning dashboard widgets in admin
