@@ -20,5 +20,6 @@ class Application
         new Widget();
         new ParentFunctionOverrides();
         new WordpressAdminConfig();
+        new SocialMediaConnection();
     }
 }

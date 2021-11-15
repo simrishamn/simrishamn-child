@@ -58,6 +58,7 @@
         {!! wp_head() !!}
     </head>
     <body class="{{ $bodyClass }} {!! body_class('no-js') !!}">
+        {!! wp_body_open() !!}
         <!--[if lt IE 9]>
             <div class="notice info browserupgrade">
             <div class="container">
