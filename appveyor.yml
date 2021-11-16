@@ -14,11 +14,7 @@ cache:
   - node_modules -> package.json, package-lock.json
 
 install:
-  # 2021-05-05: Disabled since the update fails in Appveyor. It seems like
-  #             there is a problem with one of the repositories.
-  #             This problem might be resolved in the future. In that case
-  #             we should re-enable the update
-  #- sudo apt-get update
+  - sudo apt-get update
   - sudo apt-get -fy install composer httpie php-codesniffer slugify
 
 before_build:
