@@ -1,5 +1,9 @@
 # Simrishamn Changelog
 
+# 2021-11-19 21.05.0
+* SIEW-434: Add Facebook domain verification
+* SIEW-435: Add GTM scripts
+
 # 2021-06-21 21.04.1
 * SIEW-429: Correct CSS error for ordered lists
 
